@@ -10,12 +10,12 @@ import React from 'react';
 
 // 4) Create a component
 
-function MainPage(){
+function Header(){
     return (
-        <div className="text-3xl font-bold underline border-black col-span-6 row-span-5">
-          Mainpage
+        <div className="text-3xl font-bold underline border-black col-span-12 row-span-1">
+          Header
         </div>
       )
 }
 
-export default MainPage;
+export default Header;
