@@ -1,6 +1,7 @@
 // 1) Import React and ReactDom Libraries
 import React from 'react';
 import ReactDom from 'react-dom/client';
+import './index.css';
 
 
 // 2) Get a refernce to the div with root
@@ -14,7 +15,11 @@ const root = ReactDom.createRoot(el);
 // 4) Create a component
 
 function App(){
-    return <h1>Hi there!</h1>
+    return (
+        <h1 className="text-3xl font-bold underline">
+          Hello world!
+        </h1>
+      )
 }
 
 // 5) Show the component on the screen
