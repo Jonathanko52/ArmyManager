@@ -9,6 +9,12 @@ function App() {
   const [age, setAge] = useState(28);
 
 
+  //full army state object
+  //{faction, units, point cost, modelcount}
+  //units:
+
+
+
 
   
   return (
