@@ -14,6 +14,11 @@ function App() {
   //units object: { unit name: string, model count: num, point cost per size: array, unit sizes: array, unit number of sizes: number}
 
 
+  //functions:
+  //create new army: Army name
+  //Add unit to army: { unit name: string, model count: num, point cost per size: array, unit sizes: array, unit number of sizes: number}
+
+
   
   return (
     <div className="App grid grid-cols-8 h-screen	">
