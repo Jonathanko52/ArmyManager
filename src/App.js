@@ -17,16 +17,19 @@ function App() {
   //functions:
   //create new army: Army name
   //delete army: armyId
-  //Add unit to army: { unit name: string, model count: num, point cost per size: array, unit sizes: array, unit number of sizes: number, id}
+  //Add unit to army: { unit name: string, model count: num, point cost per size: array, unit sizes: array, id}
   //delete unit from army:{id:number}
   
   //save army: local storage id
   //load army: local storage id
 
   //pages:Main page 
-  //Show army roster, point cost per unit, increase/decrease unit size
-  //show point cost total
-
+  //window displaying army
+    //Show army roster, point cost per unit, increase/decrease unit size
+    //show point cost total
+  //window for adding new unit
+    //submit button
+    //input field for name, model count, point per size, unit sizes,
   
   return (
     <div className="App grid grid-cols-8 h-screen	">
