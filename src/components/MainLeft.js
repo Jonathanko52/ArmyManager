@@ -9,10 +9,15 @@ import React from 'react';
 function MainLeft(){
 
     return (
-        <div className="text-3xl font-bold underline border-black col-span-6 row-span-5 border-2">
+        <div className=" border-black col-span-6 row-span-5 border-1">
+        <h3>MainLeft</h3>
         <form>
-            </form>
-          MainLeft
+            <label>Name</label><input ></input><br/>
+            <label>Model Count</label><input ></input><br/>
+            <label>Point Cost</label><input ></input><br/>
+            <label>Unit sizes</label><input ></input><br/>
+
+        </form>
         </div>
       )
 }
