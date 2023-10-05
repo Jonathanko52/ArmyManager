@@ -32,7 +32,7 @@ function App() {
     //input field for name, model count , point per size, unit sizes,
   
   return (
-    <div className="App grid grid-cols-8 h-screen	">
+    <div className="App grid grid-cols-8 h-screen	bg-slate-500 text-gray-300">
         <Header/>
         <NavigationBar/>
         <MainPage/>

@@ -9,14 +9,14 @@ import React from 'react';
 function MainLeft(){
 
     return (
-        <div className=" border-black col-span-4 row-span-5 border-1">
+        <div className="p-2 m-2 border-black col-span-4 row-span-5 border-1">
         <h3>MainLeft</h3>
         <form>
-            <label>Name</label><input id="MainLeftName"></input><br/>
-            <label>Model Count</label><input id="MainLeftModel"></input><br/>
-            <label>Point Cost</label><input id="MainLeftPoint"></input><br/>
-            <label>Unit sizes</label><input id="MainLeftSizes"></input><br/>
-            <input type="submit" value="Add Unit"></input>
+            <label>Name</label><br/><input id="MainLeftName"></input><br/>
+            <label>Model Count</label><br/><input id="MainLeftModel"></input><br/>
+            <label>Point Cost</label><br/><input id="MainLeftPoint"></input><br/>
+            <label>Unit sizes</label><br/><input id="MainLeftSizes"></input><br/>
+            <input className = "rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit"></input>
         </form>
         </div>
       )
