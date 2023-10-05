@@ -1,6 +1,6 @@
 import React from 'react';
-import MainLeft from '../components/MainLeft.js';
-import MainRight from '../components/MainRight'
+import MainLeft from './MainLeft.js';
+import MainRight from './MainRight.js';
 
 
 

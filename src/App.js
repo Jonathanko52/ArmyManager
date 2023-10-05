@@ -1,5 +1,5 @@
 import NavigationBar from "./components/navigationBar.js"
-import MainPage from './components/MainPage.js'
+import MainPage from './components/MainPage/MainPage.js'
 import Header from './components/Header.js'
 import React, {useState, useEffect} from 'react';
 
