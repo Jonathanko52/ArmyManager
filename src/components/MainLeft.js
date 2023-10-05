@@ -17,9 +17,7 @@ function MainLeft(){
             <label>Point Cost</label><input id="MainLeftPoint"></input><br/>
             <label>Unit sizes</label><input id="MainLeftSizes"></input><br/>
             <input type="submit" value="Add Unit"></input>
-
         </form>
-        
         </div>
       )
 }
