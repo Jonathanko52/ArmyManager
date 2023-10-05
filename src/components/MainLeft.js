@@ -9,7 +9,7 @@ import React from 'react';
 function MainLeft(){
 
     return (
-        <div className=" border-black col-span-6 row-span-5 border-1">
+        <div className=" border-black col-span-4 row-span-5 border-1">
         <h3>MainLeft</h3>
         <form>
             <label>Name</label><input id="MainLeftName"></input><br/>
