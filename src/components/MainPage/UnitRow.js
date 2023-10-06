@@ -7,6 +7,7 @@ function UnitRow(){
         <label>Unit Name:</label>
         <label>Size:</label>
         <label>Point Cost:</label>
+        <label>Enhancements:</label>
         <button>Increase size</button>
         <button>Decrease Size</button>
 

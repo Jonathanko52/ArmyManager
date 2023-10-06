@@ -11,7 +11,7 @@ function App() {
 
   //full army state object
   //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
-  //units object: { unit name: string, model count: array, point cost per size: array, unit sizes: array, id:number}
+  //units object: { unit name: string, model count: array, point cost per size: array, unit sizes: array, enchancements:object, id:number}
 
 
   //functions:
