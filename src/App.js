@@ -6,7 +6,9 @@ import React, {useState, useEffect} from 'react';
 function App() {
 
 
-  const [age, setAge] = useState(28);
+  const [army, setArmy] = useState({});
+  const [addedUnit, setAddedUnit] = useState();
+  const [] = useState();
 
 
   //full army state object
