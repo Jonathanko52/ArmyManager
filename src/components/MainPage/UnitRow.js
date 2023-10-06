@@ -4,7 +4,12 @@ function UnitRow(){
 
     return (
         <div className="font-bold underline border-black col-span-8 row-span-5 border-2">
-          UNIT ROW
+        <label>Unit Name:</label>
+        <label>Size:</label>
+        <label>Point Cost:</label>
+        <button>Increase size</button>
+        <button>Decrease Size</button>
+
         </div>
       )
 }

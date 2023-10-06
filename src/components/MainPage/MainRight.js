@@ -10,7 +10,6 @@ function MainRight(){
           <UnitRow/>
           <UnitRow/>
           <UnitRow/>
-
         </div>
       )
 }
