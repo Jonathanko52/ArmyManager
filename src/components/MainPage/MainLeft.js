@@ -15,15 +15,27 @@ function MainLeft(){
     const [pointCost, setpointCost] = useState(0);
     const [unitSize, setUnitSize] = useState(0);
 
+    const handleChangeName = (event) =>{
+        console.log(event.target.value)
+    }
+    const handleChangeModelCount = (event) =>{
+      console.log(event.target.value)
+    }    
+    const handleChangePointCost = (event) =>{
+      console.log(event.target.value)
+    }    
+    const handleChangeUnitSizes = (event) =>{
+      console.log(event.target.value)
+    }
 
     return (
         <div className="p-2 m-2 border-black col-span-4 row-span-5 border-1">
           <h3>Add unit</h3>
           <form>
-              <label>Name</label><br/><input id="MainLeftName"></input><br/>
-              <label>Model Count</label><br/><input id="MainLeftModel"></input><br/>
-              <label>Point Cost</label><br/><input id="MainLeftPoint"></input><br/>
-              <label>Unit sizes</label><br/><input id="MainLeftSizes"></input><br/>
+              <label>Name</label><br/><input id="MainLeftName" onChange={handleChangeName}></input><br/>
+              <label>Model Count</label><br/><input id="MainLeftModel" onChange={handleChangeModelCount}></input><br/>
+              <label>Point Cost</label><br/><input id="MainLeftPoint" onChange={handleChangePointCost}></input><br/>
+              <label>Unit sizes</label><br/><input id="MainLeftSizes" onChange={handleChangeUnitSizes}></input><br/>
               <input className = "rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit"></input>
           </form>
         </div>
