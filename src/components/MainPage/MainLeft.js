@@ -1,5 +1,4 @@
-import React from 'react';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect}from 'react';
 
   //pages:Main page 
   //window displaying army
@@ -16,22 +15,26 @@ function MainLeft(){
     const [unitSize, setUnitSize] = useState(0);
 
     const handleChangeName = (event) =>{
-        console.log(event.target.value)
+        setName(event.target.value)
     }
     const handleChangeModelCount = (event) =>{
-      console.log(event.target.value)
+      setCount(event.target.value)
     }    
     const handleChangePointCost = (event) =>{
-      console.log(event.target.value)
+      setpointCost(event.target.value)
     }    
     const handleChangeUnitSizes = (event) =>{
-      console.log(event.target.value)
+      setUnitSize(event.target.value)
+    }
+    const handleSubmit = (event) =>{
+      event.preventDefault()
+        console.log(unitName, modelCount, pointCost, unitSize)
     }
 
     return (
         <div className="p-2 m-2 border-black col-span-4 row-span-5 border-1">
           <h3>Add unit</h3>
-          <form>
+          <form onSubmit={handleSubmit}>
               <label>Name</label><br/><input id="MainLeftName" onChange={handleChangeName}></input><br/>
               <label>Model Count</label><br/><input id="MainLeftModel" onChange={handleChangeModelCount}></input><br/>
               <label>Point Cost</label><br/><input id="MainLeftPoint" onChange={handleChangePointCost}></input><br/>
