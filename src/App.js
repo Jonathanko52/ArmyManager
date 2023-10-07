@@ -7,7 +7,7 @@ function App() {
 
 
   const [army, setArmy] = useState({});
-  const [addedUnit, setAddedUnit] = useState();
+  const [addedUnit, setAddedUnit] = useState({});
   const [] = useState();
 
 

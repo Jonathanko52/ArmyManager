@@ -1,4 +1,6 @@
 import React from 'react';
+import React, {useState, useEffect} from 'react';
+
   //pages:Main page 
   //window displaying army
     //Show army roster, point cost per unit, increase/decrease unit size, remove unit, duplicate unit
@@ -7,6 +9,12 @@ import React from 'react';
     //submit button
     //input field for name, model count , point per size, unit sizes,
 function MainLeft(){
+
+    const [unitName, setName] = useState(0);
+    const [modelCount, setCount] = useState(0);
+    const [pointCost, setpointCost] = useState(0);
+    const [unitSize, setUnitSize] = useState(0);
+
 
     return (
         <div className="p-2 m-2 border-black col-span-4 row-span-5 border-1">
