@@ -21,6 +21,13 @@ function App() {
   //delete army: armyId
   //Add unit to army: { unit name: string, model count: array, point cost per size: array, unit sizes: array, id}
   //delete unit from army:{id:number}
+
+  const addUnitToArmy = (newUnit) =>{
+    let newArmy = Object.assign(army)
+    console.log("NEW UNIT", newUnit)
+    // newArmy.units.assign(newArmy.units, newUnit)
+    // setArmy(newArmy)
+  }
   
   //save army: local storage id
   //load army: local storage id
@@ -37,7 +44,7 @@ function App() {
     <div className="App grid grid-cols-8 h-screen	bg-slate-500 text-gray-300">
         <Header/>
         <NavigationBar/>
-        <MainPage/>
+        <MainPage addUnitToArmy={addUnitToArmy}/>
     </div>
   );
 }

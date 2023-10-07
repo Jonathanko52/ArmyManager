@@ -7,7 +7,7 @@ import React, {useState, useEffect}from 'react';
   //window for adding new unit
     //submit button
     //input field for name, model count , point per size, unit sizes,
-function MainLeft(){
+function MainLeft({addUnitToArmy}){
 
     const [unitName, setName] = useState(0);
     const [modelCount, setCount] = useState(0);
@@ -28,7 +28,7 @@ function MainLeft(){
     }
     const handleSubmit = (event) =>{
       event.preventDefault()
-        console.log(unitName, modelCount, pointCost, unitSize)
+      addUnitToArmy({unitName: unitName,modelCount: modelCount, pointCost: pointCost, unitSize:unitSize})
     }
 
     return (
