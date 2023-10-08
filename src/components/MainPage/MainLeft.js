@@ -9,13 +9,13 @@ import React, {useState, useEffect}from 'react';
     //input field for name, model count , point per size, unit sizes,
 function MainLeft({addUnitToArmy}){
 
-    const [unitName, setName] = useState(0);
+    const [unitName, setName] = useState('');
     const [modelCount, setCount] = useState(0);
     const [pointCost, setpointCost] = useState(0);
     const [unitSize, setUnitSize] = useState(0);
 
     const handleChangeName = (event) =>{
-        setName(event.target.value)
+      setName(event.target.value)
     }
     const handleChangeModelCount = (event) =>{
       setCount(event.target.value)
@@ -29,6 +29,10 @@ function MainLeft({addUnitToArmy}){
     const handleSubmit = (event) =>{
       event.preventDefault()
       addUnitToArmy({unitName: unitName,modelCount: modelCount, pointCost: pointCost, unitSize:unitSize})
+      setName('')
+      setCount(0)
+      setpointCost(0)
+      setUnitSize(0)
     }
 
     return (
