@@ -6,7 +6,7 @@ import React, {useState, useEffect} from 'react';
 function App() {
 
 
-  const [army, setArmy] = useState({});
+  const [army, setArmy] = useState({units:[]});
   const [addedUnit, setAddedUnit] = useState({});
   const [] = useState();
 
@@ -24,9 +24,8 @@ function App() {
 
   const addUnitToArmy = (newUnit) =>{
     let newArmy = Object.assign(army)
-    console.log("NEW UNIT", newUnit)
     // newArmy.units.assign(newArmy.units, newUnit)
-    // setArmy(newArmy)
+    setArmy({...army, units:[...army.units, newUnit]})
   }
   
   //save army: local storage id
@@ -44,7 +43,7 @@ function App() {
     <div className="App grid grid-cols-8 h-screen	bg-slate-500 text-gray-300">
         <Header/>
         <NavigationBar/>
-        <MainPage addUnitToArmy={addUnitToArmy}/>
+        <MainPage addUnitToArmy={addUnitToArmy} army={army}/>
     </div>
   );
 }
