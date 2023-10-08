@@ -1,7 +1,6 @@
 import React from 'react';
 
 function UnitRow({unitName, modelCount, pointCost, unitSize}){
-  console.log(unitName)
     return (
         <div className="font-bold underline border-black col-span-8 row-span-5 border-2">
           <label className="m-8 p-4" >Unit Name:{unitName}</label>

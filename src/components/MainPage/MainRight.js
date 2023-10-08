@@ -15,9 +15,13 @@ function MainRight({army}){
 
     return (
         <div className="font-bold underline border-black col-span-8 row-span-5 border-2">
-          <div className = "m-8 p-4">
+          <div className = "m-8 p-4 border-black border-2">
             <label>Army Name:</label>
+          </div>
+          <div className = "m-8 p-4 border-black border-2">
             <label>Faction:</label>
+          </div>
+          <div className = "m-8 p-4 border-black border-2">
             <label>Total cost:</label>
           </div>
           {units}
