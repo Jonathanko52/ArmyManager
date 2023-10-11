@@ -1,20 +1,11 @@
 import React, {useEffect} from 'react';
-import UnitRow from './UnitRow.js'
-
+// 
 function MainRight({army}){
   //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
   console.log(army)
   let units = [];
   let totalArmyCost = 0;
-  // useEffect(() =>{
-    army.units.forEach(cur=>{
-      units.push(<UnitRow unitName={cur.unitName} modelCount={cur.modelCount} pointCost={cur.pointCost} unitSize={cur.unitSize}/>)
-    })
-    army.units.forEach(cur=>{
-      totalArmyCost += cur.pointCost
-    })
 
-  // },[army])
 
 
 
@@ -31,7 +22,6 @@ function MainRight({army}){
             <label>Total cost:{totalArmyCost}</label>
           </div>
         </div>
-          {units}
         </div>
       )
 }

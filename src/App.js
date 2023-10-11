@@ -1,12 +1,9 @@
 import NavigationBar from "./components/navigationBar.js"
 import MainPage from './components/MainPage/MainPage.js'
+import Database from './components/Database/DatabasePage.js'
 import Header from './components/Header.js'
 import React, {useState, useEffect} from 'react';
-import * as ReactDOM from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
@@ -45,11 +42,18 @@ function App() {
     //input field for name, model count , point per size, unit sizes,
   
   return (
+    <BrowserRouter>
+
     <div className="App grid grid-cols-8 h-screen	bg-slate-500 text-gray-300">
-        <Header/>
-        <NavigationBar/>
-        <MainPage addUnitToArmy={addUnitToArmy} army={army}/>
+      <Header/>
+      <NavigationBar/>
+        <Routes>
+          <Route path="/" element={<MainPage addUnitToArmy={addUnitToArmy} army={army}/>}/>
+          <Route path="/database" element={<Database />} />
+        </ Routes>
     </div>
+    </BrowserRouter>
+
   );
 }
 
