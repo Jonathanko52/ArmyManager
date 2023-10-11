@@ -3,7 +3,6 @@ import UnitRow from './UnitRow.js'
 
 function MainRight({army}){
   //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
-  console.log(army)
   let units = [];
   let totalArmyCost = 0;
   // useEffect(() =>{
@@ -11,6 +10,7 @@ function MainRight({army}){
       units.push(<UnitRow unitName={cur.unitName} modelCount={cur.modelCount} pointCost={cur.pointCost} unitSize={cur.unitSize}/>)
     })
     army.units.forEach(cur=>{
+      console.log("ARMY COST",cur.pointCost, typeof cur.pointCost)
       totalArmyCost += cur.pointCost
     })
 

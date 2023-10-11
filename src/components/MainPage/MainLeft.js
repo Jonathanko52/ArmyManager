@@ -18,13 +18,13 @@ function MainLeft({addUnitToArmy}){
       setName(event.target.value)
     }
     const handleChangeModelCount = (event) =>{
-      setCount(event.target.value)
+      setCount(Number(event.target.value))
     }    
     const handleChangePointCost = (event) =>{
-      setpointCost(event.target.value)
+      setpointCost(parseInt(event.target.value))
     }    
     const handleChangeUnitSizes = (event) =>{
-      setUnitSize(event.target.value)
+      setUnitSize(+event.target.value)
     }
     const handleSubmit = (event) =>{
       event.preventDefault()
