@@ -31,7 +31,6 @@ function MainRight({army}){
             <label>Total cost:{totalArmyCost}</label>
           </div>
         </div>
-
           {units}
         </div>
       )
