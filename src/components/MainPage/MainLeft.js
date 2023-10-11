@@ -39,14 +39,15 @@ function MainLeft({addUnitToArmy}){
         <div className="p-2 m-2 border-black col-span-4 row-span-5 border-1">
           <h3>Add unit</h3>
           <form onSubmit={handleSubmit}>
-              <label>Name</label><br/><input id="MainLeftName" onChange={handleChangeName}></input><br/>
-              <label>Model Count</label><br/><input id="MainLeftModel" onChange={handleChangeModelCount}></input><br/>
-              <label>Point Cost</label><br/><input id="MainLeftPoint" onChange={handleChangePointCost}></input><br/>
-              <label>Unit sizes</label><br/><input id="MainLeftSizes" onChange={handleChangeUnitSizes}></input><br/>
+              <label>Name</label><br/><input id="MainLeftName" type="text" value={setName} onChange={handleChangeName}></input><br/>
+              <label>Model Count</label><br/><input id="MainLeftModel" type="number" value={setCount} onChange={handleChangeModelCount}></input><br/>
+              <label>Point Cost</label><br/><input id="MainLeftPoint" type="number" value={setpointCost} onChange={handleChangePointCost}></input><br/>
+              <label>Unit sizes</label><br/><input id="MainLeftSizes" type="number" value={setUnitSize} onChange={handleChangeUnitSizes}></input><br/>
               <input className = "rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit"></input>
           </form>
         </div>
       )
 }
+
 
 export default MainLeft;

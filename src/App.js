@@ -43,15 +43,14 @@ function App() {
   
   return (
     <BrowserRouter>
-
-    <div className="App grid grid-cols-8 h-screen	bg-slate-500 text-gray-300">
-      <Header/>
-      <NavigationBar/>
+      <div className="App grid grid-cols-8 h-screen	bg-slate-500 text-gray-300">
+        <Header/>
+        <NavigationBar/>
         <Routes>
           <Route path="/" element={<MainPage addUnitToArmy={addUnitToArmy} army={army}/>}/>
           <Route path="/database" element={<Database />} />
         </ Routes>
-    </div>
+      </div>
     </BrowserRouter>
 
   );
