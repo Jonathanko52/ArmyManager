@@ -2,6 +2,11 @@ import NavigationBar from "./components/navigationBar.js"
 import MainPage from './components/MainPage/MainPage.js'
 import Header from './components/Header.js'
 import React, {useState, useEffect} from 'react';
+import * as ReactDOM from "react-dom/client";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 
 function App() {
 
