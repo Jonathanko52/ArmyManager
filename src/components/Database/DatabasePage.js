@@ -13,4 +13,4 @@ function Database({ army}){
       )
 }
 
-export default MainPage;
+export default Database;
