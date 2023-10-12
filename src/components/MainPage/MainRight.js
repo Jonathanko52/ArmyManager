@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
 import UnitRow from './UnitRow.js'
 
-function MainRight({army, saveArmyToLocal, loadArmyFromLocal}){
-  //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
+function MainRight({army, saveArmyToLocal, loadArmyFromLocal, clearCurrentArmy})
+    //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
   let units = [];
   let totalArmyCost = 0;
   // useEffect(() =>{
@@ -33,9 +33,10 @@ function MainRight({army, saveArmyToLocal, loadArmyFromLocal}){
           </div>
           {units}
           <div>
-          <button className = "rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" onClick={saveArmyToLocal}>Save Army</button>
-          <button className = "rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" onClick={loadArmyFromLocal}>Load Army</button>
-            </div>
+            <button className = "rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" onClick={saveArmyToLocal}>Save Army</button>
+            <button className = "rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" onClick={loadArmyFromLocal}>Load Army</button>
+            <button className = "rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" onClick={clearCurrentArmy}>Clear Army</button>
+          </div>
         </div>
       )
 }
