@@ -4,11 +4,11 @@ import MainRight from './MainRight.js';
 
 
 
-function MainPage({addUnitToArmy, army}){
+function MainPage({addUnitToArmy, army, saveArmyToLocal, loadArmyFromLocal}){
     return (
         <div className="font-bold underline border-black col-span-10 grid grid-cols-12 border-2">
           <MainLeft addUnitToArmy={addUnitToArmy}/>
-          <MainRight army={army}/>
+          <MainRight army={army} saveArmyToLocal={saveArmyToLocal} loadArmyFromLocal={loadArmyFromLocal}/>
         </div>
       )
 }

@@ -31,12 +31,15 @@ function App() {
   }
 
   const saveArmyToLocal = () =>{
-
+    localStorage.setItem("warHammerArmy", JSON.stringify(army));
   }
-  const loadArmyFromLocal = () =>{
 
+  const loadArmyFromLocal = () =>{
+    let testArmy = localStorage.getItem("warHammerArmy");
+    console.log(JSON.parse(testArmy))
   }
   
+
   //save army: local storage id
   //load army: local storage id
 
@@ -54,7 +57,13 @@ function App() {
         <Header/>
         <NavigationBar/>
         <Routes>
-          <Route path="/" element={<MainPage addUnitToArmy={addUnitToArmy} army={army}/>}/>
+          <Route path="/" element={
+            <MainPage 
+              addUnitToArmy={addUnitToArmy} 
+              army={army} 
+              saveArmyToLocal={saveArmyToLocal} 
+              loadArmyFromLocal={loadArmyFromLocal}
+            />}/>
           <Route path="/database" element={<Database />} />
         </ Routes>
       </div>
