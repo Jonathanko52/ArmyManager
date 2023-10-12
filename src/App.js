@@ -31,24 +31,24 @@ function App() {
   }
 
   const saveArmyToLocal = () =>{
-    let confirmed = confirm("Are you sure you want to save your army?")
+    let confirmed = window.confirm("Are you sure you want to save your army?")
     if(confirmed){
       localStorage.setItem("warHammerArmy", JSON.stringify(army));
     }
   }
 
   const loadArmyFromLocal = () =>{
-    let confirmed = confirm("Are you sure you want to load your army?")
+    let confirmed = window.confirm("Are you sure you want to load your army?")
     if(confirmed){
       let testArmy = localStorage.getItem("warHammerArmy");
-      setArmy(testArmy)
+      setArmy(JSON.parse(testArmy))
     }
   }
 
   const clearCurrentArmy = () => {
-    let confirmed = confirm("Are you sure you want to delete the current army?")
+    let confirmed = window.confirm("Are you sure you want to delete the current army?")
     if(confirmed){
-      setArmy({})
+      setArmy({units:[]})
     }
   }
   

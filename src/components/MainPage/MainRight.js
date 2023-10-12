@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import UnitRow from './UnitRow.js'
 
-function MainRight({army, saveArmyToLocal, loadArmyFromLocal, clearCurrentArmy})
+function MainRight({army, saveArmyToLocal, loadArmyFromLocal, clearCurrentArmy}){
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
   let units = [];
   let totalArmyCost = 0;
