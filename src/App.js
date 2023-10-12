@@ -41,7 +41,14 @@ function App() {
     let confirmed = confirm("Are you sure you want to load your army?")
     if(confirmed){
       let testArmy = localStorage.getItem("warHammerArmy");
-      setArmy = testArmy
+      setArmy(testArmy)
+    }
+  }
+
+  const clearCurrentArmy = () => {
+    let confirmed = confirm("Are you sure you want to delete the current army?")
+    if(confirmed){
+      setArmy({})
     }
   }
   
@@ -69,6 +76,7 @@ function App() {
               army={army} 
               saveArmyToLocal={saveArmyToLocal} 
               loadArmyFromLocal={loadArmyFromLocal}
+              clearCurrentArmy={clearCurrentArmy}
             />}/>
           <Route path="/database" element={<Database />} />
         </ Routes>
