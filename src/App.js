@@ -29,6 +29,13 @@ function App() {
     // newArmy.units.assign(newArmy.units, newUnit)
     setArmy({...army, units:[...army.units, newUnit]})
   }
+
+  const saveArmyToLocal = () =>{
+
+  }
+  const loadArmyFromLocal = () =>{
+
+  }
   
   //save army: local storage id
   //load army: local storage id
