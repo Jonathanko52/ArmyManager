@@ -5,16 +5,13 @@ function MainRight({army, saveArmyToLocal, loadArmyFromLocal, clearCurrentArmy})
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
   let units = [];
   let totalArmyCost = 0;
-  // useEffect(() =>{
     army.units.forEach(cur=>{
       units.push(<UnitRow unitName={cur.unitName} modelCount={cur.modelCount} pointCost={cur.pointCost} unitSize={cur.unitSize}/>)
     })
     army.units.forEach(cur=>{
-      console.log("ARMY COST",cur.pointCost, typeof cur.pointCost)
       totalArmyCost += cur.pointCost
     })
 
-  // },[army])saveArmyToLocal, loadArmyFromLocal
 
 
 
