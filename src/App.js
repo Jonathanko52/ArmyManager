@@ -13,7 +13,7 @@ function App() {
 
 
   //full army state object
-  //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
+  //{armyName: string, faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
   //units object: { unit name: string, model count: array, point cost per size: array, unit sizes: array, enchancements:object, id:number}
 
 
@@ -22,6 +22,13 @@ function App() {
   //delete army: armyId
   //Add unit to army: { unit name: string, model count: array, point cost per size: array, unit sizes: array, id}
   //delete unit from army:{id:number}
+
+  const createArmy = (armyName) =>{
+    let newArmy = {}
+    newArmy.armyName = 
+    newArmy.faction = 
+    setArmy(newArmy)
+  }
 
   const addUnitToArmy = (newUnit) =>{
     setArmy({...army, units:[...army.units, newUnit]})
@@ -54,7 +61,12 @@ function App() {
   }
   
   const saveToDatabase = () => {
-    
+
+  }
+
+  const logState = () =>{
+    console.log("STATE", army)
+
   }
 
   //save army: local storage id
@@ -72,7 +84,7 @@ function App() {
     <BrowserRouter>
       <div className="App grid grid-cols-8 h-screen	bg-slate-500 text-gray-300">
         <Header/>
-        <NavigationBar/>
+        <NavigationBar logState={logState}/>
         <Routes>
           <Route path="/" element={
             <MainPage 

@@ -16,7 +16,7 @@ function DatabaseRight({army}){
             <label>Faction:</label>
           </div>
           <div className="p-4 col-span-3 row-span-5 border-black border-2">
-            <label>Total cost:{totalArmyCost}</label>
+            <label>Total cost:</label>
           </div>
         </div>
         </div>

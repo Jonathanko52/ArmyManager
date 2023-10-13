@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 
-function navBar(){
+function navBar({logState}){
     return (
       <div className="font-bold underline border-black col-span-1 row-span-5	border-2">
         <nav>
@@ -14,6 +14,7 @@ function navBar(){
               <Link to="/database">Database</Link>
             </li>
           </ul>
+          <button onClick={logState}>LOG STATE</button>
         </nav>        
       </div>
       )
