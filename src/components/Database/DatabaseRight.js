@@ -1,10 +1,7 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 // 
-function MainRight({army}){
+function DatabaseRight({army}){
   //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
-  console.log(army)
-  let units = [];
-  let totalArmyCost = 0;
 
 
 
@@ -26,4 +23,4 @@ function MainRight({army}){
       )
 }
 
-export default MainRight;
+export default DatabaseRight;

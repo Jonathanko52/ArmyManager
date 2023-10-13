@@ -2,14 +2,13 @@ import NavigationBar from "./components/navigationBar.js"
 import MainPage from './components/MainPage/MainPage.js'
 import Database from './components/Database/DatabasePage.js'
 import Header from './components/Header.js'
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
 
   const [army, setArmy] = useState({units:[]});
-  const [addedUnit, setAddedUnit] = useState({});
   const [] = useState();
 
 
@@ -25,8 +24,6 @@ function App() {
   //delete unit from army:{id:number}
 
   const addUnitToArmy = (newUnit) =>{
-    let newArmy = Object.assign(army)
-    // newArmy.units.assign(newArmy.units, newUnit)
     setArmy({...army, units:[...army.units, newUnit]})
   }
 
@@ -51,7 +48,14 @@ function App() {
       setArmy({units:[]})
     }
   }
+
+  const loadFromDatabase = () =>{
+
+  }
   
+  const saveToDatabase = () => {
+    
+  }
 
   //save army: local storage id
   //load army: local storage id
