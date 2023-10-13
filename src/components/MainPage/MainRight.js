@@ -1,8 +1,14 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import UnitRow from './UnitRow.js'
 
 function MainRight({army, saveArmyToLocal, loadArmyFromLocal, clearCurrentArmy}){
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
+    const [armyName, setArmyName] = useState('');
+    const [faction, setFaction] = useState('');
+
+
+
+
   let units = [];
   let totalArmyCost = 0;
     army.units.forEach(cur=>{
@@ -19,7 +25,7 @@ function MainRight({army, saveArmyToLocal, loadArmyFromLocal, clearCurrentArmy})
         <div className="font-bold underline border-black col-span-8 row-span-5 border-2">
           <div className = "row-span-5 grid grid grid-cols-9">
             <div className="p-4 col-span-3 row-span-5 border-black border-2">
-              <label>Army Name:</label>
+              <label>Army Name:</label><input type="text"></input>
             </div>
             <div className="p-4 col-span-3 row-span-5 border-black border-2">
               <label>Faction:</label>
