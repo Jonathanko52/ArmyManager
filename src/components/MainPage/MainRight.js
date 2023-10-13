@@ -6,7 +6,12 @@ function MainRight({army, saveArmyToLocal, loadArmyFromLocal, clearCurrentArmy})
     const [armyName, setArmyName] = useState('');
     const [faction, setFaction] = useState('');
 
-
+    const handleChangeName = (event) =>{
+      setArmyName(event.target.value)
+    }
+    const handleChangeFaction = (event) =>{
+      setFaction(event.target.value)
+    }    
 
 
   let units = [];
@@ -25,10 +30,10 @@ function MainRight({army, saveArmyToLocal, loadArmyFromLocal, clearCurrentArmy})
         <div className="font-bold underline border-black col-span-8 row-span-5 border-2">
           <div className = "row-span-5 grid grid grid-cols-9">
             <div className="p-4 col-span-3 row-span-5 border-black border-2">
-              <label>Army Name:</label><input type="text"></input>
+              <label>Army Name:</label><input type="text" onChange={handleChangeName}  value={armyName}></input>
             </div>
             <div className="p-4 col-span-3 row-span-5 border-black border-2">
-              <label>Faction:</label>
+              <label>Faction:</label><input type="text"  onChange={handleChangeFaction} value={faction}></input>
             </div>
             <div className="p-4 col-span-3 row-span-5 border-black border-2">
               <label>Total cost:{totalArmyCost}</label>
