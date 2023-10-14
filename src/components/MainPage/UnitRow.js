@@ -11,7 +11,7 @@ function UnitRow({unitName, modelCount, pointCost, unitSize, unitId, removeUnit}
 
           <button className="rounded-md p-1 m-1 bg-slate-50">Increase size</button>
           <button className="rounded-md p-1 m-1 bg-slate-50">Decrease Size</button>
-          <button className="rounded-md p-1 m-1 bg-slate-50" onClick={removeUnit(unitId)}>Remove</button>
+          <button className="rounded-md p-1 m-1 bg-slate-50" onClick={()=>{removeUnit(unitId)}}>Remove</button>
         </div>
       )
 }

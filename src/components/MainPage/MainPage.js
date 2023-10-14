@@ -10,13 +10,13 @@ function MainPage(){
   const [army, setArmy] = useState({units:[]});
   
   const addUnitToArmy = (newUnit) =>{
-    console.log("ADD")
     setArmy({...army, units:[...army.units, newUnit]})
   }
 
   const removeUnit = (unitId)=>{
     let newUnits = army.units.slice()
-    newUnits.filter(cur=>cur.unitId !== unitId)
+    console.log("ID", unitId)
+    newUnits = newUnits.filter(cur=>cur.unitId !== unitId)
     setArmy({...army, units:newUnits})
   }
 
