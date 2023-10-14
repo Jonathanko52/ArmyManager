@@ -7,7 +7,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
-
   const [army, setArmy] = useState({units:[]});
   const [] = useState();
 
@@ -94,7 +93,11 @@ function App() {
               loadArmyFromLocal={loadArmyFromLocal}
               clearCurrentArmy={clearCurrentArmy}
             />}/>
-          <Route path="/database" element={<Database />} />
+          <Route path="/database" element={
+            <Database 
+              saveToDatabase = {saveToDatabase}
+              loadFromDatabase = {loadFromDatabase}
+            />} />
         </ Routes>
       </div>
     </BrowserRouter>
