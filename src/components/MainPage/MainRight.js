@@ -1,7 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import UnitRow from './UnitRow.js'
 
-function MainRight({army, saveArmyToLocal, loadArmyFromLocal, clearCurrentArmy,changeArmyName,changeArmyFaction}){
+function MainRight({
+  army, 
+  saveArmyToLocal, 
+  loadArmyFromLocal, 
+  clearCurrentArmy,
+  changeArmyName,
+  changeArmyFaction,
+  removeUnit
+}){
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
 
     const [armyName, setArmyName] = useState('');
@@ -19,7 +27,14 @@ function MainRight({army, saveArmyToLocal, loadArmyFromLocal, clearCurrentArmy,c
   let units = [];
   let totalArmyCost = 0;
     army.units.forEach(cur=>{
-      units.push(<UnitRow unitName={cur.unitName} modelCount={cur.modelCount} pointCost={cur.pointCost} unitSize={cur.unitSize}/>)
+      units.push(<UnitRow 
+        unitName={cur.unitName} 
+        modelCount={cur.modelCount} 
+        pointCost={cur.pointCost} 
+        unitSize={cur.unitSize}
+        unitId={cur.unitId}
+        removeUnit={removeUnit}
+        />)
     })
     army.units.forEach(cur=>{
       totalArmyCost += cur.pointCost

@@ -10,12 +10,14 @@ function MainPage(){
   const [army, setArmy] = useState({units:[]});
   
   const addUnitToArmy = (newUnit) =>{
+    console.log("ADD")
     setArmy({...army, units:[...army.units, newUnit]})
   }
 
-  const removeUnit = (unitID)=>{
-
-    
+  const removeUnit = (unitId)=>{
+    let newUnits = army.units.slice()
+    newUnits.filter(cur=>cur.unitId !== unitId)
+    setArmy({...army, units:newUnits})
   }
 
   const changeArmyName = (armyName) => {
@@ -48,6 +50,9 @@ function MainPage(){
     }
   }
   
+  const logState =()=>{
+    console.log("ARMY", army)
+  }
   
   
   return (
@@ -60,7 +65,9 @@ function MainPage(){
             clearCurrentArmy={clearCurrentArmy}
             changeArmyName={changeArmyName}         
             changeArmyFaction={changeArmyFaction}
+            removeUnit={removeUnit}
           />
+          <button onClick={logState}>LOG STATE</button>
         </div>
       )
 }
