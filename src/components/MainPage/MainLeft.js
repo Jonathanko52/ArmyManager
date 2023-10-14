@@ -29,7 +29,7 @@ function MainLeft({addUnitToArmy}){
     }
     const handleSubmit = (event) =>{
       event.preventDefault()
-      let unitId = Math.floor(Math.random() * max)
+      let unitId = Math.random() * 100
       addUnitToArmy({unitName: unitName,modelCount: modelCount, pointCost: pointCost, unitSize:unitSize, unitId:unitId})
       setName('')
       setCount(0)
