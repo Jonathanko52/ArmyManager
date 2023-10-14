@@ -13,6 +13,7 @@ function MainLeft({addUnitToArmy}){
     const [modelCount, setCount] = useState(0);
     const [pointCost, setpointCost] = useState(0);
     const [unitSize, setUnitSize] = useState(0);
+    
 
     const handleChangeName = (event) =>{
       setName(event.target.value)
@@ -28,7 +29,8 @@ function MainLeft({addUnitToArmy}){
     }
     const handleSubmit = (event) =>{
       event.preventDefault()
-      addUnitToArmy({unitName: unitName,modelCount: modelCount, pointCost: pointCost, unitSize:unitSize})
+      let unitId = Math.floor(Math.random() * max)
+      addUnitToArmy({unitName: unitName,modelCount: modelCount, pointCost: pointCost, unitSize:unitSize, unitId:unitId})
       setName('')
       setCount(0)
       setpointCost(0)

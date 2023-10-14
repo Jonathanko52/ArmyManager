@@ -13,6 +13,11 @@ function MainPage(){
     setArmy({...army, units:[...army.units, newUnit]})
   }
 
+  const removeUnit = (unitID)=>{
+
+    
+  }
+
   const changeArmyName = (armyName) => {
     setArmy({...army,armyName:armyName})
   }
