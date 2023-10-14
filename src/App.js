@@ -33,6 +33,16 @@ function App() {
     setArmy({...army, units:[...army.units, newUnit]})
   }
 
+  const changeArmyName = (armyName) => {
+    setArmy({...army,armyName:armyName})
+
+  }
+
+  const changeArmyFaction = (armyFaction) =>{
+    setArmy({...army,faction:armyFaction})
+
+  }
+
   const saveArmyToLocal = () =>{
     let confirmed = window.confirm("Are you sure you want to save your army?")
     if(confirmed){
@@ -92,7 +102,10 @@ function App() {
               saveArmyToLocal={saveArmyToLocal} 
               loadArmyFromLocal={loadArmyFromLocal}
               clearCurrentArmy={clearCurrentArmy}
-            />}/>
+              changeArmyName={changeArmyName}         
+              changeArmyFaction={changeArmyFaction}
+            />
+          }/>
           <Route path="/database" element={
             <Database 
               saveToDatabase = {saveToDatabase}

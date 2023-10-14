@@ -1,18 +1,20 @@
 import React, {useEffect, useState} from 'react';
 import UnitRow from './UnitRow.js'
 
-function MainRight({army, saveArmyToLocal, loadArmyFromLocal, clearCurrentArmy}){
+function MainRight({army, saveArmyToLocal, loadArmyFromLocal, clearCurrentArmy,changeArmyName,changeArmyFaction}){
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
     const [armyName, setArmyName] = useState('');
     const [faction, setFaction] = useState('');
 
     const handleChangeName = (event) =>{
       setArmyName(event.target.value)
+      changeArmyName( armyName)       
     }
     const handleChangeFaction = (event) =>{
       setFaction(event.target.value)
-    }    
+      changeArmyFaction(faction)
 
+    }    
 
   let units = [];
   let totalArmyCost = 0;
