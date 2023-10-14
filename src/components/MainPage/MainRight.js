@@ -43,7 +43,11 @@ function MainRight({army, saveArmyToLocal, loadArmyFromLocal, clearCurrentArmy})
           <div>
             <button className = "rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" onClick={saveArmyToLocal}>Save Army</button>
             <button className = "rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" onClick={loadArmyFromLocal}>Load Army</button>
-            <button className = "rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" onClick={clearCurrentArmy}>Clear Army</button>
+            <button className = "rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" onClick={()=>{
+              clearCurrentArmy()
+              setArmyName('')
+              setFaction('')
+            }}>Clear Army</button>
           </div>
         </div>
       )
