@@ -29,19 +29,6 @@ function App() {
     setArmy(newArmy)
   }
 
-  const addUnitToArmy = (newUnit) =>{
-    setArmy({...army, units:[...army.units, newUnit]})
-  }
-
-  const changeArmyName = (armyName) => {
-    setArmy({...army,armyName:armyName})
-
-  }
-
-  const changeArmyFaction = (armyFaction) =>{
-    setArmy({...army,faction:armyFaction})
-
-  }
 
   const saveArmyToLocal = () =>{
     let confirmed = window.confirm("Are you sure you want to save your army?")
@@ -97,13 +84,7 @@ function App() {
         <Routes>
           <Route path="/" element={
             <MainPage 
-              addUnitToArmy={addUnitToArmy} 
-              army={army} 
-              saveArmyToLocal={saveArmyToLocal} 
-              loadArmyFromLocal={loadArmyFromLocal}
-              clearCurrentArmy={clearCurrentArmy}
-              changeArmyName={changeArmyName}         
-              changeArmyFaction={changeArmyFaction}
+
             />
           }/>
           <Route path="/database" element={
