@@ -52,6 +52,33 @@ function MainPage(){
     }
   }
   
+  const readyToStandby = () => {
+    
+  }
+
+  const readyToUnpainted = () => {
+    
+  }
+
+  const standbyToReady = () => {
+    
+  }
+
+  const standbyToUnpainted = () => {
+    
+  }
+
+  const unpaintedToReady = () => {
+    
+  }
+
+  const unpaintedToStandy = () => {
+    
+  }
+
+
+
+
   const logState =()=>{
     console.log("ARMY", army)
   }
