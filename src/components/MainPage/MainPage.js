@@ -52,35 +52,35 @@ function MainPage(){
     }
   }
   
-  const readyToStandby = () => {
-    setArmy
-    setArmyStandby
-  }
+  // const readyToStandby = () => {
+  //   setArmy
+  //   setArmyStandby
+  // }
 
-  const readyToUnpainted = () => {
-    setArmy
-    setArmyUnpainted
-  }
+  // const readyToUnpainted = () => {
+  //   setArmy
+  //   setArmyUnpainted
+  // }
 
-  const standbyToReady = () => {
-    setArmyStandby
-    setArmy
-  }
+  // const standbyToReady = () => {
+  //   setArmyStandby
+  //   setArmy
+  // }
 
-  const standbyToUnpainted = () => {
-    setArmyStandby
-    setArmyUnpainted
-  }
+  // const standbyToUnpainted = () => {
+  //   setArmyStandby
+  //   setArmyUnpainted
+  // }
 
-  const unpaintedToReady = () => {
-    setArmyUnpainted
-    setArmy
-  }
+  // const unpaintedToReady = () => {
+  //   setArmyUnpainted
+  //   setArmy
+  // }
 
-  const unpaintedToStandy = () => {
-    setArmyUnpainted
-    setArmyStandby
-  }
+  // const unpaintedToStandy = () => {
+  //   setArmyUnpainted
+  //   setArmyStandby
+  // }
 
 
 

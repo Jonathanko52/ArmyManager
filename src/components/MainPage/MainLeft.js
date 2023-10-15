@@ -49,7 +49,7 @@ function MainLeft({addUnitToArmy}){
     }
 
     return (
-        <div className="p-2 m-2 border-black col-span-4 row-span-5 border-1">
+        <div className="p-2 m-2 border-black col-span-2 row-span-5 border-1">
           <h3>Add unit</h3>
           <form onSubmit={handleSubmit}>
               <label>Name</label><br/><input id="MainLeftName" type="text" value={unitName} onChange={handleChangeName}></input><br/>
