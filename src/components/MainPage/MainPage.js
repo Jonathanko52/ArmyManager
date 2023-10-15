@@ -8,6 +8,8 @@ import React, {useState} from 'react';
 function MainPage(){
     
   const [army, setArmy] = useState({units:[]});
+  const [armyStandby, setArmyStandby] = useState({units:[]});
+  const [armyUnpainted, setArmyUnpainted] = useState({units:[]});
   
   const addUnitToArmy = (newUnit) =>{
     setArmy({...army, units:[...army.units, newUnit]})
