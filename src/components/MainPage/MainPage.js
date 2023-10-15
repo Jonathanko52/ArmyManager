@@ -53,27 +53,33 @@ function MainPage(){
   }
   
   const readyToStandby = () => {
-    
+    setArmy
+    setArmyStandby
   }
 
   const readyToUnpainted = () => {
-    
+    setArmy
+    setArmyUnpainted
   }
 
   const standbyToReady = () => {
-    
+    setArmyStandby
+    setArmy
   }
 
   const standbyToUnpainted = () => {
-    
+    setArmyStandby
+    setArmyUnpainted
   }
 
   const unpaintedToReady = () => {
-    
+    setArmyUnpainted
+    setArmy
   }
 
   const unpaintedToStandy = () => {
-    
+    setArmyUnpainted
+    setArmyStandby
   }
 
 
