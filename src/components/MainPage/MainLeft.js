@@ -13,7 +13,8 @@ function MainLeft({addUnitToArmy}){
     const [modelCount, setCount] = useState(0);
     const [pointCost, setpointCost] = useState(0);
     const [unitSize, setUnitSize] = useState(0);
-    
+    const [moneyCost, setMoneyCost] = useState(0);
+
 
     const handleChangeName = (event) =>{
       setName(event.target.value)
@@ -27,6 +28,9 @@ function MainLeft({addUnitToArmy}){
     const handleChangeUnitSizes = (event) =>{
       setUnitSize(+event.target.value)
     }
+    const handleChangeMoneyCost = (event) =>{
+      setMoneyCost(+event.target.value)
+    }
     const handleSubmit = (event) =>{
       event.preventDefault()
       let unitId = parseInt(Math.random() * 1000)
@@ -35,6 +39,7 @@ function MainLeft({addUnitToArmy}){
         modelCount: modelCount, 
         pointCost: pointCost, 
         unitSize:unitSize, 
+        moneyCost: moneyCost,
         unitId:unitId
       })
       setName('')
@@ -51,6 +56,7 @@ function MainLeft({addUnitToArmy}){
               <label>Model Count</label><br/><input id="MainLeftModel" type="number" value={modelCount} onChange={handleChangeModelCount}></input><br/>
               <label>Point Cost</label><br/><input id="MainLeftPoint" type="number" value={pointCost} onChange={handleChangePointCost}></input><br/>
               <label>Unit sizes</label><br/><input id="MainLeftSizes" type="number" value={unitSize} onChange={handleChangeUnitSizes}></input><br/>
+              <label>Money Cost</label><br/><input id="MainLeftSizes" type="number" value={unitSize} onChange={handleChangeMoneyCost}></input><br/>
               <input className = "rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit"></input>
           </form>
         </div>

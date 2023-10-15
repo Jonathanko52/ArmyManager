@@ -8,7 +8,7 @@ function MainRight({
   clearCurrentArmy,
   changeArmyName,
   changeArmyFaction,
-  removeUnit
+  removeUnit,
 }){
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
 
@@ -26,6 +26,7 @@ function MainRight({
 
   let units = [];
   let totalArmyCost = 0;
+  let totalArmyMoneyCost = 0;
     army.units.forEach(cur=>{
       units.push(<UnitRow 
         unitName={cur.unitName} 
@@ -38,6 +39,7 @@ function MainRight({
     })
     army.units.forEach(cur=>{
       totalArmyCost += cur.pointCost
+      totalArmyMoneyCost += cur.moneyCost
     })
 
 
@@ -53,7 +55,10 @@ function MainRight({
               <label>Faction:</label><input type="text"  onChange={handleChangeFaction} value={faction}></input>
             </div>
             <div className="p-4 col-span-3 row-span-5 border-black border-2">
-              <label>Total cost:{totalArmyCost}</label>
+              <label>Total cost in points:{totalArmyCost}</label>
+            </div>
+            <div className="p-4 col-span-3 row-span-5 border-black border-2">
+              <label>Total cost in money:{totalArmyMoneyCost}</label>
             </div>
           </div>
           {units}
