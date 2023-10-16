@@ -24,8 +24,8 @@ function ArmyColumn({army, removeUnit}){
 
 
     return (
-        <div className="border-white">
-          <div className="ARMYCOLUMN ">
+        <div className="border-white col-span-1">
+          <div className="ARMYCOLUMN">
             <div className="ARMYHEADER">
               <div className="p-4 ">
                 <label>Total cost in points:{totalArmyCost}</label>

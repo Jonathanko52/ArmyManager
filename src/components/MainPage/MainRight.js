@@ -62,7 +62,7 @@ function MainRight({
                 <label>Total cost in money:{totalArmyMoneyCost}</label>
               </div>
             </div>
-            <div className="ARMYCOLUMNS p-4 m-4 border-black border-2  grid grid-cols-4 col-span-3 row-span-6">
+            <div className="ARMYCOLUMNS p-4 m-4 border-black border-2  grid grid-cols-3 col-span-3 row-span-6">
               <ArmyColumns army={army}/>
               <ArmyColumns army={army}/>
               <ArmyColumns army={army}/>
