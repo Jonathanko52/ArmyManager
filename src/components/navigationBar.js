@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function navBar({logState}){
     return (
-      <div className="font-bold underline border-black col-span-1 row-span-5	border-2">
+      <div className="font-bold underline border-black col-span-1 row-span-6	border-2">
         <nav>
           <ul>
             <li>

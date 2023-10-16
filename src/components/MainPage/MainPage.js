@@ -91,7 +91,7 @@ function MainPage(){
   
   
   return (
-        <div className="font-bold underline border-black col-span-10 grid grid-cols-12 border-2">
+        <div className="font-bold underline border-black col-span-10 grid grid-cols-12 border-2 row-span-6">
           <MainLeft addUnitToArmy={addUnitToArmy}/>
           <MainRight 
             army={army} 
