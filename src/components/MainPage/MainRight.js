@@ -3,7 +3,7 @@ import UnitRow from './UnitRow.js'
 import ArmyColumns from './ArmyColumns.js'
 
 function MainRight({
-  army, 
+  armyReady, 
   armyStandby,
   armyUnpainted,
   saveArmyToLocal, 
@@ -11,12 +11,35 @@ function MainRight({
   clearCurrentArmy,
   changeArmyName,
   changeArmyFaction,
+  readyToStandby,
   removeUnit,
 }){
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
 
     const [armyName, setArmyName] = useState('');
     const [faction, setFaction] = useState('');
+
+
+
+  let units = [];
+  let totalArmyCost = 0;
+  let totalArmyMoneyCost = 0;
+  useEffect(()=>{
+    armyReady.units.forEach(cur=>{
+        units.push(<UnitRow 
+          unitName={cur.unitName} 
+          modelCount={cur.modelCount} 
+          pointCost={cur.pointCost} 
+          unitSize={cur.unitSize}
+          unitId={cur.unitId}
+          removeUnit={removeUnit}
+          />)
+      })
+      armyReady.units .forEach(cur=>{
+        totalArmyCost += cur.pointCost
+        totalArmyMoneyCost += cur.moneyCost
+      })
+    },[armyReady,armyStandby,armyUnpainted])
 
     const handleChangeName = (event) =>{
       setArmyName(event.target.value)
@@ -26,27 +49,6 @@ function MainRight({
       setFaction(event.target.value)
       changeArmyFaction(faction)
     }    
-
-  let units = [];
-  let totalArmyCost = 0;
-  let totalArmyMoneyCost = 0;
-    army.units.forEach(cur=>{
-      units.push(<UnitRow 
-        unitName={cur.unitName} 
-        modelCount={cur.modelCount} 
-        pointCost={cur.pointCost} 
-        unitSize={cur.unitSize}
-        unitId={cur.unitId}
-        removeUnit={removeUnit}
-        />)
-    })
-    army.units.forEach(cur=>{
-      totalArmyCost += cur.pointCost
-      totalArmyMoneyCost += cur.moneyCost
-    })
-
-
-
 
     return (
         <div className="border-black col-span-10 border-2 grid grid-cols-3 grid-rows-5">
@@ -65,7 +67,7 @@ function MainRight({
               </div>
             </div>
             <div className="ARMYCOLUMNS p-4 m-4 border-black border-2  grid grid-cols-3 col-span-3 row-span-6">
-              <ArmyColumns army={army}/>
+              <ArmyColumns army={armyReady} readyToStandby={readyToStandby}/>
               <ArmyColumns army={armyStandby}/>
               <ArmyColumns army={armyUnpainted}/>
             </div>

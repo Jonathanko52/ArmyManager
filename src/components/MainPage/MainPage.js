@@ -7,33 +7,32 @@ import React, {useState} from 'react';
 
 function MainPage(){
     
-  const [army, setArmy] = useState({units:[]});
+  const [armyReady, setArmyReady] = useState({units:[]});
   const [armyStandby, setArmyStandby] = useState({units:[]});
   const [armyUnpainted, setArmyUnpainted] = useState({units:[]});
   
   const addUnitToArmy = (newUnit) =>{
-    setArmy({...army, units:[...army.units, newUnit]})
+    setArmyReady({...armyReady, units:[...armyReady.units, newUnit]})
   }
 
   const removeUnit = (unitId)=>{
-    let newUnits = army.units.slice()
-    console.log("ID", unitId)
+    let newUnits = armyReady.units.slice()
     newUnits = newUnits.filter(cur=>cur.unitId !== unitId)
-    setArmy({...army, units:newUnits})
+    setArmyReady({...armyReady, units:newUnits})
   }
 
   const changeArmyName = (armyName) => {
-    setArmy({...army,armyName:armyName})
+    setArmyReady({...armyReady,armyName:armyName})
   }
 
   const changeArmyFaction = (armyFaction) =>{
-    setArmy({...army,faction:armyFaction})
+    setArmyReady({...armyReady,faction:armyFaction})
   }
 
   const saveArmyToLocal = () =>{
     let confirmed = window.confirm("Are you sure you want to save your army?")
     if(confirmed){
-      localStorage.setItem("warHammerArmy", JSON.stringify(army));
+      localStorage.setItem("warHammerArmy", JSON.stringify(armyReady));
     }
   }
 
@@ -41,14 +40,14 @@ function MainPage(){
     let confirmed = window.confirm("Are you sure you want to load your army?")
     if(confirmed){
       let testArmy = localStorage.getItem("warHammerArmy");
-      setArmy(JSON.parse(testArmy))
+      setArmyReady(JSON.parse(testArmy))
     }
   }
 
   const clearCurrentArmy = () => {
     let confirmed = window.confirm("Are you sure you want to delete the current army?")
     if(confirmed){
-      setArmy({units:[]})
+      setArmyReady({units:[]})
     }
   }
   
@@ -56,19 +55,45 @@ function MainPage(){
   //   setArmy({...army, units:[...army.units, newUnit]})
   // }
 
-  // const readyToStandby = () => {
-  //   setArmy
-  //   setArmyStandby
+  // const removeUnit = (unitId)=>{
+  //   let newUnits = army.units.slice()
+  //   console.log("ID", unitId)
+  //   newUnits = newUnits.filter(cur=>cur.unitId !== unitId)
+  //   setArmy({...army, units:newUnits})
   // }
 
+  const readyToStandby = (unitId) => {
+    let newReadyUnits = armyReady.units.slice()
+    let unitToBeMoved 
+    
+    // newReadyUnits.forEach((cur)=>{
+
+    // })
+
+    newReadyUnits = newReadyUnits.filter((cur)=>{
+      if(cur.unitId === unitId){
+        unitToBeMoved = cur
+      }
+      return cur.unitId !== unitId
+    })
+
+    console.log("NEW READY UNITS", newReadyUnits)
+    console.log("NEW READY UNITS", armyStandby.units, unitToBeMoved)
+
+    setArmyReady({...armyReady, units:[...newReadyUnits]})
+    setArmyStandby({...armyStandby, units:[...armyStandby.units, unitToBeMoved]})
+  }
+
+
+
   // const readyToUnpainted = () => {
-  //   setArmy
+  //   setArmyReady
   //   setArmyUnpainted
   // }
 
   // const standbyToReady = () => {
   //   setArmyStandby
-  //   setArmy
+  //   setArmyReady
   // }
 
   // const standbyToUnpainted = () => {
@@ -78,7 +103,7 @@ function MainPage(){
 
   // const unpaintedToReady = () => {
   //   setArmyUnpainted
-  //   setArmy
+  //   setArmyReady
   // }
 
   // const unpaintedToStandy = () => {
@@ -90,7 +115,7 @@ function MainPage(){
 
 
   const logState =()=>{
-    console.log("ARMY", army)
+    console.log("ARMY", armyReady)
   }
   
   
@@ -98,7 +123,7 @@ function MainPage(){
         <div className="font-bold underline border-black col-span-10 grid grid-cols-12 border-2 row-span-6">
           <MainLeft addUnitToArmy={addUnitToArmy}/>
           <MainRight 
-            army={army} 
+            armyReady={armyReady}
             armyStandby={armyStandby}
             armyUnpainted={armyUnpainted}
             saveArmyToLocal={saveArmyToLocal} 
@@ -106,6 +131,7 @@ function MainPage(){
             clearCurrentArmy={clearCurrentArmy}
             changeArmyName={changeArmyName}         
             changeArmyFaction={changeArmyFaction}
+            readyToStandby={readyToStandby}
             removeUnit={removeUnit}
           />
           <button onClick={logState}>LOG STATE</button>

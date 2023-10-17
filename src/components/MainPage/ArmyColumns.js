@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import UnitRow from './UnitRow.js'
 
-function ArmyColumn({army, removeUnit}){
+function ArmyColumn({army, removeUnit,readyToStandby}){
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
 
   let units = [];
@@ -14,6 +14,7 @@ function ArmyColumn({army, removeUnit}){
         unitSize={cur.unitSize}
         unitId={cur.unitId}
         removeUnit={removeUnit}
+        readyToStandby={readyToStandby}
         />)
     })
     army.units.forEach(cur=>{
@@ -38,6 +39,7 @@ function ArmyColumn({army, removeUnit}){
               <button className="rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" onClick={()=>{
 
               }}>Clear Army</button>
+              
             </div>
           </div>
 
