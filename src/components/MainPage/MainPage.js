@@ -109,6 +109,9 @@ function MainPage(){
 
   const logState =()=>{
     console.log("ARMY", armyReady)
+    console.log("ARMY", armyStandby)
+    console.log("ARMY", armyUnpainted)
+
   }
   
   
