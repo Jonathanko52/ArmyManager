@@ -43,10 +43,10 @@ function ArmyColumn({
               {units}
             </div>
             <div className="p-4 ">
-              <button className="rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" onClick={()=>{
-
-              }}>Clear Army</button>
-              
+              <button className="rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" 
+              onClick={buttonOne}>{buttonOneText}</button>
+              <button className="rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" 
+              onClick={buttonTwo}>{buttonTwoText}</button>
             </div>
           </div>
 
