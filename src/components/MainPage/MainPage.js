@@ -52,6 +52,10 @@ function MainPage(){
     }
   }
   
+  // const addUnitToArmy = (newUnit) =>{
+  //   setArmy({...army, units:[...army.units, newUnit]})
+  // }
+
   // const readyToStandby = () => {
   //   setArmy
   //   setArmyStandby
@@ -95,6 +99,8 @@ function MainPage(){
           <MainLeft addUnitToArmy={addUnitToArmy}/>
           <MainRight 
             army={army} 
+            armyStandby={armyStandby}
+            armyUnpainted={armyUnpainted}
             saveArmyToLocal={saveArmyToLocal} 
             loadArmyFromLocal={loadArmyFromLocal} 
             clearCurrentArmy={clearCurrentArmy}

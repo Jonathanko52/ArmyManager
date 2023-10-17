@@ -4,6 +4,8 @@ import ArmyColumns from './ArmyColumns.js'
 
 function MainRight({
   army, 
+  armyStandby,
+  armyUnpainted,
   saveArmyToLocal, 
   loadArmyFromLocal, 
   clearCurrentArmy,
@@ -64,8 +66,8 @@ function MainRight({
             </div>
             <div className="ARMYCOLUMNS p-4 m-4 border-black border-2  grid grid-cols-3 col-span-3 row-span-6">
               <ArmyColumns army={army}/>
-              <ArmyColumns army={army}/>
-              <ArmyColumns army={army}/>
+              <ArmyColumns army={armyStandby}/>
+              <ArmyColumns army={armyUnpainted}/>
             </div>
             <div className="ARMYBUTTONS p-4 m-4 border-black border-2  grid grid-cols-4 col-span-3 row-span-6">
               <button className = "rounded-md p-2 m-2 bg-slate-50" type="submit" value="Add Unit" onClick={saveArmyToLocal}>Save Army</button>
