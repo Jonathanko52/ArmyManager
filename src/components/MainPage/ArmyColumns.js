@@ -1,7 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import UnitRow from './UnitRow.js'
 
-function ArmyColumn({army, removeUnit,readyToStandby}){
+function ArmyColumn({
+  columnName,
+  army,
+  buttonOne,
+  buttonOneText,
+  buttonTwo,
+  buttonTwoText,
+}){
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
 
   let units = [];
@@ -46,5 +53,8 @@ function ArmyColumn({army, removeUnit,readyToStandby}){
         </div>
       )
 }
+
+
+
 
 export default ArmyColumn;
