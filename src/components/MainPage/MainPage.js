@@ -65,10 +65,6 @@ function MainPage(){
   const readyToStandby = (unitId) => {
     let newReadyUnits = armyReady.units.slice()
     let unitToBeMoved 
-    
-    // newReadyUnits.forEach((cur)=>{
-
-    // })
 
     newReadyUnits = newReadyUnits.filter((cur)=>{
       if(cur.unitId === unitId){
@@ -76,9 +72,6 @@ function MainPage(){
       }
       return cur.unitId !== unitId
     })
-
-    console.log("NEW READY UNITS", newReadyUnits)
-    console.log("NEW READY UNITS", armyStandby.units, unitToBeMoved)
 
     setArmyReady({...armyReady, units:[...newReadyUnits]})
     setArmyStandby({...armyStandby, units:[...armyStandby.units, unitToBeMoved]})

@@ -67,7 +67,13 @@ function MainRight({
               </div>
             </div>
             <div className="ARMYCOLUMNS p-4 m-4 border-black border-2  grid grid-cols-3 col-span-3 row-span-6">
-              <ArmyColumns army={armyReady} readyToStandby={readyToStandby}/>
+              <ArmyColumns 
+                army={armyReady} 
+                buttonOne={readyToStandby} 
+                buttonOneText={}
+                buttonTwo={}
+                buttonTwoText={}
+                />
               <ArmyColumns army={armyStandby}/>
               <ArmyColumns army={armyUnpainted}/>
             </div>
