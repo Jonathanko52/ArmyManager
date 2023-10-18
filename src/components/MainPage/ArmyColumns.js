@@ -8,6 +8,7 @@ function ArmyColumn({
   buttonOneText,
   buttonTwo,
   buttonTwoText,
+  remove
 }){
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
 
@@ -27,7 +28,7 @@ function ArmyColumn({
         buttonOneText={buttonOneText}
         buttonTwo={buttonTwo}
         buttonTwoText={buttonTwoText}
-
+        remove={remove}
         />)
     })
     army.forEach(cur=>{

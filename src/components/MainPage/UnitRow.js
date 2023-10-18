@@ -3,8 +3,9 @@ import React from 'react';
 function UnitRow({unitName, modelCount, pointCost, unitSize, unitId,   buttonOne,
   buttonOneText,
   buttonTwo,
-  buttonTwoText,}){
-      console.log("UNITROW")
+  buttonTwoText,
+  remove
+}){
 
     return (
         <div className="font-bold underline border-black col-span-8 row-span-5 border-2 p-4">
@@ -21,6 +22,8 @@ function UnitRow({unitName, modelCount, pointCost, unitSize, unitId,   buttonOne
               onClick={()=>{buttonOne(unitId)}}>{buttonOneText}</button>
               <button className="rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" 
               onClick={()=>{buttonTwo(unitId)}}>{buttonTwoText}</button>
+              <button className="rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" 
+              onClick={()=>{remove(unitId)}}>{buttonTwoText}</button>
             </div>
         </div>
       )
