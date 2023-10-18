@@ -13,19 +13,24 @@ function ArmyColumn({
 
   let units = [];
   let totalArmyCost = 0;
+  console.log("ARMY", army)
   useEffect(()=>{
-    army.units.forEach(cur=>{
+    army.forEach(cur=>{
       units.push(<UnitRow 
         unitName={cur.unitName} 
         modelCount={cur.modelCount} 
         pointCost={cur.pointCost} 
         unitSize={cur.unitSize}
         unitId={cur.unitId}
-        removeUnit={removeUnit}
-        readyToStandby={readyToStandby}
+        buttonOne={buttonOne}
+        buttonOneText={buttonOneText}
+        buttonTwo={buttonTwo}
+        buttonTwoText={buttonTwoText}
+        // removeUnit={removeUnit}
+        // readyToStandby={readyToStandby}
         />)
     })
-    army.units.forEach(cur=>{
+    army.forEach(cur=>{
       totalArmyCost += cur.pointCost
     })
   },[army])
@@ -44,12 +49,7 @@ function ArmyColumn({
             <div className="UNITS CONTAINER">
               {units}
             </div>
-            <div className="p-4 ">
-              <button className="rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" 
-              onClick={buttonOne}>{buttonOneText}</button>
-              <button className="rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" 
-              onClick={buttonTwo}>{buttonTwoText}</button>
-            </div>
+
           </div>
 
         </div>

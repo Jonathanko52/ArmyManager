@@ -51,16 +51,6 @@ function MainPage(){
     }
   }
   
-  // const addUnitToArmy = (newUnit) =>{
-  //   setArmy({...army, units:[...army.units, newUnit]})
-  // }
-
-  // const removeUnit = (unitId)=>{
-  //   let newUnits = army.units.slice()
-  //   console.log("ID", unitId)
-  //   newUnits = newUnits.filter(cur=>cur.unitId !== unitId)
-  //   setArmy({...army, units:newUnits})
-  // }
 
   const readyToStandby = (unitId) => {
     let newReadyUnits = armyReady.units.slice()
@@ -166,9 +156,9 @@ function MainPage(){
 
 
   const logState =()=>{
-    console.log("ARMY", armyReady)
-    console.log("ARMY", armyStandby)
-    console.log("ARMY", armyUnpainted)
+    console.log("READY", armyReady)
+    console.log("STANDBY", armyStandby)
+    console.log("UNPAINTED", armyUnpainted)
 
   }
   
@@ -177,9 +167,9 @@ function MainPage(){
         <div className="font-bold underline border-black col-span-10 grid grid-cols-12 border-2 row-span-6">
           <MainLeft addUnitToArmy={addUnitToArmy}/>
           <MainRight 
-            armyReady={armyReady}
-            armyStandby={armyStandby}
-            armyUnpainted={armyUnpainted}
+            armyReady={armyReady.units}
+            armyStandby={armyStandby.units}
+            armyUnpainted={armyUnpainted.units}
             saveArmyToLocal={saveArmyToLocal} 
             loadArmyFromLocal={loadArmyFromLocal} 
             clearCurrentArmy={clearCurrentArmy}

@@ -29,7 +29,8 @@ function MainRight({
   let totalArmyCost = 0;
   let totalArmyMoneyCost = 0;
   useEffect(()=>{
-    armyReady.units.forEach(cur=>{
+    console.log("MAIN RIGHT USEEFFECT UPDATING")
+    armyReady.forEach(cur=>{
         units.push(<UnitRow 
           unitName={cur.unitName} 
           modelCount={cur.modelCount} 
@@ -38,7 +39,7 @@ function MainRight({
           unitId={cur.unitId}
           />)
       })
-      armyReady.units .forEach(cur=>{
+      armyReady.forEach(cur=>{
         totalArmyCost += cur.pointCost
         totalArmyMoneyCost += cur.moneyCost
       })
