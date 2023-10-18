@@ -79,10 +79,22 @@ function MainPage(){
 
 
 
-  // const readyToUnpainted = () => {
-  //   setArmyReady
-  //   setArmyUnpainted
-  // }
+  const readyToUnpainted = () => {
+
+    let newReadyUnits = armyReady.units.slice()
+    let unitToBeMoved 
+
+    newReadyUnits = newReadyUnits.filter((cur)=>{
+      if(cur.unitId === unitId){
+        unitToBeMoved = cur
+      }
+      return cur.unitId !== unitId
+    })
+
+    setArmyReady({...armyReady, units:[...newReadyUnits]})
+    setArmyUnpainted({...armyUnpainted, units:[...armyStandby.units, unitToBeMoved]})
+
+  }
 
   // const standbyToReady = () => {
   //   setArmyStandby
