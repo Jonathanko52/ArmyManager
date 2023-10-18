@@ -32,7 +32,6 @@ function MainRight({
   let totalArmyCost = 0;
   let totalArmyMoneyCost = 0;
   useEffect(()=>{
-    console.log("MAIN RIGHT USEEFFECT UPDATING")
     armyReady.forEach(cur=>{
         units.push(<UnitRow 
           unitName={cur.unitName} 

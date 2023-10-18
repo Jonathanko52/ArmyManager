@@ -15,10 +15,22 @@ function MainPage(){
     setArmyReady({...armyReady, units:[...armyReady.units, newUnit]})
   }
 
-  const removeUnit = (unitId)=>{
+  const removeUnitFromReady = (unitId)=>{
     let newUnits = armyReady.units.slice()
     newUnits = newUnits.filter(cur=>cur.unitId !== unitId)
     setArmyReady({...armyReady, units:newUnits})
+  }
+
+  const removeUnitFromStandby = (unitId)=>{
+    let newUnits = armyStandby.units.slice()
+    newUnits = newUnits.filter(cur=>cur.unitId !== unitId)
+    setArmyStandby({...armyStandby, units:newUnits})
+  }
+
+  const removeUnitFromUnpainted = (unitId)=>{
+    let newUnits = armyUnpainted.units.slice()
+    newUnits = newUnits.filter(cur=>cur.unitId !== unitId)
+    setArmyUnpainted({...armyUnpainted, units:newUnits})
   }
 
   const changeArmyName = (armyName) => {
@@ -186,6 +198,9 @@ function MainPage(){
             standbyToUnpainted={standbyToUnpainted}
             unpaintedToReady={unpaintedToReady}
             unpaintedToStandy={unpaintedToStandy}
+            removeUnitFromUnpainted={removeUnitFromUnpainted}
+            removeUnitFromStandby={removeUnitFromStandby}
+            removeUnitFromReady={removeUnitFromReady}
           />
           <button onClick={logState}>LOG STATE</button>
         </div>

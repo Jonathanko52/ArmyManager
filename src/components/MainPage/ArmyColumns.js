@@ -11,13 +11,10 @@ function ArmyColumn({
   remove
 }){
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
-
   let units = [];
   let totalArmyCost = 0;
-  console.log("ARMY ", columnName,army)
   // useEffect(()=>{
     army.forEach(cur=>{
-
       units.push(<UnitRow 
         unitName={cur.unitName} 
         modelCount={cur.modelCount} 
