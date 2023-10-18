@@ -79,7 +79,7 @@ function MainPage(){
 
 
 
-  const readyToUnpainted = () => {
+  const readyToUnpainted = (unitId) => {
 
     let newReadyUnits = armyReady.units.slice()
     let unitToBeMoved 
@@ -92,29 +92,75 @@ function MainPage(){
     })
 
     setArmyReady({...armyReady, units:[...newReadyUnits]})
-    setArmyUnpainted({...armyUnpainted, units:[...armyStandby.units, unitToBeMoved]})
+    setArmyUnpainted({...armyUnpainted, units:[...armyUnpainted.units, unitToBeMoved]})
 
   }
 
-  // const standbyToReady = () => {
-  //   setArmyStandby
-  //   setArmyReady
-  // }
+  const standbyToReady = (unitId) => {
 
-  // const standbyToUnpainted = () => {
-  //   setArmyStandby
-  //   setArmyUnpainted
-  // }
+    let newStandbyUnits = armyStandby.units.slice()
+    let unitToBeMoved 
 
-  // const unpaintedToReady = () => {
-  //   setArmyUnpainted
-  //   setArmyReady
-  // }
+    newStandbyUnits = newStandbyUnits.filter((cur)=>{
+      if(cur.unitId === unitId){
+        unitToBeMoved = cur
+      }
+      return cur.unitId !== unitId
+    })
 
-  // const unpaintedToStandy = () => {
-  //   setArmyUnpainted
-  //   setArmyStandby
-  // }
+    setArmyStandby({...armyStandby, units:[...newStandbyUnits]})
+    setArmyReady({...armyReady, units:[...armyReady.units, unitToBeMoved]})
+
+  }
+
+  const standbyToUnpainted = (unitId) => {
+
+    let newStandbyUnits = armyStandby.units.slice()
+    let unitToBeMoved 
+
+    newStandbyUnits = newStandbyUnits.filter((cur)=>{
+      if(cur.unitId === unitId){
+        unitToBeMoved = cur
+      }
+      return cur.unitId !== unitId
+    })
+
+    setArmyStandby({...armyStandby, units:[...newStandbyUnits]})
+    setArmyUnpainted({...armyUnpainted, units:[...armyUnpainted.units, unitToBeMoved]})
+
+  }
+
+  const unpaintedToReady = (unitId) => {
+
+    let newUnpaintedUnits = armyUnpainted.units.slice()
+    let unitToBeMoved 
+
+    newUnpaintedUnits = newUnpaintedUnits.filter((cur)=>{
+      if(cur.unitId === unitId){
+        unitToBeMoved = cur
+      }
+      return cur.unitId !== unitId
+    })
+
+    setArmyUnpainted({...armyUnpainted, units:[...newUnpaintedUnits]})
+    setArmyReady({...armyReady, units:[...armyReady.units, unitToBeMoved]})
+  }
+
+  const unpaintedToStandy = (unitId) => {
+
+    let newUnpaintedUnits = armyUnpainted.units.slice()
+    let unitToBeMoved 
+
+    newUnpaintedUnits = newUnpaintedUnits.filter((cur)=>{
+      if(cur.unitId === unitId){
+        unitToBeMoved = cur
+      }
+      return cur.unitId !== unitId
+    })
+
+    setArmyUnpainted({...armyUnpainted, units:[...newUnpaintedUnits]})
+    setArmyStandby({...armyStandby, units:[...armyStandby.units, unitToBeMoved]})
+  }
 
 
 
@@ -140,6 +186,11 @@ function MainPage(){
             changeArmyName={changeArmyName}         
             changeArmyFaction={changeArmyFaction}
             readyToStandby={readyToStandby}
+            readyToUnpainted={readyToUnpainted}
+            standbyToReady={standbyToReady}
+            standbyToUnpainted={standbyToUnpainted}
+            unpaintedToReady={unpaintedToReady}
+            unpaintedToStandy={unpaintedToStandy}
             removeUnit={removeUnit}
           />
           <button onClick={logState}>LOG STATE</button>
