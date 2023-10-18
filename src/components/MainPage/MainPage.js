@@ -56,12 +56,17 @@ function MainPage(){
     let newReadyUnits = armyReady.units.slice()
     let unitToBeMoved 
 
+
+
     newReadyUnits = newReadyUnits.filter((cur)=>{
+      console.log(cur, unitId)
       if(cur.unitId === unitId){
         unitToBeMoved = cur
       }
       return cur.unitId !== unitId
     })
+
+    console.log("UNIT TO BE MOVED", unitToBeMoved )
 
     setArmyReady({...armyReady, units:[...newReadyUnits]})
     setArmyStandby({...armyStandby, units:[...armyStandby.units, unitToBeMoved]})

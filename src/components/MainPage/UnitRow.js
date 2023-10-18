@@ -4,6 +4,8 @@ function UnitRow({unitName, modelCount, pointCost, unitSize, unitId,   buttonOne
   buttonOneText,
   buttonTwo,
   buttonTwoText,}){
+      console.log("UNITROW")
+
     return (
         <div className="font-bold underline border-black col-span-8 row-span-5 border-2 p-4">
           <label className="m-8 p-4" >Unit Name:{unitName}</label>
@@ -16,9 +18,9 @@ function UnitRow({unitName, modelCount, pointCost, unitSize, unitId,   buttonOne
           <button className="rounded-md p-1 m-1 bg-slate-50">Decrease Size</button>
           <div className="p-4 ">
               <button className="rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" 
-              onClick={buttonOne}>{buttonOneText}</button>
+              onClick={()=>{buttonOne(unitId)}}>{buttonOneText}</button>
               <button className="rounded-md p-2 mt-2 bg-slate-50" type="submit" value="Add Unit" 
-              onClick={buttonTwo}>{buttonTwoText}</button>
+              onClick={()=>{buttonTwo(unitId)}}>{buttonTwoText}</button>
             </div>
         </div>
       )
