@@ -12,7 +12,11 @@ function MainRight({
   changeArmyName,
   changeArmyFaction,
   readyToStandby,
-  removeUnit,
+  readyToUnpainted,
+  standbyToReady,
+  standbyToUnpainted,
+  unpaintedToReady,
+  unpaintedToStandy,
 }){
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
 
@@ -32,7 +36,6 @@ function MainRight({
           pointCost={cur.pointCost} 
           unitSize={cur.unitSize}
           unitId={cur.unitId}
-          removeUnit={removeUnit}
           />)
       })
       armyReady.units .forEach(cur=>{

@@ -191,7 +191,6 @@ function MainPage(){
             standbyToUnpainted={standbyToUnpainted}
             unpaintedToReady={unpaintedToReady}
             unpaintedToStandy={unpaintedToStandy}
-            removeUnit={removeUnit}
           />
           <button onClick={logState}>LOG STATE</button>
         </div>
