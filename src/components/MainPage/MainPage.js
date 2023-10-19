@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 
 
 
-function MainPage(){
+function MainPage({armyApp,setArmyApp}){
     
   const [armyReady, setArmyReady] = useState({units:[]});
   const [armyStandby, setArmyStandby] = useState({units:[]});
@@ -59,6 +59,11 @@ function MainPage(){
       setArmyStandby(testArmy.armyStandby)
       setArmyUnpainted(testArmy.armyUnpainted)
     }
+  }
+
+  const saveToMainPage = () =>{
+    setArmyApp({armyReady:armyReady, armyStandby:armyStandby, armyUnpainted:armyUnpainted })
+
   }
 
   const clearCurrentArmy = () => {
@@ -211,6 +216,7 @@ function MainPage(){
             removeUnitFromReady={removeUnitFromReady}
           />
           <button onClick={logState}>LOG STATE</button>
+          <button onClick={saveToMainPage}>Save Army To Main Page</button>
         </div>
       )
 }

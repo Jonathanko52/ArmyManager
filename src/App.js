@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
-  const [army, setArmy] = useState({units:[]});
+  const [armyApp, setArmyApp] = useState({units:[]});
   const [] = useState();
 
 
@@ -54,7 +54,8 @@ function App() {
         <Routes>
           <Route path="/" element={
             <MainPage 
-
+              armyApp={armyApp}
+              setArmyApp={setArmyApp}
             />
           }/>
           <Route path="/database" element={
