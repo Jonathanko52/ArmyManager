@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import ArmyColumns from './ArmyColumns.js'
 
 function MainRight({
@@ -28,7 +28,6 @@ function MainRight({
 
 
 
-  let units = [];
   let totalArmyCost = 0;
   let totalArmyMoneyCost = 0;
   useEffect(()=>{

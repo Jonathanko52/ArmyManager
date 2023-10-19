@@ -22,36 +22,6 @@ function App() {
   //Add unit to army: { unit name: string, model count: array, point cost per size: array, unit sizes: array, id}
   //delete unit from army:{id:number}
 
-  const createArmy = (armyName) =>{
-    let newArmy = {}
-    newArmy.armyName = 
-    newArmy.faction = 
-    setArmy(newArmy)
-  }
-
-
-  const saveArmyToLocal = () =>{
-    let confirmed = window.confirm("Are you sure you want to save your army?")
-    if(confirmed){
-      localStorage.setItem("warHammerArmy", JSON.stringify(army));
-    }
-  }
-
-  const loadArmyFromLocal = () =>{
-    let confirmed = window.confirm("Are you sure you want to load your army?")
-    if(confirmed){
-      let testArmy = localStorage.getItem("warHammerArmy");
-      setArmy(JSON.parse(testArmy))
-    }
-  }
-
-  const clearCurrentArmy = () => {
-    let confirmed = window.confirm("Are you sure you want to delete the current army?")
-    if(confirmed){
-      setArmy({units:[]})
-    }
-  }
-
   const loadFromDatabase = () =>{
 
   }

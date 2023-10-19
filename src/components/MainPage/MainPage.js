@@ -55,7 +55,6 @@ function MainPage(){
     if(confirmed){
       let testArmy = localStorage.getItem("warHammerArmy");
       testArmy = JSON.parse(testArmy)
-      console.log("TESTARMY", testArmy)
       setArmyReady(testArmy.armyReady)
       setArmyStandby(testArmy.armyStandby)
       setArmyUnpainted(testArmy.armyUnpainted)
@@ -182,7 +181,6 @@ function MainPage(){
     console.log("READY", armyReady)
     console.log("STANDBY", armyStandby)
     console.log("UNPAINTED", armyUnpainted)
-
   }
   
   
