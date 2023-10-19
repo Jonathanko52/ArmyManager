@@ -71,7 +71,6 @@ function MainPage(){
 
 
     newReadyUnits = newReadyUnits.filter((cur)=>{
-      console.log(cur, unitId)
       if(cur.unitId === unitId){
         unitToBeMoved = cur
       }
@@ -179,7 +178,7 @@ function MainPage(){
   
   
   return (
-        <div className="font-bold underline border-black col-span-10 grid grid-cols-12 border-2 row-span-6">
+        <div className="font-bold underline border-black col-span-10 grid grid-cols-12 border-2 row-span-6 ">
           <MainLeft addUnitToArmy={addUnitToArmy}/>
           <MainRight 
             armyReady={armyReady.units}
