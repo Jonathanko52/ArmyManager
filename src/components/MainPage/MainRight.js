@@ -33,18 +33,18 @@ function MainRight({
   let totalArmyMoneyCost = 0;
   useEffect(()=>{
     armyReady.forEach(cur=>{
-        units.push(<UnitRow 
-          unitName={cur.unitName} 
-          modelCount={cur.modelCount} 
-          pointCost={cur.pointCost} 
-          unitSize={cur.unitSize}
-          unitId={cur.unitId}
-          />)
-      })
-      armyReady.forEach(cur=>{
-        totalArmyCost += cur.pointCost
-        totalArmyMoneyCost += cur.moneyCost
-      })
+      totalArmyCost += cur.pointCost
+      totalArmyMoneyCost += cur.moneyCost
+    })      
+    armyStandby.forEach(cur=>{
+      totalArmyCost += cur.pointCost
+      totalArmyMoneyCost += cur.moneyCost
+    })      
+    armyUnpainted.forEach(cur=>{
+      totalArmyCost += cur.pointCost
+      totalArmyMoneyCost += cur.moneyCost
+    })
+
     },[armyReady,armyStandby,armyUnpainted])
 
     const handleChangeName = (event) =>{
@@ -60,16 +60,16 @@ function MainRight({
         <div className="border-black col-span-10 border-2 grid grid-cols-3 grid-rows-5">
             <div className="ARMYHEADER grid grid-cols-4 col-span-3 row-span-6">
               <div className="p-4">
-                <label>Army Name:</label><input type="text" onChange={handleChangeName}  value={armyName}></input>
+                <label className="p-4">Army Name:</label><input type="text" onChange={handleChangeName}  value={armyName}></input>
               </div>
               <div className="p-4">
-                <label>Faction:</label><input type="text"  onChange={handleChangeFaction} value={faction}></input>
+                <label className="p-4">Faction:</label><input type="text"  onChange={handleChangeFaction} value={faction}></input>
               </div>
               <div className="p-4">
-                <label>Total cost in points:{totalArmyCost}</label>
+                <label className="p-4">Total cost in points:  {totalArmyCost}</label>
               </div>
               <div className="p-4">
-                <label>Total cost in money:{totalArmyMoneyCost}</label>
+                <label className="p-4">Total cost in money:  {totalArmyMoneyCost}</label>
               </div>
             </div>
             <div className="ARMYCOLUMNS p-4 m-4 border-black border-2  grid grid-cols-3 col-span-3 row-span-6">
