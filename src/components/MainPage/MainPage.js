@@ -44,7 +44,7 @@ function MainPage(){
   const saveArmyToLocal = () =>{
     let confirmed = window.confirm("Are you sure you want to save your army?")
     if(confirmed){
-      localStorage.setItem("warHammerArmy", JSON.stringify(armyReady));
+      localStorage.setItem("warHammerArmy", JSON.stringify({armyReady:armyReady, armyStandby:armyStandby, armyUnpainted:armyUnpainted }));
     }
   }
 
@@ -52,7 +52,13 @@ function MainPage(){
     let confirmed = window.confirm("Are you sure you want to load your army?")
     if(confirmed){
       let testArmy = localStorage.getItem("warHammerArmy");
-      setArmyReady(JSON.parse(testArmy))
+      testArmy = JSON.parse(testArmy)
+
+      console.log("TESTARMY", testArmy)
+      setArmyReady(testArmy.armyReady)
+      setArmyStandby(testArmy.armyStandby)
+      setArmyUnpainted(testArmy.armyUnpainted)
+
     }
   }
 
@@ -173,7 +179,9 @@ function MainPage(){
     console.log("READY", armyReady)
     console.log("STANDBY", armyStandby)
     console.log("UNPAINTED", armyUnpainted)
-
+    let testArmy = localStorage.getItem("warHammerArmy");
+    testArmy = JSON.parse(testArmy)
+    console.log("TESTARMY", testArmy)
   }
   
   
