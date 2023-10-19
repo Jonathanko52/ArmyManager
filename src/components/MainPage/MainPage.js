@@ -10,6 +10,8 @@ function MainPage(){
   const [armyReady, setArmyReady] = useState({units:[]});
   const [armyStandby, setArmyStandby] = useState({units:[]});
   const [armyUnpainted, setArmyUnpainted] = useState({units:[]});
+  const [armyName, setArmyName] = useState('');
+  const [faction, setFaction] = useState('');
   
   const addUnitToArmy = (newUnit) =>{
     setArmyReady({...armyReady, units:[...armyReady.units, newUnit]})
@@ -53,12 +55,10 @@ function MainPage(){
     if(confirmed){
       let testArmy = localStorage.getItem("warHammerArmy");
       testArmy = JSON.parse(testArmy)
-
       console.log("TESTARMY", testArmy)
       setArmyReady(testArmy.armyReady)
       setArmyStandby(testArmy.armyStandby)
       setArmyUnpainted(testArmy.armyUnpainted)
-
     }
   }
 
@@ -66,6 +66,8 @@ function MainPage(){
     let confirmed = window.confirm("Are you sure you want to delete the current army?")
     if(confirmed){
       setArmyReady({units:[]})
+      setArmyStandby({units:[]})
+      setArmyUnpainted({units:[]})
     }
   }
   
@@ -176,12 +178,11 @@ function MainPage(){
 
 
   const logState =()=>{
+    console.log("NAMES",armyName,faction)
     console.log("READY", armyReady)
     console.log("STANDBY", armyStandby)
     console.log("UNPAINTED", armyUnpainted)
-    let testArmy = localStorage.getItem("warHammerArmy");
-    testArmy = JSON.parse(testArmy)
-    console.log("TESTARMY", testArmy)
+
   }
   
   
@@ -192,6 +193,10 @@ function MainPage(){
             armyReady={armyReady.units}
             armyStandby={armyStandby.units}
             armyUnpainted={armyUnpainted.units}
+            armyName={armyName}
+            setArmyName={setArmyName}
+            faction={faction}
+            setFaction={setFaction}
             saveArmyToLocal={saveArmyToLocal} 
             loadArmyFromLocal={loadArmyFromLocal} 
             clearCurrentArmy={clearCurrentArmy}

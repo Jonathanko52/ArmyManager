@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import UnitRow from './UnitRow.js'
 import ArmyColumns from './ArmyColumns.js'
 
 function MainRight({
@@ -19,12 +18,13 @@ function MainRight({
   unpaintedToStandy,
   removeUnitFromUnpainted,
   removeUnitFromStandby,
-  removeUnitFromReady
+  removeUnitFromReady,
+  armyName,
+  setArmyName,
+  faction,
+  setFaction,
 }){
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
-
-    const [armyName, setArmyName] = useState('');
-    const [faction, setFaction] = useState('');
 
 
 
