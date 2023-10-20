@@ -31,7 +31,7 @@ function App() {
   }
 
   const logState = () =>{
-
+    console.log(armyApp)
   }
 
   //save army: local storage id
