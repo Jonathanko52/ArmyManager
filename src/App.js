@@ -32,6 +32,8 @@ function App() {
 
   const logState = () =>{
     console.log(armyApp)
+    console.log("ENV FILE", process.env)
+  
   }
 
   //save army: local storage id
