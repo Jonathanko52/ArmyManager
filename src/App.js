@@ -31,7 +31,6 @@ function App() {
   }
 
   const logState = () =>{
-    console.log("STATE", army)
 
   }
 

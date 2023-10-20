@@ -3,8 +3,6 @@ import MainRight from './MainRight.js';
 import React, {useState} from 'react';
 
 
-
-
 function MainPage({armyApp,setArmyApp}){
     
   const [armyReady, setArmyReady] = useState({units:[]});
@@ -182,10 +180,11 @@ function MainPage({armyApp,setArmyApp}){
 
 
   const logState =()=>{
-    console.log("NAMES",armyName,faction)
-    console.log("READY", armyReady)
-    console.log("STANDBY", armyStandby)
-    console.log("UNPAINTED", armyUnpainted)
+    // console.log("NAMES",armyName,faction)
+    // console.log("READY", armyReady)
+    // console.log("STANDBY", armyStandby)
+    // console.log("UNPAINTED", armyUnpainted)
+    console.log("ENV TEST",  process.env.REACT_APP_TITLE)
   }
   
   
