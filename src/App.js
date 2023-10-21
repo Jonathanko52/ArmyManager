@@ -5,11 +5,15 @@ import Header from './components/Header.js'
 import React, {useState} from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-//AWS test
-const uuidv1 = require('uuid/v1');
-const AWS = require('aws-sdk');
-import config from "./server/aws-config"
 
+//AWS test
+
+import config from "./server/aws-config"
+import AWS from 'aws-sdk'
+const uuidv1 = require('uuid');
+
+// const uuidv1 = require('uuid/v1');
+// const AWS = require('aws-sdk');
 
 
 function App() {
@@ -70,6 +74,33 @@ function App() {
     });
   }
 
+  const dynamoTest2 = (req, res) => {
+    AWS.config.update(config.aws_remote_config);
+    const docClient = new AWS.DynamoDB.DocumentClient();
+    const Item = { ...req.body };
+    Item.id = uuidv1();
+    var params = {
+        TableName: config.aws_table_name,
+        Item: Item
+    };
+
+    // Call DynamoDB to add the item to the table
+    docClient.put(params, function (err, data) {
+        if (err) {
+            res.send({
+                success: false,
+                message: err
+            });
+        } else {
+            res.send({
+                success: true,
+                message: 'Added movie',
+                movie: data
+            });
+        }
+    });
+  }
+
   //save army: local storage id
   //load army: local storage id
 
@@ -85,7 +116,11 @@ function App() {
     <BrowserRouter>
       <div className="App grid grid-cols-8 h-screen	bg-slate-500 text-gray-300">
         <Header/>
-        <NavigationBar logState={logState} dynamoTest={dynamoTest}/>
+        <NavigationBar 
+          logState={logState} 
+          dynamoTest={dynamoTest}
+          dynamoTest2={dynamoTest2}
+        />
         <Routes>
           <Route path="/" element={
             <MainPage 
