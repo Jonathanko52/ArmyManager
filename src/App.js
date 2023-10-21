@@ -4,6 +4,8 @@ import Database from './components/Database/DatabasePage.js'
 import Header from './components/Header.js'
 import React, {useState} from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+// const uuidv1 = require('uuid/v1');
+
 
 function App() {
 
@@ -35,8 +37,9 @@ function App() {
     console.log("ENV FILE", process.env)
     console.log("ENV FILE", process.env.REACT_APP_ACCESS_KEY_ID)
     console.log("ENV FILE", process.env.REACT_APP_SECRET_ACCESS_KEY)
+  }
+  const dynamoTest = () => {
 
-  
   }
 
   //save army: local storage id
@@ -54,7 +57,7 @@ function App() {
     <BrowserRouter>
       <div className="App grid grid-cols-8 h-screen	bg-slate-500 text-gray-300">
         <Header/>
-        <NavigationBar logState={logState}/>
+        <NavigationBar logState={logState} dynamoTest={dynamoTest}/>
         <Routes>
           <Route path="/" element={
             <MainPage 

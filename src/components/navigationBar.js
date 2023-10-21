@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 
-function navBar({dynamoTest}){
+function navBar({logState, dynamoTest}){
     return (
       <div className="font-bold underline border-black col-span-1 row-span-6	border-2">
         <nav>
