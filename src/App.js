@@ -9,11 +9,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 //AWS test
 
 import config from "./server/aws-config"
-import AWS from 'aws-sdk'
-const uuidv1 = require('uuid');
-
-// const uuidv1 = require('uuid/v1');
-// const AWS = require('aws-sdk');
 
 
 function App() {
@@ -48,57 +43,11 @@ function App() {
     console.log("ENV FILE", process.env.REACT_APP_SECRET_ACCESS_KEY)
   }
   const dynamoTest = (req, res) => {
-    AWS.config.update(config.aws_remote_config);
 
-    const docClient = new AWS.DynamoDB.DocumentClient();
-
-    const params = {
-        TableName: config.aws_table_name
-    };
-
-    docClient.scan(params, function (err, data) {
-
-        if (err) {
-            console.log(err)
-            res.send({
-                success: false,
-                message: err
-            });
-        } else {
-            const { Items } = data;
-            res.send({
-                success: true,
-                movies: Items
-            });
-        }
-    });
   }
 
   const dynamoTest2 = (req, res) => {
-    AWS.config.update(config.aws_remote_config);
-    const docClient = new AWS.DynamoDB.DocumentClient();
-    const Item = { ...req.body };
-    Item.id = uuidv1();
-    var params = {
-        TableName: config.aws_table_name,
-        Item: Item
-    };
 
-    // Call DynamoDB to add the item to the table
-    docClient.put(params, function (err, data) {
-        if (err) {
-            res.send({
-                success: false,
-                message: err
-            });
-        } else {
-            res.send({
-                success: true,
-                message: 'Added movie',
-                movie: data
-            });
-        }
-    });
   }
 
   //save army: local storage id
