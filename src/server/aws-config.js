@@ -10,3 +10,6 @@ module.exports = {
       region: 'us-east-1',
     }
 };
+
+// accessKeyId: 'ACCESS_KEY_ID',
+// secretAccessKey: 'SECRET_ACCESS_KEY',

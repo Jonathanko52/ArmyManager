@@ -178,15 +178,6 @@ function MainPage({armyApp,setArmyApp}){
 
 
 
-
-  const logState =()=>{
-    // console.log("NAMES",armyName,faction)
-    // console.log("READY", armyReady)
-    // console.log("STANDBY", armyStandby)
-    // console.log("UNPAINTED", armyUnpainted)
-    console.log("ENV TEST",  process.env.REACT_APP_TITLE)
-  }
-  
   
   return (
         <div className="font-bold underline border-black col-span-10 grid grid-cols-12 border-2 row-span-6 ">
@@ -214,7 +205,6 @@ function MainPage({armyApp,setArmyApp}){
             removeUnitFromStandby={removeUnitFromStandby}
             removeUnitFromReady={removeUnitFromReady}
           />
-          <button onClick={logState}>LOG STATE</button>
           <button onClick={saveToMainPage}>Save Army To Main Page</button>
         </div>
       )

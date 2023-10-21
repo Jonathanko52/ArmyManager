@@ -33,6 +33,9 @@ function App() {
   const logState = () =>{
     console.log(armyApp)
     console.log("ENV FILE", process.env)
+    console.log("ENV FILE", process.env.REACT_APP_ACCESS_KEY_ID)
+    console.log("ENV FILE", process.env.REACT_APP_SECRET_ACCESS_KEY)
+
   
   }
 
