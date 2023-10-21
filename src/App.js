@@ -4,7 +4,12 @@ import Database from './components/Database/DatabasePage.js'
 import Header from './components/Header.js'
 import React, {useState} from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+//AWS test
 const uuidv1 = require('uuid/v1');
+const AWS = require('aws-sdk');
+import config from "./server/aws-config"
+
 
 
 function App() {
@@ -38,8 +43,31 @@ function App() {
     console.log("ENV FILE", process.env.REACT_APP_ACCESS_KEY_ID)
     console.log("ENV FILE", process.env.REACT_APP_SECRET_ACCESS_KEY)
   }
-  const dynamoTest = () => {
+  const dynamoTest = (req, res) => {
+    AWS.config.update(config.aws_remote_config);
 
+    const docClient = new AWS.DynamoDB.DocumentClient();
+
+    const params = {
+        TableName: config.aws_table_name
+    };
+
+    docClient.scan(params, function (err, data) {
+
+        if (err) {
+            console.log(err)
+            res.send({
+                success: false,
+                message: err
+            });
+        } else {
+            const { Items } = data;
+            res.send({
+                success: true,
+                movies: Items
+            });
+        }
+    });
   }
 
   //save army: local storage id
