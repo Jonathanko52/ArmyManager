@@ -5,9 +5,14 @@ import React, {useState}from 'react';
 
 
 
-function Database({ army}){
+function Database({army}){
 
+  //STATE
+  //state for current selected army app is using
+  //state for armies we pull from database
+  
 
+  //function for setting the current army, pushes it up to the APP
 
 
 
