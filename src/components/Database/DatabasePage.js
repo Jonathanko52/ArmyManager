@@ -12,7 +12,19 @@ function Database({army}){
   //state for armies we pull from database
   
 
-  //function for setting the current army, pushes it up to the APP
+  //Function for pulling data on armies from database, showing it on screen
+    //window for army name, faction, point cost.(Component)
+  //Function for downloading one of the armies form the database to be part of the armymaker(read)
+  //Function for saving(updating) the current army to the database
+    //Armies altered in app will not be updating database in realtime
+  //Function for deleting an army from database
+
+  
+
+
+  //function 
+
+
 
 
 
