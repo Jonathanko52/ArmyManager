@@ -4,14 +4,15 @@ import Database from './components/Database/DatabasePage.js'
 import Header from './components/Header.js'
 import React, {useState} from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import AWSConfig from './server/aws-config'
 
 
 
 //AWS test
 const AWS = require("aws-sdk");
-AWS.config.update({ region: 'us-east-1' });
 const dynamodb = new AWS.DynamoDB();
+
+AWS.config.update(AWSConfig);
 
 
 function App() {
@@ -53,42 +54,19 @@ function App() {
             console.log(data);
         }
     })
+    console.log("REGION", AWS.config)
+
   }
 
   const dynamoTest2 = (req, res) => {
-      dynamodb.createTable({
-        TableName: "demo_sdk",
-        AttributeDefinitions: [
-            {
-                AttributeName: "id",
-                AttributeType: "S" //string
-            },
-            {
-                AttributeName: "timestamp",
-                AttributeType: "N" //number
-            }
-        ],
-        KeySchema: [
-            {
-                AttributeName: "id",
-                KeyType: "HASH"
-            },
-            {
-                AttributeName: "timestamp",
-                KeyType: "RANGE"
-            }
-        ],
-        ProvisionedThroughput: {
-            ReadCapacityUnits: 1,
-            WriteCapacityUnits: 1
-        }
-    }, (err, data)=>{
-        if(err) {
-            console.log(err);
-        } else {
-            console.log(JSON.stringify(data, null, 2));
-        }
+    AWS.config.getCredentials(function(err) {
+      if (err) console.log(err.stack);
+      // credentials not loaded
+      else {
+        console.log("Access key:", AWS.config.credentials.accessKeyId);
+      }
     });
+    console.log("REGION", AWS.config)
   }
 
   //save army: local storage id

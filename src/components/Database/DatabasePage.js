@@ -1,4 +1,3 @@
-import React from 'react';
 import DatabaseLeft from './DatabaseLeft.js';
 import DatabaseRight from './DatabaseRight.js';
 import React, {useState}from 'react';
