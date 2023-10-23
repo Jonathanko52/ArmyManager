@@ -60,14 +60,7 @@ function App() {
   }
 
   const dynamoTest2 = (req, res) => {
-    AWS.config.getCredentials(function(err) {
-      if (err) console.log(err.stack);
-      // credentials not loaded
-      else {
-        console.log("Access key:", AWS.config.credentials.accessKeyId);
-      }
-    });
-    console.log("REGION", AWS.config)
+
   }
 
   //save army: local storage id
