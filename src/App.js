@@ -47,14 +47,15 @@ function App() {
     console.log("ENV FILE", process.env.REACT_APP_SECRET_ACCESS_KEY)
   }
   const dynamoTest = (req, res) => {
+    console.log("REGION", AWS.config)
+
       dynamodb.listTables({}, (err, data)=>{
         if(err) {
             console.log(err);
         } else {
-            console.log(data);
+            console.log("DATA",data);
         }
     })
-    console.log("REGION", AWS.config)
 
   }
 
