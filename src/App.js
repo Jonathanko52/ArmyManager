@@ -6,9 +6,12 @@ import React, {useState} from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
-//AWS test
 
-import config from "./server/aws-config"
+
+//AWS test
+const AWS = require("aws-sdk");
+AWS.config.update({ region: 'us-east-1' });
+const dynamodb = new AWS.DynamoDB();
 
 
 function App() {
@@ -43,11 +46,49 @@ function App() {
     console.log("ENV FILE", process.env.REACT_APP_SECRET_ACCESS_KEY)
   }
   const dynamoTest = (req, res) => {
-
+      dynamodb.listTables({}, (err, data)=>{
+        if(err) {
+            console.log(err);
+        } else {
+            console.log(data);
+        }
+    })
   }
 
   const dynamoTest2 = (req, res) => {
-
+      dynamodb.createTable({
+        TableName: "demo_sdk",
+        AttributeDefinitions: [
+            {
+                AttributeName: "id",
+                AttributeType: "S" //string
+            },
+            {
+                AttributeName: "timestamp",
+                AttributeType: "N" //number
+            }
+        ],
+        KeySchema: [
+            {
+                AttributeName: "id",
+                KeyType: "HASH"
+            },
+            {
+                AttributeName: "timestamp",
+                KeyType: "RANGE"
+            }
+        ],
+        ProvisionedThroughput: {
+            ReadCapacityUnits: 1,
+            WriteCapacityUnits: 1
+        }
+    }, (err, data)=>{
+        if(err) {
+            console.log(err);
+        } else {
+            console.log(JSON.stringify(data, null, 2));
+        }
+    });
   }
 
   //save army: local storage id
