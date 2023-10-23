@@ -18,7 +18,7 @@ function navBar({logState, dynamoTest,dynamoTest2}){
           <br></br>
           <button onClick={dynamoTest}>DYNAMOTEST</button>
           <br></br>
-          <button onClick={dynamoTest2}>DYNAMOTEST2</button>
+          {/* <button onClick={dynamoTest2}>DYNAMOTEST2</button> */}
         </nav>        
       </div>
       )
