@@ -55,8 +55,8 @@ function MainLeft({addUnitToArmy}){
               <label className="m-2">Name</label><br/><input className="text-black m-2" id="MainLeftName" type="text" value={unitName} onChange={handleChangeName}></input><br/>
               <label className="m-2">Model Count</label><br/><input className="text-black m-2 pl-2"id="MainLeftModel" type="number" value={modelCount} onChange={handleChangeModelCount}></input><br/>
               <label className="m-2">Point Cost</label><br/><input className="text-black m-2 pl-2"id="MainLeftPoint" type="number" value={pointCost} onChange={handleChangePointCost}></input><br/>
-              <label className="m-2">Unit sizes</label><br/><input className="text-black m-2 pl-2"id="MainLeftSizes" type="number" value={unitSize} onChange={handleChangeUnitSizes}></input><br/>
-              <label className="m-2">Money Cost</label><br/><input className="text-black m-2 pl-2"id="MainLeftSizes" type="number" value={unitSize} onChange={handleChangeMoneyCost}></input><br/>
+              {/* <label className="m-2">Unit sizes</label><br/><input className="text-black m-2 pl-2"id="MainLeftSizes" type="number" value={unitSize} onChange={handleChangeUnitSizes}></input><br/> */}
+              {/* <label className="m-2">Money Cost</label><br/><input className="text-black m-2 pl-2"id="MainLeftSizes" type="number" value={moneyCost} onChange={handleChangeMoneyCost}></input><br/> */}
               <input className = "rounded-md p-2 mt-2 bg-slate-50 text-black" type="submit" value="Add Unit"></input>
           </form>
         </div>
