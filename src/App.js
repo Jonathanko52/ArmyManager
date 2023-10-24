@@ -11,8 +11,8 @@ import AWSConfig from './server/aws-config'
 //AWS test
 const AWS = require("aws-sdk");
 const dynamodb = new AWS.DynamoDB();
-
 AWS.config.update(AWSConfig);
+
 
 
 function App() {
