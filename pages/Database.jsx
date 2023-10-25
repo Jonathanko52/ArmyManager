@@ -3,7 +3,6 @@ import Layout from '../components/layout'
 
 
 export default function Database() {  
-  console.log("DATABASE")
     return (
         <Layout>
             <div className="container mx-auto border-black border-2">
