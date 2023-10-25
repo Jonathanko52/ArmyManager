@@ -6,6 +6,16 @@
 .pnp.js
 /.next
 /next
+.next/
+next/
+.next/cache/webpack/client-development/1.pack.gz
+.next/cache/webpack/client-development/index.pack.gz
+.next/cache/webpack/client-development/index.pack.gz.old
+.next/cache/webpack/server-development/index.pack.gz
+.next/cache/webpack/server-development/index.pack.gz.old
+.next/static/chunks/webpack.js
+.next/trace
+
 
 # testing
 /coverage
@@ -20,6 +30,8 @@
 .env.test.local
 .env.production.local
 .env
+/.next
+/next
 .next/
 
 npm-debug.log*
