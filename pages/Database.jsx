@@ -1,13 +1,11 @@
 import Layout from '../components/layout'
-
+import Database from '../components/Database/DatabasePage'
 
 
 export default function Database() {  
     return (
         <Layout>
-            <div className="container mx-auto border-black border-2">
-                Database
-            </div>
+            <Database/>
         </Layout>
 
     );

@@ -1,4 +1,3 @@
-import React, {useEffect, useState} from 'react';
 import UnitRow from './UnitRow.jsx'
 
 function ArmyColumn({

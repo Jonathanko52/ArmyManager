@@ -1,5 +1,5 @@
-import DatabaseLeft from './DatabaseLeft.js';
-import DatabaseRight from './DatabaseRight.js';
+import DatabaseLeft from './DatabaseLeft.jsx';
+import DatabaseRight from './DatabaseRight.jsx';
 import React, {useState}from 'react';
 
 
