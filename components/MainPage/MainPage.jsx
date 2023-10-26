@@ -1,5 +1,5 @@
-import MainLeft from './MainLeft.js';
-import MainRight from './MainRight.js';
+import MainLeft from './MainLeft.jsx';
+import MainRight from './MainRight.jsx';
 import React, {useState} from 'react';
 
 

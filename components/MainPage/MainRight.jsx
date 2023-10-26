@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import ArmyColumns from './ArmyColumns.js'
+import ArmyColumns from './ArmyColumns.jsx'
 
 function MainRight({
   armyReady, 
