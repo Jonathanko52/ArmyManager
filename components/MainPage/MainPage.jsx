@@ -1,6 +1,7 @@
 import MainLeft from './MainLeft.jsx';
 import MainRight from './MainRight.jsx';
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+import ArmyContext from '../../context/ArmyContext'
 
 
 function MainPage({armyApp,setArmyApp}){
@@ -11,6 +12,9 @@ function MainPage({armyApp,setArmyApp}){
   const [armyName, setArmyName] = useState('');
   const [faction, setFaction] = useState('');
   
+  const { value, setValue } = useContext(ArmyContext)
+
+
   const addUnitToArmy = (newUnit) =>{
     setArmyReady({...armyReady, units:[...armyReady.units, newUnit]})
   }

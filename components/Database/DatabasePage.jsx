@@ -1,10 +1,14 @@
 import DatabaseLeft from './DatabaseLeft.jsx';
 import DatabaseRight from './DatabaseRight.jsx';
-import React, {useState}from 'react';
+import React, {useState, useContext}from 'react';
+import ArmyContext from '../../context/ArmyContext'
 
 
 
 function Database(){
+
+  const { value, setValue } = useContext(ArmyContext)
+
 
   //STATE
   //state for current selected army app is using

@@ -3,9 +3,7 @@ import React, { useContext } from 'react';
 import ArmyContext from './../context/ArmyContext'
 
 function NavBar(){
-  // <ArmyContext.Provider value={armyReady} setValue={setArmyReady}>
 
-  // const army = useContext();
 
     const { value, setValue } = useContext(ArmyContext)
     return (

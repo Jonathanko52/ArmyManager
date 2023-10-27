@@ -9,7 +9,7 @@ import  {useState} from 'react';
 
 export default function App({ Component, pageProps }) {
 
-  const [armyReady, setArmyReady] = useState("TEST");
+  const [armyReady, setArmyReady] = useState({units:[]});
 
   return (
     <ArmyProvider value={{value:armyReady, setValue:setArmyReady}}>
