@@ -7,7 +7,7 @@ function NavBar(){
 
   // const army = useContext();
 
-    const { value, setValue } =useContext(ArmyContext)
+    const { value, setValue } = useContext(ArmyContext)
     return (
       <div className="font-bold col-span-1 row-span-6 border-black border-2">
         <nav>
@@ -19,16 +19,16 @@ function NavBar(){
             <Link className="m-4" href="/Database">Database</Link>
             </li>
           </ul>
-          <button >LOG STATE</button>
+          <button onClick={()=>{
+            console.log(value)
+          }}>LOG STATE</button>
           <br></br>
           <button onClick={()=>{
             setValue("DYNAMO1")
-            console.log(value)
           }}>DYNAMOTEST</button>
           <br></br>
           <button onClick={()=>{
             setValue("DYNAMO2")
-            console.log(value)
           }}>DYNAMOTEST2</button>
         </nav>        
       </div>

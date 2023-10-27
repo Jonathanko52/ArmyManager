@@ -4,7 +4,7 @@ import React, {useState}from 'react';
 
 
 
-function Database({army}){
+function Database(){
 
   //STATE
   //state for current selected army app is using
