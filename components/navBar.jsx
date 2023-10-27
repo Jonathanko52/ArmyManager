@@ -1,10 +1,11 @@
 import Link from 'next/link';
 
 
-function navBar({logState, dynamoTest,dynamoTest2}){
+function NavBar(){
+
+
     return (
       <div className="font-bold col-span-1 row-span-6 border-black border-2">
-      TEST
         <nav>
           <ul>
             <li>
@@ -25,4 +26,4 @@ function navBar({logState, dynamoTest,dynamoTest2}){
       )
 }
 
-export default navBar;
+export default NavBar;
