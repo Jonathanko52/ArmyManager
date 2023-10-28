@@ -42,10 +42,6 @@ function Database(){
     //deletes army from local
   };
 
-  //needs a delete form local button passed down from the APP
-  //The fuck does this mean?
-
-
 
   //Database Left
     //component displaying current army being edited in the app

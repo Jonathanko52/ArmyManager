@@ -1,4 +1,5 @@
 import UnitRow from './UnitRow.jsx'
+import React, {useEffect} from 'react';
 
 function ArmyColumn({
   columnName,
@@ -12,7 +13,8 @@ function ArmyColumn({
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
   let units = [];
   let totalArmyCost = 0;
-  // useEffect(()=>{
+  useEffect(()=>{
+    console.log("ARMY", army)
     army.forEach(cur=>{
       units.push(<UnitRow 
         unitName={cur.unitName} 
@@ -30,7 +32,7 @@ function ArmyColumn({
     army.forEach(cur=>{
       totalArmyCost += cur.pointCost
     })
-  // },[army])
+  },[army])
 
 
 

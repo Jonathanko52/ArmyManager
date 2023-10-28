@@ -25,6 +25,7 @@ function MainRight({
   setFaction,
 }){
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
+    console.log("ARMOES ON MAIN", armyReady,armyStandby,armyUnpainted)
 
 
 
@@ -47,10 +48,12 @@ function MainRight({
     },[armyReady,armyStandby,armyUnpainted])
 
     const handleChangeName = (event) =>{
+      console.log("TEST1")
       setArmyName(event.target.value)
       changeArmyName(armyName)       
     }
     const handleChangeFaction = (event) =>{
+      console.log("TEST2")
       setFaction(event.target.value)
       changeArmyFaction(faction)
     }    

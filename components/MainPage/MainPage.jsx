@@ -1,18 +1,27 @@
 import MainLeft from './MainLeft.jsx';
 import MainRight from './MainRight.jsx';
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import ArmyContext from '../../context/ArmyContext'
 
 
-function MainPage({armyApp,setArmyApp}){
+function MainPage({setArmyApp}){
     
+  const { value, setValue } = useContext(ArmyContext)
+
   const [armyReady, setArmyReady] = useState({units:[]});
   const [armyStandby, setArmyStandby] = useState({units:[]});
   const [armyUnpainted, setArmyUnpainted] = useState({units:[]});
   const [armyName, setArmyName] = useState('');
   const [faction, setFaction] = useState('');
   
-  const { value, setValue } = useContext(ArmyContext)
+
+
+  useEffect(() => {
+    console.log("RUN ONCE",value)
+    // setArmyReady(value.armyReady)
+    // setArmyStandby(value.armyStandby)
+    // setArmyUnpainted(value.armyUnpainted)
+  }, []);
 
 
   const addUnitToArmy = (newUnit) =>{
@@ -50,6 +59,11 @@ function MainPage({armyApp,setArmyApp}){
     if(confirmed){
       localStorage.setItem("warHammerArmy", JSON.stringify({armyReady:armyReady, armyStandby:armyStandby, armyUnpainted:armyUnpainted }));
     }
+    // setValue({
+    //   armyReady:armyReady,
+    //   armyStandby:armyStandby, 
+    //   armyUnpainted:armyUnpainted
+    // })
   }
 
   const loadArmyFromLocal = () =>{
