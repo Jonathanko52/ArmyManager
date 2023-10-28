@@ -17,182 +17,76 @@ function MainPage({setArmyApp}){
 
 
   useEffect(() => {
-    // console.log("RUN ONCE",value)
     setArmyReady(value.armyReady)
     setArmyStandby(value.armyStandby)
     setArmyUnpainted(value.armyUnpainted)
-    
   }, []);
 
 
   const addUnitToArmy = (newUnit) =>{
-    setArmyReady({...armyReady, units:[...armyReady.units, newUnit]})
   }
 
   const removeUnitFromReady = (unitId)=>{
-    let newUnits = armyReady.units.slice()
-    newUnits = newUnits.filter(cur=>cur.unitId !== unitId)
-    setArmyReady({...armyReady, units:newUnits})
+
   }
 
   const removeUnitFromStandby = (unitId)=>{
-    let newUnits = armyStandby.units.slice()
-    newUnits = newUnits.filter(cur=>cur.unitId !== unitId)
-    setArmyStandby({...armyStandby, units:newUnits})
+
   }
 
   const removeUnitFromUnpainted = (unitId)=>{
-    let newUnits = armyUnpainted.units.slice()
-    newUnits = newUnits.filter(cur=>cur.unitId !== unitId)
-    setArmyUnpainted({...armyUnpainted, units:newUnits})
+
   }
 
   const changeArmyName = (armyName) => {
-    setArmyReady({...armyReady,armyName:armyName})
+
   }
 
   const changeArmyFaction = (armyFaction) =>{
-    setArmyReady({...armyReady,faction:armyFaction})
+
   }
 
   const saveArmyToLocal = () =>{
-    let confirmed = window.confirm("Are you sure you want to save your army?")
-    if(confirmed){
-      localStorage.setItem("warHammerArmy", JSON.stringify({armyReady:armyReady, armyStandby:armyStandby, armyUnpainted:armyUnpainted }));
-    }
-    setValue({
-      armyReady:armyReady,
-      armyStandby:armyStandby, 
-      armyUnpainted:armyUnpainted
-    })
+
   }
 
   const loadArmyFromLocal = () =>{
-    let confirmed = window.confirm("Are you sure you want to load your army?")
-    if(confirmed){
-      let testArmy = localStorage.getItem("warHammerArmy");
-      testArmy = JSON.parse(testArmy)
-      setArmyReady(testArmy.armyReady)
-      setArmyStandby(testArmy.armyStandby)
-      setArmyUnpainted(testArmy.armyUnpainted)
-    }
+
   }
 
   const saveToMainPage = () =>{
-    setArmyApp({armyReady:armyReady, armyStandby:armyStandby, armyUnpainted:armyUnpainted })
-
   }
 
   const clearCurrentArmy = () => {
-    let confirmed = window.confirm("Are you sure you want to delete the current army?")
-    if(confirmed){
-      setArmyReady({units:[]})
-      setArmyStandby({units:[]})
-      setArmyUnpainted({units:[]})
-    }
+
   }
   
 
   const readyToStandby = (unitId) => {
-    let newReadyUnits = armyReady.units.slice()
-    let unitToBeMoved 
 
-
-
-    newReadyUnits = newReadyUnits.filter((cur)=>{
-      if(cur.unitId === unitId){
-        unitToBeMoved = cur
-      }
-      return cur.unitId !== unitId
-    })
-
-    setArmyReady({...armyReady, units:[...newReadyUnits]})
-    setArmyStandby({...armyStandby, units:[...armyStandby.units, unitToBeMoved]})
   }
 
 
 
   const readyToUnpainted = (unitId) => {
 
-    let newReadyUnits = armyReady.units.slice()
-    let unitToBeMoved 
-
-    newReadyUnits = newReadyUnits.filter((cur)=>{
-      if(cur.unitId === unitId){
-        unitToBeMoved = cur
-      }
-      return cur.unitId !== unitId
-    })
-
-    setArmyReady({...armyReady, units:[...newReadyUnits]})
-    setArmyUnpainted({...armyUnpainted, units:[...armyUnpainted.units, unitToBeMoved]})
-
   }
 
   const standbyToReady = (unitId) => {
-
-    let newStandbyUnits = armyStandby.units.slice()
-    let unitToBeMoved 
-
-    newStandbyUnits = newStandbyUnits.filter((cur)=>{
-      if(cur.unitId === unitId){
-        unitToBeMoved = cur
-      }
-      return cur.unitId !== unitId
-    })
-
-    setArmyStandby({...armyStandby, units:[...newStandbyUnits]})
-    setArmyReady({...armyReady, units:[...armyReady.units, unitToBeMoved]})
 
   }
 
   const standbyToUnpainted = (unitId) => {
 
-    let newStandbyUnits = armyStandby.units.slice()
-    let unitToBeMoved 
-
-    newStandbyUnits = newStandbyUnits.filter((cur)=>{
-      if(cur.unitId === unitId){
-        unitToBeMoved = cur
-      }
-      return cur.unitId !== unitId
-    })
-
-    setArmyStandby({...armyStandby, units:[...newStandbyUnits]})
-    setArmyUnpainted({...armyUnpainted, units:[...armyUnpainted.units, unitToBeMoved]})
 
   }
 
   const unpaintedToReady = (unitId) => {
 
-    let newUnpaintedUnits = armyUnpainted.units.slice()
-    let unitToBeMoved 
-
-    newUnpaintedUnits = newUnpaintedUnits.filter((cur)=>{
-      if(cur.unitId === unitId){
-        unitToBeMoved = cur
-      }
-      return cur.unitId !== unitId
-    })
-
-    setArmyUnpainted({...armyUnpainted, units:[...newUnpaintedUnits]})
-    setArmyReady({...armyReady, units:[...armyReady.units, unitToBeMoved]})
   }
 
   const unpaintedToStandy = (unitId) => {
 
-    let newUnpaintedUnits = armyUnpainted.units.slice()
-    let unitToBeMoved 
-
-    newUnpaintedUnits = newUnpaintedUnits.filter((cur)=>{
-      if(cur.unitId === unitId){
-        unitToBeMoved = cur
-      }
-      return cur.unitId !== unitId
-    })
-
-    setArmyUnpainted({...armyUnpainted, units:[...newUnpaintedUnits]})
-    setArmyStandby({...armyStandby, units:[...armyStandby.units, unitToBeMoved]})
   }
 
 
