@@ -17,7 +17,7 @@ function MainPage({setArmyApp}){
 
 
   useEffect(() => {
-    console.log("RUN ONCE",value)
+    // console.log("RUN ONCE",value)
     setArmyReady(value.armyReady)
     setArmyStandby(value.armyStandby)
     setArmyUnpainted(value.armyUnpainted)
