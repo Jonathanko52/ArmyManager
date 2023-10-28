@@ -2,9 +2,9 @@ import React, {useEffect} from 'react';
 import ArmyColumns from './ArmyColumns.jsx'
 
 function MainRight({
-  armyReady, 
-  armyStandby,
-  armyUnpainted,
+  unitsReady, 
+  unitsStandby,
+  unitsUnpainted,
   saveArmyToLocal, 
   loadArmyFromLocal, 
   clearCurrentArmy,
@@ -29,20 +29,8 @@ function MainRight({
   let totalArmyCost = 0;
   let totalArmyMoneyCost = 0;
   useEffect(()=>{
-    armyReady.forEach(cur=>{
-      totalArmyCost += cur.pointCost
-      totalArmyMoneyCost += cur.moneyCost
-    })      
-    armyStandby.forEach(cur=>{
-      totalArmyCost += cur.pointCost
-      totalArmyMoneyCost += cur.moneyCost
-    })      
-    armyUnpainted.forEach(cur=>{
-      totalArmyCost += cur.pointCost
-      totalArmyMoneyCost += cur.moneyCost
-    })
 
-    },[armyReady,armyStandby,armyUnpainted])
+  },[])
 
     const handleChangeName = (event) =>{
       setArmyName(event.target.value)
@@ -72,7 +60,7 @@ function MainRight({
             <div className="ARMYCOLUMNS p-4 m-4 border-black border-2  grid grid-cols-3 col-span-3 row-span-6">
               <ArmyColumns
                 columnName={"Ready"}
-                army={armyReady} 
+                units={unitsReady} 
                 buttonOne={readyToStandby} 
                 buttonOneText={"Move to Standby"}
                 buttonTwo={readyToUnpainted}
@@ -81,7 +69,7 @@ function MainRight({
               />
               <ArmyColumns
                 columnName={"Standby"}
-                army={armyStandby} 
+                units={unitsStandby} 
                 buttonOne={standbyToReady} 
                 buttonOneText={"Move to Ready"}
                 buttonTwo={standbyToUnpainted}
@@ -90,7 +78,7 @@ function MainRight({
               />
               <ArmyColumns
                 columnName={"Unpainted/Unassembled"}
-                army={armyUnpainted} 
+                units={unitsUnpainted} 
                 buttonOne={unpaintedToReady} 
                 buttonOneText={"Move to Ready"}
                 buttonTwo={unpaintedToStandy}

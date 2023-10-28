@@ -16,9 +16,10 @@ export default function App({ Component, pageProps }) {
   });
 
     useEffect(() => {
-    setArmyReady(localStorage.getItem("warHammerArmy"))
-    console.log("First Mount. should only print once.", armyReady)
-
+      console.log("APP LOADING DATA")
+      if(localStorage.getItem("warHammerArmy")){
+        setArmyReady(localStorage.getItem("warHammerArmy"))
+      }
   }, []);
 
   return (

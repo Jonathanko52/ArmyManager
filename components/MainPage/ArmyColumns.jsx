@@ -3,7 +3,7 @@ import React, {useEffect} from 'react';
 
 function ArmyColumn({
   columnName,
-  army,
+  units,
   buttonOne,
   buttonOneText,
   buttonTwo,
@@ -11,12 +11,11 @@ function ArmyColumn({
   remove
 }){
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
-  let units = [];
+  let unitsComponents = [];
   let totalArmyCost = 0;
   // useEffect(()=>{
-    console.log("ARMY", army)
-    army.forEach(cur=>{
-      units.push(<UnitRow 
+    units.forEach(cur=>{
+      unitsComponents.push(<UnitRow 
         unitName={cur.unitName} 
         modelCount={cur.modelCount} 
         pointCost={cur.pointCost} 
@@ -29,7 +28,7 @@ function ArmyColumn({
         remove={remove}
         />)
     })
-    army.forEach(cur=>{
+    units.forEach(cur=>{
       totalArmyCost += cur.pointCost
     })
   // },[army])
@@ -46,7 +45,7 @@ function ArmyColumn({
               </div>
             </div>
             <div className="UNITS CONTAINER">
-              {units}
+              {unitsComponents}
             </div>
 
           </div>
