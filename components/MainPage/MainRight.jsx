@@ -25,9 +25,6 @@ function MainRight({
   setFaction,
 }){
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
-    console.log("ARMOES ON MAIN", armyReady,armyStandby,armyUnpainted)
-
-
 
   let totalArmyCost = 0;
   let totalArmyMoneyCost = 0;

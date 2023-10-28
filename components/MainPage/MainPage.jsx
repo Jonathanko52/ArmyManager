@@ -18,9 +18,10 @@ function MainPage({setArmyApp}){
 
   useEffect(() => {
     console.log("RUN ONCE",value)
-    // setArmyReady(value.armyReady)
-    // setArmyStandby(value.armyStandby)
-    // setArmyUnpainted(value.armyUnpainted)
+    setArmyReady(value.armyReady)
+    setArmyStandby(value.armyStandby)
+    setArmyUnpainted(value.armyUnpainted)
+    
   }, []);
 
 
@@ -59,11 +60,11 @@ function MainPage({setArmyApp}){
     if(confirmed){
       localStorage.setItem("warHammerArmy", JSON.stringify({armyReady:armyReady, armyStandby:armyStandby, armyUnpainted:armyUnpainted }));
     }
-    // setValue({
-    //   armyReady:armyReady,
-    //   armyStandby:armyStandby, 
-    //   armyUnpainted:armyUnpainted
-    // })
+    setValue({
+      armyReady:armyReady,
+      armyStandby:armyStandby, 
+      armyUnpainted:armyUnpainted
+    })
   }
 
   const loadArmyFromLocal = () =>{

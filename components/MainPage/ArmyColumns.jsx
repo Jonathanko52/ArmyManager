@@ -13,7 +13,7 @@ function ArmyColumn({
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
   let units = [];
   let totalArmyCost = 0;
-  useEffect(()=>{
+  // useEffect(()=>{
     console.log("ARMY", army)
     army.forEach(cur=>{
       units.push(<UnitRow 
@@ -32,7 +32,7 @@ function ArmyColumn({
     army.forEach(cur=>{
       totalArmyCost += cur.pointCost
     })
-  },[army])
+  // },[army])
 
 
 
