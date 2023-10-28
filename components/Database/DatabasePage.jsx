@@ -1,6 +1,6 @@
 import DatabaseLeft from './DatabaseLeft.jsx';
 import DatabaseRight from './DatabaseRight.jsx';
-import React, {useState, useContext}from 'react';
+import React, {useState, useContext, useEffect}from 'react';
 import ArmyContext from '../../context/ArmyContext'
 
 
@@ -9,11 +9,17 @@ function Database(){
 
   const { value, setValue } = useContext(ArmyContext)
 
+  const [appArmy, setAppArmy] = useState('');
+  const [databaseArmies, setDatabaseArmies] = useState('');
+
+
+  useEffect(() => {
+    console.log("First Mount. should only print once.")
+  }, []);
 
   //STATE
   //state for current selected army app is using
   //state for armies we pull from database
-  //state for army we clicked on from database 
   
 
   //Function for pulling data on armies from database, showing it on screen
