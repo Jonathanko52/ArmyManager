@@ -17,19 +17,35 @@ function Database(){
     console.log("First Mount. should only print once.")
   }, []);
 
-  //STATE
-  //state for current selected army app is using
-  //state for armies we pull from database
-  
+  const fetchFromDatabase = () => {
 
-  //Function for pulling data on armies from database, showing it on screen
-    //window for army name, faction, point cost.(Component)
-  //Function for downloading one of the armies form the database to be part of the armymaker(read)
-  //Function for saving(updating) the current army to the database
-    //Armies altered in app will not be updating database in realtime
-  //Function for deleting an army from database
+  };
+
+  const setDatabaseArmyToAppArmy = () => {
+
+  };
+
+  const saveAppArmyToDatabase = () => {
+    //adds completely new army to database
+
+  };
+
+  const updateAppArmyToDatabase = () => {
+    //rewrites army in database with local army
+  };
+
+  const deleteArmyFromDatabase = () => {
+    //deletes army from the database
+  };
+
+  const deleteArmyFromApp = () => {
+    //deletes army from local
+  };
 
   //needs a delete form local button passed down from the APP
+  //The fuck does this mean?
+
+
 
   //Database Left
     //component displaying current army being edited in the app
