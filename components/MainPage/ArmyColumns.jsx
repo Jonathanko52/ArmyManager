@@ -33,9 +33,6 @@ function ArmyColumn({
     })
   // },[army])
 
-
-
-
     return (
         <div className="border-white col-span-1">
           <div className="ARMYCOLUMN">
@@ -47,9 +44,7 @@ function ArmyColumn({
             <div className="UNITS CONTAINER">
               {unitsComponents}
             </div>
-
           </div>
-
         </div>
       )
 }

@@ -17,10 +17,18 @@ function MainPage(){
 
 
   useEffect(() => {
-    console.log("VALUE",value)
     setArmyReady(value.armyReady)
     setArmyStandby(value.armyStandby)
     setArmyUnpainted(value.armyUnpainted)
+
+    //cleanup function
+    return ()=>{
+      setValue({
+        armyReady:armyReady,
+        armyStandby:armyStandby,
+        armyUnpainted:armyUnpainted
+      })
+    }
   }, []);
 
 
