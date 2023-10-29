@@ -22,6 +22,8 @@ function MainPage(){
     //cleanup function
     return ()=>{
       setValue({
+        armyName:armyName,
+        faction:faction,
         armyReady:armyReady,
         armyStandby:armyStandby,
         armyUnpainted:armyUnpainted
@@ -68,7 +70,13 @@ function MainPage(){
   }
 
   const saveToMainPage = () =>{
-    //
+    setValue({
+      armyName:armyName,
+      faction:faction,
+      armyReady:armyReady,
+      armyStandby:armyStandby,
+      armyUnpainted:armyUnpainted
+    })
   }
 
   const clearCurrentArmy = () => {
