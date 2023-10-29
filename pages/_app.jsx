@@ -16,7 +16,6 @@ export default function App({ Component, pageProps }) {
   });
 
     useEffect(() => {
-      console.log("APP LOADING DATA")
       if(localStorage.getItem("warHammerArmy")){
         setArmyReady(localStorage.getItem("warHammerArmy"))
       }

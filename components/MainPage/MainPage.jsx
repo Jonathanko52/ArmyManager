@@ -13,8 +13,6 @@ function MainPage(){
   const [armyUnpainted, setArmyUnpainted] = useState({units:[]});
   const [armyName, setArmyName] = useState('');
   const [faction, setFaction] = useState('');
-  
-
 
   useEffect(() => {
     setArmyReady(value.armyReady)
@@ -30,7 +28,6 @@ function MainPage(){
       })
     }
   }, []);
-
 
   const addUnitToArmy = (newUnit) =>{
     setArmyReady({...armyReady, units:[...armyReady.units, newUnit]})
@@ -63,26 +60,29 @@ function MainPage(){
   }
 
   const saveArmyToLocal = () =>{
-
+    //probably no longer necessary
   }
 
   const loadArmyFromLocal = () =>{
-
+    //
   }
 
   const saveToMainPage = () =>{
+    //
   }
 
   const clearCurrentArmy = () => {
-
+    setValue({
+      armyReady:{units:[]}, 
+      armyStandby:{units:[]}, 
+      armyUnpainted:{units:[]}
+    })
   }
   
 
   const readyToStandby = (unitId) => {
     let newReadyUnits = armyReady.units.slice()
     let unitToBeMoved 
-
-
 
     newReadyUnits = newReadyUnits.filter((cur)=>{
       if(cur.unitId === unitId){
@@ -95,8 +95,6 @@ function MainPage(){
     setArmyStandby({...armyStandby, units:[...armyStandby.units, unitToBeMoved]})
 
   }
-
-
 
   const readyToUnpainted = (unitId) => {
 
@@ -133,7 +131,6 @@ function MainPage(){
   }
 
   const standbyToUnpainted = (unitId) => {
-
 
     let newStandbyUnits = armyStandby.units.slice()
     let unitToBeMoved 
@@ -182,9 +179,6 @@ function MainPage(){
     setArmyStandby({...armyStandby, units:[...armyStandby.units, unitToBeMoved]})
  
   }
-
-
-
   
   return (
         <div className="font-bold underline border-black col-span-10 grid grid-cols-12 border-2 row-span-6 ">
