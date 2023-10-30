@@ -15,12 +15,14 @@ function MainPage(){
   const [faction, setFaction] = useState('');
 
   useEffect(() => {
+    console.log("MAIN USEEFFECT")
     setArmyReady(value.armyReady)
     setArmyStandby(value.armyStandby)
     setArmyUnpainted(value.armyUnpainted)
 
     //cleanup function
     return ()=>{
+      console.log("CLEANUP FIRING")
       setValue({
         armyName:armyName,
         faction:faction,
@@ -86,106 +88,83 @@ function MainPage(){
       armyUnpainted:{units:[]}
     })
   }
-  
 
   const readyToStandby = (unitId) => {
     let newReadyUnits = armyReady.units.slice()
     let unitToBeMoved 
-
     newReadyUnits = newReadyUnits.filter((cur)=>{
       if(cur.unitId === unitId){
         unitToBeMoved = cur
       }
       return cur.unitId !== unitId
     })
-
     setArmyReady({...armyReady, units:[...newReadyUnits]})
     setArmyStandby({...armyStandby, units:[...armyStandby.units, unitToBeMoved]})
-
   }
 
   const readyToUnpainted = (unitId) => {
-
     let newReadyUnits = armyReady.units.slice()
     let unitToBeMoved 
-
     newReadyUnits = newReadyUnits.filter((cur)=>{
       if(cur.unitId === unitId){
         unitToBeMoved = cur
       }
       return cur.unitId !== unitId
     })
-
     setArmyReady({...armyReady, units:[...newReadyUnits]})
     setArmyUnpainted({...armyUnpainted, units:[...armyUnpainted.units, unitToBeMoved]})
-
   }
 
   const standbyToReady = (unitId) => {
-
     let newStandbyUnits = armyStandby.units.slice()
     let unitToBeMoved 
-
     newStandbyUnits = newStandbyUnits.filter((cur)=>{
       if(cur.unitId === unitId){
         unitToBeMoved = cur
       }
       return cur.unitId !== unitId
     })
-
     setArmyStandby({...armyStandby, units:[...newStandbyUnits]})
     setArmyReady({...armyReady, units:[...armyReady.units, unitToBeMoved]})
-
   }
 
   const standbyToUnpainted = (unitId) => {
-
     let newStandbyUnits = armyStandby.units.slice()
     let unitToBeMoved 
-
     newStandbyUnits = newStandbyUnits.filter((cur)=>{
       if(cur.unitId === unitId){
         unitToBeMoved = cur
       }
       return cur.unitId !== unitId
     })
-
     setArmyStandby({...armyStandby, units:[...newStandbyUnits]})
     setArmyUnpainted({...armyUnpainted, units:[...armyUnpainted.units, unitToBeMoved]})
-
   }
 
   const unpaintedToReady = (unitId) => {
     let newUnpaintedUnits = armyUnpainted.units.slice()
     let unitToBeMoved 
-
     newUnpaintedUnits = newUnpaintedUnits.filter((cur)=>{
       if(cur.unitId === unitId){
         unitToBeMoved = cur
       }
       return cur.unitId !== unitId
     })
-
     setArmyUnpainted({...armyUnpainted, units:[...newUnpaintedUnits]})
     setArmyReady({...armyReady, units:[...armyReady.units, unitToBeMoved]})
- 
   }
 
   const unpaintedToStandy = (unitId) => {
-
     let newUnpaintedUnits = armyUnpainted.units.slice()
     let unitToBeMoved 
-
     newUnpaintedUnits = newUnpaintedUnits.filter((cur)=>{
       if(cur.unitId === unitId){
         unitToBeMoved = cur
       }
       return cur.unitId !== unitId
     })
-
     setArmyUnpainted({...armyUnpainted, units:[...newUnpaintedUnits]})
     setArmyStandby({...armyStandby, units:[...armyStandby.units, unitToBeMoved]})
- 
   }
   
   return (

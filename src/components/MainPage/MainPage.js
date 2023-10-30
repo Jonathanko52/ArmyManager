@@ -3,7 +3,7 @@ import MainRight from './MainRight.js';
 import React, {useState} from 'react';
 
 
-function MainPage({armyApp,setArmyApp}){
+function MainPage({setArmyApp}){
     
   const [armyReady, setArmyReady] = useState({units:[]});
   const [armyStandby, setArmyStandby] = useState({units:[]});
@@ -61,7 +61,6 @@ function MainPage({armyApp,setArmyApp}){
 
   const saveToMainPage = () =>{
     setArmyApp({armyReady:armyReady, armyStandby:armyStandby, armyUnpainted:armyUnpainted })
-
   }
 
   const clearCurrentArmy = () => {
@@ -73,12 +72,9 @@ function MainPage({armyApp,setArmyApp}){
     }
   }
   
-
   const readyToStandby = (unitId) => {
     let newReadyUnits = armyReady.units.slice()
     let unitToBeMoved 
-
-
 
     newReadyUnits = newReadyUnits.filter((cur)=>{
       if(cur.unitId === unitId){
@@ -90,8 +86,6 @@ function MainPage({armyApp,setArmyApp}){
     setArmyReady({...armyReady, units:[...newReadyUnits]})
     setArmyStandby({...armyStandby, units:[...armyStandby.units, unitToBeMoved]})
   }
-
-
 
   const readyToUnpainted = (unitId) => {
 
@@ -175,9 +169,6 @@ function MainPage({armyApp,setArmyApp}){
     setArmyUnpainted({...armyUnpainted, units:[...newUnpaintedUnits]})
     setArmyStandby({...armyStandby, units:[...armyStandby.units, unitToBeMoved]})
   }
-
-
-
   
   return (
         <div className="font-bold underline border-black col-span-10 grid grid-cols-12 border-2 row-span-6 ">
