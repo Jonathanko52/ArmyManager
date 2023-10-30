@@ -28,9 +28,6 @@ function MainRight({
 
   let totalArmyCost = 0;
   let totalArmyMoneyCost = 0;
-  useEffect(()=>{
-
-  },[])
 
     const handleChangeName = (event) =>{
       setArmyName(event.target.value)

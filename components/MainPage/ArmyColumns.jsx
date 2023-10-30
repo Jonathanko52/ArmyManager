@@ -14,6 +14,7 @@ function ArmyColumn({
   let unitsComponents = [];
   let totalArmyCost = 0;
   // useEffect(()=>{
+    if(Array.isArray(units)){
     units.forEach(cur=>{
       unitsComponents.push(<UnitRow 
         unitName={cur.unitName} 
@@ -31,6 +32,7 @@ function ArmyColumn({
     units.forEach(cur=>{
       totalArmyCost += cur.pointCost
     })
+    }
   // },[army])
 
     return (

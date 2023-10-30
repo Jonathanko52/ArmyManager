@@ -15,14 +15,13 @@ function MainPage(){
   const [faction, setFaction] = useState('');
 
   useEffect(() => {
-    console.log("MAIN USEEFFECT")
+    console.log("MAIN USEEFFECT FIRED", value)
     setArmyReady(value.armyReady)
     setArmyStandby(value.armyStandby)
     setArmyUnpainted(value.armyUnpainted)
-
     //cleanup function
+    console.log(armyReady,armyStandby,armyUnpainted)
     return ()=>{
-      console.log("CLEANUP FIRING")
       setValue({
         armyName:armyName,
         faction:faction,
@@ -64,7 +63,10 @@ function MainPage(){
   }
 
   const saveArmyToLocal = () =>{
-    //probably no longer necessary
+    let confirmed = window.confirm("Are you sure you want to save your army?")
+    if(confirmed){
+      localStorage.setItem("warHammerArmy", JSON.stringify({armyReady:armyReady, armyStandby:armyStandby, armyUnpainted:armyUnpainted }));
+    }
   }
 
   const loadArmyFromLocal = () =>{
@@ -166,14 +168,18 @@ function MainPage(){
     setArmyUnpainted({...armyUnpainted, units:[...newUnpaintedUnits]})
     setArmyStandby({...armyStandby, units:[...armyStandby.units, unitToBeMoved]})
   }
+
+  const logState = () =>{
+    console.log(armyReady,armyStandby,armyUnpainted)
+  }
   
   return (
         <div className="font-bold underline border-black col-span-10 grid grid-cols-12 border-2 row-span-6 ">
           <MainLeft addUnitToArmy={addUnitToArmy}/>
           <MainRight 
-            unitsReady={armyReady.units}
-            unitsStandby={armyStandby.units}
-            unitsUnpainted={armyUnpainted.units}
+            unitsReady={armyReady}
+            unitsStandby={armyStandby}
+            unitsUnpainted={armyUnpainted}
             armyName={armyName}
             setArmyName={setArmyName}
             faction={faction}
@@ -194,6 +200,8 @@ function MainPage(){
             removeUnitFromReady={removeUnitFromReady}
           />
           <button onClick={saveToMainPage}>Save Army To Main Page</button>
+          <button onClick={logState}>Log State</button>
+
         </div>
       )
 }

@@ -14,7 +14,7 @@ function Database(){
 
 
   useEffect(() => {
-    console.log("First Mount. should only print once.", value)
+    console.log("Database Mount. should only print once.", value)
   }, []);
 
   const fetchFromDatabase = () => {

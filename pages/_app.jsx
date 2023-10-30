@@ -16,8 +16,12 @@ export default function App({ Component, pageProps }) {
   });
 
     useEffect(() => {
+      console.log("Loading army form local")
       if(localStorage.getItem("warHammerArmy")){
         setArmyReady(localStorage.getItem("warHammerArmy"))
+      }
+      return ()=>{
+        console.log("Closeapp cleanup")
       }
   }, []);
 
@@ -26,3 +30,8 @@ export default function App({ Component, pageProps }) {
       <Component {...pageProps} />
     </ ArmyProvider>
   )}
+
+  // let confirmed = window.confirm("Are you sure you want to save your army?")
+  // if(confirmed){
+  //   localStorage.setItem("warHammerArmy", JSON.stringify({armyReady:armyReady, armyStandby:armyStandby, armyUnpainted:armyUnpainted }));
+  // }

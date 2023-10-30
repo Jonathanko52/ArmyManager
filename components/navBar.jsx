@@ -10,6 +10,9 @@ function NavBar(){
       <div className="font-bold col-span-1 row-span-6 border-black border-2">
         <nav>
           <ul>
+          <li>
+            <Link className="m-4" href="/">Index</Link><br></br>
+            </li>
             <li>
             <Link className="m-4" href="/Army">Army</Link><br></br>
             </li>
