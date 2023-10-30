@@ -16,11 +16,22 @@ function MainPage(){
 
   useEffect(() => {
     console.log("MAIN USEEFFECT FIRED", value)
-    setArmyReady(value.armyReady)
-    setArmyStandby(value.armyStandby)
-    setArmyUnpainted(value.armyUnpainted)
+
+    let contextData = JSON.parse(value)
+
+      console.log("TEST", contextData)
+      console.log("TEST1", typeof contextData)
+      console.log("TEST2", contextData.armyReady)
+
+
+      setArmyReady(contextData.armyReady)
+      setArmyStandby(contextData.armyStandby)
+      setArmyUnpainted(contextData.armyUnpainted)
+
+
+
+
     //cleanup function
-    console.log(armyReady,armyStandby,armyUnpainted)
     return ()=>{
       setValue({
         armyName:armyName,
@@ -177,9 +188,9 @@ function MainPage(){
         <div className="font-bold underline border-black col-span-10 grid grid-cols-12 border-2 row-span-6 ">
           <MainLeft addUnitToArmy={addUnitToArmy}/>
           <MainRight 
-            unitsReady={armyReady}
-            unitsStandby={armyStandby}
-            unitsUnpainted={armyUnpainted}
+            unitsReady={armyReady.units}
+            unitsStandby={armyStandby.units}
+            unitsUnpainted={armyUnpainted.units}
             armyName={armyName}
             setArmyName={setArmyName}
             faction={faction}
