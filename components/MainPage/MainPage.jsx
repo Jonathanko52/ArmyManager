@@ -99,7 +99,13 @@ function MainPage(){
   const saveArmyToLocal = () =>{
     let confirmed = window.confirm("Are you sure you want to save your army?")
     if(confirmed){
-      localStorage.setItem("warHammerArmy", JSON.stringify({armyReady:armyReady, armyStandby:armyStandby, armyUnpainted:armyUnpainted }));
+      localStorage.setItem("warHammerArmy", JSON.stringify({
+        armyName:armyName,
+        faction:faction,
+        armyReady:armyReady, 
+        armyStandby:armyStandby, 
+        armyUnpainted:armyUnpainted 
+      }));
     }
   }
 
@@ -108,6 +114,8 @@ function MainPage(){
     if(confirmed){
       let testArmy = localStorage.getItem("warHammerArmy");
       testArmy = JSON.parse(testArmy)
+      setArmyName(testArmy.armyName)
+      setFaction(testArmy.faction)
       setArmyReady(testArmy.armyReady)
       setArmyStandby(testArmy.armyStandby)
       setArmyUnpainted(testArmy.armyUnpainted)
@@ -126,6 +134,8 @@ function MainPage(){
 
   const clearCurrentArmy = () => {
     setValue({
+      armyName:'',
+      faction:'',
       armyReady:{units:[]}, 
       armyStandby:{units:[]}, 
       armyUnpainted:{units:[]}
