@@ -19,6 +19,9 @@ function MainRight({
   removeUnitFromUnpainted,
   removeUnitFromStandby,
   removeUnitFromReady,
+  duplicateUnitInReady,
+  duplicateUnitInStandby,
+  duplicateUnitInUnpainted,
   armyName,
   setArmyName,
   faction,
@@ -63,6 +66,8 @@ function MainRight({
                 buttonTwo={readyToUnpainted}
                 buttonTwoText={"Move to Unpainted"}
                 remove={removeUnitFromReady}
+                duplicate={duplicateUnitInReady}
+
               />
               <ArmyColumns
                 columnName={"Standby"}
@@ -72,6 +77,7 @@ function MainRight({
                 buttonTwo={standbyToUnpainted}
                 buttonTwoText={"Move to Unpainted"}
                 remove={removeUnitFromStandby}
+                duplicate={duplicateUnitInStandby}
               />
               <ArmyColumns
                 columnName={"Unpainted/Unassembled"}
@@ -81,6 +87,7 @@ function MainRight({
                 buttonTwo={unpaintedToStandy}
                 buttonTwoText={"Move to Standby"}
                 remove={removeUnitFromUnpainted}
+                duplicate={duplicateUnitInUnpainted}
               />
             </div>
             <div className="ARMYBUTTONS p-4 m-4 border-black border-2  grid grid-cols-4 col-span-3 row-span-6">

@@ -14,8 +14,8 @@ import Layout from '../components/layout'
   
       useEffect(() => {
         if(localStorage.getItem("warHammerArmy")){
-          setArmyReady(localStorage.getItem("warHammerArmy"))
-        }
+          let contextData = JSON.parse(localStorage.getItem("warHammerArmy"))
+          setArmyReady(contextData)        }
     }, []);
   
     return (

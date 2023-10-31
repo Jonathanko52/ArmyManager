@@ -17,19 +17,11 @@ function MainPage(){
   useEffect(() => {
     console.log("MAIN USEEFFECT FIRED", value)
 
-    let contextData = JSON.parse(value)
-
-      console.log("TEST", contextData)
-      console.log("TEST1", typeof contextData)
-      console.log("TEST2", contextData.armyReady)
-
+    let contextData = value
 
       setArmyReady(contextData.armyReady)
       setArmyStandby(contextData.armyStandby)
       setArmyUnpainted(contextData.armyUnpainted)
-
-
-
 
     //cleanup function
     return ()=>{
@@ -45,6 +37,42 @@ function MainPage(){
 
   const addUnitToArmy = (newUnit) =>{
     setArmyReady({...armyReady, units:[...armyReady.units, newUnit]})
+  }
+
+  const duplicateUnitInReady = (unitId) =>{
+    let duplicatedUnit = {}
+    let newUnitId = parseInt(Math.random() * 1000)
+    armyReady.units.forEach(cur=>{
+      if(cur.unitId === unitId){
+        Object.assign(duplicatedUnit,cur)
+        duplicatedUnit.unitId = newUnitId
+      }
+    })
+    setArmyReady({...armyReady, units:[...armyReady.units, duplicatedUnit]})
+  }
+
+  const duplicateUnitInStandby = (unitId) =>{
+    let duplicatedUnit = {}
+    let newUnitId = parseInt(Math.random() * 1000)
+    armyReady.units.forEach(cur=>{
+      if(cur.unitId === unitId){
+        Object.assign(duplicatedUnit,cur)
+        duplicatedUnit.unitId = newUnitId
+      }
+    })
+    setArmyStandby({...armyReady, units:[...armyReady.units, duplicatedUnit]})
+  }
+
+  const duplicateUnitInUnpainted = (unitId) =>{
+    let duplicatedUnit = {}
+    let newUnitId = parseInt(Math.random() * 1000)
+    armyReady.units.forEach(cur=>{
+      if(cur.unitId === unitId){
+        Object.assign(duplicatedUnit,cur)
+        duplicatedUnit.unitId = newUnitId
+      }
+    })
+    setArmyUnpainted({...armyReady, units:[...armyReady.units, duplicatedUnit]})
   }
 
   const removeUnitFromReady = (unitId)=>{
@@ -81,7 +109,14 @@ function MainPage(){
   }
 
   const loadArmyFromLocal = () =>{
-    //
+    let confirmed = window.confirm("Are you sure you want to load your army?")
+    if(confirmed){
+      let testArmy = localStorage.getItem("warHammerArmy");
+      testArmy = JSON.parse(testArmy)
+      setArmyReady(testArmy.armyReady)
+      setArmyStandby(testArmy.armyStandby)
+      setArmyUnpainted(testArmy.armyUnpainted)
+    }
   }
 
   const saveToMainPage = () =>{
@@ -209,6 +244,9 @@ function MainPage(){
             removeUnitFromUnpainted={removeUnitFromUnpainted}
             removeUnitFromStandby={removeUnitFromStandby}
             removeUnitFromReady={removeUnitFromReady}
+            duplicateUnitInReady={duplicateUnitInReady}
+            duplicateUnitInStandby={duplicateUnitInStandby}
+            duplicateUnitInUnpainted={duplicateUnitInUnpainted}
           />
           <button onClick={saveToMainPage}>Save Army To Main Page</button>
           <button onClick={logState}>Log State</button>

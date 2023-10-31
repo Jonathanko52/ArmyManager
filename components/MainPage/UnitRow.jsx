@@ -4,7 +4,8 @@ function UnitRow({unitName, modelCount, pointCost, unitSize, unitId, buttonOne,
   buttonOneText,
   buttonTwo,
   buttonTwoText,
-  remove
+  remove,
+  duplicate
 }){
     return (
         <div className="font-bold underline border-black col-span-8 row-span-5 border-2 p-4">
@@ -22,6 +23,8 @@ function UnitRow({unitName, modelCount, pointCost, unitSize, unitId, buttonOne,
               onClick={()=>{buttonTwo(unitId)}}>{buttonTwoText}</button>
               <button className="rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" 
               onClick={()=>{remove(unitId)}}>Remove</button>
+              <button className="rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" 
+              onClick={()=>{duplicate(unitId)}}>Duplicate</button>
             </div>
         </div>
       )

@@ -8,13 +8,13 @@ function ArmyColumn({
   buttonOneText,
   buttonTwo,
   buttonTwoText,
-  remove
+  remove,
+  duplicate
 }){
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
   let unitsComponents = [];
   let totalArmyCost = 0;
   // useEffect(()=>{
-    console.log("UNITS",units)
     if(Array.isArray(units)){
     units.forEach(cur=>{
       unitsComponents.push(<UnitRow 
@@ -28,6 +28,7 @@ function ArmyColumn({
         buttonTwo={buttonTwo}
         buttonTwoText={buttonTwoText}
         remove={remove}
+        duplicate={duplicate}
         />)
     })
     units.forEach(cur=>{
