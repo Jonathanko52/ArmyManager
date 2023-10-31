@@ -15,15 +15,10 @@ function MainPage(){
   const [faction, setFaction] = useState('');
 
   useEffect(() => {
-    console.log("MAIN USEEFFECT FIRED", value)
-
     let contextData = value
-
       setArmyReady(contextData.armyReady)
       setArmyStandby(contextData.armyStandby)
       setArmyUnpainted(contextData.armyUnpainted)
-
-    //cleanup function
     return ()=>{
       setValue({
         armyName:armyName,
@@ -54,25 +49,25 @@ function MainPage(){
   const duplicateUnitInStandby = (unitId) =>{
     let duplicatedUnit = {}
     let newUnitId = parseInt(Math.random() * 1000)
-    armyReady.units.forEach(cur=>{
+    armyStandby.units.forEach(cur=>{
       if(cur.unitId === unitId){
         Object.assign(duplicatedUnit,cur)
         duplicatedUnit.unitId = newUnitId
       }
     })
-    setArmyStandby({...armyReady, units:[...armyReady.units, duplicatedUnit]})
+    setArmyStandby({...armyStandby, units:[...armyStandby.units, duplicatedUnit]})
   }
 
   const duplicateUnitInUnpainted = (unitId) =>{
     let duplicatedUnit = {}
     let newUnitId = parseInt(Math.random() * 1000)
-    armyReady.units.forEach(cur=>{
+    armyUnpainted.units.forEach(cur=>{
       if(cur.unitId === unitId){
         Object.assign(duplicatedUnit,cur)
         duplicatedUnit.unitId = newUnitId
       }
     })
-    setArmyUnpainted({...armyReady, units:[...armyReady.units, duplicatedUnit]})
+    setArmyUnpainted({...armyUnpainted, units:[...armyUnpainted.units, duplicatedUnit]})
   }
 
   const removeUnitFromReady = (unitId)=>{
