@@ -133,13 +133,16 @@ function MainPage(){
   }
 
   const clearCurrentArmy = () => {
-    setValue({
-      armyName:'',
-      faction:'',
-      armyReady:{units:[]}, 
-      armyStandby:{units:[]}, 
-      armyUnpainted:{units:[]}
-    })
+    let confirmed = window.confirm("Are you sure you want delete your current army?")
+    if(confirmed){
+      setValue({
+        armyName:'',
+        faction:'',
+        armyReady:{units:[]}, 
+        armyStandby:{units:[]}, 
+        armyUnpainted:{units:[]}
+      })
+    }
   }
 
   const readyToStandby = (unitId) => {
