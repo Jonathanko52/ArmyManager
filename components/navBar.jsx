@@ -24,12 +24,28 @@ function NavBar(){
             console.log(value)
           }}>LOG STATE</button>
           <br></br>
-          <button onClick={()=>{
-            setValue("DYNAMO1")
+          <button onClick={(e)=>{
+            // http://localhost:3000/api/retrieveArmy
+            e.preventDefault();
+            const postData = async () => {
+              console.log("DYNAMO")
+        
+              const response = await fetch("/api/retrieveArmy", {
+                method: "GET",
+                // body: JSON.stringify(data),
+              });
+              return response.json();
+            };
+            postData().then((data) => {
+              
+            });
+
+
+
           }}>DYNAMOTEST</button>
           <br></br>
           <button onClick={()=>{
-            setValue("DYNAMO2")
+            // setValue("DYNAMO2")
           }}>DYNAMOTEST2</button>
         </nav>        
       </div>
