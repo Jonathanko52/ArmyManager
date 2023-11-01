@@ -21,7 +21,7 @@ function Database(){
       const postData = async () => {
         console.log("Read Table")
   
-        const response = await fetch("/api/readTable", {
+        const response = await fetch("/api/retrieveArmy", {
           method: "GET",
           // body: JSON.stringify(data),
         });
@@ -38,21 +38,71 @@ function Database(){
 
   const saveAppArmyToDatabase = () => {
     //adds completely new army to database
+    const postData = async () => {
+      console.log("Read Table")
 
+      const response = await fetch("/api/addArmy", {
+        method: "POST",
+        // body: JSON.stringify(data),
+      });
+      return response.json();
+    };
+    postData().then((data) => {
+      console.log("CREATE TABLE ON FRONTPAGE", data)
+    });
   };
 
   const updateAppArmyToDatabase = () => {
     //rewrites army in database with local army
+    const postData = async () => {
+      console.log("Read Table")
+
+      const response = await fetch("/api/updateArmy", {
+        method: "GET",
+        // body: JSON.stringify(data),
+      });
+      return response.json();
+    };
+    postData().then((data) => {
+      console.log("CREATE TABLE ON FRONTPAGE", data)
+    });
   };
 
   const deleteArmyFromDatabase = () => {
     //deletes army from the database
+    const postData = async () => {
+      console.log("Read Table")
+
+      const response = await fetch("/api/deleteArmy", {
+        method: "GET",
+        // body: JSON.stringify(data),
+      });
+      return response.json();
+    };
+    postData().then((data) => {
+      console.log("CREATE TABLE ON FRONTPAGE", data)
+    });
   };
 
   const deleteArmyFromApp = () => {
     //deletes army from local
   };
 
+  const createTable = () => {
+    //deletes army from local
+    const postData = async () => {
+      console.log("Read Table")
+
+      const response = await fetch("/api/createTable", {
+        method: "GET",
+        // body: JSON.stringify(data),
+      });
+      return response.json();
+    };
+    postData().then((data) => {
+      console.log("CREATE TABLE ON FRONTPAGE", data)
+    });
+  };
 
   //Database Left
     //component displaying current army being edited in the app
@@ -77,7 +127,13 @@ function Database(){
 
     return (
         <div className="font-bold underline border-black col-span-10 grid grid-cols-12 border-2">
-          <DatabaseLeft/>
+          <DatabaseLeft
+            addArmy={saveAppArmyToDatabase}
+            createTable={createTable}
+            deleteArmy={deleteArmyFromDatabase}
+            retrieveArmy={fetchFromDatabase}
+            updateArmy={updateAppArmyToDatabase} 
+          />
           <DatabaseRight/>
         </div>
       )
