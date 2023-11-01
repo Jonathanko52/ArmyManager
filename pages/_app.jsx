@@ -16,11 +16,9 @@ export default function App({ Component, pageProps }) {
   });
 
     useEffect(() => {
-      console.log("Loading army form local")
       if(localStorage.getItem("warHammerArmy")){
         let contextData = JSON.parse(localStorage.getItem("warHammerArmy"))
         setArmyReady(contextData)
-        console.log("context",localStorage.getItem("warHammerArmy"))
       }
       return ()=>{
         console.log("Closeapp cleanup")

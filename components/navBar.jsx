@@ -25,7 +25,6 @@ function NavBar(){
           }}>LOG STATE</button>
           <br></br>
           <button onClick={(e)=>{
-            // http://localhost:3000/api/retrieveArmy
             e.preventDefault();
             const postData = async () => {
               console.log("DYNAMO")
@@ -37,10 +36,8 @@ function NavBar(){
               return response.json();
             };
             postData().then((data) => {
-              
+              console.log("DATA ON FRONTPAGE", data)
             });
-
-
 
           }}>DYNAMOTEST</button>
           <br></br>
