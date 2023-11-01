@@ -10,7 +10,7 @@ export default function retrieveArmy(req, res) {
   const params = {
     TableName: "Movies",
     Key: {
-      title: { S: title },
+      title: { S: "TEST" },
     },
   };
 
@@ -18,7 +18,7 @@ export default function retrieveArmy(req, res) {
     if (err) {
       console.error("Unable to find movie", err);
     } else {
-      console.log("Found movie", data.Item);
+      console.log("Found movie", data);
     }
   });
 }

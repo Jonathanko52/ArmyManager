@@ -15,7 +15,7 @@ export default function updateArmy(req, res) {
         ReturnConsumedCapacity: "TOTAL",
       };
     
-      DynamoDB.putItem(params, function(err) {
+      dynamodb.putItem(params, function(err) {
         if (err) {
           console.error("Unable to find movie", err);
         } else {

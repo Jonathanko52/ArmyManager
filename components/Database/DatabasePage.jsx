@@ -39,7 +39,7 @@ function Database(){
   const saveAppArmyToDatabase = () => {
     //adds completely new army to database
     const postData = async () => {
-      console.log("Read Table")
+      console.log("ADDING ARMY")
 
       const response = await fetch("/api/addArmy", {
         method: "POST",

@@ -7,11 +7,12 @@ AWS.config.update(AWSConfig);
 
 
 export default function addArmy(req, res) {
+  console.log("ADD ARMY API HIT")
     const params = {
       TableName: "Movies",
       Item: {
-        title: { S: title },
-        rtScore: { N: rtScore },
+        title: { S: "TEST" },
+        rtScore: { N: "3" },
       },
     };
   
@@ -19,7 +20,7 @@ export default function addArmy(req, res) {
       if (err) {
         console.error("Unable to add movie", err);
       } else {
-        console.log(`Added ${title} with a Rotten Tomatoes Score of ${rtScore}%`);
+        // console.log(`Added ${title} with a Rotten Tomatoes Score of ${rtScore}%`);
       }
     });
   }
