@@ -39,11 +39,11 @@ function Database(){
   const saveAppArmyToDatabase = () => {
     //adds completely new army to database
     const postData = async () => {
-      console.log("ADDING ARMY")
-
+      console.log("ADDING ARMY",value)
+      let data = value
       const response = await fetch("/api/addArmy", {
         method: "POST",
-        // body: JSON.stringify(data),
+        body: JSON.stringify(data),
       });
       return response.json();
     };
@@ -104,6 +104,12 @@ function Database(){
     });
   };
 
+  const logCurrentState = () =>{
+    console.log("CONTEXT VALUE",value)
+
+
+  }
+
   //Database Left
     //component displaying current army being edited in the app
     //save button for said component
@@ -133,6 +139,7 @@ function Database(){
             deleteArmy={deleteArmyFromDatabase}
             retrieveArmy={fetchFromDatabase}
             updateArmy={updateAppArmyToDatabase} 
+            logCurrentState={logCurrentState}
           />
           <DatabaseRight/>
         </div>

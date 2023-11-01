@@ -12,7 +12,8 @@ function DatabaseLeft({
   createTable,
   deleteArmy,
   retrieveArmy,
-  updateArmy
+  updateArmy,
+  logCurrentState
 }){
 
 
@@ -23,6 +24,7 @@ function DatabaseLeft({
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{deleteArmy()}}>Delete Army</button>
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{retrieveArmy()}}>Retrieve Army</button>
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{updateArmy()}}>Update Army</button>
+          <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{logCurrentState()}}>Log State</button>
         </div>
       )
 }

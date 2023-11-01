@@ -7,12 +7,14 @@ AWS.config.update(AWSConfig);
 
 
 export default function addArmy(req, res) {
-  console.log("ADD ARMY API HIT")
+  console.log("ADD ARMY API HIT",typeof JSON.parse(req.body))
+    let parsedArmy = JSON.parse(req.body)
     const params = {
-      TableName: "Movies",
+      TableName: "Warhammer Armies",
       Item: {
-        title: { S: "TEST" },
-        rtScore: { N: "3" },
+        armyName: { S: parsedArmy.armyName },
+        armyFaction:{ S: parsedArmy.faction},
+        armyString: { S: req.body },
       },
     };
   
