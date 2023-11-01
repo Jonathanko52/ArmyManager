@@ -1,5 +1,5 @@
 import AWSConfig from './config/aws-config'
-import params from './../api/config/dynamoSchema'
+import params from '../api/config/tableSchema'
 
 const AWS = require("aws-sdk");
 const dynamodb = new AWS.DynamoDB();

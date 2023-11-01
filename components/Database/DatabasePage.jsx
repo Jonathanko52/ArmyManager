@@ -18,7 +18,18 @@ function Database(){
   }, []);
 
   const fetchFromDatabase = () => {
-
+      const postData = async () => {
+        console.log("Read Table")
+  
+        const response = await fetch("/api/readTable", {
+          method: "GET",
+          // body: JSON.stringify(data),
+        });
+        return response.json();
+      };
+      postData().then((data) => {
+        console.log("CREATE TABLE ON FRONTPAGE", data)
+      });
   };
 
   const setDatabaseArmyToAppArmy = () => {
@@ -60,12 +71,14 @@ function Database(){
 
 
 
+      
+
+
 
     return (
         <div className="font-bold underline border-black col-span-10 grid grid-cols-12 border-2">
-
-          {/* <DatabaseLeft/>
-          <DatabaseRight/> */}
+          <DatabaseLeft/>
+          <DatabaseRight/>
         </div>
       )
 }
