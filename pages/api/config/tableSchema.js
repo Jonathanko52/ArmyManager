@@ -2,13 +2,13 @@ module.exports = {
     TableName: "WarhammerArmies",
     KeySchema: [
       { 
-        AttributeName: "title", 
+        AttributeName: "armyName", 
         KeyType: "HASH" 
       }   
     ],
     AttributeDefinitions: [
       {
-        AttributeName: "title", 
+        AttributeName: "armyName", 
         AttributeType: "S" 
       }
     ],
