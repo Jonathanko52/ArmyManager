@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, { useContext } from 'react';
 import ArmyContext from './../context/ArmyContext'
+import params from './../pages/api/config/dynamoSchema'
 
 function NavBar(){
 
@@ -42,7 +43,18 @@ function NavBar(){
           }}>DYNAMOTEST</button>
           <br></br>
           <button onClick={()=>{
-            // setValue("DYNAMO2")
+            const postData = async () => {
+              console.log("DYNAMO2")
+        
+              const response = await fetch("/api/createTable", {
+                method: "GET",
+                // body: JSON.stringify(data),
+              });
+              return response.json();
+            };
+            postData().then((data) => {
+              console.log("CREATE TABLE ON FRONTPAGE", data)
+            });
           }}>DYNAMOTEST2</button>
         </nav>        
       </div>

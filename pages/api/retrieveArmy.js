@@ -5,12 +5,20 @@ AWS.config.update(AWSConfig);
 
 
 
-export default function handler(req, res) {
-  dynamodb.listTables({}, (err, data)=>{
-    if(err) {
-        console.log(err);
+export default function retrieveArmy(req, res) {
+
+  const params = {
+    TableName: "Movies",
+    Key: {
+      title: { S: title },
+    },
+  };
+
+  dynamodb.getItem(params, function(err, data) {
+    if (err) {
+      console.error("Unable to find movie", err);
     } else {
-        console.log("DATA",data);
+      console.log("Found movie", data.Item);
     }
-  })
+  });
 }
