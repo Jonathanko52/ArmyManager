@@ -9,7 +9,6 @@ function Database(){
 
   const { value, setValue } = useContext(ArmyContext)
 
-  const [appArmy, setAppArmy] = useState('');
   const [databaseArmies, setDatabaseArmies] = useState('');
 
 
@@ -18,8 +17,9 @@ function Database(){
   }, []);
 
   const fetchFromDatabase = () => {
+
+    //FETCHES ALL ARMIES FROM DATABASE. SEPERATE FUNCTION NEEDED TO SET IT TO APP ARMY
       const postData = async () => {
-        console.log("Read Table")
   
         const response = await fetch("/api/retrieveArmy", {
           method: "GET",
@@ -35,6 +35,7 @@ function Database(){
   const setDatabaseArmyToAppArmy = () => {
 
   };
+
 
   const saveAppArmyToDatabase = () => {
     //adds completely new army to database
