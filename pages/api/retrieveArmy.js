@@ -6,19 +6,17 @@ AWS.config.update(AWSConfig);
 
 
 export default function retrieveArmy(req, res) {
-
+  console.log("BACKEND RETRIEVE")
   const params = {
-    TableName: "Movies",
-    Key: {
-      title: { S: "TEST" },
-    },
+    TableName: "WarhammerArmies",
   };
 
-  dynamodb.getItem(params, function(err, data) {
+  dynamodb.scan(params, function(err, data) {
     if (err) {
       console.error("Unable to find movie", err);
     } else {
-      console.log("Found movie", data);
+      console.log("Found movie", data.Items);
+      res.status(400).send(data.Items)
     }
   });
 }

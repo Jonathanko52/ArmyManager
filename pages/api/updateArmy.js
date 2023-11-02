@@ -7,7 +7,6 @@ AWS.config.update(AWSConfig);
 
 export default function updateArmy(req, res) {
   let parsedArmy = JSON.parse(req.body)
-  console.log("ARMY NAME",parsedArmy.armyName)
 
     const params = {
         TableName: "WarhammerArmies",
