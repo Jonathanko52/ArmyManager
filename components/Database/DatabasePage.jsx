@@ -17,7 +17,7 @@ function Database(){
   }, []);
 
   const fetchFromDatabase = () => {
-
+    console.log("FETCHING FROM DATABASE")
     //FETCHES ALL ARMIES FROM DATABASE. SEPERATE FUNCTION NEEDED TO SET IT TO APP ARMY
       const postData = async () => {
   
@@ -28,7 +28,9 @@ function Database(){
         return response.json();
       };
       postData().then((data) => {
-        console.log("CREATE TABLE ON FRONTPAGE", data)
+        console.log("Tables Retrieved", typeof data, data)
+        let newDatabaseArmies = data
+        setDatabaseArmies(newDatabaseArmies)
       });
   };
 
