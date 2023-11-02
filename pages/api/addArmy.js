@@ -7,7 +7,6 @@ AWS.config.update(AWSConfig);
 
 
 export default function addArmy(req, res) {
-  console.log("ADD ARMY API HIT",typeof JSON.parse(req.body))
     let parsedArmy = JSON.parse(req.body)
     const params = {
       TableName: "WarhammerArmies",

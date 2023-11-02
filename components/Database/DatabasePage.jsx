@@ -56,15 +56,15 @@ function Database(){
     //rewrites army in database with local army
     const postData = async () => {
       console.log("Read Table")
-
+      let data = value
       const response = await fetch("/api/updateArmy", {
         method: "GET",
-        // body: JSON.stringify(data),
+        body: JSON.stringify(data),
       });
       return response.json();
     };
     postData().then((data) => {
-      console.log("CREATE TABLE ON FRONTPAGE", data)
+      console.log("UPDATEFRONTPAGE", data)
     });
   };
 

@@ -6,11 +6,14 @@ AWS.config.update(AWSConfig);
 
 
 export default function updateArmy(req, res) {
+  let parsedArmy = JSON.parse(req.body)
+
     const params = {
-        TableName: "Movies",
+        TableName: "WarhammerArmies",
         Item: {
-          title: { S: title },
-          rtScore: { N: newRtScore.toString() },
+          armyName: { S: parsedArmy.armyName },
+          armyFaction:{ S: parsedArmy.faction},
+          armyString: { S: req.body },
         },
         ReturnConsumedCapacity: "TOTAL",
       };
