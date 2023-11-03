@@ -130,7 +130,8 @@ function MainPage(){
       faction:faction,
       armyReady:armyReady,
       armyStandby:armyStandby,
-      armyUnpainted:armyUnpainted
+      armyUnpainted:armyUnpainted,
+      armyPoints:armyPoints
     })
   }
 
@@ -228,7 +229,10 @@ function MainPage(){
   }
 
   const logState = () =>{
-    console.log(armyReady,armyStandby,armyUnpainted)
+    console.log(armyReady,armyStandby,armyUnpainted)  
+    console.log(armyPoints, armyName, faction)
+
+  
   }
   
   return (
