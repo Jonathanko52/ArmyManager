@@ -89,7 +89,6 @@ function Database(){
   const createTable = () => {
     //WORKING ON AWS DYNAMODB
     const postData = async () => {
-      console.log("Read Table")
 
       const response = await fetch("/api/createTable", {
         method: "GET",
@@ -103,8 +102,8 @@ function Database(){
   };
 
   const logCurrentState = () =>{
-    console.log("CONTEXT VALUE",value)
-    console.log("DATABASE VALUE",databaseArmies)
+    console.log("CONTEXT VALUE", value)
+    console.log("DATABASE VALUE", databaseArmies, typeof databaseArmies)
   }
 
   //Database Left
@@ -143,7 +142,7 @@ function Database(){
             updateArmy={updateAppArmyToDatabase} 
             logCurrentState={logCurrentState}
           />
-          <DatabaseRight/>
+          <DatabaseRight databaseArmies={databaseArmies}/>
         </div>
       )
 }

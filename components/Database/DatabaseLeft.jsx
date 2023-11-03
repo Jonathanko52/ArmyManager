@@ -1,4 +1,4 @@
-import React, {useState,}from 'react';
+import React from 'react';
 
   //pages:Main page 
   //window displaying army
