@@ -17,18 +17,15 @@ function Database(){
   }, []);
 
   const fetchFromDatabase = () => {
-    console.log("FETCHING FROM DATABASE")
-    //FETCHES ALL ARMIES FROM DATABASE. SEPERATE FUNCTION NEEDED TO SET IT TO APP ARMY
+    //WORKING ON AWS DYNAMODB
       const postData = async () => {
   
         const response = await fetch("/api/retrieveArmy", {
           method: "GET",
-          // body: JSON.stringify(data),
         });
         return response.json();
       };
       postData().then((data) => {
-        console.log("Tables Retrieved", typeof data, data)
         let newDatabaseArmies = data
         setDatabaseArmies(newDatabaseArmies)
       });
@@ -38,43 +35,41 @@ function Database(){
 
   };
 
-
   const saveAppArmyToDatabase = () => {
-    //adds completely new army to database
+    //WORKING ON AWS DYNAMODB
     const postData = async () => {
       console.log("ADDING ARMY",value)
-      let data = value
+      let data = JSON.stringify(value)
       const response = await fetch("/api/addArmy", {
         method: "POST",
-        body: JSON.stringify(data),
+        body: data,
       });
       return response.json();
     };
     postData().then((data) => {
-      console.log("CREATE TABLE ON FRONTPAGE", data)
+      console.log("ARMY SAVED TO DATABASE", data)
     });
   };
 
   const updateAppArmyToDatabase = () => {
-    //rewrites army in database with local army
+    //WORKING ON AWS DYNAMODB
     const postData = async () => {
       console.log("ADDING ARMY",value)
-      let data = value
+      let data = JSON.stringify(value)
       const response = await fetch("/api/updateArmy", {
         method: "POST",
-        body: JSON.stringify(data),
+        body: data,
       });
       return response.json();
     };
     postData().then((data) => {
-      console.log("CREATE TABLE ON FRONTPAGE", data)
+      console.log("ARMY IN DATABASE UPDATED", data)
     });
   };
 
   const deleteArmyFromDatabase = () => {
-    //deletes army from the database
+    //NOT SETUP YET
     const postData = async () => {
-      console.log("Read Table")
 
       const response = await fetch("/api/deleteArmy", {
         method: "GET",
@@ -92,7 +87,7 @@ function Database(){
   };
 
   const createTable = () => {
-    //deletes army from local
+    //WORKING ON AWS DYNAMODB
     const postData = async () => {
       console.log("Read Table")
 
@@ -109,8 +104,7 @@ function Database(){
 
   const logCurrentState = () =>{
     console.log("CONTEXT VALUE",value)
-
-
+    console.log("DATABASE VALUE",databaseArmies)
   }
 
   //Database Left
@@ -125,13 +119,18 @@ function Database(){
       //button to delete said database item
       //button to load said database item(set to app state)
       //button to copy said database item(create a copy of it in database)
-      //ability to rearrage. drag and drop is ideal
+      //ability to rearrage. drag and drop is ideal      
 
-
-
-
-      
-
+  // DYNAMOD TABLES TO BE PASED
+      // [
+      //   {
+      //     armyString: {
+      //       S: `{"armyName":"Black Templars","faction":"Black Templars","armyReady":{"units":[],"armyName":"Black Templar","faction":"Black Templar"},"armyStandby":{"units":[{"unitName":"Crusader Squad","modelCount":10,"pointCost":140,"unitSize":0,"moneyCost":0,"unitId":942},{"unitName":"Castellan","modelCount":1,"pointCost":65,"unitSize":0,"moneyCost":0,"unitId":467},{"unitName":"Emperor's Champion","modelCount":1,"pointCost":75,"unitSize":0,"moneyCost":0,"unitId":386}]},"armyUnpainted":{"units":[{"unitName":"Crusader Squad","modelCount":10,"pointCost":140,"unitSize":0,"moneyCost":0,"unitId":982}]}}`
+      //     },
+      //     armyName: { S: 'Black Templars' },
+      //     armyFaction: { S: 'Black Templars' }
+      //   }
+      // ]
 
 
     return (
