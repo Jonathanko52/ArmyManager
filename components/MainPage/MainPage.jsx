@@ -11,6 +11,7 @@ function MainPage(){
   const [armyReady, setArmyReady] = useState({units:[]});
   const [armyStandby, setArmyStandby] = useState({units:[]});
   const [armyUnpainted, setArmyUnpainted] = useState({units:[]});
+  const [armyPoints, setArmyPoints] = useState(0)
   const [armyName, setArmyName] = useState('');
   const [faction, setFaction] = useState('');
 
@@ -25,7 +26,8 @@ function MainPage(){
         faction:faction,
         armyReady:armyReady,
         armyStandby:armyStandby,
-        armyUnpainted:armyUnpainted
+        armyUnpainted:armyUnpainted,
+        armyPoints:armyPoints
       })
     }
   }, []);
@@ -140,7 +142,9 @@ function MainPage(){
         faction:'',
         armyReady:{units:[]}, 
         armyStandby:{units:[]}, 
-        armyUnpainted:{units:[]}
+        armyUnpainted:{units:[]},
+        armyPoints:0,
+
       })
     }
   }
@@ -236,6 +240,7 @@ function MainPage(){
             unitsUnpainted={armyUnpainted.units}
             armyName={armyName}
             setArmyName={setArmyName}
+            setArmyPoints={setArmyPoints}
             faction={faction}
             setFaction={setFaction}
             saveArmyToLocal={saveArmyToLocal} 

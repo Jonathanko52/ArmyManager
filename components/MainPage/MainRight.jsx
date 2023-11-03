@@ -26,6 +26,7 @@ function MainRight({
   setArmyName,
   faction,
   setFaction,
+  setArmyPoints
 }){
     //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
 
