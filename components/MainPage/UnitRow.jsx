@@ -1,6 +1,6 @@
 import React from 'react';
 
-function UnitRow({unitName, modelCount, pointCost, unitSize, unitId, buttonOne,
+function UnitRow({unitName, modelCount, pointCost, unitId, buttonOne,
   buttonOneText,
   buttonTwo,
   buttonTwoText,

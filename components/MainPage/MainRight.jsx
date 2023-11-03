@@ -28,11 +28,32 @@ function MainRight({
   setFaction,
   setArmyPoints
 }){
-    //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
+
 
   let totalArmyCost = 0;
   let totalArmyMoneyCost = 0;
+  let totalArmyModelCount = 0;
 
+  // useEffect(()=>{
+  //   console.log("MAIN RIGHT USE EFFECT")
+    unitsReady.forEach((cur)=>{
+      totalArmyCost += cur.pointCost
+      totalArmyMoneyCost += 
+      totalArmyModelCount += cur.modelCount
+    })
+    unitsStandby.forEach((cur)=>{
+      totalArmyCost += cur.pointCost
+      totalArmyMoneyCost += 
+      totalArmyModelCount += cur.modelCount
+    })
+    unitsUnpainted.forEach((cur)=>{
+      totalArmyCost += cur.pointCost
+      totalArmyMoneyCost += 
+      totalArmyModelCount += cur.modelCount
+    })
+    setArmyPoints(totalArmyCost)
+
+  // },[])
     const handleChangeName = (event) =>{
       setArmyName(event.target.value)
       changeArmyName(armyName)       
@@ -68,7 +89,6 @@ function MainRight({
                 buttonTwoText={"Move to Unpainted"}
                 remove={removeUnitFromReady}
                 duplicate={duplicateUnitInReady}
-
               />
               <ArmyColumns
                 columnName={"Standby"}
