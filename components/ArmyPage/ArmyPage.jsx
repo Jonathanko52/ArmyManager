@@ -1,10 +1,10 @@
-import MainLeft from './MainLeft.jsx';
-import MainRight from './MainRight.jsx';
+import MainLeft from './ArmyLeft';
+import MainRight from './ArmyRight';
 import React, {useState, useContext, useEffect} from 'react';
 import ArmyContext from '../../context/ArmyContext'
 
 
-function MainPage(){
+function ArmyPage(){
     
   const { value, setValue } = useContext(ArmyContext)
 
@@ -17,18 +17,24 @@ function MainPage(){
 
   useEffect(() => {
     let contextData = value
+    console.log("LOADING CONTEXTDATA IN USEEFFECT", value)
+    setTimeout(() => {
+      console.log("TIMEOUT FIRED", value)
       setArmyReady(contextData.armyReady)
       setArmyStandby(contextData.armyStandby)
       setArmyUnpainted(contextData.armyUnpainted)
+    }, "1000");
+
+
     return ()=>{
-      setValue({
-        armyName:armyName,
-        faction:faction,
-        armyReady:armyReady,
-        armyStandby:armyStandby,
-        armyUnpainted:armyUnpainted,
-        armyPoints:armyPoints
-      })
+      // setValue({
+      //   armyName:armyName,
+      //   faction:faction,
+      //   armyReady:armyReady,
+      //   armyStandby:armyStandby,
+      //   armyUnpainted:armyUnpainted,
+      //   armyPoints:armyPoints
+      // })
     }
   }, []);
 
@@ -272,4 +278,4 @@ function MainPage(){
       )
 }
 
-export default MainPage;
+export default ArmyPage;
