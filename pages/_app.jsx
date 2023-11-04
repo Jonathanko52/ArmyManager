@@ -13,10 +13,12 @@ export default function App({ Component, pageProps }) {
     armyStandby:{units:[]}, 
     armyUnpainted:{units:[]}
   });
+  const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-      console.log("APP BOOTING")
+      console.log("APP BOOTING",pageProps)
       if(localStorage.getItem("warHammerArmy")){
+        console.log("APP OPENING LOCAL STORAGE")
         let contextData = JSON.parse(localStorage.getItem("warHammerArmy"))
         setArmyReady(contextData)
       }
@@ -26,7 +28,7 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <ArmyProvider value={{value:armyReady, setValue:setArmyReady}}>
+    <ArmyProvider value={{value:armyReady, setValue:setArmyReady, isLoading}}>
       <Component {...pageProps} />
     </ ArmyProvider>
   )}
