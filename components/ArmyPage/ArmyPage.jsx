@@ -6,7 +6,7 @@ import ArmyContext from '../../context/ArmyContext'
 
 function ArmyPage(){
     
-  const { value, setValue, loading} = useContext(ArmyContext)
+  const { value, setValue, isLoading} = useContext(ArmyContext)
 
   const [armyReady, setArmyReady] = useState({units:[]});
   const [armyStandby, setArmyStandby] = useState({units:[]});
@@ -17,14 +17,11 @@ function ArmyPage(){
 
   useEffect(() => {
     let contextData = value
-    console.log("LOADING CONTEXTDATA IN USEEFFECT")
-    setTimeout(() => {
-      console.log("TIMEOUT FIRED", value)
+
       setArmyReady(contextData.armyReady)
       setArmyStandby(contextData.armyStandby)
       setArmyUnpainted(contextData.armyUnpainted)
-    }, "1000");
-
+    console.log("LOADING",isLoading)
 
     return ()=>{
       // setValue({
@@ -36,7 +33,7 @@ function ArmyPage(){
       //   armyPoints:armyPoints
       // })
     }
-  }, []);
+  }, [isLoading]);
 
   const addUnitToArmy = (newUnit) =>{
     setArmyReady({...armyReady, units:[...armyReady.units, newUnit]})

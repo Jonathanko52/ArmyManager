@@ -16,11 +16,18 @@ export default function App({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-      console.log("APP BOOTING",pageProps)
+      console.log("APP BOOTING, CONTEXT LOADING", isLoading)
       if(localStorage.getItem("warHammerArmy")){
         console.log("APP OPENING LOCAL STORAGE")
-        let contextData = JSON.parse(localStorage.getItem("warHammerArmy"))
-        setArmyReady(contextData)
+
+
+        setTimeout(() => {
+          let contextData = JSON.parse(localStorage.getItem("warHammerArmy"))
+          setArmyReady(contextData)
+          setIsLoading(false)
+          console.log("APP BOOTING, CONTEXT UPDATED", isLoading, armyReady)
+
+        }, "1000");
       }
       return ()=>{
         console.log("Closeapp cleanup")
@@ -28,7 +35,7 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <ArmyProvider value={{value:armyReady, setValue:setArmyReady, isLoading}}>
+    <ArmyProvider value={{value:armyReady, setValue:setArmyReady, isLoading:isLoading}}>
       <Component {...pageProps} />
     </ ArmyProvider>
   )}
