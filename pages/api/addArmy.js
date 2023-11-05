@@ -14,6 +14,7 @@ export default function addArmy(req, res) {
         armyName: { S: parsedArmy.armyName },
         armyFaction:{ S: parsedArmy.faction},
         armyString: { S: req.body },
+        armyPoints: {S:parsedArmy.armyPoints.toString()}
       },
     };
   

@@ -46,6 +46,7 @@ function Database(){
     //WORKING ON AWS DYNAMODB
     const postData = async () => {
       let data = JSON.stringify(value)
+      console.log(value, data)
       const response = await fetch("/api/addArmy", {
         method: "POST",
         body: data,
