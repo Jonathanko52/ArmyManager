@@ -6,15 +6,6 @@ import {ArmyProvider} from '../context/ArmyContext'
 
 export default function Layout({ children }) {
 
-
-    const liftState = (test) =>{
-        setArmyReady(test)
-    }
-
-    const logState = () =>{
-        console.log(armyReady)
-    }
-
     return (
             <div className="App grid grid-cols-8 bg-slate-500 text-gray-300 min-h-screen">
                 <Header/>

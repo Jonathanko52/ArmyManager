@@ -16,13 +16,12 @@ function ArmyRow({armyName,armyfaction,armyPoints}){
           <label className="m-4 p-4" >Army Name: {armyName}</label><br></br>
           <label className="m-4 p-4" >Faction: {armyfaction}</label><br></br>
           <label className="m-4 p-4" >Points: {armyPoints}</label><br></br>
-          {/* <label className="m-4 p-4" >Unit ID: {armyId}</label><br></br> */}
 
           <div className="p-4 ">
               <button className="rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" 
-              onClick={}></button>
+              onClick={()=>{}}></button>
               <button className="rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" 
-              onClick={}></button>
+              onClick={()=>{}}></button>
 
           </div>
         </div>

@@ -16,18 +16,12 @@ export default function App({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-      console.log("APP BOOTING, CONTEXT LOADING", isLoading)
       if(localStorage.getItem("warHammerArmy")){
-        console.log("APP OPENING LOCAL STORAGE")
 
-
-        setTimeout(() => {
           let contextData = JSON.parse(localStorage.getItem("warHammerArmy"))
           setArmyReady(contextData)
           setIsLoading(false)
-          console.log("APP BOOTING, CONTEXT UPDATED", isLoading, armyReady)
 
-        }, "1000");
       }
       return ()=>{
         console.log("Closeapp cleanup")
