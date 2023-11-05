@@ -17,10 +17,14 @@ function ArmyPage(){
 
   useEffect(() => {
     let contextData = value
-
+      console.log(contextData)
       setArmyReady(contextData.armyReady)
       setArmyStandby(contextData.armyStandby)
       setArmyUnpainted(contextData.armyUnpainted)
+      // setArmyPoints()
+      setArmyName(contextData.armyName)
+      setFaction(contextData.faction)
+
 
     return ()=>{
       // setValue({
@@ -108,7 +112,8 @@ function ArmyPage(){
         faction:faction,
         armyReady:armyReady, 
         armyStandby:armyStandby, 
-        armyUnpainted:armyUnpainted 
+        armyUnpainted:armyUnpainted,
+        armyPoints:armyPoints
       }));
     }
   }
@@ -233,8 +238,6 @@ function ArmyPage(){
   const logState = () =>{
     console.log(armyReady,armyStandby,armyUnpainted)  
     console.log(armyPoints, armyName, faction)
-
-  
   }
   
   return (
