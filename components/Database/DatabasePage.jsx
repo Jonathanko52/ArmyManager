@@ -17,7 +17,7 @@ function Database(){
   }, []);
 
   const fetchFromDatabase = () => {
-    //WORKING ON AWS DYNAMODB
+    //Pulls from Dynamo to be presented on the database page, in the state
       const postData = async () => {
   
         const response = await fetch("/api/retrieveArmy", {
@@ -31,14 +31,20 @@ function Database(){
       });
   };
 
-  const setDatabaseArmyToAppArmy = () => {
-
+  const setDatabaseArmyToAppArmy = (id) => {
+    //Pulls from the state in here and pshes it into context, so no API
+    let armyToBeSet
+    databaseArmies.forEach((cur)=>{
+      if(cur.id === id){
+        armyToBeSet = cur;
+      }
+    })
+    setValue(armyToBeSet)
   };
 
   const saveAppArmyToDatabase = () => {
     //WORKING ON AWS DYNAMODB
     const postData = async () => {
-      console.log("ADDING ARMY",value)
       let data = JSON.stringify(value)
       const response = await fetch("/api/addArmy", {
         method: "POST",
@@ -54,7 +60,6 @@ function Database(){
   const updateAppArmyToDatabase = () => {
     //WORKING ON AWS DYNAMODB
     const postData = async () => {
-      console.log("ADDING ARMY",value)
       let data = JSON.stringify(value)
       const response = await fetch("/api/updateArmy", {
         method: "POST",
@@ -73,7 +78,6 @@ function Database(){
 
       const response = await fetch("/api/deleteArmy", {
         method: "GET",
-        // body: JSON.stringify(data),
       });
       return response.json();
     };
@@ -92,7 +96,6 @@ function Database(){
 
       const response = await fetch("/api/createTable", {
         method: "GET",
-        // body: JSON.stringify(data),
       });
       return response.json();
     };
