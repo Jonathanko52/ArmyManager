@@ -14,6 +14,7 @@ function DatabaseRight({databaseArmies}){
         // <ArmyRow 
         //   armyName={cur.armyName.S}
         //   armyfaction={cur.armyFaction.S}
+        //  armyPoints=={cur.armyPoints.S}
         // />
       })
     }
