@@ -26,35 +26,10 @@ function NavBar(){
           }}>LOG STATE</button>
           <br></br>
           <button onClick={(e)=>{
-            e.preventDefault();
-            const postData = async () => {
-              console.log("DYNAMO")
-        
-              const response = await fetch("/api/retrieveArmy", {
-                method: "GET",
-                // body: JSON.stringify(data),
-              });
-              return response.json();
-            };
-            postData().then((data) => {
-              console.log("DATA ON FRONTPAGE", data)
-            });
-
           }}>DYNAMOTEST</button>
           <br></br>
           <button onClick={()=>{
-            const postData = async () => {
-              console.log("DYNAMO2")
-        
-              const response = await fetch("/api/createTable", {
-                method: "GET",
-                // body: JSON.stringify(data),
-              });
-              return response.json();
-            };
-            postData().then((data) => {
-              console.log("CREATE TABLE ON FRONTPAGE", data)
-            });
+
           }}>DYNAMOTEST2</button>
         </nav>        
       </div>

@@ -21,7 +21,6 @@ function ArmyPage(){
       setArmyReady(contextData.armyReady)
       setArmyStandby(contextData.armyStandby)
       setArmyUnpainted(contextData.armyUnpainted)
-    console.log("LOADING",isLoading)
 
     return ()=>{
       // setValue({
