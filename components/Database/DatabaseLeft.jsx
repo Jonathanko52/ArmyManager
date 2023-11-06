@@ -1,12 +1,9 @@
-import React from 'react';
+import React, { useContext }from 'react';
+import ArmyRow from './ArmyRow'
+import ArmyContext from '../../context/ArmyContext'
 
-  //pages:Main page 
-  //window displaying army
-    //Show army roster, point cost per unit, increase/decrease unit size, remove unit, duplicate unit
-    //show point cost total
-  //window for adding new unit
-    //submit button
-    //input field for name, model count , point per size, unit sizes,
+
+
 function DatabaseLeft({
   addArmy,
   createTable,
@@ -16,8 +13,22 @@ function DatabaseLeft({
   logCurrentState
 }){
 
+  const { value, setValue } = useContext(ArmyContext)
+  console.log("VALUE",value)
+  let armyName = value.armyName
+  let armyFaction = value.faction
+  let armyPoints = value.armyPoints
+
+
+
     return (
         <div className="p-2 m-2 border-black col-span-4 row-span-5 border-1">
+        <h1>Current Army</h1>
+        <ArmyRow
+            armyName={armyName}
+            armyfaction={armyFaction}
+           armyPoints={armyPoints}
+        />
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{addArmy()}}>Add Army to Database</button>
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{createTable()}}>Create Table</button>
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{deleteArmy()}}>Delete Army</button>
