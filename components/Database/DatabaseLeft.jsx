@@ -16,10 +16,9 @@ function DatabaseLeft({
   logCurrentState
 }){
 
-
     return (
         <div className="p-2 m-2 border-black col-span-4 row-span-5 border-1">
-          <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{addArmy()}}>Add Army</button>
+          <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{addArmy()}}>Add Army to Database</button>
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{createTable()}}>Create Table</button>
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{deleteArmy()}}>Delete Army</button>
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{retrieveArmy()}}>Retrieve Army</button>
