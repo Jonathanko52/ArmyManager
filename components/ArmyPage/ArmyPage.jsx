@@ -17,7 +17,7 @@ function ArmyPage(){
 
   useEffect(() => {
     let contextData = value
-      console.log(contextData)
+      console.log("ARMY PAGE MOUNTING",contextData)
       setArmyReady(contextData.armyReady)
       setArmyStandby(contextData.armyStandby)
       setArmyUnpainted(contextData.armyUnpainted)
@@ -145,6 +145,7 @@ function ArmyPage(){
   const clearCurrentArmy = () => {
     let confirmed = window.confirm("Are you sure you want delete your current army?")
     if(confirmed){
+      console.log("TEST CLEAR")
       setValue({
         armyName:'',
         faction:'',
@@ -152,7 +153,6 @@ function ArmyPage(){
         armyStandby:{units:[]}, 
         armyUnpainted:{units:[]},
         armyPoints:0,
-
       })
     }
   }

@@ -45,8 +45,8 @@ function Database(){
   const saveAppArmyToDatabase = () => {
     //WORKING ON AWS DYNAMODB
     const postData = async () => {
+
       let data = JSON.stringify(value)
-      console.log(value, data)
       const response = await fetch("/api/addArmy", {
         method: "POST",
         body: data,
@@ -56,6 +56,7 @@ function Database(){
     postData().then((data) => {
       console.log("ARMY SAVED TO DATABASE", data)
     });
+    
   };
 
   const updateAppArmyToDatabase = () => {

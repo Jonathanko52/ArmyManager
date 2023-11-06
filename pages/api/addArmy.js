@@ -22,7 +22,7 @@ export default function addArmy(req, res) {
       if (err) {
         console.error("Unable to add movie", err);
       } else {
-        // console.log(`Added ${title} with a Rotten Tomatoes Score of ${rtScore}%`);
+        console.log(`Added Army ${parsedArmy.armyName } to database`);
       }
     });
   }

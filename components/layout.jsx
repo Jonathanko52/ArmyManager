@@ -1,7 +1,6 @@
 import NavBar from './NavBar.jsx'
 import Header from './Header'
 import React, {useState, createContext} from 'react';
-import {ArmyProvider} from '../context/ArmyContext'
 
 
 export default function Layout({ children }) {
