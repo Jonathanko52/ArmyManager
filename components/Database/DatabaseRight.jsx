@@ -10,8 +10,8 @@ function DatabaseRight({databaseArmies}){
     let armies = []
     if(databaseArmies){
       databaseArmies.forEach((cur)=>{
-        console.log("DATABASE CURRENt", JSON.parse(cur.armyString.S))
         let parsedArmy = JSON.parse(cur.armyString.S)
+        console.log("FETCHED",parsedArmy)
         let armyName = parsedArmy.armyName
         let armyFaction = parsedArmy.faction
         let armyPoints = parsedArmy.armyPoints

@@ -116,6 +116,7 @@ function ArmyPage(){
         armyPoints:armyPoints
       }));
     }
+    saveToMainPage()
   }
 
   const loadArmyFromLocal = () =>{
@@ -270,9 +271,7 @@ function ArmyPage(){
             duplicateUnitInStandby={duplicateUnitInStandby}
             duplicateUnitInUnpainted={duplicateUnitInUnpainted}
           />
-          <button onClick={saveToMainPage}>Save Army To Main Page</button>
           <button onClick={logState}>Log State</button>
-
         </div>
       )
 }
