@@ -7,6 +7,7 @@ AWS.config.update(AWSConfig);
 
 export default function updateArmy(req, res) {
   let parsedArmy = JSON.parse(req.body)
+  let armyName = parsedArmy.armyName
 
     const params = {
         TableName: "WarhammerArmies",
@@ -22,7 +23,7 @@ export default function updateArmy(req, res) {
         if (err) {
           console.error("Unable to find movie", err);
         } else {
-          console.log("UPDATED")
+          console.log(`UPDATED ${armyName}` )
           // console.log(`Updated ${title} with new RT Score of ${newRtScore}%`);
         }
       });
