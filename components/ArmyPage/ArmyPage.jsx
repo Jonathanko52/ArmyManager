@@ -14,6 +14,7 @@ function ArmyPage(){
   const [armyPoints, setArmyPoints] = useState(0)
   const [armyName, setArmyName] = useState('');
   const [faction, setFaction] = useState('');
+  const [armyId, setArmyId] = useState(0);
 
   useEffect(() => {
     let contextData = value
@@ -21,7 +22,6 @@ function ArmyPage(){
       setArmyReady(contextData.armyReady)
       setArmyStandby(contextData.armyStandby)
       setArmyUnpainted(contextData.armyUnpainted)
-      // setArmyPoints()
       setArmyName(contextData.armyName)
       setFaction(contextData.faction)
 

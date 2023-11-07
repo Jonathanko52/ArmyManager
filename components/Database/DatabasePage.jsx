@@ -106,6 +106,12 @@ function Database(){
     });
   };
 
+  const setArmyToContext = () =>{
+   setValue()
+
+
+  }
+
   const logCurrentState = () =>{
     console.log("CONTEXT VALUE", value)
     console.log("DATABASE VALUE", databaseArmies, typeof databaseArmies)

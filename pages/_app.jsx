@@ -8,20 +8,21 @@ export default function App({ Component, pageProps }) {
 
   // Wraps around all components
 
-  const [armyReady, setArmyReady] = useState({
+  const [army, setArmy] = useState({
     armyReady:{units:[]}, 
     armyStandby:{units:[]}, 
-    armyUnpainted:{units:[]}
+    armyUnpainted:{units:[]},
+    armyId:0,
+    armyName:'',
+    faction:''
   });
   const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
       if(localStorage.getItem("warHammerArmy")){
-
           let contextData = JSON.parse(localStorage.getItem("warHammerArmy"))
-          setArmyReady(contextData)
+          setArmy(contextData)
           setIsLoading(false)
-
       }
       return ()=>{
         console.log("Closeapp cleanup")
