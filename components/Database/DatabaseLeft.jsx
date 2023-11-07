@@ -14,7 +14,7 @@ function DatabaseLeft({
 }){
 
   const { value, setValue } = useContext(ArmyContext)
-  console.log("VALUE",value)
+
   let armyName = value.armyName
   let armyFaction = value.faction
   let armyPoints = value.armyPoints
@@ -28,6 +28,8 @@ function DatabaseLeft({
             armyName={armyName}
             armyfaction={armyFaction}
            armyPoints={armyPoints}
+           buttonOne={addArmy}
+           buttonOneText={"Save To Database"}
         />
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{addArmy()}}>Add Army to Database</button>
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{createTable()}}>Create Table</button>
