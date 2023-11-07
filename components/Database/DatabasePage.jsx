@@ -147,7 +147,11 @@ function Database(){
             updateArmy={updateAppArmyToDatabase} 
             logCurrentState={logCurrentState}
           />
-          <DatabaseRight databaseArmies={databaseArmies}/>
+          <DatabaseRight 
+            databaseArmies={databaseArmies}
+            deleteArmy={deleteArmyFromDatabase}
+
+          />
         </div>
       )
 }

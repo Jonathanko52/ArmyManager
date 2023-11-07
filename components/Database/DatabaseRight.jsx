@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import ArmyRow from './ArmyRow'
 // 
-function DatabaseRight({databaseArmies}){
+function DatabaseRight({databaseArmies,deleteArmy})
   //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
 
     useEffect(()=>{
@@ -16,9 +16,15 @@ function DatabaseRight({databaseArmies}){
         let armyFaction = parsedArmy.faction
         let armyPoints = parsedArmy.armyPoints
         armies.push(<ArmyRow 
-          armyName={armyName}
-          armyfaction={armyFaction}
+         armyName={armyName}
+         armyfaction={armyFaction}
          armyPoints={armyPoints}
+         buttonOne={deleteArmy}
+         buttonOneText={"Delete Army"}
+         buttonTwo={"Save To Database"}
+         buttonTwoText={"Delete from Database"}
+
+
         />)
       })
     }
