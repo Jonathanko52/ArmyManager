@@ -18,6 +18,8 @@ function Database(){
 
   const fetchFromDatabase = () => {
     //Pulls from Dynamo to be presented on the database page, in the state
+    let confirmed = window.confirm("Are you sure you want to retrieve your data from the database?")
+    if(confirmed){
       const postData = async () => {
         const response = await fetch("/api/retrieveArmy", {
           method: "GET",
@@ -28,80 +30,92 @@ function Database(){
         let newDatabaseArmies = data
         setDatabaseArmies(newDatabaseArmies)
       });
+    }
   };
 
   const setDatabaseArmyToAppArmy = (ind) => {
     //Pulls from the state in here and pshes it into context, so no API
-    let armyToBeSet
-    console.log("DATABASE ARMY TO LOAD", databaseArmies[ind])
-    let armyParsed = JSON.parse(databaseArmies[ind].armyString.S)
+    let confirmed = window.confirm("Do you want to load this army into the app?")
+    if(confirmed){
+      let armyToBeSet
+      console.log("DATABASE ARMY TO LOAD", databaseArmies[ind])
+      let armyParsed = JSON.parse(databaseArmies[ind].armyString.S)
 
-    console.log("ARMYPARSED",armyParsed)
-    let armyName = armyParsed.armyName
-    let armyPoints = armyParsed.armyPoints
-    let armyReady = armyParsed.armyReady
-    let armyStandby = armyParsed.armyStandby
-    let armyUnpainted = armyParsed.armyUnpainted
-    let faction = armyParsed.faction
+      console.log("ARMYPARSED",armyParsed)
+      let armyName = armyParsed.armyName
+      let armyPoints = armyParsed.armyPoints
+      let armyReady = armyParsed.armyReady
+      let armyStandby = armyParsed.armyStandby
+      let armyUnpainted = armyParsed.armyUnpainted
+      let faction = armyParsed.faction
 
-    armyToBeSet = {
-      armyName,
-      armyPoints,
-      armyReady,
-      armyStandby,
-      armyUnpainted,
-      faction
+      armyToBeSet = {
+        armyName,
+        armyPoints,
+        armyReady,
+        armyStandby,
+        armyUnpainted,
+        faction
+      }
+      localStorage.setItem("warHammerArmy", JSON.stringify(armyToBeSet));
+
+
+      setValue(armyToBeSet)
     }
-    localStorage.setItem("warHammerArmy", JSON.stringify(armyToBeSet));
-
-
-    setValue(armyToBeSet)
   };
 
   const saveAppArmyToDatabase = () => {
     //WORKING ON AWS DYNAMODB
-    const postData = async () => {
+    let confirmed = window.confirm("Are you sure you want to save your army to the database?")
+      if(confirmed){
+      const postData = async () => {
 
-      let data = JSON.stringify(value)
-      const response = await fetch("/api/addArmy", {
-        method: "POST",
-        body: data,
+        let data = JSON.stringify(value)
+        const response = await fetch("/api/addArmy", {
+          method: "POST",
+          body: data,
+        });
+        return response.json();
+      };
+      postData().then((data) => {
+        console.log("ARMY SAVED TO DATABASE", data)
       });
-      return response.json();
-    };
-    postData().then((data) => {
-      console.log("ARMY SAVED TO DATABASE", data)
-    });
-    
+    }
   };
 
   const updateAppArmyToDatabase = () => {
     //WORKING ON AWS DYNAMODB
-    const postData = async () => {
-      let data = JSON.stringify(value)
-      const response = await fetch("/api/updateArmy", {
-        method: "POST",
-        body: data,
+    let confirmed = window.confirm("Are you sure you want to save over your army in the database?")
+      if(confirmed){
+      const postData = async () => {
+        let data = JSON.stringify(value)
+        const response = await fetch("/api/updateArmy", {
+          method: "POST",
+          body: data,
+        });
+        return response.json();
+      };
+      postData().then((data) => {
+        console.log("ARMY IN DATABASE UPDATED", data)
       });
-      return response.json();
-    };
-    postData().then((data) => {
-      console.log("ARMY IN DATABASE UPDATED", data)
-    });
+    }
   };
 
   const deleteArmyFromDatabase = () => {
     //NOT SETUP YET
-    const postData = async () => {
+    let confirmed = window.confirm("Are you sure you want to delete this army?")
+      if(confirmed){
+      const postData = async () => {
 
-      const response = await fetch("/api/deleteArmy", {
-        method: "GET",
+        const response = await fetch("/api/deleteArmy", {
+          method: "GET",
+        });
+        return response.json();
+      };
+      postData().then((data) => {
+        console.log("CREATE TABLE ON FRONTPAGE", data)
       });
-      return response.json();
-    };
-    postData().then((data) => {
-      console.log("CREATE TABLE ON FRONTPAGE", data)
-    });
+    }
   };
 
   const deleteArmyFromApp = () => {
@@ -110,16 +124,19 @@ function Database(){
 
   const createTable = () => {
     //WORKING ON AWS DYNAMODB
-    const postData = async () => {
+    let confirmed = window.confirm("Are you want to add a table to the database?")
+      if(confirmed){
+      const postData = async () => {
 
-      const response = await fetch("/api/createTable", {
-        method: "GET",
+        const response = await fetch("/api/createTable", {
+          method: "GET",
+        });
+        return response.json();
+      };
+      postData().then((data) => {
+        console.log("CREATE TABLE ON FRONTPAGE", data)
       });
-      return response.json();
-    };
-    postData().then((data) => {
-      console.log("CREATE TABLE ON FRONTPAGE", data)
-    });
+    }
   };
 
   const setArmyToContext = () =>{
