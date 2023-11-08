@@ -52,8 +52,7 @@ function Database(){
       armyUnpainted,
       faction
     }
-
-    
+    localStorage.setItem("warHammerArmy", JSON.stringify(armyToBeSet));
 
 
     setValue(armyToBeSet)
