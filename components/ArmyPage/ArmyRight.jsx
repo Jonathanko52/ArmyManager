@@ -26,7 +26,8 @@ function MainRight({
   setArmyName,
   faction,
   setFaction,
-  setArmyPoints
+  setArmyPoints,
+  armyId
 }){
 
 
@@ -78,6 +79,12 @@ function MainRight({
               <div className="p-4">
                 <label className="p-4">Total cost in money:  {totalArmyMoneyCost}</label>
               </div>
+              <div className="p-4">
+                <label className="p-4">Army Id:  {armyId}</label>
+              </div>
+
+
+              armyId
             </div>
             <div className="ARMYCOLUMNS p-4 m-4 border-black border-2  grid grid-cols-3 col-span-3 row-span-6">
               <ArmyColumns

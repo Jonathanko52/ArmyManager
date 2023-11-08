@@ -24,7 +24,8 @@ function ArmyPage(){
       setArmyUnpainted(contextData.armyUnpainted)
       setArmyName(contextData.armyName)
       setFaction(contextData.faction)
-
+      setArmyId(contextData.armyId)
+      
 
     return ()=>{
       // setValue({
@@ -113,7 +114,8 @@ function ArmyPage(){
         armyReady:armyReady, 
         armyStandby:armyStandby, 
         armyUnpainted:armyUnpainted,
-        armyPoints:armyPoints
+        armyPoints:armyPoints,
+        armyId:armyId
       }));
     }
     saveToMainPage()
@@ -270,6 +272,7 @@ function ArmyPage(){
             duplicateUnitInReady={duplicateUnitInReady}
             duplicateUnitInStandby={duplicateUnitInStandby}
             duplicateUnitInUnpainted={duplicateUnitInUnpainted}
+            armyId={armyId}
           />
           <button onClick={logState}>Log State</button>
         </div>
