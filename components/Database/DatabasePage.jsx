@@ -19,7 +19,6 @@ function Database(){
   const fetchFromDatabase = () => {
     //Pulls from Dynamo to be presented on the database page, in the state
       const postData = async () => {
-  
         const response = await fetch("/api/retrieveArmy", {
           method: "GET",
         });
@@ -31,14 +30,32 @@ function Database(){
       });
   };
 
-  const setDatabaseArmyToAppArmy = (id) => {
+  const setDatabaseArmyToAppArmy = (ind) => {
     //Pulls from the state in here and pshes it into context, so no API
     let armyToBeSet
-    databaseArmies.forEach((cur)=>{
-      if(cur.id === id){
-        armyToBeSet = cur;
-      }
-    })
+    console.log("DATABASE ARMY TO LOAD", databaseArmies[ind])
+    let armyParsed = JSON.parse(databaseArmies[ind].armyString.S)
+
+    console.log("ARMYPARSED",armyParsed)
+    let armyName = armyParsed.armyName
+    let armyPoints = armyParsed.armyPoints
+    let armyReady = armyParsed.armyReady
+    let armyStandby = armyParsed.armyStandby
+    let armyUnpainted = armyParsed.armyUnpainted
+    let faction = armyParsed.faction
+
+    armyToBeSet = {
+      armyName,
+      armyPoints,
+      armyReady,
+      armyStandby,
+      armyUnpainted,
+      faction
+    }
+
+    
+
+
     setValue(armyToBeSet)
   };
 
@@ -156,7 +173,7 @@ function Database(){
           <DatabaseRight 
             databaseArmies={databaseArmies}
             deleteArmy={deleteArmyFromDatabase}
-
+            setDatabaseArmyToAppArmy={setDatabaseArmyToAppArmy}
           />
         </div>
       )

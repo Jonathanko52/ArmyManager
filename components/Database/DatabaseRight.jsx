@@ -1,26 +1,28 @@
 import React, {useEffect} from 'react';
 import ArmyRow from './ArmyRow'
 // 
-function DatabaseRight({databaseArmies,deleteArmy}){
+function DatabaseRight({databaseArmies,deleteArmy,setDatabaseArmyToAppArmy}){
   //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
 
     useEffect(()=>{
-      console.log(databaseArmies)
+      console.log("DATA",databaseArmies)
     },[])
     let armies = []
     if(databaseArmies){
-      databaseArmies.forEach((cur)=>{
+      databaseArmies.forEach((cur,ind)=>{
         let parsedArmy = JSON.parse(cur.armyString.S)
         let armyName = parsedArmy.armyName
         let armyFaction = parsedArmy.faction
         let armyPoints = parsedArmy.armyPoints
         armies.push(<ArmyRow 
+         key={ind}
+         number={ind}
          armyName={armyName}
          armyfaction={armyFaction}
          armyPoints={armyPoints}
          buttonOne={deleteArmy}
          buttonOneText={"Delete Army"}
-         buttonTwo={"Save To Database"}
+         buttonTwo={setDatabaseArmyToAppArmy}
          buttonTwoText={"Load Army"}
         />)
       })

@@ -23,8 +23,6 @@ export default function App({ Component, pageProps }) {
       let newArmyId
       if(localStorage.getItem("warHammerArmy")){
           contextData = JSON.parse(localStorage.getItem("warHammerArmy"))
-
-
       }
       if(!contextData.armyId){
         newArmyId = parseInt(Math.random() * 1000)

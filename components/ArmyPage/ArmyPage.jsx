@@ -149,6 +149,7 @@ function ArmyPage(){
     let confirmed = window.confirm("Are you sure you want delete your current army?")
     if(confirmed){
       console.log("TEST CLEAR")
+      let newArmyId = parseInt(Math.random() * 1000)
       setValue({
         armyName:'',
         faction:'',
@@ -156,7 +157,14 @@ function ArmyPage(){
         armyStandby:{units:[]}, 
         armyUnpainted:{units:[]},
         armyPoints:0,
+        armyId:newArmyId
       })
+      setArmyReady({units:[]})
+      setArmyStandby({units:[]})
+      setArmyUnpainted({units:[]})
+      setArmyName('')
+      setFaction('')
+      setArmyId(0)
     }
   }
 
