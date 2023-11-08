@@ -33,7 +33,6 @@ function Database(){
   };
 
   const setDatabaseArmyToAppArmy = (ind) => {
-    //Pulls from the state in here and pshes it into context, so no API
     let confirmed = window.confirm("Do you want to load this army into the app?")
     if(confirmed){
       let armyToBeSet
@@ -57,7 +56,6 @@ function Database(){
         faction
       }
       localStorage.setItem("warHammerArmy", JSON.stringify(armyToBeSet));
-
 
       setValue(armyToBeSet)
     }
@@ -100,19 +98,20 @@ function Database(){
     }
   };
 
-  const deleteArmyFromDatabase = () => {
+  const deleteArmyFromDatabase = (armyName) => {
     //NOT SETUP YET
     let confirmed = window.confirm("Are you sure you want to delete this army?")
       if(confirmed){
       const postData = async () => {
 
         const response = await fetch("/api/deleteArmy", {
-          method: "GET",
+          method: "DELETE",
+          body: armyName,
         });
         return response.json();
       };
       postData().then((data) => {
-        console.log("CREATE TABLE ON FRONTPAGE", data)
+        console.log("DELETING", data)
       });
     }
   };

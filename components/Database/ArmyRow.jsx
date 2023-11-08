@@ -27,7 +27,7 @@ function ArmyRow({armyName,armyfaction,armyPoints,
 
           <div className="p-4 ">
               {buttonOne? <button className="rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" 
-              onClick={()=>{buttonOne}}>{buttonOneText}</button>: null}
+              onClick={()=>{buttonOne(armyName)}}>{buttonOneText}</button>: null}
               {buttonTwo ?  <button className="rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" 
               onClick={()=>{buttonTwo(number)}}>{buttonTwoText}</button> : null}
 

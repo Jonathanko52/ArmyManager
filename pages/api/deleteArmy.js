@@ -5,13 +5,12 @@ const dynamodb = new AWS.DynamoDB();
 AWS.config.update(AWSConfig);
 
 export default function deleteArmy(req, res) {
-  let parsedArmy = JSON.parse(req.body)
-  let armyName = parsedArmy.armyName
+
 
     const params = {
         TableName: "WarhammerArmies",
-        Item: {
-          armyName: { S: parsedArmy.armyName },
+        Key: {
+          armyName: { S: req.body },
         },
       };
     
@@ -19,7 +18,7 @@ export default function deleteArmy(req, res) {
         if (err) {
           console.error("Unable to find movie", err);
         } else {
-          console.log(`Deleted ${title} from the database`);
+          console.log(`Deleted ${req.body} from the database`);
         }
       });
   }
