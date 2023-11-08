@@ -17,7 +17,6 @@ function Database(){
   }, []);
 
   const fetchFromDatabase = () => {
-    //Pulls from Dynamo to be presented on the database page, in the state
     let confirmed = window.confirm("Are you sure you want to retrieve your data from the database?")
     if(confirmed){
       const postData = async () => {
@@ -118,9 +117,6 @@ function Database(){
     }
   };
 
-  const deleteArmyFromApp = () => {
-    //deletes army from local
-  };
 
   const createTable = () => {
     //WORKING ON AWS DYNAMODB
@@ -139,11 +135,7 @@ function Database(){
     }
   };
 
-  const setArmyToContext = () =>{
-   setValue()
 
-
-  }
 
   const logCurrentState = () =>{
     console.log("CONTEXT VALUE", value)
@@ -163,17 +155,6 @@ function Database(){
       //button to load said database item(set to app state)
       //button to copy said database item(create a copy of it in database)
       //ability to rearrage. drag and drop is ideal      
-
-  // DYNAMOD TABLES TO BE PASED
-      // [
-      //   {
-      //     armyString: {
-      //       S: `{"armyName":"Black Templars","faction":"Black Templars","armyReady":{"units":[],"armyName":"Black Templar","faction":"Black Templar"},"armyStandby":{"units":[{"unitName":"Crusader Squad","modelCount":10,"pointCost":140,"unitSize":0,"moneyCost":0,"unitId":942},{"unitName":"Castellan","modelCount":1,"pointCost":65,"unitSize":0,"moneyCost":0,"unitId":467},{"unitName":"Emperor's Champion","modelCount":1,"pointCost":75,"unitSize":0,"moneyCost":0,"unitId":386}]},"armyUnpainted":{"units":[{"unitName":"Crusader Squad","modelCount":10,"pointCost":140,"unitSize":0,"moneyCost":0,"unitId":982}]}}`
-      //     },
-      //     armyName: { S: 'Black Templars' },
-      //     armyFaction: { S: 'Black Templars' }
-      //   }
-      // ]
 
 
     return (

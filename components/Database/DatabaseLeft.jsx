@@ -7,7 +7,6 @@ import ArmyContext from '../../context/ArmyContext'
 function DatabaseLeft({
   addArmy,
   createTable,
-  deleteArmy,
   retrieveArmy,
   updateArmy,
   logCurrentState
@@ -33,7 +32,6 @@ function DatabaseLeft({
         />
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{addArmy()}}>Add Army to Database</button>
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{createTable()}}>Create Table</button>
-          <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{deleteArmy()}}>Delete Army</button>
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{retrieveArmy()}}>Retrieve Army</button>
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{updateArmy()}}>Update Army</button>
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{logCurrentState()}}>Log State</button>
