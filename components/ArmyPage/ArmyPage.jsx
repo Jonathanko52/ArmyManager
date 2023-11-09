@@ -63,7 +63,8 @@ function ArmyPage(){
   const duplicateUnitInStandby = (unitId) =>{
     let duplicatedUnit = {}
     let newUnitId = parseInt(Math.random() * 1000)
-    duplicateIdCheck(newUnitId)
+    let id = duplicateIdCheck(newUnitId)
+    newUnitId = id
     armyStandby.units.forEach(cur=>{
       if(cur.unitId === unitId){
         Object.assign(duplicatedUnit,cur)
@@ -76,7 +77,8 @@ function ArmyPage(){
   const duplicateUnitInUnpainted = (unitId) =>{
     let duplicatedUnit = {}
     let newUnitId = parseInt(Math.random() * 1000)
-    duplicateIdCheck(newUnitId)
+    let id = duplicateIdCheck(newUnitId)
+    newUnitId = id
     armyUnpainted.units.forEach(cur=>{
       if(cur.unitId === unitId){
         Object.assign(duplicatedUnit,cur)
@@ -157,7 +159,8 @@ function ArmyPage(){
     if(confirmed){
       console.log("TEST CLEAR")
       let newArmyId = parseInt(Math.random() * 1000)
-      duplicateIdCheck(newArmyId)
+      let id = duplicateIdCheck(newArmyId)
+      newArmyId = id
       setValue({
         armyName:'',
         faction:'',

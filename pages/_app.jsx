@@ -34,7 +34,6 @@ export default function App({ Component, pageProps }) {
         setIsLoading(false)
       }
 
-
       return ()=>{
         console.log("Closeapp cleanup")
       }

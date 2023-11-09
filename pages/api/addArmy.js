@@ -20,7 +20,7 @@ export default function addArmy(req) {
       if (err) {
         console.error("Unable to add movie", err);
       } else {
-        console.log(`Added Army ${parsedArmy.armyName } to database`);
+        console.log(`Added Army ${parsedArmy.armyName} to database`);
       }
     });
   }
