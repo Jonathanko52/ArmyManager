@@ -40,16 +40,17 @@ function ArmyPage(){
   }, [isLoading]);
 
   const addUnitToArmy = (newUnit) =>{
+    let id = duplicateIdCheck(newUnit.unitId)
+    newUnit.unitId= id
 
-
-    
     setArmyReady({...armyReady, units:[...armyReady.units, newUnit]})
   }
 
   const duplicateUnitInReady = (unitId) =>{
     let duplicatedUnit = {}
     let newUnitId = parseInt(Math.random() * 1000)
-    duplicateIdCheck(newUnitId)
+    let id = duplicateIdCheck(newUnitId)
+    newUnitId = id
     armyReady.units.forEach(cur=>{
       if(cur.unitId === unitId){
         Object.assign(duplicatedUnit,cur)
