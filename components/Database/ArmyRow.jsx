@@ -3,8 +3,10 @@ import React from 'react';
 function ArmyRow({armyName,armyfaction,armyPoints,
     buttonOne,
     buttonOneText,
+    buttonOneParam,
     buttonTwo,
     buttonTwoText,
+    buttonTwoParam,
     number,
     key
 }){
@@ -17,9 +19,9 @@ function ArmyRow({armyName,armyfaction,armyPoints,
 
           <div className="p-4 ">
               {buttonOne? <button className="rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" 
-              onClick={()=>{buttonOne(armyName)}}>{buttonOneText}</button>: null}
+              onClick={()=>{buttonOne(buttonOneParam)}}>{buttonOneText}</button>: null}
               {buttonTwo ?  <button className="rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" 
-              onClick={()=>{buttonTwo(number)}}>{buttonTwoText}</button> : null}
+              onClick={()=>{buttonTwo(buttonTwoParam)}}>{buttonTwoText}</button> : null}
 
           </div>
         </div>

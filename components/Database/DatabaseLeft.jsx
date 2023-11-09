@@ -25,8 +25,8 @@ function DatabaseLeft({
           armyPoints={armyPoints}
           buttonOne={addArmy}
           buttonOneText={"Save To Database"}
+          buttonOneParam={armyName}
         />
-          <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{addArmy()}}>Add Army to Database</button>
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{createTable()}}>Create Table</button>
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{retrieveArmy()}}>Retrieve Army</button>
           <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={()=>{updateArmy()}}>Update Army</button>

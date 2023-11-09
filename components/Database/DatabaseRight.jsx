@@ -15,7 +15,6 @@ function DatabaseRight({databaseArmies,deleteArmy,setDatabaseArmyToAppArmy}){
         let armyPoints = parsedArmy.armyPoints
         armies.push(<ArmyRow 
          key={ind}
-         number={ind}
          armyName={armyName}
          armyfaction={armyFaction}
          armyPoints={armyPoints}
@@ -23,6 +22,7 @@ function DatabaseRight({databaseArmies,deleteArmy,setDatabaseArmyToAppArmy}){
          buttonOneText={"Delete Army"}
          buttonTwo={setDatabaseArmyToAppArmy}
          buttonTwoText={"Load Army"}
+         buttonTwoParam={ind}
         />)
       })
     }
