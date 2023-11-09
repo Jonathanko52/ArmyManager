@@ -6,7 +6,6 @@ AWS.config.update(AWSConfig);
 
 
 export default function retrieveArmy(req, res) {
-  console.log("BACKEND RETRIEVE")
   const params = {
     TableName: "WarhammerArmies",
   };

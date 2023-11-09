@@ -11,7 +11,6 @@ function ArmyColumn({
   remove,
   duplicate
 }){
-    //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
   let unitsComponents = [];
   let totalArmyCost = 0;
   // useEffect(()=>{

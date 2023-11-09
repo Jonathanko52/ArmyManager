@@ -4,7 +4,7 @@ const AWS = require("aws-sdk");
 const dynamodb = new AWS.DynamoDB();
 AWS.config.update(AWSConfig);
 
-export default function deleteArmy(req, res) {
+export default function deleteArmy(req) {
 
     const params = {
         TableName: "WarhammerArmies",

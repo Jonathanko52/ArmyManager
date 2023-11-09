@@ -7,7 +7,7 @@ AWS.config.update(AWSConfig);
 
 
 
-export default function createTable(req, res) {
+export default function createTable() {
     dynamodb.createTable(params, function(err, data) {
         if (err) {
           console.error("Unable to create table", err);

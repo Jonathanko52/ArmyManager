@@ -4,7 +4,7 @@ const AWS = require("aws-sdk");
 const dynamodb = new AWS.DynamoDB();
 AWS.config.update(AWSConfig);
 
-export default function addArmy(req, res) {
+export default function addArmy(req) {
     let parsedArmy = JSON.parse(req.body)
     const params = {
       TableName: "WarhammerArmies",

@@ -12,7 +12,6 @@ function UnitRow({unitName, modelCount, pointCost, unitId, buttonOne,
           <label className="m-4 p-4" >Unit Name: {unitName}</label><br></br>
           <label className="m-4 p-4" >Model Count: {modelCount}</label><br></br>
           <label className="m-4 p-4" >Point Cost: {pointCost}</label><br></br>
-          {/* <label className="m-4 p-4" >Enhancements: {unitSize}</label><br></br> */}
           <label className="m-4 p-4" >Unit ID: {unitId}</label><br></br>
           <button className="rounded-md p-1 m-1 bg-slate-50 text-black">Increase size</button>
           <button className="rounded-md p-1 m-1 bg-slate-50 text-black">Decrease Size</button>

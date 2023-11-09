@@ -36,7 +36,7 @@ function MainRight({
   let totalArmyModelCount = 0;
 
   // useEffect(()=>{
-  //   console.log("MAIN RIGHT USE EFFECT")
+
     unitsReady.forEach((cur)=>{
       totalArmyCost += cur.pointCost
       totalArmyMoneyCost += 
