@@ -40,12 +40,16 @@ function ArmyPage(){
   }, [isLoading]);
 
   const addUnitToArmy = (newUnit) =>{
+
+
+    
     setArmyReady({...armyReady, units:[...armyReady.units, newUnit]})
   }
 
   const duplicateUnitInReady = (unitId) =>{
     let duplicatedUnit = {}
     let newUnitId = parseInt(Math.random() * 1000)
+    duplicateIdCheck(newUnitId)
     armyReady.units.forEach(cur=>{
       if(cur.unitId === unitId){
         Object.assign(duplicatedUnit,cur)
@@ -58,6 +62,7 @@ function ArmyPage(){
   const duplicateUnitInStandby = (unitId) =>{
     let duplicatedUnit = {}
     let newUnitId = parseInt(Math.random() * 1000)
+    duplicateIdCheck(newUnitId)
     armyStandby.units.forEach(cur=>{
       if(cur.unitId === unitId){
         Object.assign(duplicatedUnit,cur)
@@ -70,6 +75,7 @@ function ArmyPage(){
   const duplicateUnitInUnpainted = (unitId) =>{
     let duplicatedUnit = {}
     let newUnitId = parseInt(Math.random() * 1000)
+    duplicateIdCheck(newUnitId)
     armyUnpainted.units.forEach(cur=>{
       if(cur.unitId === unitId){
         Object.assign(duplicatedUnit,cur)
@@ -150,6 +156,7 @@ function ArmyPage(){
     if(confirmed){
       console.log("TEST CLEAR")
       let newArmyId = parseInt(Math.random() * 1000)
+      duplicateIdCheck(newArmyId)
       setValue({
         armyName:'',
         faction:'',
@@ -249,6 +256,31 @@ function ArmyPage(){
   const logState = () =>{
     console.log(armyReady,armyStandby,armyUnpainted)  
     console.log(armyPoints, armyName, faction)
+  }
+
+  const duplicateIdCheck = (newUnitId) => {
+    armyReady.units.forEach((cur)=>{
+      if(cur.unitId === newUnitId){
+        while(cur.unitId === newUnitId){
+          newUnitId = parseInt(Math.random() * 1000)
+        }
+      }
+    })
+    armyStandby.units.forEach((cur)=>{
+      if(cur.unitId === newUnitId){
+        while(cur.unitId === newUnitId){
+          newUnitId = parseInt(Math.random() * 1000)
+        }
+      }
+    })
+    armyUnpainted.units.forEach((cur)=>{
+      if(cur.unitId === newUnitId){
+        while(cur.unitId === newUnitId){
+          newUnitId = parseInt(Math.random() * 1000)
+        }
+      }
+    })
+    return newUnitId
   }
   
   return (
