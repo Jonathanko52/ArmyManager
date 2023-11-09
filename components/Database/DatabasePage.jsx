@@ -99,7 +99,7 @@ function Database(){
   };
 
   const deleteArmyFromDatabase = (armyName) => {
-    //NOT SETUP YET
+    //WORKING ON AWS DYNAMODB
     let confirmed = window.confirm("Are you sure you want to delete this army?")
       if(confirmed){
       const postData = async () => {
@@ -115,7 +115,6 @@ function Database(){
       });
     }
   };
-
 
   const createTable = () => {
     //WORKING ON AWS DYNAMODB
@@ -140,21 +139,6 @@ function Database(){
     console.log("CONTEXT VALUE", value)
     console.log("DATABASE VALUE", databaseArmies, typeof databaseArmies)
   }
-
-  //Database Left
-    //component displaying current army being edited in the app
-    //save button for said component
-    //delete from local button
-
-  //Database Right
-      //component for displaying all armies in database.
-      //ability to click on an army to select if(checkbox-like. needs state)
-      //ability to click on multiple?
-      //button to delete said database item
-      //button to load said database item(set to app state)
-      //button to copy said database item(create a copy of it in database)
-      //ability to rearrage. drag and drop is ideal      
-
 
     return (
         <div className="font-bold underline border-black col-span-10 grid grid-cols-12 border-2">

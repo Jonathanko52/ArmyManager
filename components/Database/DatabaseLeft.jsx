@@ -2,8 +2,6 @@ import React, { useContext }from 'react';
 import ArmyRow from './ArmyRow'
 import ArmyContext from '../../context/ArmyContext'
 
-
-
 function DatabaseLeft({
   addArmy,
   createTable,
@@ -17,8 +15,6 @@ function DatabaseLeft({
   let armyName = value.armyName
   let armyFaction = value.faction
   let armyPoints = value.armyPoints
-
-
 
     return (
         <div className="p-2 m-2 border-black col-span-4 row-span-5 border-1">

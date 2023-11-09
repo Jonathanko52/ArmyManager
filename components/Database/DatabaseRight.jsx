@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 import ArmyRow from './ArmyRow'
 // 
 function DatabaseRight({databaseArmies,deleteArmy,setDatabaseArmyToAppArmy}){
-  //{faction:string, units: object, enhancements:object, pointcost: num, modelcount: num, id: number}
 
     useEffect(()=>{
       console.log("DATA",databaseArmies)

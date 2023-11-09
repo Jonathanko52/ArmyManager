@@ -6,7 +6,6 @@ AWS.config.update(AWSConfig);
 
 export default function deleteArmy(req, res) {
 
-
     const params = {
         TableName: "WarhammerArmies",
         Key: {
@@ -22,17 +21,3 @@ export default function deleteArmy(req, res) {
         }
       });
   }
-
-
-
-  // let armyName = parsedArmy.armyName
-
-  //   const params = {
-  //       TableName: "WarhammerArmies",
-  //       Item: {
-  //         armyName: { S: parsedArmy.armyName },
-  //         armyFaction:{ S: parsedArmy.faction},
-  //         armyString: { S: req.body },
-  //       },
-  //       ReturnConsumedCapacity: "TOTAL",
-  //     };

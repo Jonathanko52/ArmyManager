@@ -1,15 +1,5 @@
 import React from 'react';
 
-      //   {
-      //     armyString: {
-      //       S: `{"armyName":"Black Templars","faction":"Black Templars","armyReady":{"units":[],"armyName":"Black Templar","faction":"Black Templar"},"armyStandby":{"units":[{"unitName":"Crusader Squad","modelCount":10,"pointCost":140,"unitSize":0,"moneyCost":0,"unitId":942},{"unitName":"Castellan","modelCount":1,"pointCost":65,"unitSize":0,"moneyCost":0,"unitId":467},{"unitName":"Emperor's Champion","modelCount":1,"pointCost":75,"unitSize":0,"moneyCost":0,"unitId":386}]},"armyUnpainted":{"units":[{"unitName":"Crusader Squad","modelCount":10,"pointCost":140,"unitSize":0,"moneyCost":0,"unitId":982}]}}`
-      //     },
-      //     armyName: { S: 'Black Templars' },
-      //     armyFaction: { S: 'Black Templars' }
-      //   }
-
-
-
 function ArmyRow({armyName,armyfaction,armyPoints,
     buttonOne,
     buttonOneText,
