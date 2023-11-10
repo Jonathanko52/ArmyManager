@@ -293,29 +293,28 @@ function ArmyPage(){
     event.preventDefault();
     let unitBeingDragged
     console.log("DRAG",unitId, columnName)
-    if(columnName === "Ready"){
-      armyReady.units.forEach((cur)=>{
-        if(cur.unitId === unitId){
-          unitBeingDragged = cur
-        }
-      })
-    } else if (columnName === "Standby"){
-      armyStandby.units.forEach((cur)=>{
-        if(cur.unitId === unitId){
-          unitBeingDragged = cur
-        }
-      })
-    } else if (columnName === "Unpainted/Unassembled"){
-      armyUnpainted.units.forEach((cur)=>{
-        if(cur.unitId === unitId){
-          unitBeingDragged = cur
-        }
-      })
-    }
+    // if(columnName === "Ready"){
+    //   armyReady.units.forEach((cur)=>{
+    //     if(cur.unitId === unitId){
+    //       unitBeingDragged = cur
+    //     }
+    //   })
+    // } else if (columnName === "Standby"){
+    //   armyStandby.units.forEach((cur)=>{
+    //     if(cur.unitId === unitId){
+    //       unitBeingDragged = cur
+    //     }
+    //   })
+    // } else if (columnName === "Unpainted/Unassembled"){
+    //   armyUnpainted.units.forEach((cur)=>{
+    //     if(cur.unitId === unitId){
+    //       unitBeingDragged = cur
+    //     }
+    //   })
+    // }
+    // setUnitBeingDragged(unitBeingDragged)
+    setUnitBeingDragged([unitId, columnName])
 
-
-
-    setUnitBeingDragged(unitBeingDragged)
   }
 
   const dragOverUnit = (event) =>{
@@ -326,6 +325,34 @@ function ArmyPage(){
     event.preventDefault();
     console.log("DROP", column)
     console.log("UNIT BEING DRAGGED", unitBeingDragged)
+    if(column === "Ready"){
+      if(unitBeingDragged[1] === "Standby"){
+        standbyToReady(unitBeingDragged[0])
+      } else if(unitBeingDragged[1] === "Unpainted/Unassembled"){
+        unpaintedToReady(unitBeingDragged[0])
+      }
+    } else if(column === "Standby"){
+      if(unitBeingDragged[1] === "Ready"){
+        readyToStandby(unitBeingDragged[0])
+      } else if(unitBeingDragged[1] === "Unpainted/Unassembled"){
+        unpaintedToStandy(unitBeingDragged[0])
+      }
+    } else if(column === "Unpainted/Unassembled"){
+      if(unitBeingDragged[1] === "Ready"){
+        readyToUnpainted(unitBeingDragged[0])
+      } else if(unitBeingDragged[1] === "Standby"){
+        standbyToUnpainted(unitBeingDragged[0])
+      }
+    }
+
+
+
+
+
+
+
+
+
   }
 
 
