@@ -29,7 +29,6 @@ function MainRight({
   setArmyPoints,
   armyId,
   dragUnit,
-  dragOverUnit,
   dropUnit
 }){
 
@@ -100,7 +99,6 @@ function MainRight({
                 remove={removeUnitFromReady}
                 duplicate={duplicateUnitInReady}
                 dragUnit={dragUnit}
-                dragOverUnit={dragOverUnit}
                 dropUnit={dropUnit}
               />
               <ArmyColumns
@@ -113,7 +111,6 @@ function MainRight({
                 remove={removeUnitFromStandby}
                 duplicate={duplicateUnitInStandby}
                 dragUnit={dragUnit}
-                dragOverUnit={dragOverUnit}
                 dropUnit={dropUnit}
               />
               <ArmyColumns
@@ -126,7 +123,6 @@ function MainRight({
                 remove={removeUnitFromUnpainted}
                 duplicate={duplicateUnitInUnpainted}
                 dragUnit={dragUnit}
-                dragOverUnit={dragOverUnit}
                 dropUnit={dropUnit}
               />
             </div>
@@ -135,7 +131,6 @@ function MainRight({
               <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={loadArmyFromLocal}>Load Army</button>
               <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={clearCurrentArmy}>Clear Army</button>
             </div>
-
         </div>
       )
 }

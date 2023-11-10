@@ -11,7 +11,6 @@ function ArmyColumn({
   remove,
   duplicate,
   dragUnit,
-  dragOverUnit,
   dropUnit
 }){
   let unitsComponents = [];
@@ -32,7 +31,6 @@ function ArmyColumn({
         remove={remove}
         duplicate={duplicate}
         dragUnit={dragUnit}
-        dragOverUnit={dragOverUnit}
         dropUnit={dropUnit}
         columnName={columnName}
         />)

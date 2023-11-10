@@ -1,5 +1,5 @@
-import MainLeft from './ArmyLeft';
-import MainRight from './ArmyRight';
+import ArmyLeft from './ArmyLeft';
+import ArmyRight from './ArmyRight';
 import React, {useState, useContext, useEffect} from 'react';
 import ArmyContext from '../../context/ArmyContext'
 
@@ -291,40 +291,12 @@ function ArmyPage(){
   
   const dragUnit = (event, unitId, columnName) =>{
     event.preventDefault();
-    let unitBeingDragged
-    console.log("DRAG",unitId, columnName)
-    // if(columnName === "Ready"){
-    //   armyReady.units.forEach((cur)=>{
-    //     if(cur.unitId === unitId){
-    //       unitBeingDragged = cur
-    //     }
-    //   })
-    // } else if (columnName === "Standby"){
-    //   armyStandby.units.forEach((cur)=>{
-    //     if(cur.unitId === unitId){
-    //       unitBeingDragged = cur
-    //     }
-    //   })
-    // } else if (columnName === "Unpainted/Unassembled"){
-    //   armyUnpainted.units.forEach((cur)=>{
-    //     if(cur.unitId === unitId){
-    //       unitBeingDragged = cur
-    //     }
-    //   })
-    // }
-    // setUnitBeingDragged(unitBeingDragged)
     setUnitBeingDragged([unitId, columnName])
-
-  }
-
-  const dragOverUnit = (event) =>{
-    event.preventDefault();
   }
 
   const dropUnit = (event, column) =>{
     event.preventDefault();
-    console.log("DROP", column)
-    console.log("UNIT BEING DRAGGED", unitBeingDragged)
+
     if(column === "Ready"){
       if(unitBeingDragged[1] === "Standby"){
         standbyToReady(unitBeingDragged[0])
@@ -346,20 +318,13 @@ function ArmyPage(){
     }
 
 
-
-
-
-
-
-
-
   }
 
 
   return (
         <div className="font-bold underline border-black col-span-10 grid grid-cols-12 border-2 row-span-6 ">
-          <MainLeft addUnitToArmy={addUnitToArmy}/>
-          <MainRight 
+          <ArmyLeft addUnitToArmy={addUnitToArmy}/>
+          <ArmyRight 
             unitsReady={armyReady.units}
             unitsStandby={armyStandby.units}
             unitsUnpainted={armyUnpainted.units}
@@ -387,7 +352,6 @@ function ArmyPage(){
             duplicateUnitInUnpainted={duplicateUnitInUnpainted}
             armyId={armyId}
             dragUnit={dragUnit}
-            dragOverUnit={dragOverUnit}
             dropUnit={dropUnit}
           />
           <button onClick={logState}>Log State</button>
