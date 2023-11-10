@@ -34,6 +34,7 @@ function ArmyColumn({
         dragUnit={dragUnit}
         dragOverUnit={dragOverUnit}
         dropUnit={dropUnit}
+        columnName={columnName}
         />)
     })
     units.forEach(cur=>{
@@ -43,11 +44,11 @@ function ArmyColumn({
   // },[army])
 
     return (
-        <div className="border-white col-span-1">
-          <div className="ARMYCOLUMN"
-            // onDrop={()=>{dropUnit()}}
-            onDragOver={dragOverUnit}
-          >
+        <div className="border-white col-span-1"
+          onDrop={(e)=>{dropUnit(e,columnName)}}
+          onDragOver={dragOverUnit}
+        >
+          <div className="ARMYCOLUMN" >
 
             <div className="ARMYHEADER text-xl">
               <div className="p-4 ">

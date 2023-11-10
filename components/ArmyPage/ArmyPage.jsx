@@ -15,6 +15,8 @@ function ArmyPage(){
   const [armyName, setArmyName] = useState('');
   const [faction, setFaction] = useState('');
   const [armyId, setArmyId] = useState(0);
+  const [unitBeingDragged, setUnitBeingDragged] = useState();
+
 
   useEffect(() => {
     let contextData = value
@@ -287,20 +289,43 @@ function ArmyPage(){
     return newUnitId
   }
   
-  const dragUnit = (event) =>{
+  const dragUnit = (event, unitId, columnName) =>{
     event.preventDefault();
-    // console.log("DRAG")
+    let unitBeingDragged
+    console.log("DRAG",unitId, columnName)
+    if(columnName === "Ready"){
+      armyReady.units.forEach((cur)=>{
+        if(cur.unitId === unitId){
+          unitBeingDragged = cur
+        }
+      })
+    } else if (columnName === "Standby"){
+      armyStandby.units.forEach((cur)=>{
+        if(cur.unitId === unitId){
+          unitBeingDragged = cur
+        }
+      })
+    } else if (columnName === "Unpainted/Unassembled"){
+      armyUnpainted.units.forEach((cur)=>{
+        if(cur.unitId === unitId){
+          unitBeingDragged = cur
+        }
+      })
+    }
+
+
+
+    setUnitBeingDragged(unitBeingDragged)
   }
 
   const dragOverUnit = (event) =>{
     event.preventDefault();
-    // console.log("DRAGOVER")
-
   }
-  const dropUnit = (event) =>{
-    console.log("DROP",event)
 
+  const dropUnit = (event, column) =>{
     event.preventDefault();
+    console.log("DROP", column)
+    console.log("UNIT BEING DRAGGED", unitBeingDragged)
   }
 
 
