@@ -287,6 +287,23 @@ function ArmyPage(){
     return newUnitId
   }
   
+  const dragUnit = (event) =>{
+    event.preventDefault();
+    // console.log("DRAG")
+  }
+
+  const dragOverUnit = (event) =>{
+    event.preventDefault();
+    // console.log("DRAGOVER")
+
+  }
+  const dropUnit = (event) =>{
+    console.log("DROP",event)
+
+    event.preventDefault();
+  }
+
+
   return (
         <div className="font-bold underline border-black col-span-10 grid grid-cols-12 border-2 row-span-6 ">
           <MainLeft addUnitToArmy={addUnitToArmy}/>
@@ -317,6 +334,9 @@ function ArmyPage(){
             duplicateUnitInStandby={duplicateUnitInStandby}
             duplicateUnitInUnpainted={duplicateUnitInUnpainted}
             armyId={armyId}
+            dragUnit={dragUnit}
+            dragOverUnit={dragOverUnit}
+            dropUnit={dropUnit}
           />
           <button onClick={logState}>Log State</button>
         </div>

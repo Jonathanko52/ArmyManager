@@ -5,10 +5,20 @@ function UnitRow({unitName, modelCount, pointCost, unitId, buttonOne,
   buttonTwo,
   buttonTwoText,
   remove,
-  duplicate
+  duplicate,            
+  dragUnit,
+  dragOverUnit,
+  dropUnit
 }){
     return (
-        <div className="font-bold underline border-black col-span-8 row-span-5 border-2 p-4" draggable="true">
+        <div 
+          className="font-bold underline border-black col-span-8 row-span-5 border-2 p-4" 
+          draggable="true"
+          onDrag={dragUnit}
+          onDrop={(e)=>{dropUnit(e)}}
+
+
+        >
           <label className="m-4 p-4" >Unit Name: {unitName}</label><br></br>
           <label className="m-4 p-4" >Model Count: {modelCount}</label><br></br>
           <label className="m-4 p-4" >Point Cost: {pointCost}</label><br></br>

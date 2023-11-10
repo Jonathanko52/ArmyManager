@@ -9,7 +9,10 @@ function ArmyColumn({
   buttonTwo,
   buttonTwoText,
   remove,
-  duplicate
+  duplicate,
+  dragUnit,
+  dragOverUnit,
+  dropUnit
 }){
   let unitsComponents = [];
   let totalArmyCost = 0;
@@ -28,6 +31,9 @@ function ArmyColumn({
         buttonTwoText={buttonTwoText}
         remove={remove}
         duplicate={duplicate}
+        dragUnit={dragUnit}
+        dragOverUnit={dragOverUnit}
+        dropUnit={dropUnit}
         />)
     })
     units.forEach(cur=>{
@@ -38,7 +44,11 @@ function ArmyColumn({
 
     return (
         <div className="border-white col-span-1">
-          <div className="ARMYCOLUMN">
+          <div className="ARMYCOLUMN"
+            // onDrop={()=>{dropUnit()}}
+            onDragOver={dragOverUnit}
+          >
+
             <div className="ARMYHEADER text-xl">
               <div className="p-4 ">
               <h1>{columnName}</h1><label>Total cost in points: {totalArmyCost}</label>
