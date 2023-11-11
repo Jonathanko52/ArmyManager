@@ -90,24 +90,22 @@ function ArmyPage(){
   }
 
   const moveReadyUnitUp = (unitId) =>{
-    let movedUnit = {}
     let index
     armyReady.units.forEach((cur,ind)=>{
       if(cur.unitId === unitId){
-        Object.assign(movedUnit,cur)
-        movedUnit.unitId = newUnitId
         index = ind
       }
     })
     if(index > 0 && armyReady.units.length > 1){
-
-      setArmyReady({...armyReady, units:[...armyReady.units, movedUnit]})
-
+      let newArmyReady = armyReady.units.slice()
+      let placeHolder = newArmyReady[index]
+      newArmyReady[index] = newArmyReady[index-1]
+      newArmyReady[index-1] = placeHolder
+      setArmyReady({...armyReady, units:newArmyReady})
     }
   }
 
   const moveReadyUnitDown = (unitId) =>{
-    let newUnitId
     let index
     armyReady.units.forEach((cur,ind)=>{
       if(cur.unitId === unitId){
@@ -123,7 +121,69 @@ function ArmyPage(){
     }
   }
 
+  const moveStandbyUnitUp = (unitId) =>{
+    let index
+    armyStandby.units.forEach((cur,ind)=>{
+      if(cur.unitId === unitId){
+        index = ind
+      }
+    })
+    if(index > 0 && armyStandby.units.length > 1){
+      let newArmyStandby = armyStandby.units.slice()
+      let placeHolder = newArmyStandby[index]
+      newArmyStandby[index] = newArmyStandby[index-1]
+      newArmyStandby[index-1] = placeHolder
+      setArmyStandby({...armyStandby, units:newArmyStandby})
+    }
+  }
 
+  const moveStandbyUnitDown = (unitId) =>{
+    let index
+    armyStandby.units.forEach((cur,ind)=>{
+      if(cur.unitId === unitId){
+        index = ind
+      }
+    })
+    if(index < armyStandby.units.length-1 && armyStandby.units.length > 1){
+      let newArmyStandby = armyStandby.units.slice()
+      let placeHolder = newArmyStandby[index]
+      newArmyStandby[index] = newArmyStandby[index+1]
+      newArmyStandby[index+1] = placeHolder
+      setArmyStandby({...armyStandby, units:newArmyStandby})
+    }
+  }
+
+  const moveUnpaintedUnitUp = (unitId) =>{
+    let index
+    armyUnpainted.units.forEach((cur,ind)=>{
+      if(cur.unitId === unitId){
+        index = ind
+      }
+    })
+    if(index > 0 && armyUnpainted.units.length > 1){
+      let newArmyUnpainted = armyUnpainted.units.slice()
+      let placeHolder = newArmyUnpainted[index]
+      newArmyUnpainted[index] = newArmyUnpainted[index-1]
+      newArmyUnpainted[index-1] = placeHolder
+      setArmyUnpainted({...armyUnpainted, units:newArmyUnpainted})
+    }
+  }
+
+  const moveUnpaintedUnitDown = (unitId) =>{
+    let index
+    armyUnpainted.units.forEach((cur,ind)=>{
+      if(cur.unitId === unitId){
+        index = ind
+      }
+    })
+    if(index < armyUnpainted.units.length-1 && armyUnpainted.units.length > 1){
+      let newArmyUnpainted = armyUnpainted.units.slice()
+      let placeHolder = newArmyUnpainted[index]
+      newArmyUnpainted[index] = newArmyUnpainted[index+1]
+      newArmyUnpainted[index+1] = placeHolder
+      setArmyUnpainted({...armyUnpainted, units:newArmyUnpainted})
+    }
+  }
 
 
   const removeUnitFromReady = (unitId)=>{
@@ -388,7 +448,12 @@ function ArmyPage(){
             armyId={armyId}
             dragUnit={dragUnit}
             dropUnit={dropUnit}
+            moveReadyUnitUp={moveReadyUnitUp}
             moveReadyUnitDown={moveReadyUnitDown}
+            moveStandbyUnitUp={moveStandbyUnitUp}
+            moveStandbyUnitDown={moveStandbyUnitDown}
+            moveUnpaintedUnitUp={moveUnpaintedUnitUp}
+            moveUnpaintedUnitDown={moveUnpaintedUnitDown}
           />
           <button onClick={logState}>Log State</button>
         </div>

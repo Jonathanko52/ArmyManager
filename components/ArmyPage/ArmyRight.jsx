@@ -30,7 +30,12 @@ function MainRight({
   armyId,
   dragUnit,
   dropUnit,
-  moveReadyUnitDown
+  moveReadyUnitUp,
+  moveReadyUnitDown,
+  moveStandbyUnitUp,
+  moveStandbyUnitDown,
+  moveUnpaintedUnitUp,
+  moveUnpaintedUnitDown
 }){
 
 
@@ -101,7 +106,12 @@ function MainRight({
                 duplicate={duplicateUnitInReady}
                 dragUnit={dragUnit}
                 dropUnit={dropUnit}
+                moveReadyUnitUp={moveReadyUnitUp}
                 moveReadyUnitDown={moveReadyUnitDown}
+                moveStandbyUnitUp={moveStandbyUnitUp}
+                moveStandbyUnitDown={moveStandbyUnitDown}
+                moveUnpaintedUnitUp={moveUnpaintedUnitUp}
+                moveUnpaintedUnitDown={moveUnpaintedUnitDown}
               />
               <ArmyColumns
                 columnName={"Standby"}
@@ -114,7 +124,12 @@ function MainRight({
                 duplicate={duplicateUnitInStandby}
                 dragUnit={dragUnit}
                 dropUnit={dropUnit}
+                moveReadyUnitUp={moveReadyUnitUp}
                 moveReadyUnitDown={moveReadyUnitDown}
+                moveStandbyUnitUp={moveStandbyUnitUp}
+                moveStandbyUnitDown={moveStandbyUnitDown}
+                moveUnpaintedUnitUp={moveUnpaintedUnitUp}
+                moveUnpaintedUnitDown={moveUnpaintedUnitDown}
               />
               <ArmyColumns
                 columnName={"Unpainted/Unassembled"}
@@ -127,7 +142,12 @@ function MainRight({
                 duplicate={duplicateUnitInUnpainted}
                 dragUnit={dragUnit}
                 dropUnit={dropUnit}
+                moveReadyUnitUp={moveReadyUnitUp}
                 moveReadyUnitDown={moveReadyUnitDown}
+                moveStandbyUnitUp={moveStandbyUnitUp}
+                moveStandbyUnitDown={moveStandbyUnitDown}
+                moveUnpaintedUnitUp={moveUnpaintedUnitUp}
+                moveUnpaintedUnitDown={moveUnpaintedUnitDown}
               />
             </div>
             <div className="ARMYBUTTONS p-4 m-4 border-black border-2 grid grid-cols-4 col-span-3 row-span-6">

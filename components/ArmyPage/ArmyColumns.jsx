@@ -12,7 +12,12 @@ function ArmyColumn({
   duplicate,
   dragUnit,
   dropUnit,
-  moveReadyUnitDown
+  moveReadyUnitUp,
+  moveReadyUnitDown,
+  moveStandbyUnitUp,
+  moveStandbyUnitDown,
+  moveUnpaintedUnitUp,
+  moveUnpaintedUnitDown
 }){
   let unitsComponents = [];
   let totalArmyCost = 0;
@@ -34,9 +39,15 @@ function ArmyColumn({
         dragUnit={dragUnit}
         dropUnit={dropUnit}
         columnName={columnName}
-        moveReadyUnitDown={moveReadyUnitDown}
+
         />)
     })
+    // moveReadyUnitUp={moveReadyUnitUp}
+    // moveReadyUnitDown={moveReadyUnitDown}
+    // moveStandbyUnitUp={moveStandbyUnitUp}
+    // moveStandbyUnitDown={moveStandbyUnitDown}
+    // moveUnpaintedUnitUp={moveUnpaintedUnitUp}
+    // moveUnpaintedUnitDown={moveUnpaintedUnitDown}
     units.forEach(cur=>{
       totalArmyCost += cur.pointCost
     })
