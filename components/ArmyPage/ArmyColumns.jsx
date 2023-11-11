@@ -11,7 +11,8 @@ function ArmyColumn({
   remove,
   duplicate,
   dragUnit,
-  dropUnit
+  dropUnit,
+  moveReadyUnitDown
 }){
   let unitsComponents = [];
   let totalArmyCost = 0;
@@ -33,6 +34,7 @@ function ArmyColumn({
         dragUnit={dragUnit}
         dropUnit={dropUnit}
         columnName={columnName}
+        moveReadyUnitDown={moveReadyUnitDown}
         />)
     })
     units.forEach(cur=>{
@@ -44,7 +46,6 @@ function ArmyColumn({
     return (
         <div className="border-white col-span-1"
           onDrop={(e)=>{dropUnit(e,columnName)}}
-          onDragOver={dragOverUnit}
         >
           <div className="ARMYCOLUMN" >
 

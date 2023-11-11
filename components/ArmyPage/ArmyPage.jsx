@@ -99,7 +99,11 @@ function ArmyPage(){
         index = ind
       }
     })
-    setArmyReady({...armyReady, units:[...armyReady.units, movedUnit]})
+    if(index > 0 && armyReady.units.length > 1){
+
+      setArmyReady({...armyReady, units:[...armyReady.units, movedUnit]})
+
+    }
   }
 
   const moveReadyUnitDown = (unitId) =>{
@@ -112,7 +116,13 @@ function ArmyPage(){
         index = ind
       }
     })
-    setArmyReady({...armyReady, units:[...armyReady.units, movedUnit]})
+    if(index < armyReady.units.length-1 && armyReady.units.length > 1){
+      let newArmyReady = armyReady.units.slice()
+      let placeHolder = newArmyReady[index]
+      newArmyReady[index] = newArmyReady[index-1]
+      newArmyReady[index-1] = placeHolder
+      setArmyReady({...armyReady, units:[...newArmyReady]})
+    }
   }
 
 
@@ -380,6 +390,7 @@ function ArmyPage(){
             armyId={armyId}
             dragUnit={dragUnit}
             dropUnit={dropUnit}
+            moveReadyUnitDown={moveReadyUnitDown}
           />
           <button onClick={logState}>Log State</button>
         </div>

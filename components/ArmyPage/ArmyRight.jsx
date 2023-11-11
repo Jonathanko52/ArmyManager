@@ -29,7 +29,8 @@ function MainRight({
   setArmyPoints,
   armyId,
   dragUnit,
-  dropUnit
+  dropUnit,
+  moveReadyUnitDown
 }){
 
 
@@ -100,6 +101,7 @@ function MainRight({
                 duplicate={duplicateUnitInReady}
                 dragUnit={dragUnit}
                 dropUnit={dropUnit}
+                moveReadyUnitDown={moveReadyUnitDown}
               />
               <ArmyColumns
                 columnName={"Standby"}
@@ -112,6 +114,7 @@ function MainRight({
                 duplicate={duplicateUnitInStandby}
                 dragUnit={dragUnit}
                 dropUnit={dropUnit}
+                moveReadyUnitDown={moveReadyUnitDown}
               />
               <ArmyColumns
                 columnName={"Unpainted/Unassembled"}
@@ -124,6 +127,7 @@ function MainRight({
                 duplicate={duplicateUnitInUnpainted}
                 dragUnit={dragUnit}
                 dropUnit={dropUnit}
+                moveReadyUnitDown={moveReadyUnitDown}
               />
             </div>
             <div className="ARMYBUTTONS p-4 m-4 border-black border-2 grid grid-cols-4 col-span-3 row-span-6">
