@@ -23,6 +23,20 @@ function ArmyColumn({
   let totalArmyCost = 0;
   // useEffect(()=>{
     if(Array.isArray(units)){
+      let buttonThreeFunction
+      let buttonFourFunction
+      if(columnName === "Ready"){
+        buttonThreeFunction = moveReadyUnitUp
+        buttonFourFunction = moveReadyUnitDown
+      } else if(columnName === "Standby"){
+        buttonThreeFunction = moveStandbyUnitUp
+        buttonFourFunction = moveStandbyUnitDown
+      } if(columnName === "Unpainted/Unassembled"){
+        buttonThreeFunction = moveUnpaintedUnitUp
+        buttonFourFunction = moveUnpaintedUnitDown
+      }
+
+
     units.forEach(cur=>{
       unitsComponents.push(<UnitRow 
         unitName={cur.unitName} 
@@ -34,12 +48,13 @@ function ArmyColumn({
         buttonOneText={buttonOneText}
         buttonTwo={buttonTwo}
         buttonTwoText={buttonTwoText}
+        buttonThree={buttonThreeFunction}
+        buttonFour={buttonFourFunction}
         remove={remove}
         duplicate={duplicate}
         dragUnit={dragUnit}
         dropUnit={dropUnit}
         columnName={columnName}
-
         />)
     })
     // moveReadyUnitUp={moveReadyUnitUp}

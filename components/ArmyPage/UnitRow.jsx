@@ -8,7 +8,8 @@ function UnitRow({unitName, modelCount, pointCost, unitId, buttonOne,
   duplicate,            
   dragUnit,
   columnName,
-  moveReadyUnitDown
+  buttonThree,
+  buttonFour
 }){
     return (
         <div 
@@ -21,8 +22,8 @@ function UnitRow({unitName, modelCount, pointCost, unitId, buttonOne,
           <label className="m-4 p-4" >Point Cost: {pointCost}</label><br></br>
           <label className="m-4 p-4" >Unit ID: {unitId}</label><br></br>
 
-          <button className="rounded-md p-1 m-1 bg-slate-50 text-black" onClick={()=>{moveReadyUnitDown(unitId)}}>Move down</button>
-          <button className="rounded-md p-1 m-1 bg-slate-50 text-black">Decrease Size</button>
+          <button className="rounded-md p-1 m-1 bg-slate-50 text-black" onClick={()=>{buttonThree(unitId)}}>Move Up</button>
+          <button className="rounded-md p-1 m-1 bg-slate-50 text-black" onClick={()=>{buttonFour(unitId)}}>Move Down</button>
           <div className="p-4 ">
               <button className="rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" 
               onClick={()=>{buttonOne(unitId)}}>{buttonOneText}</button>
