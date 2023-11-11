@@ -107,21 +107,19 @@ function ArmyPage(){
   }
 
   const moveReadyUnitDown = (unitId) =>{
-    let movedUnit = {}
+    let newUnitId
     let index
     armyReady.units.forEach((cur,ind)=>{
       if(cur.unitId === unitId){
-        Object.assign(movedUnit,cur)
-        movedUnit.unitId = newUnitId
         index = ind
       }
     })
     if(index < armyReady.units.length-1 && armyReady.units.length > 1){
       let newArmyReady = armyReady.units.slice()
       let placeHolder = newArmyReady[index]
-      newArmyReady[index] = newArmyReady[index-1]
-      newArmyReady[index-1] = placeHolder
-      setArmyReady({...armyReady, units:[...newArmyReady]})
+      newArmyReady[index] = newArmyReady[index+1]
+      newArmyReady[index+1] = placeHolder
+      setArmyReady({...armyReady, units:newArmyReady})
     }
   }
 
