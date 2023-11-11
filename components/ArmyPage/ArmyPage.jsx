@@ -20,7 +20,6 @@ function ArmyPage(){
 
   useEffect(() => {
     let contextData = value
-      console.log("ARMY PAGE MOUNTING",contextData)
       setArmyReady(contextData.armyReady)
       setArmyStandby(contextData.armyStandby)
       setArmyUnpainted(contextData.armyUnpainted)
@@ -89,6 +88,19 @@ function ArmyPage(){
     })
     setArmyUnpainted({...armyUnpainted, units:[...armyUnpainted.units, duplicatedUnit]})
   }
+
+  const moveReadyUnitUp = (unitId) =>{
+    let duplicatedUnit = {}
+    armyReady.units.forEach(cur=>{
+      if(cur.unitId === unitId){
+        Object.assign(duplicatedUnit,cur)
+        duplicatedUnit.unitId = newUnitId
+      }
+    })
+    setArmyReady({...armyReady, units:[...armyReady.units, duplicatedUnit]})
+  }
+
+
 
   const removeUnitFromReady = (unitId)=>{
     let newUnits = armyReady.units.slice()
@@ -316,7 +328,6 @@ function ArmyPage(){
         standbyToUnpainted(unitBeingDragged[0])
       }
     }
-
 
   }
 
