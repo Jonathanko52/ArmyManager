@@ -36,7 +36,6 @@ function ArmyColumn({
         buttonFourFunction = moveUnpaintedUnitDown
       }
 
-
     units.forEach(cur=>{
       unitsComponents.push(<UnitRow 
         unitName={cur.unitName} 
@@ -57,12 +56,6 @@ function ArmyColumn({
         columnName={columnName}
         />)
     })
-    // moveReadyUnitUp={moveReadyUnitUp}
-    // moveReadyUnitDown={moveReadyUnitDown}
-    // moveStandbyUnitUp={moveStandbyUnitUp}
-    // moveStandbyUnitDown={moveStandbyUnitDown}
-    // moveUnpaintedUnitUp={moveUnpaintedUnitUp}
-    // moveUnpaintedUnitDown={moveUnpaintedUnitDown}
     units.forEach(cur=>{
       totalArmyCost += cur.pointCost
     })
@@ -87,8 +80,5 @@ function ArmyColumn({
         </div>
       )
 }
-
-
-
 
 export default ArmyColumn;
