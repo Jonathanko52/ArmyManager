@@ -90,15 +90,31 @@ function ArmyPage(){
   }
 
   const moveReadyUnitUp = (unitId) =>{
-    let duplicatedUnit = {}
-    armyReady.units.forEach(cur=>{
+    let movedUnit = {}
+    let index
+    armyReady.units.forEach((cur,ind)=>{
       if(cur.unitId === unitId){
-        Object.assign(duplicatedUnit,cur)
-        duplicatedUnit.unitId = newUnitId
+        Object.assign(movedUnit,cur)
+        movedUnit.unitId = newUnitId
+        index = ind
       }
     })
-    setArmyReady({...armyReady, units:[...armyReady.units, duplicatedUnit]})
+    setArmyReady({...armyReady, units:[...armyReady.units, movedUnit]})
   }
+
+  const moveReadyUnitDown = (unitId) =>{
+    let movedUnit = {}
+    let index
+    armyReady.units.forEach((cur,ind)=>{
+      if(cur.unitId === unitId){
+        Object.assign(movedUnit,cur)
+        movedUnit.unitId = newUnitId
+        index = ind
+      }
+    })
+    setArmyReady({...armyReady, units:[...armyReady.units, movedUnit]})
+  }
+
 
 
 
