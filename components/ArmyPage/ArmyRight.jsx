@@ -76,19 +76,19 @@ function MainRight({
         <div className="border-black col-span-10 border-2 grid grid-cols-3 grid-rows-5">
             <div className="ARMYHEADER grid grid-cols-4 col-span-3 row-span-6">
               <div className="p-4">
-                <label className="p-4">Army Name:</label><input type="text" className="text-black m-2 pl-2" onChange={handleChangeName}  value={armyName}></input>
+                <h1 className="text-xl">Army Name:</h1><input type="text" className="text-black m-2 pl-2" onChange={handleChangeName}  value={armyName}></input>
               </div>
               <div className="p-4">
-                <label className="p-4">Faction:</label><input type="text" className="text-black m-2 pl-2" onChange={handleChangeFaction} value={faction}></input>
+                <h1 className="text-xl">Faction:</h1><input type="text" className="text-black m-2 pl-2" onChange={handleChangeFaction} value={faction}></input>
               </div>
               <div className="p-4">
-                <label className="p-4">Total cost in points:  {totalArmyCost}</label>
+                <h1 className="text-xl">Total cost in points:  {totalArmyCost}</h1>
               </div>
               <div className="p-4">
-                <label className="p-4">Total cost in money:  {totalArmyMoneyCost}</label>
+                <h1 className="text-xl">Total cost in money:  {totalArmyMoneyCost}</h1>
               </div>
               <div className="p-4">
-                <label className="p-4">Army Id:  {armyId}</label>
+                <h1 className="text-xl">Army Id:  {armyId}</h1>
               </div>
 
             </div>
