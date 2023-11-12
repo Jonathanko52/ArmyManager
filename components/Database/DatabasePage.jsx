@@ -141,7 +141,7 @@ function Database(){
   }
 
     return (
-        <div className="font-bold underline border-black col-span-10 grid grid-cols-12 border-2">
+        <div className="font-bold border-black col-span-10 grid grid-cols-12 border-2">
           <DatabaseLeft
             addArmy={saveAppArmyToDatabase}
             createTable={createTable}

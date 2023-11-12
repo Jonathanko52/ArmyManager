@@ -12,7 +12,7 @@ function ArmyRow({armyName,armyfaction,armyPoints,
 }){
     console.log(key, number, armyName)
     return (
-        <div className="font-bold underline border-black col-span-8 row-span-5 border-2 p-4">
+        <div className="font-bold border-black col-span-8 row-span-5 border-2 p-4">
           <label className="m-4 p-4" >Army Name: {armyName}</label><br></br>
           <label className="m-4 p-4" >Faction: {armyfaction}</label><br></br>
           <label className="m-4 p-4" >Points: {armyPoints}</label><br></br>

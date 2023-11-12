@@ -29,7 +29,7 @@ function DatabaseRight({databaseArmies,deleteArmy,setDatabaseArmyToAppArmy}){
     }
 
     return (
-        <div className="font-bold underline border-black col-span-8 row-span-5 border-2">
+        <div className="font-bold border-black col-span-8 row-span-5 border-2">
           {armies}
         </div>
       )
