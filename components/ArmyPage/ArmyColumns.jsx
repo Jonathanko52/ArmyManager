@@ -75,7 +75,7 @@ function ArmyColumn({
                     >
             <div className="ARMYHEADER text-xl">
               <div className="p-4 ">
-              <h1>{columnName}TEST</h1><label>Total cost in points: {totalArmyCost}</label>
+              <h1>{columnName}</h1><label>Total cost in points: {totalArmyCost}</label>
               </div>
             </div>
             <div className="UNITS CONTAINER">
