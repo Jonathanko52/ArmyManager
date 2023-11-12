@@ -386,12 +386,15 @@ function ArmyPage(){
   }
   
   const dragUnit = (event, unitId, columnName) =>{
+    console.log("DRAG",unitId, columnName)
     event.preventDefault();
     setUnitBeingDragged([unitId, columnName])
   }
 
   const dropUnit = (event, column) =>{
     event.preventDefault();
+    console.log("EVENT", event)
+    console.log("Column", column)
 
     if(column === "Ready"){
       if(unitBeingDragged[1] === "Standby"){
