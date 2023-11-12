@@ -7,6 +7,7 @@ function UnitRow({unitName, modelCount, pointCost, unitId, buttonOne,
   remove,
   duplicate,            
   dragUnit,
+  dropUnit,
   columnName,
   buttonThree,
   buttonFour

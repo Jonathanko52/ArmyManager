@@ -63,14 +63,19 @@ function ArmyColumn({
   // },[army])
 
     return (
-        <div className="border-white col-span-1"
+        <div className="border-white col-span-1 ARMYCOLUMN"
           onDrop={(e)=>{dropUnit(e,columnName)}}
+          //Dragover itself doesn't do anything(well, I'm not making it do anything), but without it, onDrop does not work
+          onDragOver={(e)=>{
+            e.preventDefault()
+          }}
         >
-          <div className="ARMYCOLUMN" >
-
+          <div
+                    onDrop={(e)=>{dropUnit(e,columnName)}}
+                    >
             <div className="ARMYHEADER text-xl">
               <div className="p-4 ">
-              <h1>{columnName}</h1><label>Total cost in points: {totalArmyCost}</label>
+              <h1>{columnName}TEST</h1><label>Total cost in points: {totalArmyCost}</label>
               </div>
             </div>
             <div className="UNITS CONTAINER">
