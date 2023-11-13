@@ -8,12 +8,14 @@ AWS.config.update(AWSConfig);
 
 
 export default function createTable() {
-  AWS.config.update(AWSConfig);
-    dynamodb.createTable(params, function(err, data) {
-        if (err) {
-          console.error("Unable to create table", err);
-        } else {
-          console.log("Created table", data);
-        }
+  return new Promise((resolve,reject)=>{
+    AWS.config.update({region: "us-west-1"});
+      dynamodb.createTable(params, function(err, data) {
+          if (err) {
+            console.error("Unable to create table", err);
+          } else {
+            console.log("Created table", data);
+          }
       });
+  })
 }
