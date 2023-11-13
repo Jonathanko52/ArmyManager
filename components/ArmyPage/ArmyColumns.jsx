@@ -73,7 +73,7 @@ function ArmyColumn({
           <div onDrop={(e)=>{dropUnit(e,columnName)}}>
             <div className="ARMYHEADER text-xl">
               <div className="p-4 ">
-              <h1>{columnName}</h1><label>Total cost in points: {totalArmyCost}</label>
+              <h1>{columnName}</h1><label>Total cost in points: <p className="text-slate-50">{totalArmyCost}</p></label>
               </div>
             </div>
             <div className="UNITS CONTAINER">
