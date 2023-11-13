@@ -5,7 +5,7 @@ const dynamodb = new AWS.DynamoDB();
 AWS.config.update(AWSConfig);
 
 export default function deleteArmy(req) {
-
+  AWS.config.update(AWSConfig);
     const params = {
         TableName: "WarhammerArmies",
         Key: {

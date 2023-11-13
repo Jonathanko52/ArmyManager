@@ -5,6 +5,7 @@ const dynamodb = new AWS.DynamoDB();
 AWS.config.update(AWSConfig);
 
 export default function addArmy(req) {
+    AWS.config.update(AWSConfig);
     let parsedArmy = JSON.parse(req.body)
     const params = {
       TableName: "WarhammerArmies",

@@ -6,6 +6,7 @@ AWS.config.update(AWSConfig);
 
 
 export default function updateArmy(req) {
+  AWS.config.update(AWSConfig);
   let parsedArmy = JSON.parse(req.body)
   let armyName = parsedArmy.armyName
 
