@@ -11,7 +11,7 @@ function ArmyRow({armyName,armyfaction,armyPoints,
     key
 }){
     return (
-        <div className="border-black col-span-8 row-span-5 border-2 p-4">
+        <div className="border-black col-span-8 row-span-5 border-2 m-4 p-2">
           <label className="m-4 p-4 text-lg font-bold" >Army Name: <label className="text-slate-50 font-normal">{armyName}</label></label><br></br>
           <label className="m-4 p-4 text-lg font-bold" >Faction: <label className="text-slate-50 font-normal">{armyfaction}</label></label><br></br>
           <label className="m-4 p-4 text-lg font-bold" >Points: <label className="text-slate-50 font-normal">{armyPoints}</label></label><br></br>
