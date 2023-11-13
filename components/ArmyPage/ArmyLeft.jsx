@@ -43,12 +43,12 @@ function MainLeft({addUnitToArmy}){
 
     return (
         <div className="p-2 m-2 border-black col-span-2 row-span-5 border-1">
-          <h3>Add unit</h3>
+          <h3 className="m-2 text-lg font-bold">Add unit</h3>
           <form onSubmit={handleSubmit}>
-              <label className="m-2">Name</label><br/><input className="text-black m-2" id="MainLeftName" type="text" value={unitName} onChange={handleChangeName}></input><br/>
-              <label className="m-2">Model Count</label><br/><input className="text-black m-2 pl-2"id="MainLeftModel" type="number" value={modelCount} onChange={handleChangeModelCount}></input><br/>
-              <label className="m-2">Point Cost</label><br/><input className="text-black m-2 pl-2"id="MainLeftPoint" type="number" value={pointCost} onChange={handleChangePointCost}></input><br/>
-              <input className = "rounded-md p-2 mt-2 bg-slate-50 text-black" type="submit" value="Add Unit"></input>
+              <label className="m-1 text-lg">Name</label><br/><input className="text-black m-2" id="MainLeftName" type="text" value={unitName} onChange={handleChangeName}></input><br/>
+              <label className="m-1 text-lg">Model Count</label><br/><input className="text-black m-2 pl-2"id="MainLeftModel" type="number" value={modelCount} onChange={handleChangeModelCount}></input><br/>
+              <label className="m-1 text-lg">Point Cost</label><br/><input className="text-black m-2 pl-2"id="MainLeftPoint" type="number" value={pointCost} onChange={handleChangePointCost}></input><br/>
+              <input className = "rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 text-black font-bold" type="submit" value="Add Unit"></input>
           </form>
         </div>
       )
