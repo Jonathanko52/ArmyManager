@@ -9,10 +9,8 @@ function UnitRow({unitName, modelCount, pointCost, unitId,
   buttonThreeText,
   buttonFour,
   buttonFourText,
-  remove,
-  duplicate,            
+       
   dragUnit,
-  dropUnit,
   columnName,
 }){
     return (
@@ -24,7 +22,7 @@ function UnitRow({unitName, modelCount, pointCost, unitId,
           <label className="m-4 p-4 text-lg font-bold" >Unit Name: <label className="text-slate-50 font-normal">{unitName}</label></label><br></br>
           <label className="m-4 p-4 text-lg font-bold" >Model Count: <label className="text-slate-50 font-normal">{modelCount}</label></label><br></br>
           <label className="m-4 p-4 text-lg font-bold" >Point Cost: <label className="text-slate-50 font-normal">{pointCost}</label></label><br></br>
-          <label className="m-4 p-4 text-lg font-bold" >Unit ID: <label className="text-slate-50 font-normal">{unitId}</label></label><br></br>
+          {/* <label className="m-4 p-4 text-lg font-bold" >Unit ID: <label className="text-slate-50 font-normal">{unitId}</label></label><br></br> */}
 
           <div className="p-4 ">
               {buttonOne ? <button className="rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 text-black font-bold" type="submit" value="Add Unit" 

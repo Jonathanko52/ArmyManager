@@ -5,6 +5,7 @@ const dynamodb = new AWS.DynamoDB();
 AWS.config.update(AWSConfig);
 
 export default function deleteArmy(req) {
+  console.log("REQ", req.body)
   return new Promise((resolve,reject)=>{
     AWS.config.update({region: "us-west-1"});
       const params = {

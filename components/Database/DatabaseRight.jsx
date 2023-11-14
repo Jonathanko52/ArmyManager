@@ -20,7 +20,7 @@ function DatabaseRight({databaseArmies,deleteArmy,setDatabaseArmyToAppArmy}){
          armyPoints={armyPoints}
          buttonOne={deleteArmy}
          buttonOneText={"Delete Army"}
-         buttonTwoParam={armyName}
+         buttonOneParam={armyName}
          buttonTwo={setDatabaseArmyToAppArmy}
          buttonTwoText={"Load Army"}
          buttonTwoParam={ind}

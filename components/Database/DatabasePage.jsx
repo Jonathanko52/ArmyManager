@@ -99,6 +99,7 @@ function Database(){
   };
 
   const deleteArmyFromDatabase = (armyName) => {
+    console.log("DELETE", armyName)
     //WORKING ON AWS DYNAMODB
     let confirmed = window.confirm("Are you sure you want to delete this army?")
       if(confirmed){
