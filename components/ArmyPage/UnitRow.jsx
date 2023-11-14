@@ -14,7 +14,7 @@ function UnitRow({unitName, modelCount, pointCost, unitId, buttonOne,
 }){
     return (
         <div 
-          className="border-black col-span-8 row-span-5 border-2 p-4 " 
+          className="border-black col-span-8 row-span-5 border-2 p-4 m-4" 
           draggable="true"
           onDrag={(e)=>{dragUnit(e, unitId, columnName)}}
         >

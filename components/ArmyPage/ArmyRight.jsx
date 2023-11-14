@@ -73,22 +73,22 @@ function MainRight({
     }    
 
     return (
-        <div className="border-black col-span-10 border-2 grid grid-cols-3 grid-rows-5">
-            <div className="ARMYHEADER grid grid-cols-4 col-span-3 row-span-6">
+        <div className="border-black col-span-10 border-l-2 grid grid-cols-3 grid-rows-5">
+            <div className="ARMYHEADER grid grid-cols-5 col-span-3 row-span-6">
               <div className="p-4">
-                <h1 className="text-xl font-bold">Army Name:</h1><input type="text" className="text-black m-2 pl-2" onChange={handleChangeName}  value={armyName}></input>
+                <h1 className="text-xl font-bold p-2">Army Name:</h1><input type="text" className="text-black m-2 pl-2" onChange={handleChangeName}  value={armyName}></input>
               </div>
               <div className="p-4">
-                <h1 className="text-xl font-bold">Faction:</h1><input type="text" className="text-black m-2 pl-2" onChange={handleChangeFaction} value={faction}></input>
+                <h1 className="text-xl font-bold p-2">Faction:</h1><input type="text" className="text-black m-2 pl-2" onChange={handleChangeFaction} value={faction}></input>
               </div>
               <div className="p-4">
-                <h1 className="text-xl font-bold">Total cost in points:  <label className="text-slate-50 font-normal">{totalArmyCost}</label></h1>
+                <h1 className="text-xl font-bold p-2">Total cost in points:  <label className="text-slate-50 font-normal">{totalArmyCost}</label></h1>
               </div>
               <div className="p-4">
-                <h1 className="text-xl font-bold">Total cost in money:  <label className="text-slate-50 font-normal">{totalArmyMoneyCost}</label></h1>
+                <h1 className="text-xl font-bold p-2">Total cost in money:  <label className="text-slate-50 font-normal">{totalArmyMoneyCost}</label></h1>
               </div>
               <div className="p-4">
-                <h1 className="text-xl font-bold">Army Id:  <label className="text-slate-50 font-normal">{armyId}</label></h1>
+                <h1 className="text-xl font-bold p-2">Army Id:  <label className="text-slate-50 font-normal">{armyId}</label></h1>
               </div>
 
             </div>
