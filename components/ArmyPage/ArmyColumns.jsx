@@ -8,52 +8,41 @@ function ArmyColumn({
   buttonOneText,
   buttonTwo,
   buttonTwoText,
+  buttonThree,
+  buttonThreeText,
+  buttonFour,
+  buttonFourText,
   remove,
   duplicate,
   dragUnit,
   dropUnit,
-  moveReadyUnitUp,
-  moveReadyUnitDown,
-  moveStandbyUnitUp,
-  moveStandbyUnitDown,
-  moveUnpaintedUnitUp,
-  moveUnpaintedUnitDown
 }){
   let unitsComponents = [];
   let totalArmyCost = 0;
   // useEffect(()=>{
     if(Array.isArray(units)){
-      let buttonThreeFunction
-      let buttonFourFunction
-      if(columnName === "Ready"){
-        buttonThreeFunction = moveReadyUnitUp
-        buttonFourFunction = moveReadyUnitDown
-      } else if(columnName === "Standby"){
-        buttonThreeFunction = moveStandbyUnitUp
-        buttonFourFunction = moveStandbyUnitDown
-      } if(columnName === "Unpainted/Unassembled"){
-        buttonThreeFunction = moveUnpaintedUnitUp
-        buttonFourFunction = moveUnpaintedUnitDown
-      }
 
     units.forEach(cur=>{
+
       unitsComponents.push(<UnitRow 
         unitName={cur.unitName} 
         modelCount={cur.modelCount} 
         pointCost={cur.pointCost} 
         unitSize={cur.unitSize}
         unitId={cur.unitId}
-        buttonOne={buttonOne}
-        buttonOneText={buttonOneText}
-        buttonTwo={buttonTwo}
-        buttonTwoText={buttonTwoText}
-        buttonThree={buttonThreeFunction}
-        buttonFour={buttonFourFunction}
         remove={remove}
         duplicate={duplicate}
         dragUnit={dragUnit}
         dropUnit={dropUnit}
         columnName={columnName}
+        buttonOne={buttonOne}
+        buttonOneText={buttonOneText}
+        buttonTwo={buttonTwo}
+        buttonTwoText={buttonTwoText}
+        buttonThree={buttonThree}
+        buttonThreeText={buttonThreeText}
+        buttonFour={buttonFour}
+        buttonFourText={buttonFourText}
         />)
     })
     units.forEach(cur=>{

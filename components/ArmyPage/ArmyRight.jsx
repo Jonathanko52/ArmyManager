@@ -96,62 +96,51 @@ function MainRight({
               <ArmyColumns
                 columnName={"Ready"}
                 units={unitsReady} 
-                buttonOne={readyToStandby} 
-                buttonOneText={"Move to Standby"}
-                buttonTwo={readyToUnpainted}
-                buttonTwoText={"Move to Unpainted"}
-                remove={removeUnitFromReady}
-                duplicate={duplicateUnitInReady}
                 dragUnit={dragUnit}
                 dropUnit={dropUnit}
-                moveReadyUnitUp={moveReadyUnitUp}
-                moveReadyUnitDown={moveReadyUnitDown}
-                moveStandbyUnitUp={moveStandbyUnitUp}
-                moveStandbyUnitDown={moveStandbyUnitDown}
-                moveUnpaintedUnitUp={moveUnpaintedUnitUp}
-                moveUnpaintedUnitDown={moveUnpaintedUnitDown}
+                buttonOne={removeUnitFromReady}
+                buttonOneText={"Remove"}
+                buttonTwo={duplicateUnitInReady}
+                buttonTwoText={"Duplicate Unit"}
+                buttonThree={moveReadyUnitUp}
+                buttonThreeText={"Move Up"}
+                buttonFour={moveReadyUnitDown}
+                buttonFourText={"Move Down"}
+
               />
               <ArmyColumns
                 columnName={"Standby"}
                 units={unitsStandby} 
-                buttonOne={standbyToReady} 
-                buttonOneText={"Move to Ready"}
-                buttonTwo={standbyToUnpainted}
-                buttonTwoText={"Move to Unpainted"}
-                remove={removeUnitFromStandby}
-                duplicate={duplicateUnitInStandby}
                 dragUnit={dragUnit}
                 dropUnit={dropUnit}
-                moveReadyUnitUp={moveReadyUnitUp}
-                moveReadyUnitDown={moveReadyUnitDown}
-                moveStandbyUnitUp={moveStandbyUnitUp}
-                moveStandbyUnitDown={moveStandbyUnitDown}
-                moveUnpaintedUnitUp={moveUnpaintedUnitUp}
-                moveUnpaintedUnitDown={moveUnpaintedUnitDown}
+                buttonOne={removeUnitFromStandby}
+                buttonOneText={"Remove"}
+                buttonTwo={duplicateUnitInStandby}
+                buttonTwoText={"Duplicate Unit"}
+                buttonThree={moveStandbyUnitUp}
+                buttonThreeText={"Move Up"}
+                buttonFour={moveStandbyUnitDown}
+                buttonFourText={"Move Down"}
               />
               <ArmyColumns
                 columnName={"Unpainted/Unassembled"}
                 units={unitsUnpainted} 
-                buttonOne={unpaintedToReady} 
-                buttonOneText={"Move to Ready"}
-                buttonTwo={unpaintedToStandy}
-                buttonTwoText={"Move to Standby"}
-                remove={removeUnitFromUnpainted}
-                duplicate={duplicateUnitInUnpainted}
                 dragUnit={dragUnit}
                 dropUnit={dropUnit}
-                moveReadyUnitUp={moveReadyUnitUp}
-                moveReadyUnitDown={moveReadyUnitDown}
-                moveStandbyUnitUp={moveStandbyUnitUp}
-                moveStandbyUnitDown={moveStandbyUnitDown}
-                moveUnpaintedUnitUp={moveUnpaintedUnitUp}
-                moveUnpaintedUnitDown={moveUnpaintedUnitDown}
+                buttonOne={removeUnitFromUnpainted}
+                buttonOneText={"Remove"}
+                buttonTwo={duplicateUnitInUnpainted}
+                buttonTwoText={"Duplicate Unit"}
+                buttonThree={moveUnpaintedUnitUp}
+                buttonThreeText={"Move Up"}
+                buttonFour={moveUnpaintedUnitDown}
+                buttonFourText={"Move Down"}
               />
             </div>
             <div className="ARMYBUTTONS p-4 m-4 border-black border-2 grid grid-cols-4 col-span-3 row-span-6">
-              <button className = "rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 text-black font-bold" type="submit" value="Add Unit" onClick={saveArmyToLocal}>Save Army</button>
-              <button className = "rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 text-black font-bold" type="submit" value="Add Unit" onClick={loadArmyFromLocal}>Load Army</button>
-              <button className = "rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 text-black font-bold" type="submit" value="Add Unit" onClick={clearCurrentArmy}>Clear Army</button>
+              <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={saveArmyToLocal}>Save Army</button>
+              <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={loadArmyFromLocal}>Load Army</button>
+              <button className = "rounded-md p-2 m-2 bg-slate-50 text-black" type="submit" value="Add Unit" onClick={clearCurrentArmy}>Clear Army</button>
             </div>
         </div>
       )

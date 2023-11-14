@@ -394,8 +394,6 @@ function ArmyPage(){
 
   const dropUnit = (event, column) =>{
     event.preventDefault();
-    console.log("EVENT", event)
-    console.log("Column", column)
 
     if(column === "Ready"){
       if(unitBeingDragged[1] === "Standby"){
