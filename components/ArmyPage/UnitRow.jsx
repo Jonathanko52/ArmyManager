@@ -1,6 +1,10 @@
 import React from 'react';
 
-function UnitRow({unitName, modelCount, pointCost, unitId, 
+function UnitRow({
+  unitName, 
+  modelCount, 
+  pointCost, 
+  unitId, 
   buttonOne,
   buttonOneText,
   buttonTwo,
@@ -8,8 +12,7 @@ function UnitRow({unitName, modelCount, pointCost, unitId,
   buttonThree,
   buttonThreeText,
   buttonFour,
-  buttonFourText,
-       
+  buttonFourText, 
   dragUnit,
   columnName,
 }){
