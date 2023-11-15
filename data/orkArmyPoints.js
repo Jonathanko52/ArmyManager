@@ -1,12 +1,11 @@
 module.exports = {
     Battlewagon:[["1 model", 185]],
-BeastSnaggaBoyz:[["10 models", 105],["20 models",210]]
-Beastboss:[],
-1 model ������������������������������������������������������������100 pts
-Beastboss on Squigosaur:[],
-1 model ������������������������������������������������������������165 pts
-Big Mek in Mega Armour:[],
-1 model �������������������������������������������������������������� 85 pts
+    BeastSnaggaBoyz:[["10 models", 105],["20 models",210]],
+    Beastboss:[["1 model",100]],
+Beastboss on Squigosaur:[["1 model",165]],
+Big Mek in Mega Armour:[['1 model', 85]],
+
+
 Big Mek with Kustom Force Field:[],
 1 model �������������������������������������������������������������� 55 pts
 Big Mek with Shokk Attack Gun:[],
