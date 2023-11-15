@@ -11,13 +11,23 @@ function ArmyLeft(){
     let unitsToPickFrom = []
 
     const handleChangePointCost = (event) =>{
+        let splitKey = event.target.value.replace(/([a-z])([A-Z])/g, '$1 $2');
         setSelectedUnit(orkArmyPoints[event.target.value])
-        setSelectedUnitName(event.target.value)
+        setSelectedUnitName(splitKey)
     }    
+
+    const increaseUnitSize = () =>{
+
+    }
+
+    const decreaseUnitSize  = () =>{
+
+    }
 
 
     for(let keys in orkArmyPoints){
-        unitsToPickFrom.push(<option value={keys}>{keys}</option>)
+        let splitKey = keys.replace(/([a-z])([A-Z])/g, '$1 $2');
+        unitsToPickFrom.push(<option value={keys}>{splitKey}</option>)
     }
 
 
