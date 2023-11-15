@@ -4,25 +4,14 @@ module.exports = {
     Beastboss:[["1 model",100]],
 Beastboss on Squigosaur:[["1 model",165]],
 Big Mek in Mega Armour:[['1 model', 85]],
-
-
-Big Mek with Kustom Force Field:[],
-1 model �������������������������������������������������������������� 55 pts
-Big Mek with Shokk Attack Gun:[],
-1 model �������������������������������������������������������������� 75 pts
-Big’ed Bossbunka:[],
-1 model ������������������������������������������������������������135 pts
-Blitza-bommer:[],
-1 model ������������������������������������������������������������115 pts
-Boomdakka Snazzwagon:[],
-1 model �������������������������������������������������������������� 90 pts
-Boss Snikrot:[],
-1 model �������������������������������������������������������������� 85 pts
-Boss Zagstruk:[],
-1 model �������������������������������������������������������������� 90 pts
-Boyz:[],
-10 models ��������������������������������������������������������� 85 pts
-20 models �������������������������������������������������������170 pts
+Big Mek with Kustom Force Field:[['1 model',55]],
+Big Mek with Shokk Attack Gun:[['1 model',75]],
+Big’ed Bossbunka:[['1 model',135]],
+Blitza-bommer:[['1 model',115]],
+Boomdakka Snazzwagon:[['1 model',90]],
+Boss Snikrot:['1 model',85],
+Boss Zagstruk:['1 model',90],
+Boyz:[['10 model',85],['20 model',170]]
 Burna Boyz:[],
 1 Spanner and 4 Burna Boyz ����������������������� 60 pts
 2 Spanners and 8 Burna Boyz �������������������120 pts
