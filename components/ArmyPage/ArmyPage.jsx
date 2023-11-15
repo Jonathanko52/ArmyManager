@@ -1,4 +1,5 @@
 import ArmyLeft from './ArmyLeft';
+import NewArmyLeft from './newArmyPageLeft'
 import ArmyRight from './ArmyRight';
 import React, {useState, useContext, useEffect} from 'react';
 import ArmyContext from '../../context/ArmyContext'
@@ -419,7 +420,8 @@ function ArmyPage(){
 
   return (
         <div className="border-black col-span-10 grid grid-cols-12 border-2 row-span-6 ">
-          <ArmyLeft addUnitToArmy={addUnitToArmy}/>
+          {/* <ArmyLeft addUnitToArmy={addUnitToArmy}/> */}
+          <NewArmyLeft/>
           <ArmyRight 
             unitsReady={armyReady.units}
             unitsStandby={armyStandby.units}
