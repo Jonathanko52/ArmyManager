@@ -13,6 +13,17 @@ function ArmyLeft({addUnitToArmy}){
 
     let unitsToPickFrom = []
     console.log(orkArmyPoints,"ORK")
+    for(keys in orkArmyPoints){
+        unitsToPickFrom.push(
+            <UnitRow
+                // unitName
+                // modelCount
+                // pointCost
+            
+            
+            />
+        )
+    }
 
     return (
         <div className="p-2 m-2 border-black col-span-2 row-span-5 border-1">
