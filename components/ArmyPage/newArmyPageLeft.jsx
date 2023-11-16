@@ -6,6 +6,8 @@ function ArmyLeft(){
 
     const [selectedUnit, setSelectedUnit] = useState('');
     const [selectedUnitName, setSelectedUnitName] = useState('')
+    const [unitSizeIndex, setUnitSizeIndex ] = useState(0)
+
 
 
     let unitsToPickFrom = []
@@ -17,11 +19,15 @@ function ArmyLeft(){
     }    
 
     const increaseUnitSize = () =>{
-
+        if(unitSizeIndex < selectedUnit.length-1){
+            setUnitSizeIndex(unitSizeIndex+1)
+        }
     }
 
     const decreaseUnitSize  = () =>{
-
+        if(unitSizeIndex > 0){
+            setUnitSizeIndex(unitSizeIndex-1)
+        }
     }
 
 
@@ -37,8 +43,12 @@ function ArmyLeft(){
             {selectedUnit ? 
                 <UnitRow
                     unitName={selectedUnitName}
-                    modelCount={selectedUnit[0][0]}
-                    pointCost={selectedUnit[0][1]}
+                    modelCount={selectedUnit[unitSizeIndex][0]}
+                    pointCost={selectedUnit[unitSizeIndex][1]}
+                    buttonOne={increaseUnitSize}
+                    buttonOneText={"Increase Size"}
+                    buttonTwo={decreaseUnitSize}
+                    buttonTwoText={"Decrease Size"}
             
             />: null }
             <select className='text-black' onChange={handleChangePointCost}>
