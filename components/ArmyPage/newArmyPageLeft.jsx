@@ -51,7 +51,10 @@ function ArmyLeft({addUnitToArmy}){
         <div className="p-2 m-2 border-black col-span-2 row-span-5 border-1 ">
 
             <label>Select Unit to Add to Army</label>
-            <select className='text-black' onChange={handleChangePointCost}>
+            <select className='text-black' onChange={(e)=>{
+                handleChangePointCost(e)
+                setUnitSizeIndex(0)
+                }}>
                 {unitsToPickFrom}
             </select>
             {/* <select className='text-black' onChange={()=>{}}>
@@ -68,7 +71,6 @@ function ArmyLeft({addUnitToArmy}){
                     buttonTwoText={"Decrease Size"}
                     buttonThree={newArmyAddUnitToArmy}
                     buttonThreeText={"Add Unit To Army"}
-            
             />: null }
 
         </div>
