@@ -8,8 +8,6 @@ function ArmyLeft({addUnitToArmy}){
     const [selectedUnitName, setSelectedUnitName] = useState('')
     const [unitSizeIndex, setUnitSizeIndex ] = useState(0)
 
-
-
     let unitsToPickFrom = []
 
     const handleChangePointCost = (event) =>{
@@ -32,7 +30,6 @@ function ArmyLeft({addUnitToArmy}){
 
     const newArmyAddUnitToArmy = () =>{
         let unitId = parseInt(Math.random() * 1000)
-
         addUnitToArmy({
             unitName: selectedUnitName,
             modelCount: selectedUnit[unitSizeIndex][0], 
@@ -49,7 +46,6 @@ function ArmyLeft({addUnitToArmy}){
 
     return (
         <div className="p-2 m-2 border-black col-span-2 row-span-5 border-1 ">
-
             <label>Select Unit to Add to Army</label>
             <select className='text-black' onChange={(e)=>{
                 handleChangePointCost(e)

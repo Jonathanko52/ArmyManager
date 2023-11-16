@@ -52,7 +52,7 @@ function ArmyColumn({
   // },[army])
 
     return (
-        <div className="col-span-1 ARMYCOLUMN"
+        <div className="col-span-1 ARMYCOLUMN  h-screen overflow-y-scroll"
           onDrop={(e)=>{dropUnit(e,columnName)}}
           //Dragover itself doesn't do anything(well, I'm not making it do anything), but without it, onDrop does not work
           onDragOver={(e)=>{

@@ -6,7 +6,7 @@ import React, {useState, createContext} from 'react';
 export default function Layout({ children }) {
 
     return (
-            <div className="App grid grid-cols-8 bg-slate-500 text-slate-200 min-h-screen">
+            <div className="LAYOUT grid grid-cols-8 bg-slate-500 text-slate-200">
                 <Header/>
                 <NavBar/>
                 {children}
