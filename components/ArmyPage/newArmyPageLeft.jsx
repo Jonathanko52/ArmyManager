@@ -49,9 +49,9 @@ function ArmyLeft({addUnitToArmy}){
 
     return (
         <div className="p-2 m-2 border-black col-span-2 row-span-5 border-1 ">
-            <select className='text-black' onChange={()=>{}}>
+            {/* <select className='text-black' onChange={()=>{}}>
                 
-            </select>
+            </select> */}
             <label>Select Unit to Add to Army</label>
             <select className='text-black' onChange={handleChangePointCost}>
                 {unitsToPickFrom}
