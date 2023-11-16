@@ -421,7 +421,7 @@ function ArmyPage(){
   return (
         <div className="border-black col-span-10 grid grid-cols-12 border-2 row-span-6 ">
           {/* <ArmyLeft addUnitToArmy={addUnitToArmy}/> */}
-          <NewArmyLeft/>
+          <NewArmyLeft addUnitToArmy={addUnitToArmy}/>
           <ArmyRight 
             unitsReady={armyReady.units}
             unitsStandby={armyStandby.units}
