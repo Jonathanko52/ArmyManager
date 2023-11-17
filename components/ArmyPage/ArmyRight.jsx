@@ -32,26 +32,21 @@ function MainRight({
   moveUnpaintedUnitDown
 }){
 
-
   let totalArmyCost = 0;
-  let totalArmyMoneyCost = 0;
   let totalArmyModelCount = 0;
 
   // useEffect(()=>{
 
     unitsReady.forEach((cur)=>{
       totalArmyCost += cur.pointCost
-      totalArmyMoneyCost += 
       totalArmyModelCount += cur.modelCount
     })
     unitsStandby.forEach((cur)=>{
       totalArmyCost += cur.pointCost
-      totalArmyMoneyCost += 
       totalArmyModelCount += cur.modelCount
     })
     unitsUnpainted.forEach((cur)=>{
       totalArmyCost += cur.pointCost
-      totalArmyMoneyCost += 
       totalArmyModelCount += cur.modelCount
     })
     setArmyPoints(totalArmyCost)
@@ -77,9 +72,6 @@ function MainRight({
               </div>
               <div className="p-4">
                 <h1 className="text-xl font-bold p-2">Total cost in points:  <label className="text-slate-50 font-normal">{totalArmyCost}</label></h1>
-              </div>
-              <div className="p-4">
-                <h1 className="text-xl font-bold p-2">Total cost in money:  <label className="text-slate-50 font-normal">{totalArmyMoneyCost}</label></h1>
               </div>
               <div className="p-4">
                 <h1 className="text-xl font-bold p-2">Army Id:  <label className="text-slate-50 font-normal">{armyId}</label></h1>
