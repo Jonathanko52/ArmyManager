@@ -38,10 +38,11 @@ function ArmyLeft({addUnitToArmy}){
           })
     }
 
-
+    let keyId=0;
     for(let keys in orkArmyPoints){
+        keyId++
         let splitKey = keys.replace(/([a-z])([A-Z])/g, '$1 $2');
-        unitsToPickFrom.push(<option value={keys}>{splitKey}</option>)
+        unitsToPickFrom.push(<option key={keyId} value={keys}>{splitKey}</option>)
     }
 
     return (
