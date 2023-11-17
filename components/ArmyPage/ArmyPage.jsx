@@ -388,8 +388,6 @@ function ArmyPage(){
   const dragUnit = (event, unitId, columnName) =>{
     event.preventDefault();
     setUnitBeingDragged([unitId, columnName])
-    // console.log("DRAG",unitId, columnName, unitBeingDragged)
-
   }
 
   const dropUnit = (event, column) =>{
@@ -414,7 +412,6 @@ function ArmyPage(){
         standbyToUnpainted(unitBeingDragged[0])
       }
     }
-
   }
 
 

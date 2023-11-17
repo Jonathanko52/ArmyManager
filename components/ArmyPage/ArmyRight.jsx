@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import ArmyColumns from './ArmyColumns.jsx'
 
 function MainRight({
@@ -33,23 +33,24 @@ function MainRight({
 }){
 
   let totalArmyCost = 0;
-  let totalArmyModelCount = 0;
 
   // useEffect(()=>{
 
     unitsReady.forEach((cur)=>{
       totalArmyCost += cur.pointCost
-      totalArmyModelCount += cur.modelCount
     })
     unitsStandby.forEach((cur)=>{
       totalArmyCost += cur.pointCost
-      totalArmyModelCount += cur.modelCount
     })
     unitsUnpainted.forEach((cur)=>{
       totalArmyCost += cur.pointCost
-      totalArmyModelCount += cur.modelCount
     })
     setArmyPoints(totalArmyCost)
+
+    // return ()=>{
+    //   saveArmyToLocal()
+    // }
+
 
   // },[])
     const handleChangeName = (event) =>{
@@ -65,18 +66,17 @@ function MainRight({
         <div className="border-black col-span-10 border-l-2 grid grid-cols-3 grid-rows-5">
             <div className="ARMYHEADER grid grid-cols-5 col-span-3 row-span-6">
               <div className="p-4">
-                <h1 className="text-xl font-bold p-2">Army Name:</h1><input type="text" className="text-black m-2 pl-2" onChange={handleChangeName}  value={armyName}></input>
+                <h1 className="text-xl font-bold p-2">Army Name: </h1><input type="text" className="text-black m-2 pl-2" onChange={handleChangeName}  value={armyName}></input>
               </div>
               <div className="p-4">
-                <h1 className="text-xl font-bold p-2">Faction:</h1><input type="text" className="text-black m-2 pl-2" onChange={handleChangeFaction} value={faction}></input>
+                <h1 className="text-xl font-bold p-2">Faction: </h1><input type="text" className="text-black m-2 pl-2" onChange={handleChangeFaction} value={faction}></input>
               </div>
               <div className="p-4">
-                <h1 className="text-xl font-bold p-2">Total cost in points:  <label className="text-slate-50 font-normal">{totalArmyCost}</label></h1>
+                <h1 className="text-xl font-bold p-2">Total cost in points: <label className="text-slate-50 font-normal">{totalArmyCost}</label></h1>
               </div>
               <div className="p-4">
-                <h1 className="text-xl font-bold p-2">Army Id:  <label className="text-slate-50 font-normal">{armyId}</label></h1>
+                <h1 className="text-xl font-bold p-2">Army Id: <label className="text-slate-50 font-normal">{armyId}</label></h1>
               </div>
-
             </div>
             <div className="ARMYCOLUMNS p-4 m-4 border-black border-2  grid grid-cols-3 col-span-3 row-span-6">
               <ArmyColumns
