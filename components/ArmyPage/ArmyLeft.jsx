@@ -1,58 +1,78 @@
 import React, {useState}from 'react';
+import orkArmyPoints from './../../data/orkArmyPoints'
+import UnitRow from './UnitRow'
 
-function MainLeft({addUnitToArmy}){
+function ArmyLeft({addUnitToArmy}){
 
-    const [unitName, setName] = useState('');
-    const [modelCount, setCount] = useState(0);
-    const [pointCost, setpointCost] = useState(0);
-    const [unitSize, setUnitSize] = useState(0);
-    const [moneyCost, setMoneyCost] = useState(0);
+    const [selectedUnit, setSelectedUnit] = useState('');
+    const [selectedUnitName, setSelectedUnitName] = useState('')
+    const [unitSizeIndex, setUnitSizeIndex ] = useState(0)
 
+    let unitsToPickFrom = []
 
-    const handleChangeName = (event) =>{
-      setName(event.target.value)
-    }
-    const handleChangeModelCount = (event) =>{
-      setCount(Number(event.target.value))
-    }    
     const handleChangePointCost = (event) =>{
-      setpointCost(parseInt(event.target.value))
+        let splitKey = event.target.value.replace(/([a-z])([A-Z])/g, '$1 $2');
+        setSelectedUnit(orkArmyPoints[event.target.value])
+        setSelectedUnitName(splitKey)
     }    
-    const handleChangeUnitSizes = (event) =>{
-      setUnitSize(+event.target.value)
+
+    const increaseUnitSize = () =>{
+        if(unitSizeIndex < selectedUnit.length-1){
+            setUnitSizeIndex(unitSizeIndex+1)
+        }
     }
-    const handleChangeMoneyCost = (event) =>{
-      setMoneyCost(+event.target.value)
+
+    const decreaseUnitSize  = () =>{
+        if(unitSizeIndex > 0){
+            setUnitSizeIndex(unitSizeIndex-1)
+        }
     }
-    const handleSubmit = (event) =>{
-      event.preventDefault()
-      let unitId = parseInt(Math.random() * 1000)
-      addUnitToArmy({
-        unitName: unitName,
-        modelCount: modelCount, 
-        pointCost: pointCost, 
-        unitSize:unitSize, 
-        moneyCost: moneyCost,
-        unitId:unitId
-      })
-      setName('')
-      setCount(0)
-      setpointCost(0)
-      setUnitSize(0)
+
+    const newArmyAddUnitToArmy = () =>{
+        let unitId = parseInt(Math.random() * 1000)
+        addUnitToArmy({
+            unitName: selectedUnitName,
+            modelCount: selectedUnit[unitSizeIndex][0], 
+            pointCost: selectedUnit[unitSizeIndex][1], 
+            unitId:unitId
+          })
+    }
+
+    let keyId=0;
+    for(let keys in orkArmyPoints){
+        keyId++
+        let splitKey = keys.replace(/([a-z])([A-Z])/g, '$1 $2');
+        unitsToPickFrom.push(<option key={keyId} value={keys}>{splitKey}</option>)
     }
 
     return (
-        <div className="p-2 m-2 border-black col-span-2 row-span-5 border-1">
-          <h3 className="m-2 text-lg font-bold">Add unit</h3>
-          <form onSubmit={handleSubmit}>
-              <label className="m-1 text-lg">Name</label><br/><input className="text-black m-2" id="MainLeftName" type="text" value={unitName} onChange={handleChangeName}></input><br/>
-              <label className="m-1 text-lg">Model Count</label><br/><input className="text-black m-2 pl-2"id="MainLeftModel" type="number" value={modelCount} onChange={handleChangeModelCount}></input><br/>
-              <label className="m-1 text-lg">Point Cost</label><br/><input className="text-black m-2 pl-2"id="MainLeftPoint" type="number" value={pointCost} onChange={handleChangePointCost}></input><br/>
-              <input className = "rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 text-black font-bold" type="submit" value="Add Unit"></input>
-          </form>
+        <div className="p-2 m-2 border-black col-span-2 row-span-5 border-1 ">
+            <label>Select Unit to Add to Army</label>
+            <select className='text-black' onChange={(e)=>{
+                handleChangePointCost(e)
+                setUnitSizeIndex(0)
+                }}>
+                {unitsToPickFrom}
+            </select>
+            {/* <select className='text-black' onChange={()=>{}}>
+                
+            </select> */}
+            {selectedUnit ? 
+                <UnitRow
+                    unitName={selectedUnitName}
+                    modelCount={selectedUnit[unitSizeIndex][0]}
+                    pointCost={selectedUnit[unitSizeIndex][1]}
+                    buttonOne={increaseUnitSize}
+                    buttonOneText={"Increase Size"}
+                    buttonTwo={decreaseUnitSize}
+                    buttonTwoText={"Decrease Size"}
+                    buttonThree={newArmyAddUnitToArmy}
+                    buttonThreeText={"Add Unit To Army"}
+            />: null }
+
         </div>
       )
 }
 
 
-export default MainLeft;
+export default ArmyLeft;

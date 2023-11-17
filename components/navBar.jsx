@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import React, { useContext } from 'react';
 import ArmyContext from './../context/ArmyContext'
-import params from '../pages/api/config/tableSchema'
 
 function NavBar(){
 

@@ -1,6 +1,6 @@
 import NavBar from './NavBar.jsx'
 import Header from './Header'
-import React, {useState, createContext} from 'react';
+import React from 'react';
 
 
 export default function Layout({ children }) {
