@@ -26,12 +26,12 @@ function ArmyPage(){
       setArmyName(contextData.armyName)
       setFaction(contextData.faction)
       setArmyId(contextData.armyId)
-      window.addEventListener('beforeunload',saveOnClose);
+    //   window.addEventListener('beforeunload',saveOnClose);
 
-    return ()=>{
-      logState()
-      window.removeEventListener('beforeunload', saveOnClose);
-    }
+    // return ()=>{
+    //   logState()
+    //   window.removeEventListener('beforeunload', saveOnClose);
+    // }
   }, [isLoading]);
 
   const addUnitToArmy = (newUnit) =>{
@@ -52,6 +52,7 @@ function ArmyPage(){
       }
     })
     setArmyReady({...armyReady, units:[...armyReady.units, duplicatedUnit]})
+    saveArmyToLocal()
   }
 
   const duplicateUnitInStandby = (unitId) =>{
@@ -66,6 +67,7 @@ function ArmyPage(){
       }
     })
     setArmyStandby({...armyStandby, units:[...armyStandby.units, duplicatedUnit]})
+    saveArmyToLocal()
   }
 
   const duplicateUnitInUnpainted = (unitId) =>{
@@ -80,6 +82,7 @@ function ArmyPage(){
       }
     })
     setArmyUnpainted({...armyUnpainted, units:[...armyUnpainted.units, duplicatedUnit]})
+    saveArmyToLocal()
   }
 
   const moveReadyUnitUp = (unitId) =>{
@@ -96,6 +99,7 @@ function ArmyPage(){
       newArmyReady[index-1] = placeHolder
       setArmyReady({...armyReady, units:newArmyReady})
     }
+    saveArmyToLocal()
   }
 
   const moveReadyUnitDown = (unitId) =>{
@@ -112,6 +116,7 @@ function ArmyPage(){
       newArmyReady[index+1] = placeHolder
       setArmyReady({...armyReady, units:newArmyReady})
     }
+    saveArmyToLocal()
   }
 
   const moveStandbyUnitUp = (unitId) =>{
@@ -128,6 +133,7 @@ function ArmyPage(){
       newArmyStandby[index-1] = placeHolder
       setArmyStandby({...armyStandby, units:newArmyStandby})
     }
+    saveArmyToLocal()
   }
 
   const moveStandbyUnitDown = (unitId) =>{
@@ -144,6 +150,7 @@ function ArmyPage(){
       newArmyStandby[index+1] = placeHolder
       setArmyStandby({...armyStandby, units:newArmyStandby})
     }
+    saveArmyToLocal()
   }
 
   const moveUnpaintedUnitUp = (unitId) =>{
@@ -160,6 +167,7 @@ function ArmyPage(){
       newArmyUnpainted[index-1] = placeHolder
       setArmyUnpainted({...armyUnpainted, units:newArmyUnpainted})
     }
+    saveArmyToLocal()
   }
 
   const moveUnpaintedUnitDown = (unitId) =>{
@@ -176,6 +184,7 @@ function ArmyPage(){
       newArmyUnpainted[index+1] = placeHolder
       setArmyUnpainted({...armyUnpainted, units:newArmyUnpainted})
     }
+    saveArmyToLocal()
   }
 
 
@@ -183,26 +192,31 @@ function ArmyPage(){
     let newUnits = armyReady.units.slice()
     newUnits = newUnits.filter(cur=>cur.unitId !== unitId)
     setArmyReady({...armyReady, units:newUnits})
+    saveArmyToLocal()
   }
 
   const removeUnitFromStandby = (unitId)=>{
     let newUnits = armyStandby.units.slice()
     newUnits = newUnits.filter(cur=>cur.unitId !== unitId)
     setArmyStandby({...armyStandby, units:newUnits})
+    saveArmyToLocal()
   }
 
   const removeUnitFromUnpainted = (unitId)=>{
     let newUnits = armyUnpainted.units.slice()
     newUnits = newUnits.filter(cur=>cur.unitId !== unitId)
     setArmyUnpainted({...armyUnpainted, units:newUnits})
+    saveArmyToLocal()
   }
 
   const changeArmyName = (armyName) => {
     setArmyReady({...armyReady,armyName:armyName})
+    saveArmyToLocal()
   }
 
   const changeArmyFaction = (armyFaction) =>{
     setArmyReady({...armyReady,faction:armyFaction})
+    saveArmyToLocal()
   }
 
   const saveArmyToLocal = () =>{
@@ -217,8 +231,8 @@ function ArmyPage(){
         armyPoints:armyPoints,
         armyId:armyId
       }));
+      saveToMainPage()
     }
-    saveToMainPage()
   }
 
   const loadArmyFromLocal = () =>{
@@ -280,6 +294,7 @@ function ArmyPage(){
     })
     setArmyReady({...armyReady, units:[...newReadyUnits]})
     setArmyStandby({...armyStandby, units:[...armyStandby.units, unitToBeMoved]})
+    saveArmyToLocal()
   }
 
   const readyToUnpainted = (unitId) => {
@@ -293,6 +308,7 @@ function ArmyPage(){
     })
     setArmyReady({...armyReady, units:[...newReadyUnits]})
     setArmyUnpainted({...armyUnpainted, units:[...armyUnpainted.units, unitToBeMoved]})
+    saveArmyToLocal()
   }
 
   const standbyToReady = (unitId) => {
@@ -306,6 +322,7 @@ function ArmyPage(){
     })
     setArmyStandby({...armyStandby, units:[...newStandbyUnits]})
     setArmyReady({...armyReady, units:[...armyReady.units, unitToBeMoved]})
+    saveArmyToLocal()
   }
 
   const standbyToUnpainted = (unitId) => {
@@ -319,6 +336,7 @@ function ArmyPage(){
     })
     setArmyStandby({...armyStandby, units:[...newStandbyUnits]})
     setArmyUnpainted({...armyUnpainted, units:[...armyUnpainted.units, unitToBeMoved]})
+    saveArmyToLocal()
   }
 
   const unpaintedToReady = (unitId) => {
@@ -332,6 +350,7 @@ function ArmyPage(){
     })
     setArmyUnpainted({...armyUnpainted, units:[...newUnpaintedUnits]})
     setArmyReady({...armyReady, units:[...armyReady.units, unitToBeMoved]})
+    saveArmyToLocal()
   }
 
   const unpaintedToStandy = (unitId) => {
@@ -345,6 +364,7 @@ function ArmyPage(){
     })
     setArmyUnpainted({...armyUnpainted, units:[...newUnpaintedUnits]})
     setArmyStandby({...armyStandby, units:[...armyStandby.units, unitToBeMoved]})
+    saveArmyToLocal()
   }
 
   const logState = () =>{
