@@ -29,7 +29,7 @@ function ArmyPage(){
       window.addEventListener('beforeunload',saveOnClose);
 
     return ()=>{
-      logState()
+      // logState()
       window.removeEventListener('beforeunload', saveOnClose);
     }
   }, [isLoading]);
@@ -219,6 +219,7 @@ function ArmyPage(){
         }));
         saveToMainPage()
     }
+    console.log("SAVED")
   }
 
   const loadArmyFromLocal = () =>{
@@ -408,6 +409,7 @@ function ArmyPage(){
   }
 
   const saveOnClose = (event)=>{
+    saveArmyToLocal()
 
     const e = event || window.event;
     // Cancel the event
@@ -416,7 +418,6 @@ function ArmyPage(){
     if (e) {
       e.returnValue = ''; // Legacy method for cross browser support
     }
-    saveArmyToLocal()
 
     return ''; // Legacy method for cross browser support
   }
