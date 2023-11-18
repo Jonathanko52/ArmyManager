@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import ArmyColumns from './ArmyColumns.jsx'
 
 function MainRight({
@@ -48,9 +48,9 @@ function MainRight({
     setArmyPoints(totalArmyCost)
 
     // return ()=>{
-    //   saveArmyToLocal()
-    // }
-
+      // saveArmyToLocal()
+      //as of right now, data isn't saved. deletes it, actually. theory is that army data is lost, then the save is run. whoops
+  //   }
 
   // },[])
     const handleChangeName = (event) =>{

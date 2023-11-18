@@ -22,9 +22,10 @@ function ArmyColumn({
   // useEffect(()=>{
     if(Array.isArray(units)){
 
-    units.forEach(cur=>{
+    units.forEach((cur,ind)=>{
 
-      unitsComponents.push(<UnitRow 
+      unitsComponents.push(<UnitRow
+        key={ind} 
         unitName={cur.unitName} 
         modelCount={cur.modelCount} 
         pointCost={cur.pointCost} 

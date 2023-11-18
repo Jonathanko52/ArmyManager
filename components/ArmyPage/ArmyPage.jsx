@@ -30,14 +30,15 @@ function ArmyPage(){
       
 
     return ()=>{
-      // setValue({
-      //   armyName:armyName,
-      //   faction:faction,
-      //   armyReady:armyReady,
-      //   armyStandby:armyStandby,
-      //   armyUnpainted:armyUnpainted,
-      //   armyPoints:armyPoints
-      // })
+      saveArmyToLocal()
+      setValue({
+        armyName:armyName,
+        faction:faction,
+        armyReady:armyReady,
+        armyStandby:armyStandby,
+        armyUnpainted:armyUnpainted,
+        armyPoints:armyPoints
+      })
     }
   }, [isLoading]);
 
