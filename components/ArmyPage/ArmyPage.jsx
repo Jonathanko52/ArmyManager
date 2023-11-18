@@ -27,18 +27,38 @@ function ArmyPage(){
       setArmyName(contextData.armyName)
       setFaction(contextData.faction)
       setArmyId(contextData.armyId)
-      
+      window.addEventListener('beforeunload', (event)=>{
 
+        const e = event || window.event;
+        // Cancel the event
+
+        e.preventDefault();
+        if (e) {
+          e.returnValue = ''; // Legacy method for cross browser support
+        }
+        // saveToMainPage()
+        saveArmyToLocal()
+
+        return ''; // Legacy method for cross browser support
+      });
+
+
+      
     return ()=>{
-      saveArmyToLocal()
-      setValue({
-        armyName:armyName,
-        faction:faction,
-        armyReady:armyReady,
-        armyStandby:armyStandby,
-        armyUnpainted:armyUnpainted,
-        armyPoints:armyPoints
-      })
+      window.removeEventListener('beforeunload', (event)=>{
+
+        const e = event || window.event;
+        // Cancel the event
+
+        e.preventDefault();
+        if (e) {
+          e.returnValue = ''; // Legacy method for cross browser support
+        }
+        // saveToMainPage()
+        saveArmyToLocal()
+
+        return ''; // Legacy method for cross browser support
+      });
     }
   }, [isLoading]);
 
