@@ -27,10 +27,10 @@ function DatabaseLeft({
           buttonOneText={"Save To Database"}
           buttonOneParam={armyName}
         />
-          <button className = "rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 text-black font-bold" type="submit" value="Add Unit" onClick={()=>{createTable()}}>Create Table</button>
-          <button className = "rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 text-black font-bold" type="submit" value="Add Unit" onClick={()=>{retrieveArmy()}}>Retrieve Army</button>
-          <button className = "rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 text-black font-bold" type="submit" value="Add Unit" onClick={()=>{updateArmy()}}>Update Army</button>
-          <button className = "rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 text-black font-bold" type="submit" value="Add Unit" onClick={()=>{logCurrentState()}}>Log State</button>
+          <button className = "rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold" type="submit" value="Add Unit" onClick={()=>{createTable()}}>Create Table</button>
+          <button className = "rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold" type="submit" value="Add Unit" onClick={()=>{retrieveArmy()}}>Retrieve Army</button>
+          <button className = "rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold" type="submit" value="Add Unit" onClick={()=>{updateArmy()}}>Update Army</button>
+          <button className = "rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold" type="submit" value="Add Unit" onClick={()=>{logCurrentState()}}>Log State</button>
         </div>
       )
 }

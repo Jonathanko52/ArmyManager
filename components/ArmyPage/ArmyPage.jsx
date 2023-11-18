@@ -27,38 +27,10 @@ function ArmyPage(){
       setArmyName(contextData.armyName)
       setFaction(contextData.faction)
       setArmyId(contextData.armyId)
-      window.addEventListener('beforeunload', (event)=>{
+      window.addEventListener('beforeunload',saveOnClose);
 
-        const e = event || window.event;
-        // Cancel the event
-
-        e.preventDefault();
-        if (e) {
-          e.returnValue = ''; // Legacy method for cross browser support
-        }
-        // saveToMainPage()
-        saveArmyToLocal()
-
-        return ''; // Legacy method for cross browser support
-      });
-
-
-      
     return ()=>{
-      window.removeEventListener('beforeunload', (event)=>{
-
-        const e = event || window.event;
-        // Cancel the event
-
-        e.preventDefault();
-        if (e) {
-          e.returnValue = ''; // Legacy method for cross browser support
-        }
-        // saveToMainPage()
-        saveArmyToLocal()
-
-        return ''; // Legacy method for cross browser support
-      });
+      window.removeEventListener('beforeunload', saveOnClose);
     }
   }, [isLoading]);
 
@@ -66,7 +38,7 @@ function ArmyPage(){
     let id = duplicateIdCheck(newUnit.unitId)
     newUnit.unitId= id
 
-    setArmyReady({...armyReady, units:[...armyReady.units, newUnit]})
+    setArmyReady({...armyReady, units:[newUnit,...armyReady.units]})
   }
 
   const duplicateUnitInReady = (unitId) =>{
@@ -433,6 +405,20 @@ function ArmyPage(){
         standbyToUnpainted(unitBeingDragged[0])
       }
     }
+  }
+
+  const saveOnClose = (event)=>{
+
+    const e = event || window.event;
+    // Cancel the event
+
+    e.preventDefault();
+    if (e) {
+      e.returnValue = ''; // Legacy method for cross browser support
+    }
+    saveArmyToLocal()
+
+    return ''; // Legacy method for cross browser support
   }
 
 

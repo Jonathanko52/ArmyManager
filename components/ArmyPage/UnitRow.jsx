@@ -28,15 +28,15 @@ function UnitRow({
           <label className="m-4 p-4 text-lg font-bold" >Point Cost: <label className="text-slate-50 font-normal">{pointCost}</label></label><br></br>
           </div>
           <div className="col-span-1">
-              {buttonThree ? <button className="rounded-md p-2 m-2 bg-slate-50 text-black font-bold" type="submit" value="Add Unit" 
+              {buttonThree ? <button className="rounded-md p-2 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold" type="submit" value="Add Unit" 
               onClick={()=>{buttonThree(unitId)}}>{buttonThreeText}</button> : null}
-              {buttonFour ? <button className="rounded-md p-2 m-2 bg-slate-50 text-black font-bold" type="submit" value="Add Unit" 
+              {buttonFour ? <button className="rounded-md p-2 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold" type="submit" value="Add Unit" 
               onClick={()=>{buttonFour(unitId)}}>{buttonFourText}</button> : null}
           </div>
           <div className="col-span-4">
-              {buttonOne ? <button className="rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 text-black font-bold" type="submit" value="Add Unit" 
+              {buttonOne ? <button className="rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold" type="submit" value="Add Unit" 
               onClick={()=>{buttonOne(unitId)}}>{buttonOneText}</button> : null}
-              {buttonTwo ? <button className="rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 text-black font-bold" type="submit" value="Add Unit" 
+              {buttonTwo ? <button className="rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold" type="submit" value="Add Unit" 
               onClick={()=>{buttonTwo(unitId)}}>{buttonTwoText}</button> : null}
 
             </div>

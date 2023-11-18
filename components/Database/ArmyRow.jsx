@@ -15,9 +15,9 @@ function ArmyRow({armyName,armyfaction,armyPoints,
           <label className="m-4 p-4 text-lg font-bold" >Points: <label className="text-slate-50 font-normal">{armyPoints}</label></label><br></br>
 
           <div className="p-4 ">
-              {buttonOne? <button className="rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 text-black font-bold" type="submit" value="Add Unit" 
+              {buttonOne? <button className="rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold" type="submit" value="Add Unit" 
               onClick={()=>{buttonOne(buttonOneParam)}}>{buttonOneText}</button>: null}
-              {buttonTwo ?  <button className="rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 text-black font-bold" type="submit" value="Add Unit" 
+              {buttonTwo ?  <button className="rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold" type="submit" value="Add Unit" 
               onClick={()=>{buttonTwo(buttonTwoParam)}}>{buttonTwoText}</button> : null}
 
           </div>
