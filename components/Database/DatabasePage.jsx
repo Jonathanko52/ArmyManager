@@ -36,10 +36,8 @@ function Database(){
     let confirmed = window.confirm("Do you want to load this army into the app?")
     if(confirmed){
       let armyToBeSet
-      console.log("DATABASE ARMY TO LOAD", databaseArmies[ind])
       let armyParsed = JSON.parse(databaseArmies[ind].armyString.S)
 
-      console.log("ARMYPARSED",armyParsed)
       let armyName = armyParsed.armyName
       let armyPoints = armyParsed.armyPoints
       let armyReady = armyParsed.armyReady
@@ -56,7 +54,6 @@ function Database(){
         faction
       }
       localStorage.setItem("warHammerArmy", JSON.stringify(armyToBeSet));
-
       setValue(armyToBeSet)
     }
   };
