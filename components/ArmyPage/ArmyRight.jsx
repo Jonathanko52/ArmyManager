@@ -29,7 +29,8 @@ function ArmyRight({
   moveStandbyUnitUp,
   moveStandbyUnitDown,
   moveUnpaintedUnitUp,
-  moveUnpaintedUnitDown
+  moveUnpaintedUnitDown,
+  logState
 }){
 
   let totalArmyCost = 0;
@@ -76,6 +77,9 @@ function ArmyRight({
               </div>
               <div className="p-4">
                 <h1 className="text-xl font-bold p-2">Army Id: <label className="text-slate-50 font-normal">{armyId}</label></h1>
+              </div>
+              <div className="p-4">
+                <button className = "rounded-md p-2 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold" type="submit" value="Add Unit" onClick={logState}>Log State</button>        
               </div>
             </div>
             <div className="ARMYCOLUMNS p-4 m-4 border-black border-2  grid grid-cols-3 col-span-3 row-span-6">

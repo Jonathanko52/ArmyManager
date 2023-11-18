@@ -1,5 +1,4 @@
 import ArmyLeft from './ArmyLeft';
-import NewArmyLeft from './ArmyLeft'
 import ArmyRight from './ArmyRight';
 import React, {useState, useContext, useEffect} from 'react';
 import ArmyContext from '../../context/ArmyContext'
@@ -30,14 +29,14 @@ function ArmyPage(){
       window.addEventListener('beforeunload',saveOnClose);
 
     return ()=>{
+      logState()
       window.removeEventListener('beforeunload', saveOnClose);
     }
   }, [isLoading]);
 
   const addUnitToArmy = (newUnit) =>{
     let id = duplicateIdCheck(newUnit.unitId)
-    newUnit.unitId= id
-
+    newUnit.unitId= id 
     setArmyReady({...armyReady, units:[newUnit,...armyReady.units]})
   }
 
@@ -349,8 +348,9 @@ function ArmyPage(){
   }
 
   const logState = () =>{
-    console.log(armyReady,armyStandby,armyUnpainted)  
-    console.log(armyPoints, armyName, faction)
+    console.log("READY",armyReady.units)  
+    console.log("STANDBY",armyStandby.units)  
+    console.log("UNPAINTED",armyUnpainted.units)  
   }
 
   const duplicateIdCheck = (newUnitId) => {
@@ -460,8 +460,8 @@ function ArmyPage(){
             moveStandbyUnitDown={moveStandbyUnitDown}
             moveUnpaintedUnitUp={moveUnpaintedUnitUp}
             moveUnpaintedUnitDown={moveUnpaintedUnitDown}
+            logState={logState}
           />
-          <button onClick={logState}>Log State</button>
         </div>
       )
 }
