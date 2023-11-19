@@ -7,6 +7,7 @@ function ArmyLeft({addUnitToArmy}){
     const [selectedUnit, setSelectedUnit] = useState('');
     const [selectedUnitName, setSelectedUnitName] = useState('')
     const [unitSizeIndex, setUnitSizeIndex ] = useState(0)
+    const [armyPointFilter, setArmyPointFilter] = useState(0)
 
     let unitsToPickFrom = []
 
