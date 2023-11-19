@@ -12,10 +12,16 @@ function ArmyLeft({addUnitToArmy}){
 
     let unitsToPickFrom = []
 
-    const handleChangePointCost = (event) =>{
+    const handleUnitSelect = (event) =>{
         let splitKey = event.target.value.replace(/([a-z])([A-Z])/g, '$1 $2');
         setSelectedUnit(orkArmyPoints[event.target.value])
-        setSelectedUnitName(splitKey)
+
+    }    
+    const handlePointFilterSelect = (event) =>{
+        setArmyPointFilter(event.target.value)
+    }    
+    const handleFactionSelect = (event) =>{
+        setFactionSelect(event.target.value)
     }    
 
     const increaseUnitSize = () =>{
@@ -69,7 +75,7 @@ function ArmyLeft({addUnitToArmy}){
         <div className="p-2 m-2 border-black col-span-2 row-span-5 border-1 ">
             <label>Select Unit to Add to Army</label>
             <select className='text-black' onChange={(e)=>{
-                handleChangePointCost(e)
+                handleUnitSelect(e)
                 setUnitSizeIndex(0)
                 }}>
                 {unitsToPickFrom}
@@ -77,7 +83,11 @@ function ArmyLeft({addUnitToArmy}){
             {/* <select className='text-black' onChange={()=>{}}>
                 
             </select> */}
-            {selectedUnit ? 
+
+
+
+{/* handlePointFilterSelect 
+handleFactionSelect  */}
                 <UnitRow
                     unitName={selectedUnitName}
                     modelCount={selectedUnit[unitSizeIndex][0]}
