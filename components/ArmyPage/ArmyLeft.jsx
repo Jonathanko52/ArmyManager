@@ -63,7 +63,7 @@ function ArmyLeft({addUnitToArmy}){
     
         return ()=>{
           // logState()
-          window.removeEventListener('beforeunload', saveOnClose);
+        //   window.removeEventListener('beforeunload', saveOnClose);
         }
       }, []);
 
@@ -80,15 +80,22 @@ function ArmyLeft({addUnitToArmy}){
                 }}>
                 {unitsToPickFrom}
             </select>
-            {/* <select className='text-black' onChange={()=>{}}>
-                
-            </select> */}
-
-
-
-{/* handlePointFilterSelect 
-handleFactionSelect  */}
-                <UnitRow
+            <label>Filters</label><br></br>
+            <select className='text-black' onChange={(e)=>{
+                handlePointFilterSelect(e)
+            }}>
+                <option key={1} value={50}>{'< 50'}</option>
+                <option key={2} value={100}>{'< 100'}</option>
+                <option key={3} value={150}>{'< 150'}</option>
+                <option key={4} value={200}>{'< 200'}</option>
+            </select><br></br>
+            <label>Faction Select</label><br></br>
+            <select className='text-black' onChange={(e)=>{
+                handleFactionSelect(e)
+            }}>
+                <option key={1} value={50}>{'Ork'}</option>
+            </select>
+               {selectedUnit ? <UnitRow
                     unitName={selectedUnitName}
                     modelCount={selectedUnit[unitSizeIndex][0]}
                     pointCost={selectedUnit[unitSizeIndex][1]}
