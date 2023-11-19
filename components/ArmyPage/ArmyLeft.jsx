@@ -1,4 +1,4 @@
-import React, {useState}from 'react';
+import React, {useState,useEffect}from 'react';
 import orkArmyPoints from './../../data/orkArmyPoints'
 import UnitRow from './UnitRow'
 
@@ -8,6 +8,7 @@ function ArmyLeft({addUnitToArmy}){
     const [selectedUnitName, setSelectedUnitName] = useState('')
     const [unitSizeIndex, setUnitSizeIndex ] = useState(0)
     const [armyPointFilter, setArmyPointFilter] = useState(0)
+    const [factionSelect, setFactionSelect] = useState('')
 
     let unitsToPickFrom = []
 
@@ -45,6 +46,24 @@ function ArmyLeft({addUnitToArmy}){
         let splitKey = keys.replace(/([a-z])([A-Z])/g, '$1 $2');
         unitsToPickFrom.push(<option key={keyId} value={keys}>{splitKey}</option>)
     }
+
+    useEffect(() => {
+        let keyId=0;
+        for(let keys in orkArmyPoints){
+            keyId++
+            let splitKey = keys.replace(/([a-z])([A-Z])/g, '$1 $2');
+            unitsToPickFrom.push(<option key={keyId} value={keys}>{splitKey}</option>)
+        }
+    
+        return ()=>{
+          // logState()
+          window.removeEventListener('beforeunload', saveOnClose);
+        }
+      }, []);
+
+
+
+
 
     return (
         <div className="p-2 m-2 border-black col-span-2 row-span-5 border-1 ">
