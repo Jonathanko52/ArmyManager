@@ -433,6 +433,7 @@ function ArmyPage(){
             armyName={armyName}
             setArmyName={setArmyName}
             setArmyPoints={setArmyPoints}
+            armyPoints={armyPoints}
             faction={faction}
             setFaction={setFaction}
             saveArmyToLocal={saveArmyToLocal} 

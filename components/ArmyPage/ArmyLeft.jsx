@@ -13,13 +13,13 @@ function ArmyLeft({addUnitToArmy}){
     let unitsToPickFrom = []
 
     const handleUnitSelect = (event) =>{
-        let splitKey = event.target.value.replace(/([a-z])([A-Z])/g, '$1 $2');
         setSelectedUnit(orkArmyPoints[event.target.value])
-
     }    
+
     const handlePointFilterSelect = (event) =>{
         setArmyPointFilter(event.target.value)
     }    
+    
     const handleFactionSelect = (event) =>{
         setFactionSelect(event.target.value)
     }    
@@ -48,27 +48,13 @@ function ArmyLeft({addUnitToArmy}){
 
 
     let keyId=0;
-    //setting unit list
     for(let keys in orkArmyPoints){
         keyId++
         let splitKey = keys.replace(/([a-z])([A-Z])/g, '$1 $2');
-            console.log("TEST",orkArmyPoints[keys][0][1] <= armyPointFilter)
         if(orkArmyPoints[keys][0][1] <= armyPointFilter){
             unitsToPickFrom.push(<option key={keyId} value={keys}>{splitKey}</option>)
         }
     }
-    console.log("FILTER CHANGED", armyPointFilter)
-
-    useEffect(() => {
-
-        return ()=>{
-          // logState()
-        //   window.removeEventListener('beforeunload', saveOnClose);
-        }
-      }, [armyPointFilter]);
-
-
-
 
 
     return (
@@ -77,7 +63,7 @@ function ArmyLeft({addUnitToArmy}){
             <select className='text-black' onChange={(e)=>{
                 handleUnitSelect(e)
                 setUnitSizeIndex(0)
-                }}>
+            }}>
                 {unitsToPickFrom}
             </select>
             <label>Filters</label><br></br>
@@ -93,7 +79,7 @@ function ArmyLeft({addUnitToArmy}){
             <select className='text-black' onChange={(e)=>{
                 handleFactionSelect(e)
             }}>
-                <option key={1} value={50}>{'Ork'}</option>
+                <option key={1} value={'Ork'}>{'Ork'}</option>
             </select>
                {selectedUnit ? <UnitRow
                     unitName={selectedUnitName}

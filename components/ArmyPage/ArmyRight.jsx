@@ -30,7 +30,8 @@ function ArmyRight({
   moveStandbyUnitDown,
   moveUnpaintedUnitUp,
   moveUnpaintedUnitDown,
-  logState
+  logState,
+  armyPoints
 }){
 
   let totalArmyCost = 0;
@@ -39,12 +40,17 @@ function ArmyRight({
 
     unitsReady.forEach((cur)=>{
       totalArmyCost += cur.pointCost
+      console.log("TOTAL1",totalArmyCost)
+
     })
     unitsStandby.forEach((cur)=>{
       totalArmyCost += cur.pointCost
+      console.log("TOTAL2",totalArmyCost)
+
     })
     unitsUnpainted.forEach((cur)=>{
       totalArmyCost += cur.pointCost
+      console.log("TOTAL3",totalArmyCost)
     })
     setArmyPoints(totalArmyCost)
 
@@ -53,7 +59,7 @@ function ArmyRight({
       //as of right now, data isn't saved. deletes it, actually. theory is that army data is lost, then the save is run. whoops
     }
 
-  },[])
+  },[unitsReady])
     const handleChangeName = (event) =>{
       setArmyName(event.target.value)
       changeArmyName(armyName)       
@@ -73,7 +79,7 @@ function ArmyRight({
                 <h1 className="text-xl font-bold p-2">Faction: </h1><input type="text" className="text-black m-2 pl-2" onChange={handleChangeFaction} value={faction}></input>
               </div>
               <div className="p-4">
-                <h1 className="text-xl font-bold p-2">Total cost in points: <label className="text-slate-50 font-normal">{totalArmyCost}</label></h1>
+                <h1 className="text-xl font-bold p-2">Total cost in points:  <label className="text-slate-50 font-normal">{armyPoints}</label></h1>
               </div>
               <div className="p-4">
                 <h1 className="text-xl font-bold p-2">Army Id: <label className="text-slate-50 font-normal">{armyId}</label></h1>
