@@ -80,6 +80,8 @@ function ArmyLeft({addUnitToArmy}){
                 handleFactionSelect(e)
             }}>
                 <option key={1} value={'Ork'}>{'Ork'}</option>
+                <option key={1} value={'Black Templar'}>{'Black Templar'}</option>
+
             </select>
                {selectedUnit ? <UnitRow
                     unitName={selectedUnitName}
