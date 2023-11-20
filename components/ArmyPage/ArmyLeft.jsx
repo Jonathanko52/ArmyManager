@@ -7,7 +7,7 @@ function ArmyLeft({addUnitToArmy}){
     const [selectedUnit, setSelectedUnit] = useState('');
     const [selectedUnitName, setSelectedUnitName] = useState('')
     const [unitSizeIndex, setUnitSizeIndex ] = useState(0)
-    const [armyPointFilter, setArmyPointFilter] = useState(0)
+    const [armyPointFilter, setArmyPointFilter] = useState(1000)
     const [factionSelect, setFactionSelect] = useState('')
 
     let unitsToPickFrom = []
@@ -58,14 +58,18 @@ function ArmyLeft({addUnitToArmy}){
         for(let keys in orkArmyPoints){
             keyId++
             let splitKey = keys.replace(/([a-z])([A-Z])/g, '$1 $2');
-            unitsToPickFrom.push(<option key={keyId} value={keys}>{splitKey}</option>)
+
+                console.log("TEST",orkArmyPoints[keys][0][1] <= armyPointFilter)
+            if(orkArmyPoints[keys][0][1] <= armyPointFilter){
+                unitsToPickFrom.push(<option key={keyId} value={keys}>{splitKey}</option>)
+            }
         }
-    
+        console.log("FILTER CHANGED", armyPointFilter)
         return ()=>{
           // logState()
         //   window.removeEventListener('beforeunload', saveOnClose);
         }
-      }, []);
+      }, [armyPointFilter]);
 
 
 
