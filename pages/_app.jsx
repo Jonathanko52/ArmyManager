@@ -10,7 +10,6 @@ AWS.config.update(AWSConfig);
 
 export default function App({ Component, pageProps }) {
 
-
   // Wraps around all components
 
   const [army, setArmy] = useState({

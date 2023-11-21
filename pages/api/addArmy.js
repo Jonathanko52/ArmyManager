@@ -1,8 +1,5 @@
-import AWSConfig from './config/aws-config'
-
 const AWS = require("aws-sdk");
 const dynamodb = new AWS.DynamoDB();
-AWS.config.update(AWSConfig);
 
 export default function addArmy(req) {
   return new Promise((resolve,reject)=>{

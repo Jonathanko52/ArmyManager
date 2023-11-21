@@ -1,11 +1,7 @@
-import AWSConfig from './config/aws-config'
 import params from '../api/config/tableSchema'
 
 const AWS = require("aws-sdk");
 const dynamodb = new AWS.DynamoDB();
-AWS.config.update(AWSConfig);
-
-
 
 export default function createTable() {
   return new Promise((resolve,reject)=>{
