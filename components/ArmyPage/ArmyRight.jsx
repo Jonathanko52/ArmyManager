@@ -40,17 +40,13 @@ function ArmyRight({
 
     unitsReady.forEach((cur)=>{
       totalArmyCost += cur.pointCost
-      console.log("TOTAL1",totalArmyCost)
 
     })
     unitsStandby.forEach((cur)=>{
       totalArmyCost += cur.pointCost
-      console.log("TOTAL2",totalArmyCost)
-
     })
     unitsUnpainted.forEach((cur)=>{
       totalArmyCost += cur.pointCost
-      console.log("TOTAL3",totalArmyCost)
     })
     setArmyPoints(totalArmyCost)
 
@@ -59,11 +55,13 @@ function ArmyRight({
       //as of right now, data isn't saved. deletes it, actually. theory is that army data is lost, then the save is run. whoops
     }
 
-  },[unitsReady])
+  },[unitsReady,unitsStandby,unitsUnpainted])
+
     const handleChangeName = (event) =>{
       setArmyName(event.target.value)
       changeArmyName(armyName)       
     }
+
     const handleChangeFaction = (event) =>{
       setFaction(event.target.value)
       changeArmyFaction(faction)
