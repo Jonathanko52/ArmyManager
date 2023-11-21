@@ -2,6 +2,11 @@
 import '../styles/global.css';
 import {ArmyProvider} from '../context/ArmyContext.js'
 import  {useState, useEffect} from 'react';
+import AWSConfig from './api/config/aws-config';
+
+const AWS = require("aws-sdk");
+AWS.config.update(AWSConfig);
+
 
 export default function App({ Component, pageProps }) {
 
