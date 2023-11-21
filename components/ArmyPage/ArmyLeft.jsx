@@ -46,7 +46,6 @@ function ArmyLeft({addUnitToArmy}){
           })
     }
 
-
     let keyId=0;
     for(let keys in orkArmyPoints){
         keyId++
@@ -55,7 +54,6 @@ function ArmyLeft({addUnitToArmy}){
             unitsToPickFrom.push(<option key={keyId} value={keys}>{splitKey}</option>)
         }
     }
-
 
     return (
         <div className="p-2 m-2 border-black col-span-2 row-span-5 border-1 ">
