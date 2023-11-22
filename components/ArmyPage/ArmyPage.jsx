@@ -16,6 +16,7 @@ function ArmyPage(){
   const [faction, setFaction] = useState('');
   const [armyId, setArmyId] = useState(0);
   const [unitBeingDragged, setUnitBeingDragged] = useState();
+  const [overlimitObj, checkOverlimitObj] = {}
 
 
   useEffect(() => {
@@ -38,6 +39,7 @@ function ArmyPage(){
     let id = duplicateIdCheck(newUnit.unitId)
     newUnit.unitId= id 
     setArmyReady({...armyReady, units:[newUnit,...armyReady.units]})
+    //PLACEHOLDER
   }
 
   const duplicateUnitInReady = (unitId) =>{
@@ -52,6 +54,7 @@ function ArmyPage(){
       }
     })
     setArmyReady({...armyReady, units:[...armyReady.units, duplicatedUnit]})
+    //PLACEHOLDER
   }
 
   const duplicateUnitInStandby = (unitId) =>{
@@ -307,6 +310,10 @@ function ArmyPage(){
     })
     setArmyStandby({...armyStandby, units:[...newStandbyUnits]})
     setArmyReady({...armyReady, units:[...armyReady.units, unitToBeMoved]})
+
+
+
+    ////PLACEHOLDER
   }
 
   const standbyToUnpainted = (unitId) => {
@@ -333,6 +340,9 @@ function ArmyPage(){
     })
     setArmyUnpainted({...armyUnpainted, units:[...newUnpaintedUnits]})
     setArmyReady({...armyReady, units:[...armyReady.units, unitToBeMoved]})
+
+
+    ////PLACEHOLDER
   }
 
   const unpaintedToStandy = (unitId) => {
@@ -422,11 +432,7 @@ function ArmyPage(){
     return ''; // Legacy method for cross browser support
   }
 
-  const checkUnitLimit = () =>{
-    
-
-
-  }
+s
 
 
   return (
