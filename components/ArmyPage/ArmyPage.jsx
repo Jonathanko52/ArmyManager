@@ -17,8 +17,9 @@ function ArmyPage(){
   const [faction, setFaction] = useState('');
   const [armyId, setArmyId] = useState(0);
   const [unitBeingDragged, setUnitBeingDragged] = useState();
-  const [overlimitObj, checkOverlimitObj] = userState({})
+  const [overlimitObj, setOverlimitObj] = useState({})
   const [factionPoint, setFactionPoints] = useState(orkArmyPoints)
+  const [overLimit, setOverlimit] = useState(orkArmyPoints)
 
 
   useEffect(() => {
@@ -41,7 +42,7 @@ function ArmyPage(){
     let id = duplicateIdCheck(newUnit.unitId)
     newUnit.unitId= id 
     setArmyReady({...armyReady, units:[newUnit,...armyReady.units]})
-    //PLACEHOLDER
+    checkUnitLimit()
   }
 
   const duplicateUnitInReady = (unitId) =>{
@@ -56,7 +57,7 @@ function ArmyPage(){
       }
     })
     setArmyReady({...armyReady, units:[...armyReady.units, duplicatedUnit]})
-    //PLACEHOLDER
+    checkUnitLimit()
   }
 
   const duplicateUnitInStandby = (unitId) =>{
@@ -315,7 +316,7 @@ function ArmyPage(){
 
 
 
-    ////PLACEHOLDER
+    checkUnitLimit()
   }
 
   const standbyToUnpainted = (unitId) => {
@@ -344,7 +345,7 @@ function ArmyPage(){
     setArmyReady({...armyReady, units:[...armyReady.units, unitToBeMoved]})
 
 
-    ////PLACEHOLDER
+    checkUnitLimit()
   }
 
   const unpaintedToStandy = (unitId) => {
@@ -434,20 +435,21 @@ function ArmyPage(){
     return ''; // Legacy method for cross browser support
   }
 
-const checkUnitLimit = () =>{
-  let limitObj = armyReady.reduce((cur,acc)=>{
-    if(acc[cur]){
-      acc[cur]++
+  const checkUnitLimit = () =>{
+  let limitObj = armyReady.units.reduce((acc,cur)=>{
+    console.log("RUN", acc)
+    if(acc[cur.unitName]){
+      acc[cur.unitName]++
     } else {
-      acc[cur]+1
+      acc[cur.unitName]=1
     }
-
-    if(acc[cur] > ){
-
-    }
-
+    // if(acc[cur] > ){
+    //   factionPoint[cur]
+    //   setOverlimit(true)
+    // }
     return acc
   },{})
+  console.log("LIMIT OBJ",limitObj)
 }
 
 
