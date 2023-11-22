@@ -2,6 +2,7 @@ import ArmyLeft from './ArmyLeft';
 import ArmyRight from './ArmyRight';
 import React, {useState, useContext, useEffect} from 'react';
 import ArmyContext from '../../context/ArmyContext'
+import orkArmyPoints from './../../data/orkArmyPoints'
 
 
 function ArmyPage(){
@@ -16,7 +17,8 @@ function ArmyPage(){
   const [faction, setFaction] = useState('');
   const [armyId, setArmyId] = useState(0);
   const [unitBeingDragged, setUnitBeingDragged] = useState();
-  const [overlimitObj, checkOverlimitObj] = {}
+  const [overlimitObj, checkOverlimitObj] = userState({})
+  const [factionPoint, setFactionPoints] = useState(orkArmyPoints)
 
 
   useEffect(() => {
@@ -432,7 +434,21 @@ function ArmyPage(){
     return ''; // Legacy method for cross browser support
   }
 
-s
+const checkUnitLimit = () =>{
+  let limitObj = armyReady.reduce((cur,acc)=>{
+    if(acc[cur]){
+      acc[cur]++
+    } else {
+      acc[cur]+1
+    }
+
+    if(acc[cur] > ){
+
+    }
+
+    return acc
+  },{})
+}
 
 
   return (
