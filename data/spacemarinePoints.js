@@ -1,6 +1,6 @@
 module.exports = {
     AdraxAgatone :[['1 model',90]],
-    Aggressor Squad
+    AggressorSquad
     3 models ����������������������������������������������������������100 pts
     6 models ����������������������������������������������������������200 pts
     Ancient in Terminator Armour
