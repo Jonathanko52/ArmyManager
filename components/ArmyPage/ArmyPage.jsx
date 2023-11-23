@@ -437,19 +437,20 @@ function ArmyPage(){
 
   const checkUnitLimit = () =>{
   let limitObj = armyReady.units.reduce((acc,cur)=>{
-    console.log("RUN", acc)
     if(acc[cur.unitName]){
       acc[cur.unitName]++
     } else {
       acc[cur.unitName]=1
     }
-    // if(acc[cur] > ){
-    //   factionPoint[cur]
-    //   setOverlimit(true)
-    // }
+    if(acc[cur.unitName] >= 3){
+      let camelString = cur.unitName.replace(/(\w)(\w*)/g,
+      function(g0,g1,g2){return g1.toUpperCase() + g2.toLowerCase();}).replace(/\s+/g, '');
+
+      console.log("TEST LIMIT",factionPoint[camelString],camelString)
+      setOverlimit(true)
+    }
     return acc
   },{})
-  console.log("LIMIT OBJ",limitObj)
 }
 
 
