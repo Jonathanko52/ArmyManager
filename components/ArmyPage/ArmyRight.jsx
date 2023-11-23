@@ -31,7 +31,8 @@ function ArmyRight({
   moveUnpaintedUnitUp,
   moveUnpaintedUnitDown,
   logState,
-  armyPoints
+  armyPoints,
+  overLimit
 }){
 
   let totalArmyCost = 0;
@@ -85,6 +86,10 @@ function ArmyRight({
               <div className="p-4">
                 <button className = "rounded-md p-2 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold" type="submit" value="Add Unit" onClick={logState}>Log State</button>        
               </div>
+              {overLimit ?               
+              <div className="p-4">
+                OVERLIMIT UNIT: {overLimit}           
+              </div>: null}
             </div>
             <div className="ARMYCOLUMNS p-4 m-4 border-black border-2  grid grid-cols-3 col-span-3 row-span-6">
               <ArmyColumns

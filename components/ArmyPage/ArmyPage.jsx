@@ -19,7 +19,7 @@ function ArmyPage(){
   const [unitBeingDragged, setUnitBeingDragged] = useState();
   const [overlimitObj, setOverlimitObj] = useState({})
   const [factionPoint, setFactionPoints] = useState(orkArmyPoints)
-  const [overLimit, setOverlimit] = useState(orkArmyPoints)
+  const [overLimit, setOverlimit] = useState(false)
 
 
   useEffect(() => {
@@ -447,7 +447,7 @@ function ArmyPage(){
       function(g0,g1,g2){return g1.toUpperCase() + g2.toLowerCase();}).replace(/\s+/g, '');
 
       console.log("TEST LIMIT",factionPoint[camelString],camelString)
-      setOverlimit(true)
+      setOverlimit(cur.unitName)
     }
     return acc
   },{})
@@ -458,6 +458,7 @@ function ArmyPage(){
         <div className="border-black col-span-10 grid grid-cols-12 border-2 row-span-6">
           <ArmyLeft addUnitToArmy={addUnitToArmy}/>
           <ArmyRight 
+            overLimit={overLimit}
             unitsReady={armyReady.units}
             unitsStandby={armyStandby.units}
             unitsUnpainted={armyUnpainted.units}
