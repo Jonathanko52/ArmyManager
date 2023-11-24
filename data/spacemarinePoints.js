@@ -2,274 +2,274 @@ module.exports = {
     AdraxAgatone:{models:[['1 model',90]], unitLimit},
     AggressorSquad:{models:[['3 models',100],['6 models',200]]},
     AncientInTerminatorArmour:{models:[['1 model', 90]]},
-    ApothecaryBiologis:{}
+    ApothecaryBiologis:{},
     1 model  55 pts
-    AssaultIntercessorSquad
+    AssaultIntercessorSquad:{},
     5 models  80 pts
     10 models 160 pts
-    AssaultSquad
+    AssaultSquad:{},
     5 models  95 pts
     10 models 190 pts
-    AssaultSquadWithJumpPacks
+    AssaultSquadWithJumpPacks:{},
     5 models 115 pts
     10 models 230 pts
-    AstartesServitors
+    AstartesServitors:{},
     4 models  55 pts
-    AttackBikeSquad
+    AttackBikeSquad:{},
     1 model  55 pts
     2 models 110 pts
     3 models 165 pts
-    BallistusDreadnought
+    BallistusDreadnought:{},
     1 model 150 pts
-    BikeSquad
+    BikeSquad:{},
     3 models  80 pts
     6 models 160 pts
-    AttackBike + 55 pts
-    BladeguardAncient
+    AttackBike + 55 pts:{},
+    BladeguardAncient:{},
     1 model  50 pts
-    BladeguardVeteranSquad
+    BladeguardVeteranSquad:{},
     3 models  90 pts
     6 models 180 pts
-    BrutalisDreadnought
+    BrutalisDreadnought:{},
     1 model 175 pts
-    Captain
+    Captain:{},
     1 model  80 pts
-    CaptainInGravisArmour
+    CaptainInGravisArmour:{},
     1 model  80 pts
-    CaptainInPhobosArmour
+    CaptainInPhobosArmour:{},
     1 model  80 pts
-    CaptainInTerminatorArmour
+    CaptainInTerminatorArmour:{},
     1 model  95 pts
-    CaptainOnBike
+    CaptainOnBike:{},
     1 model  95 pts
-    CaptainSicarius
+    CaptainSicarius:{},
     1 model  85 pts
-    CaptainWithJumpPack
+    CaptainWithJumpPack:{},
     1 model 100 pts
-    CenturionAssaultSquad
+    CenturionAssaultSquad:{},
     3 models 150 pts
     6 models 300 pts
-    CenturionDevastatorSquad
+    CenturionDevastatorSquad:{},
     3 models 175 pts
     6 models 350 pts
-    Chaplain
+    Chaplain:{},
     1 model  70 pts
     ChaplainCassius
     1 model  80 pts
-    ChaplainInTerminatorArmour
+    ChaplainInTerminatorArmour:{},
     1 model  90 pts
-    ChaplainOnBike
+    ChaplainOnBike:{},
     1 model  80 pts
-    ChaplainWithJumpPack
+    ChaplainWithJumpPack:{},
     1 model  85 pts
-    ChiefLibrarianTigurius
+    ChiefLibrarianTigurius:{},
     1 model  80 pts
-    CommandSquad
+    CommandSquad:{},
     5 models 165 pts
-    ContemptorDreadnought
+    ContemptorDreadnought:{},
     1 model 170 pts
-    DarnathLysander
+    DarnathLysander:{},
     1 model 105 pts
-    DesolationSquad
+    DesolationSquad:{},
     5 models 200 pts
-    DevastatorSquad
+    DevastatorSquad:{},
     5 models 120 pts
     10 models 200 pts
-    Dreadnought
+    Dreadnought:{},
     1 model 135 pts
-    DropPod
+    DropPod:{},
     1 model  70 pts
-    EliminatorSquad
+    EliminatorSquad:{},
     3 models  75 pts
-    EradicatorSquad
+    EradicatorSquad:{},
     3 models  95 pts
     6 models 190 pts
-    FirestrikeServoTurrets
+    FirestrikeServoTurrets:{},
     1 model  80 pts
     2 models 160 pts
-    GladiatorLancer
+    GladiatorLancer:{},
     1 model 160 pts
-    GladiatorReaper
+    GladiatorReaper:{},
     1 model 150 pts
-    GladiatorValiant
+    GladiatorValiant:{},
     1 model 150 pts
-    HammerfallBunker
+    HammerfallBunker:{},
     1 model 210 pts
-    Heavy IntercessorSquad
+    Heavy IntercessorSquad:{},
     5 models 105 pts
     10 models 210 pts
-    HellblasterSquad
+    HellblasterSquad:{},
     5 models 125 pts
     10 models 250 pts
-    Hunter
+    Hunter:{},
     1 model 100 pts
-    Impulsor
+    Impulsor:{},
     1 model  85 pts
-    InceptorSquad
+    InceptorSquad:{},
     3 models 115 pts
     6 models 230 pts
-    IncursorSquad
+    IncursorSquad:{},
     5 models  85 pts
     10 models 170 pts
-    InfernusSquad
+    InfernusSquad:{},
     5 models  85 pts
     10 models 170 pts
-    InfiltratorSquad
+    InfiltratorSquad:{},
     5 models 100 pts
     10 models 200 pts
-    IntercessorSquad
+    IntercessorSquad:{},
     5 models  85 pts
     10 models 170 pts
-    InvaderATV
+    InvaderATV:{},
     1 model  70 pts
-    InvictorTacticalWarsuit
+    InvictorTacticalWarsuit:{},
     1 model 150 pts
-    IronFatherFeirros
+    IronFatherFeirros:{},
     1 model  95 pts
-    IroncladDreadnought
+    IroncladDreadnought:{},
     1 model 150 pts
-    Judiciar
+    Judiciar:{},
     1 model  75 pts
-    KayvaanShrike
+    KayvaanShrike:{},
     1 model 105 pts
-    KorSarroKhan
+    KorSarroKhan:{},
     1 model  75 pts
-    LandRaider
+    LandRaider:{},
     1 model 240 pts
-    LandRaiderCrusader
+    LandRaiderCrusader:{},
     1 model 230 pts
-    LandRaiderRedeemer
+    LandRaiderRedeemer:{},
     1 model 260 pts
-    LandSpeeder
+    LandSpeeder:{},
     1 model  80 pts
-    LandSpeederStorm
+    LandSpeederStorm:{},
     1 model  70 pts
-    LandSpeederTornado
+    LandSpeederTornado:{},
     1 model  95 pts
-    LandSpeederTyphoon
+    LandSpeederTyphoon:{},
     1 model 100 pts
-    Librarian
+    Librarian:{},
     1 model  75 pts
-    LibrarianInPhobosArmour
+    LibrarianInPhobosArmour:{},
     1 model  75 pts
-    LibrarianInTerminatorArmour
+    LibrarianInTerminatorArmour:{},
     1 model  90 pts
-    LibrarianWithJumpPack
+    LibrarianWithJumpPack:{},
     1 model  75 pts
-    Lieutenant
+    Lieutenant:{},
     1 model  80 pts
-    LieutenantInPhobosArmour
+    LieutenantInPhobosArmour:{},
     1 model  60 pts
-    LieutenantInReiverArmour
+    LieutenantInReiverArmour:{},
     1 model  60 pts
-    LieutenantWithCombiWeapon
+    LieutenantWithCombiWeapon:{},
     1 model  70 pts
-    MarneusCalgar
+    MarneusCalgar:{},
     3 models 185 pts
-    OutriderSquad
+    OutriderSquad:{},
     3 models 105 pts
     6 models 210 pts
-    InvaderATV +70 pts
-    PedroKantor
+    InvaderATV +70 pts:{},
+    PedroKantor:{},
     1 model  95 pts
-    PredatorAnnihilator
+    PredatorAnnihilator:{},
     1 model 130 pts
-    PredatorDestructor
+    PredatorDestructor:{},
     1 model 130 pts
-    PrimarisAncient
+    PrimarisAncient:{},
     1 model  55 pts
-    PrimarisApothecary
+    PrimarisApothecary:{},
     1 model  55 pts
-    PrimarisCaptain
+    PrimarisCaptain:{},
     1 model  80 pts
-    PrimarisChaplain
+    PrimarisChaplain:{},
     1 model  65 pts
-    PrimarisCompanyChampion
+    PrimarisCompanyChampion:{},
     1 model  55 pts
-    PrimarisLibrarian
+    PrimarisLibrarian:{},
     1 model  70 pts
-    PrimarisLieutenant
+    PrimarisLieutenant:{},
     1 model  75 pts
-    PrimarisTechmarine
+    PrimarisTechmarine:{},
     1 model  65 pts
-    Razorback
+    Razorback:{},
     1 model 100 pts
-    RedemptorDreadnought
+    RedemptorDreadnought:{},
     1 model 210 pts
-    ReiverSquad
+    ReiverSquad:{},
     5 models  85 pts
     10 models 170 pts
-    RelicTerminatorSquad
+    RelicTerminatorSquad:{},
     5 models 200 pts
     10 models 400 pts
-    Repulsor
+    Repulsor:{},
     1 model 195 pts
-    RepulsorExecutioner
+    RepulsorExecutioner:{},
     1 model 230 pts
-    Rhino
+    Rhino:{},
     1 model  75 pts
-    RobouteGuilliman
+    RobouteGuilliman:{},
     1 model 380 pts
-    ScoutBikeSquad
+    ScoutBikeSquad:{},
     3 models  75 pts
     6 models 150 pts
-    ScoutSniperSquad
+    ScoutSniperSquad:{},
     5 models  75 pts
     10 models 150 pts
-    ScoutSquad
+    ScoutSquad:{},
     5 models  65 pts
     10 models 130 pts
-    SergeantChronus
+    SergeantChronus:{},
     1 model  75 pts
-    SergeantTelion
+    SergeantTelion:{},
     1 model  70 pts
-    Stalker
+    Stalker:{},
     1 model 140 pts
-    SternguardVeteranSquad
+    SternguardVeteranSquad:{},
     5 models 110 pts
     10 models 220 pts
-    StormSpeederHailstrike
+    StormSpeederHailstrike:{},
     1 model 140 pts
-    StormSpeederHammerstrike
+    StormSpeederHammerstrike:{},
     1 model 160 pts
-    StormSpeederThunderstrike
+    StormSpeederThunderstrike:{},
     1 model 170 pts
-    StormhawkInterceptor
+    StormhawkInterceptor:{},
     1 model 165 pts
-    StormravenGunship
+    StormravenGunship:{},
     1 model 255 pts
-    StormtalonGunship
+    StormtalonGunship:{},
     1 model 175 pts
-    SuppressorSquad
+    SuppressorSquad:{},
     3 models  85 pts
-    TacticalSquad
+    TacticalSquad:{},
     10 models 160 pts
-    Techmarine
+    Techmarine:{},
     1 model  70 pts
-    TerminatorAssaultSquad
+    TerminatorAssaultSquad:{},
     5 models 205 pts
     10 models 410 pts
-    TerminatorSquad
+    TerminatorSquad:{},
     5 models 190 pts
     10 models 380 pts
-    ThunderfireCannon
+    ThunderfireCannon:{},
     2 models  90 pts
-    TorGaradon
+    TorGaradon:{},
     1 model  90 pts
-    TyrannicWarVeterans
+    TyrannicWarVeterans:{},
     5 models  85 pts
-    UrielVentris
+    UrielVentris:{},
     1 model  75 pts
-    VanguardVeteranSquad
+    VanguardVeteranSquad:{},
     5 models 120 pts
     10 models 240 pts
-    VanguardVeteranSquadWithJumpPacks
+    VanguardVeteranSquadWithJumpPacks:{},
     5 models 105 pts
     10 models 210 pts
-    Vindicator
+    Vindicator:{},
     1 model 190 pts
-    VulkanHe’stan
+    VulkanHe’stan:{},
     1 model  80 pts
-    Whirlwind
+    Whirlwind:{},
     1 model 150 pts
 };
