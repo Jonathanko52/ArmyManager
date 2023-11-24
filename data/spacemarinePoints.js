@@ -58,71 +58,71 @@ module.exports = {
     1 model  80 pts
     ChaplainInTerminatorArmour
     1 model  90 pts
-    Chaplain on Bike
+    ChaplainOnBike
     1 model  80 pts
-    Chaplain with Jump Pack
+    ChaplainWithJumpPack
     1 model  85 pts
-    Chief Librarian Tigurius
+    ChiefLibrarianTigurius
     1 model  80 pts
-    Command Squad
+    CommandSquad
     5 models 165 pts
-    Contemptor Dreadnought
+    ContemptorDreadnought
     1 model 170 pts
-    Darnath Lysander
+    DarnathLysander
     1 model 105 pts
-    Desolation Squad
+    DesolationSquad
     5 models 200 pts
-    Devastator Squad
+    DevastatorSquad
     5 models 120 pts
     10 models 200 pts
     Dreadnought
     1 model 135 pts
-    Drop Pod
+    DropPod
     1 model  70 pts
-    Eliminator Squad
+    EliminatorSquad
     3 models  75 pts
-    Eradicator Squad
+    EradicatorSquad
     3 models  95 pts
     6 models 190 pts
-    Firestrike Servo-turrets
+    FirestrikeServoTurrets
     1 model  80 pts
     2 models 160 pts
-    Gladiator Lancer
+    GladiatorLancer
     1 model 160 pts
-    Gladiator Reaper
+    GladiatorReaper
     1 model 150 pts
-    Gladiator Valiant
+    GladiatorValiant
     1 model 150 pts
-    Hammerfall Bunker
+    HammerfallBunker
     1 model 210 pts
-    Heavy Intercessor Squad
+    Heavy IntercessorSquad
     5 models 105 pts
     10 models 210 pts
-    Hellblaster Squad
+    HellblasterSquad
     5 models 125 pts
     10 models 250 pts
     Hunter
     1 model 100 pts
     Impulsor
     1 model  85 pts
-    Inceptor Squad
+    InceptorSquad
     3 models 115 pts
     6 models 230 pts
-    Incursor Squad
+    IncursorSquad
     5 models  85 pts
     10 models 170 pts
-    Infernus Squad
+    InfernusSquad
     5 models  85 pts
     10 models 170 pts
-    Infiltrator Squad
+    InfiltratorSquad
     5 models 100 pts
     10 models 200 pts
-    Intercessor Squad
+    IntercessorSquad
     5 models  85 pts
     10 models 170 pts
-    Invader ATV
+    InvaderATV
     1 model  70 pts
-    Invictor Tactical Warsuit
+    InvictorTacticalWarsuit
     1 model 150 pts
     Iron Father Feirros
     1 model  95 pts
