@@ -124,151 +124,151 @@ module.exports = {
     1 model  70 pts
     InvictorTacticalWarsuit
     1 model 150 pts
-    Iron Father Feirros
+    IronFatherFeirros
     1 model  95 pts
-    Ironclad Dreadnought
+    IroncladDreadnought
     1 model 150 pts
     Judiciar
     1 model  75 pts
-    Kayvaan Shrike
+    KayvaanShrike
     1 model 105 pts
-    Kor’sarro Khan
+    KorSarroKhan
     1 model  75 pts
-    Land Raider
+    LandRaider
     1 model 240 pts
-    Land Raider Crusader
+    LandRaiderCrusader
     1 model 230 pts
-    Land Raider Redeemer
+    LandRaiderRedeemer
     1 model 260 pts
-    Land Speeder
+    LandSpeeder
     1 model  80 pts
-    Land Speeder Storm
+    LandSpeederStorm
     1 model  70 pts
-    Land Speeder Tornado
+    LandSpeederTornado
     1 model  95 pts
-    Land Speeder Typhoon
+    LandSpeederTyphoon
     1 model 100 pts
     Librarian
     1 model  75 pts
-    Librarian in Phobos Armour
+    LibrarianInPhobosArmour
     1 model  75 pts
-    Librarian in Terminator Armour
+    LibrarianInTerminatorArmour
     1 model  90 pts
-    Librarian with Jump Pack
+    LibrarianWithJumpPack
     1 model  75 pts
     Lieutenant
     1 model  80 pts
-    Lieutenant in Phobos Armour
+    LieutenantInPhobosArmour
     1 model  60 pts
-    Lieutenant in Reiver Armour
+    LieutenantInReiverArmour
     1 model  60 pts
-    Lieutenant with Combi-weapon
+    LieutenantWithCombiWeapon
     1 model  70 pts
-    Marneus Calgar
+    MarneusCalgar
     3 models 185 pts
-    Outrider Squad
+    OutriderSquad
     3 models 105 pts
     6 models 210 pts
-    Invader ATV +70 pts
-    Pedro Kantor
+    InvaderATV +70 pts
+    PedroKantor
     1 model  95 pts
-    Predator Annihilator
+    PredatorAnnihilator
     1 model 130 pts
-    Predator Destructor
+    PredatorDestructor
     1 model 130 pts
-    Primaris Ancient
+    PrimarisAncient
     1 model  55 pts
-    Primaris Apothecary
+    PrimarisApothecary
     1 model  55 pts
-    Primaris Captain
+    PrimarisCaptain
     1 model  80 pts
-    Primaris Chaplain
+    PrimarisChaplain
     1 model  65 pts
-    Primaris Company Champion
+    PrimarisCompanyChampion
     1 model  55 pts
-    Primaris Librarian
+    PrimarisLibrarian
     1 model  70 pts
-    Primaris Lieutenant
+    PrimarisLieutenant
     1 model  75 pts
-    Primaris Techmarine
+    PrimarisTechmarine
     1 model  65 pts
     Razorback
     1 model 100 pts
-    Redemptor Dreadnought
+    RedemptorDreadnought
     1 model 210 pts
-    Reiver Squad
+    ReiverSquad
     5 models  85 pts
     10 models 170 pts
-    Relic Terminator Squad
+    RelicTerminatorSquad
     5 models 200 pts
     10 models 400 pts
     Repulsor
     1 model 195 pts
-    Repulsor Executioner
+    RepulsorExecutioner
     1 model 230 pts
     Rhino
     1 model  75 pts
-    Roboute Guilliman
+    RobouteGuilliman
     1 model 380 pts
-    Scout Bike Squad
+    ScoutBikeSquad
     3 models  75 pts
     6 models 150 pts
-    Scout Sniper Squad
+    ScoutSniperSquad
     5 models  75 pts
     10 models 150 pts
-    Scout Squad
+    ScoutSquad
     5 models  65 pts
     10 models 130 pts
-    Sergeant Chronus
+    SergeantChronus
     1 model  75 pts
-    Sergeant Telion
+    SergeantTelion
     1 model  70 pts
     Stalker
     1 model 140 pts
-    Sternguard Veteran Squad
+    SternguardVeteranSquad
     5 models 110 pts
     10 models 220 pts
-    Storm Speeder Hailstrike
+    StormSpeederHailstrike
     1 model 140 pts
-    Storm Speeder Hammerstrike
+    StormSpeederHammerstrike
     1 model 160 pts
-    Storm Speeder Thunderstrike
+    StormSpeederThunderstrike
     1 model 170 pts
-    Stormhawk Interceptor
+    StormhawkInterceptor
     1 model 165 pts
-    Stormraven Gunship
+    StormravenGunship
     1 model 255 pts
-    Stormtalon Gunship
+    StormtalonGunship
     1 model 175 pts
-    Suppressor Squad
+    SuppressorSquad
     3 models  85 pts
-    Tactical Squad
+    TacticalSquad
     10 models 160 pts
     Techmarine
     1 model  70 pts
-    Terminator Assault Squad
+    TerminatorAssaultSquad
     5 models 205 pts
     10 models 410 pts
-    Terminator Squad
+    TerminatorSquad
     5 models 190 pts
     10 models 380 pts
-    Thunderfire Cannon
+    ThunderfireCannon
     2 models  90 pts
-    Tor Garadon
+    TorGaradon
     1 model  90 pts
-    Tyrannic War Veterans
+    TyrannicWarVeterans
     5 models  85 pts
-    Uriel Ventris
+    UrielVentris
     1 model  75 pts
-    Vanguard Veteran Squad
+    VanguardVeteranSquad
     5 models 120 pts
     10 models 240 pts
-    Vanguard Veteran Squad with Jump Packs
+    VanguardVeteranSquadWithJumpPacks
     5 models 105 pts
     10 models 210 pts
     Vindicator
     1 model 190 pts
-    Vulkan He’stan
+    VulkanHe’stan
     1 model  80 pts
     Whirlwind
     1 model 150 pts
