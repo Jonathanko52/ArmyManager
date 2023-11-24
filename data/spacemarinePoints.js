@@ -1,64 +1,62 @@
 module.exports = {
     AdraxAgatone:{models:[['1 model',90]], unitLimit},
     AggressorSquad:{models:[['3 models',100],['6 models',200]]},
-
-    Ancient in Terminator Armour
-    1 model  90 pts
-    Apothecary Biologis
+    AncientInTerminatorArmour:{models:[['1 model', 90]]},
+    ApothecaryBiologis:{}
     1 model  55 pts
-    Assault Intercessor Squad
+    AssaultIntercessorSquad
     5 models  80 pts
     10 models 160 pts
-    Assault Squad
+    AssaultSquad
     5 models  95 pts
     10 models 190 pts
-    Assault Squad with Jump Packs
+    AssaultSquadWithJumpPacks
     5 models 115 pts
     10 models 230 pts
-    Astartes Servitors
+    AstartesServitors
     4 models  55 pts
-    Attack Bike Squad
+    AttackBikeSquad
     1 model  55 pts
     2 models 110 pts
     3 models 165 pts
-    Ballistus Dreadnought
+    BallistusDreadnought
     1 model 150 pts
-    Bike Squad
+    BikeSquad
     3 models  80 pts
     6 models 160 pts
-    Attack Bike + 55 pts
-    Bladeguard Ancient
+    AttackBike + 55 pts
+    BladeguardAncient
     1 model  50 pts
-    Bladeguard Veteran Squad
+    BladeguardVeteranSquad
     3 models  90 pts
     6 models 180 pts
-    Brutalis Dreadnought
+    BrutalisDreadnought
     1 model 175 pts
     Captain
     1 model  80 pts
-    Captain in Gravis Armour
+    CaptainInGravisArmour
     1 model  80 pts
-    Captain in Phobos Armour
+    CaptainInPhobosArmour
     1 model  80 pts
-    Captain in Terminator Armour
+    CaptainInTerminatorArmour
     1 model  95 pts
-    Captain on Bike
+    CaptainOnBike
     1 model  95 pts
-    Captain Sicarius
+    CaptainSicarius
     1 model  85 pts
-    Captain with Jump Pack
+    CaptainWithJumpPack
     1 model 100 pts
-    Centurion Assault Squad
+    CenturionAssaultSquad
     3 models 150 pts
     6 models 300 pts
-    Centurion Devastator Squad
+    CenturionDevastatorSquad
     3 models 175 pts
     6 models 350 pts
     Chaplain
     1 model  70 pts
-    Chaplain Cassius
+    ChaplainCassius
     1 model  80 pts
-    Chaplain in Terminator Armour
+    ChaplainInTerminatorArmour
     1 model  90 pts
     Chaplain on Bike
     1 model  80 pts
