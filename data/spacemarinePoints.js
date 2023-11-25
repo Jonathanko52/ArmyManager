@@ -5,163 +5,138 @@ module.exports = {
     ApothecaryBiologis:{models:[['1 model', 55]],unitLimit:3},
     AssaultIntercessorSquad:{models:[['5 models', 80],['10 models', 160]],unitLimit:3},
     AssaultSquad:{models:[['5 models', 95],['10 models', 190]],unitLimit:3},
-    AssaultSquadWithJumpPacks:{models:[],unitLimit:3},
-    5 models 115 pts
-    10 models 230 pts
-    AstartesServitors:{models:[],unitLimit:3},
-    4 models  55 pts
-    AttackBikeSquad:{models:[],unitLimit:3},
-    1 model  55 pts
-    2 models 110 pts
-    3 models 165 pts
-    BallistusDreadnought:{models:[],unitLimit:3},
-    1 model 150 pts
-    BikeSquad:{models:[],unitLimit:3},
-    3 models  80 pts
-    6 models 160 pts
-    AttackBike + 55 pts:{models:[],unitLimit:3},
-    BladeguardAncient:{models:[],unitLimit:3},
-    1 model  50 pts
-    BladeguardVeteranSquad:{models:[],unitLimit:3},
-    3 models  90 pts
-    6 models 180 pts
-    BrutalisDreadnought:{models:[],unitLimit:3},
-    1 model 175 pts
-    Captain:{models:[],unitLimit:3},
-    1 model  80 pts
-    CaptainInGravisArmour:{models:[],unitLimit:3},
-    1 model  80 pts
-    CaptainInPhobosArmour:{models:[],unitLimit:3},
-    1 model  80 pts
-    CaptainInTerminatorArmour:{models:[],unitLimit:3},
-    1 model  95 pts
-    CaptainOnBike:{models:[],unitLimit:3},
-    1 model  95 pts
-    CaptainSicarius:{models:[],unitLimit:3},
-    1 model  85 pts
-    CaptainWithJumpPack:{models:[],unitLimit:3},
-    1 model 100 pts
-    CenturionAssaultSquad:{models:[],unitLimit:3},
-    3 models 150 pts
-    6 models 300 pts
-    CenturionDevastatorSquad:{models:[],unitLimit:3},
-    3 models 175 pts
-    6 models 350 pts
-    Chaplain:{models:[],unitLimit:3},
+    AssaultSquadWithJumpPacks:{models:[['5 models', 115], ['10 models', 230]],unitLimit:3},
+    AstartesServitors:{models:[['4 models', 55]],unitLimit:3},
+    AttackBikeSquad:{models:[['1 model', 55], ['2 models', 110], ['3 models', 165]],unitLimit:3},
+    BallistusDreadnought:{models:[['1 model', 150]],unitLimit:3},
+    BikeSquad:{models:[['3 models', 80],['6 models', 160],['+ attack Bike', 55]],unitLimit:3},
+    BladeguardAncient:{models:[['1 model', 50]],unitLimit:3},
+    BladeguardVeteranSquad:{models:[['3 models', 90],['6 models', 180]],unitLimit:3},
+    BrutalisDreadnought:{models:[['1 model', 175]],unitLimit:3},
+    Captain:{models:[['1 model', 80]],unitLimit:3},
+    CaptainInGravisArmour:{models:[['1 model', 80]],unitLimit:3},
+    CaptainInPhobosArmour:{models:[['1 model', 80]],unitLimit:3},
+    CaptainInTerminatorArmour:{models:[['1 model', 95]],unitLimit:3},
+    CaptainOnBike:{models:[['1 model', 95]],unitLimit:3},
+    CaptainSicarius:{models:[['1 model', 85]],unitLimit:3},
+    CaptainWithJumpPack:{models:[['1 model', 100]],unitLimit:3},
+    CenturionAssaultSquad:{models:[['3 models', 150],['6 models', 300]],unitLimit:3},
+    CenturionDevastatorSquad:{models:[['3 models', 175],['6 models', 350]],unitLimit:3},
+    Chaplain:{models:[['3 models', 150]],unitLimit:3},
     1 model  70 pts
     ChaplainCassius
     1 model  80 pts
-    ChaplainInTerminatorArmour:{models:[],unitLimit:3},
+    ChaplainInTerminatorArmour:{models:[['3 models', 150]],unitLimit:3},
     1 model  90 pts
-    ChaplainOnBike:{models:[],unitLimit:3},
+    ChaplainOnBike:{models:[['3 models', 150]],unitLimit:3},
     1 model  80 pts
-    ChaplainWithJumpPack:{models:[],unitLimit:3},
+    ChaplainWithJumpPack:{models:[['3 models', 150]],unitLimit:3},
     1 model  85 pts
-    ChiefLibrarianTigurius:{models:[],unitLimit:3},
+    ChiefLibrarianTigurius:{models:[['3 models', 150]],unitLimit:3},
     1 model  80 pts
-    CommandSquad:{models:[],unitLimit:3},
+    CommandSquad:{models:[['3 models', 150]],unitLimit:3},
     5 models 165 pts
-    ContemptorDreadnought:{models:[],unitLimit:3},
+    ContemptorDreadnought:{models:[['3 models', 150]],unitLimit:3},
     1 model 170 pts
-    DarnathLysander:{models:[],unitLimit:3},
+    DarnathLysander:{models:[['3 models', 150]],unitLimit:3},
     1 model 105 pts
-    DesolationSquad:{models:[],unitLimit:3},
+    DesolationSquad:{models:[['3 models', 150]],unitLimit:3},
     5 models 200 pts
-    DevastatorSquad:{models:[],unitLimit:3},
+    DevastatorSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
     5 models 120 pts
     10 models 200 pts
-    Dreadnought:{models:[],unitLimit:3},
+    Dreadnought:{models:[['3 models', 150]],unitLimit:3},
     1 model 135 pts
-    DropPod:{models:[],unitLimit:3},
+    DropPod:{models:[['3 models', 150]],unitLimit:3},
     1 model  70 pts
-    EliminatorSquad:{models:[],unitLimit:3},
+    EliminatorSquad:{models:[['3 models', 150]],unitLimit:3},
     3 models  75 pts
-    EradicatorSquad:{models:[],unitLimit:3},
+    EradicatorSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
     3 models  95 pts
     6 models 190 pts
-    FirestrikeServoTurrets:{models:[],unitLimit:3},
+    FirestrikeServoTurrets:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
     1 model  80 pts
     2 models 160 pts
-    GladiatorLancer:{models:[],unitLimit:3},
+    GladiatorLancer:{models:[['3 models', 150]],unitLimit:3},
     1 model 160 pts
-    GladiatorReaper:{models:[],unitLimit:3},
+    GladiatorReaper:{models:['3 models', 150][],unitLimit:3},
     1 model 150 pts
-    GladiatorValiant:{models:[],unitLimit:3},
+    GladiatorValiant:{models:[['3 models', 150]],unitLimit:3},
     1 model 150 pts
-    HammerfallBunker:{models:[],unitLimit:3},
+    HammerfallBunker:{models:[['3 models', 150]],unitLimit:3},
     1 model 210 pts
-    Heavy IntercessorSquad:{models:[],unitLimit:3},
+    Heavy IntercessorSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
     5 models 105 pts
     10 models 210 pts
-    HellblasterSquad:{models:[],unitLimit:3},
+    HellblasterSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
     5 models 125 pts
     10 models 250 pts
-    Hunter:{models:[],unitLimit:3},
+    Hunter:{models:[['3 models', 150]],unitLimit:3},
     1 model 100 pts
-    Impulsor:{models:[],unitLimit:3},
+    Impulsor:{models:[['3 models', 150]],unitLimit:3},
     1 model  85 pts
-    InceptorSquad:{models:[],unitLimit:3},
+    InceptorSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
     3 models 115 pts
     6 models 230 pts
-    IncursorSquad:{models:[],unitLimit:3},
+    IncursorSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
     5 models  85 pts
     10 models 170 pts
-    InfernusSquad:{models:[],unitLimit:3},
+    InfernusSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
     5 models  85 pts
     10 models 170 pts
-    InfiltratorSquad:{models:[],unitLimit:3},
+    InfiltratorSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
     5 models 100 pts
     10 models 200 pts
-    IntercessorSquad:{models:[],unitLimit:3},
+    IntercessorSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
     5 models  85 pts
     10 models 170 pts
-    InvaderATV:{models:[],unitLimit:3},
+    InvaderATV:{models:[['3 models', 150]],unitLimit:3},
     1 model  70 pts
-    InvictorTacticalWarsuit:{models:[],unitLimit:3},
+    InvictorTacticalWarsuit:{models:[['3 models', 150]],unitLimit:3},
     1 model 150 pts
-    IronFatherFeirros:{models:[],unitLimit:3},
+    IronFatherFeirros:{models:[['3 models', 150]],unitLimit:3},
     1 model  95 pts
-    IroncladDreadnought:{models:[],unitLimit:3},
+    IroncladDreadnought:{models:[['3 models', 150]],unitLimit:3},
     1 model 150 pts
-    Judiciar:{models:[],unitLimit:3},
+    Judiciar:{models:[['3 models', 150]],unitLimit:3},
     1 model  75 pts
-    KayvaanShrike:{models:[],unitLimit:3},
+    KayvaanShrike:{models:[['3 models', 150]],unitLimit:3},
     1 model 105 pts
-    KorSarroKhan:{models:[],unitLimit:3},
+    KorSarroKhan:{models:[['3 models', 150]],unitLimit:3},
     1 model  75 pts
-    LandRaider:{models:[],unitLimit:3},
+    LandRaider:{models:[['3 models', 150]],unitLimit:3},
     1 model 240 pts
-    LandRaiderCrusader:{models:[],unitLimit:3},
+    LandRaiderCrusader:{models:[['3 models', 150]],unitLimit:3},
     1 model 230 pts
-    LandRaiderRedeemer:{models:[],unitLimit:3},
+    LandRaiderRedeemer:{models:[['3 models', 150]],unitLimit:3},
     1 model 260 pts
-    LandSpeeder:{models:[],unitLimit:3},
+    LandSpeeder:{models:[['3 models', 150]],unitLimit:3},
     1 model  80 pts
-    LandSpeederStorm:{models:[],unitLimit:3},
+    LandSpeederStorm:{models:[['3 models', 150]],unitLimit:3},
     1 model  70 pts
-    LandSpeederTornado:{models:[],unitLimit:3},
+    LandSpeederTornado:{models:[['3 models', 150]],unitLimit:3},
     1 model  95 pts
-    LandSpeederTyphoon:{models:[],unitLimit:3},
+    LandSpeederTyphoon:{models:[['3 models', 150]],unitLimit:3},
     1 model 100 pts
-    Librarian:{models:[],unitLimit:3},
+    Librarian:{models:[['3 models', 150]],unitLimit:3},
     1 model  75 pts
-    LibrarianInPhobosArmour:{models:[],unitLimit:3},
+    LibrarianInPhobosArmour:{models:[['3 models', 150]],unitLimit:3},
     1 model  75 pts
-    LibrarianInTerminatorArmour:{models:[],unitLimit:3},
+    LibrarianInTerminatorArmour:{models:[['3 models', 150]],unitLimit:3},
     1 model  90 pts
-    LibrarianWithJumpPack:{models:[],unitLimit:3},
+    LibrarianWithJumpPack:{models:[['3 models', 150]],unitLimit:3},
     1 model  75 pts
-    Lieutenant:{models:[],unitLimit:3},
+    Lieutenant:{models:[['3 models', 150]],unitLimit:3},
     1 model  80 pts
-    LieutenantInPhobosArmour:{models:[],unitLimit:3},
+    LieutenantInPhobosArmour:{models:[['3 models', 150]],unitLimit:3},
     1 model  60 pts
-    LieutenantInReiverArmour:{models:[],unitLimit:3},
+    LieutenantInReiverArmour:{models:[['3 models', 150]],unitLimit:3},
     1 model  60 pts
-    LieutenantWithCombiWeapon:{models:[],unitLimit:3},
+    LieutenantWithCombiWeapon:{models:[['3 models', 150]],unitLimit:3},
     1 model  70 pts
-    MarneusCalgar:{models:[],unitLimit:3},
+    MarneusCalgar:{models:[['3 models', 150]],unitLimit:3},
     3 models 185 pts
-    OutriderSquad:{models:[],unitLimit:3},
+    OutriderSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
     3 models 105 pts
     6 models 210 pts
     InvaderATV +70 pts:{models:[],unitLimit:3},
