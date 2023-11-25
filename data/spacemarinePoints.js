@@ -82,43 +82,22 @@ module.exports = {
     PrimarisApothecary:{models:[['1 model', 55]],unitLimit:3},
     PrimarisCaptain:{models:[['1 model', 80]],unitLimit:3},
     PrimarisChaplain:{models:[['1 model', 65]],unitLimit:3},
-    PrimarisCompanyChampion:{models:[['3 models', 150]],unitLimit:3},
-    1 model  55 pts
-    PrimarisLibrarian:{models:[['3 models', 150]],unitLimit:3},
-    1 model  70 pts
-    PrimarisLieutenant:{models:[['3 models', 150]],unitLimit:3},
-    1 model  75 pts
-    PrimarisTechmarine:{models:[['3 models', 150]],unitLimit:3},
-    1 model  65 pts
-    Razorback:{models:[['3 models', 150]],unitLimit:3},
-    1 model 100 pts
-    RedemptorDreadnought:{models:[['3 models', 150]],unitLimit:3},
-    1 model 210 pts
-    ReiverSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
-    5 models  85 pts
-    10 models 170 pts
-    RelicTerminatorSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
-    5 models 200 pts
-    10 models 400 pts
-    Repulsor:{models:[['3 models', 150]],unitLimit:3},
-    1 model 195 pts
-    RepulsorExecutioner:{models:[['3 models', 150]],unitLimit:3},
-    1 model 230 pts
-    Rhino:{models:[['3 models', 150]],unitLimit:3},
-    1 model  75 pts
-    RobouteGuilliman:{models:[['3 models', 150]],unitLimit:3},
-    1 model 380 pts
-    ScoutBikeSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
-    3 models  75 pts
-    6 models 150 pts
-    ScoutSniperSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
-    5 models  75 pts
-    10 models 150 pts
-    ScoutSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
-    5 models  65 pts
-    10 models 130 pts
-    SergeantChronus:{models:[['3 models', 150]],unitLimit:3},
-    1 model  75 pts
+    PrimarisCompanyChampion:{models:[['1 model', 55]],unitLimit:3},
+    PrimarisLibrarian:{models:[['1 model', 70]],unitLimit:3},
+    PrimarisLieutenant:{models:[['1 model', 75]],unitLimit:3},
+    PrimarisTechmarine:{models:[['1 model', 65]],unitLimit:3},
+    Razorback:{models:[['1 model', 100]],unitLimit:3},
+    RedemptorDreadnought:{models:[['1 model', 210]],unitLimit:3},
+    ReiverSquad:{models:[['5 models', 85],['10 models', 170]],unitLimit:3},
+    RelicTerminatorSquad:{models:[['5 models', 200],['10 models', 400]],unitLimit:3},
+    Repulsor:{models:[['1 model', 195]],unitLimit:3},
+    RepulsorExecutioner:{models:[['1 models', 230]],unitLimit:3},
+    Rhino:{models:[['1 models', 75]],unitLimit:3},
+    RobouteGuilliman:{models:[['1 model', 380]],unitLimit:3},
+    ScoutBikeSquad:{models:[['3 models', 75],['6 models', 150]],unitLimit:3},
+    ScoutSniperSquad:{models:[['5 models', 75],['10 models', 150]],unitLimit:3},
+    ScoutSquad:{models:[['5 models', 65],['10 models', 130]],unitLimit:3},
+    SergeantChronus:{models:[['1 model', 75]],unitLimit:3},
     SergeantTelion:{models:[['3 models', 150]],unitLimit:3},
     1 model  70 pts
     Stalker:{models:[['3 models', 150]],unitLimit:3},
