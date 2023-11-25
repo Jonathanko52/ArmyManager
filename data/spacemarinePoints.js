@@ -43,92 +43,45 @@ module.exports = {
     GladiatorValiant:{models:[['1 model', 150]],unitLimit:3},
     HammerfallBunker:{models:[['1 model', 210]],unitLimit:3},
     HeavyIntercessorSquad:{models:[['5 models', 105],['10 models', 210]],unitLimit:3},
-    HellblasterSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
-    5 models 125 pts
-    10 models 250 pts
-    Hunter:{models:[['3 models', 150]],unitLimit:3},
-    1 model 100 pts
-    Impulsor:{models:[['3 models', 150]],unitLimit:3},
-    1 model  85 pts
-    InceptorSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
-    3 models 115 pts
-    6 models 230 pts
-    IncursorSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
-    5 models  85 pts
-    10 models 170 pts
-    InfernusSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
-    5 models  85 pts
-    10 models 170 pts
-    InfiltratorSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
-    5 models 100 pts
-    10 models 200 pts
-    IntercessorSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
-    5 models  85 pts
-    10 models 170 pts
-    InvaderATV:{models:[['3 models', 150]],unitLimit:3},
-    1 model  70 pts
-    InvictorTacticalWarsuit:{models:[['3 models', 150]],unitLimit:3},
-    1 model 150 pts
-    IronFatherFeirros:{models:[['3 models', 150]],unitLimit:3},
-    1 model  95 pts
-    IroncladDreadnought:{models:[['3 models', 150]],unitLimit:3},
-    1 model 150 pts
-    Judiciar:{models:[['3 models', 150]],unitLimit:3},
-    1 model  75 pts
-    KayvaanShrike:{models:[['3 models', 150]],unitLimit:3},
-    1 model 105 pts
-    KorSarroKhan:{models:[['3 models', 150]],unitLimit:3},
-    1 model  75 pts
-    LandRaider:{models:[['3 models', 150]],unitLimit:3},
-    1 model 240 pts
-    LandRaiderCrusader:{models:[['3 models', 150]],unitLimit:3},
-    1 model 230 pts
-    LandRaiderRedeemer:{models:[['3 models', 150]],unitLimit:3},
-    1 model 260 pts
-    LandSpeeder:{models:[['3 models', 150]],unitLimit:3},
-    1 model  80 pts
-    LandSpeederStorm:{models:[['3 models', 150]],unitLimit:3},
-    1 model  70 pts
-    LandSpeederTornado:{models:[['3 models', 150]],unitLimit:3},
-    1 model  95 pts
-    LandSpeederTyphoon:{models:[['3 models', 150]],unitLimit:3},
-    1 model 100 pts
-    Librarian:{models:[['3 models', 150]],unitLimit:3},
-    1 model  75 pts
-    LibrarianInPhobosArmour:{models:[['3 models', 150]],unitLimit:3},
-    1 model  75 pts
-    LibrarianInTerminatorArmour:{models:[['3 models', 150]],unitLimit:3},
-    1 model  90 pts
-    LibrarianWithJumpPack:{models:[['3 models', 150]],unitLimit:3},
-    1 model  75 pts
-    Lieutenant:{models:[['3 models', 150]],unitLimit:3},
-    1 model  80 pts
-    LieutenantInPhobosArmour:{models:[['3 models', 150]],unitLimit:3},
-    1 model  60 pts
-    LieutenantInReiverArmour:{models:[['3 models', 150]],unitLimit:3},
-    1 model  60 pts
-    LieutenantWithCombiWeapon:{models:[['3 models', 150]],unitLimit:3},
-    1 model  70 pts
-    MarneusCalgar:{models:[['3 models', 150]],unitLimit:3},
-    3 models 185 pts
-    OutriderSquad:{models:[['3 models', 150],['3 models', 150],['3 models', 150]],unitLimit:3},
-    3 models 105 pts
-    6 models 210 pts
-    InvaderATV +70 pts
-    PedroKantor:{models:[['3 models', 150]],unitLimit:3},
-    1 model  95 pts
-    PredatorAnnihilator:{models:[['3 models', 150]],unitLimit:3},
-    1 model 130 pts
-    PredatorDestructor:{models:[['3 models', 150]],unitLimit:3},
-    1 model 130 pts
-    PrimarisAncient:{models:[['3 models', 150]],unitLimit:3},
-    1 model  55 pts
-    PrimarisApothecary:{models:[['3 models', 150]],unitLimit:3},
-    1 model  55 pts
-    PrimarisCaptain:{models:[['3 models', 150]],unitLimit:3},
-    1 model  80 pts
-    PrimarisChaplain:{models:[['3 models', 150]],unitLimit:3},
-    1 model  65 pts
+    HellblasterSquad:{models:[['5 models', 125],['10 models', 250]],unitLimit:3},
+    Hunter:{models:[['1 model', 100]],unitLimit:3},
+    Impulsor:{models:[['1 model', 85]],unitLimit:3},
+    InceptorSquad:{models:[['3 models', 115],['6 models', 230]],unitLimit:3},
+    IncursorSquad:{models:[['5 models', 85],['10 models', 170]],unitLimit:3},
+    InfernusSquad:{models:[['5 models', 85],['10 models', 170]],unitLimit:3},
+    InfiltratorSquad:{models:[['5 models', 100],['10 models', 200]],unitLimit:3},
+    IntercessorSquad:{models:[['5 models', 85],['10 models', 170]],unitLimit:3},
+    InvaderATV:{models:[['1 model', 70]],unitLimit:3},
+    InvictorTacticalWarsuit:{models:[['1 models', 150]],unitLimit:3},
+    IronFatherFeirros:{models:[['1 model', 95]],unitLimit:3},
+    IroncladDreadnought:{models:[['1 model', 150]],unitLimit:3},
+    Judiciar:{models:[['1 model', 75]],unitLimit:3},
+    KayvaanShrike:{models:[['1 model', 105]],unitLimit:3},
+    KorSarroKhan:{models:[['1 model', 75]],unitLimit:3},
+    LandRaider:{models:[['1 model', 240]],unitLimit:3},
+    LandRaiderCrusader:{models:[['1 model', 230]],unitLimit:3},
+    LandRaiderRedeemer:{models:[['1 model', 260]],unitLimit:3},
+    LandSpeeder:{models:[['1 model', 80]],unitLimit:3},
+    LandSpeederStorm:{models:[['1 model', 70]],unitLimit:3},
+    LandSpeederTornado:{models:[['1 model', 95]],unitLimit:3},
+    LandSpeederTyphoon:{models:[['1 model', 10]],unitLimit:3},
+    Librarian:{models:[['1 model', 75]],unitLimit:3},
+    LibrarianInPhobosArmour:{models:[['1 model', 75]],unitLimit:3},
+    LibrarianInTerminatorArmour:{models:[['1 model', 90]],unitLimit:3},
+    LibrarianWithJumpPack:{models:[['1 model', 75]],unitLimit:3},
+    Lieutenant:{models:[['1 model', 80]],unitLimit:3},
+    LieutenantInPhobosArmour:{models:[['1 model', 60]],unitLimit:3},
+    LieutenantInReiverArmour:{models:[['1 model', 60]],unitLimit:3},
+    LieutenantWithCombiWeapon:{models:[['1 model', 70]],unitLimit:3},
+    MarneusCalgar:{models:[['3 models', 185]],unitLimit:3},
+    OutriderSquad:{models:[['3 models', 105],['6 models', 210],['InvaderATV', 70]],unitLimit:3},
+    PedroKantor:{models:[['1 model', 95]],unitLimit:3},
+    PredatorAnnihilator:{models:[['1 model', 130]],unitLimit:3},
+    PredatorDestructor:{models:[['1 model', 130]],unitLimit:3},
+    PrimarisAncient:{models:[['1 model', 55]],unitLimit:3},
+    PrimarisApothecary:{models:[['1 model', 55]],unitLimit:3},
+    PrimarisCaptain:{models:[['1 model', 80]],unitLimit:3},
+    PrimarisChaplain:{models:[['1 model', 65]],unitLimit:3},
     PrimarisCompanyChampion:{models:[['3 models', 150]],unitLimit:3},
     1 model  55 pts
     PrimarisLibrarian:{models:[['3 models', 150]],unitLimit:3},
