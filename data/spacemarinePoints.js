@@ -1,15 +1,10 @@
 module.exports = {
-    AdraxAgatone:{models:[['1 model',90]], unitLimit},
-    AggressorSquad:{models:[['3 models',100],['6 models',200]]},
-    AncientInTerminatorArmour:{models:[['1 model', 90]]},
-    ApothecaryBiologis:{models:[],unitLimit:3},
-    1 model  55 pts
-    AssaultIntercessorSquad:{models:[],unitLimit:3},
-    5 models  80 pts
-    10 models 160 pts
-    AssaultSquad:{models:[],unitLimit:3},
-    5 models  95 pts
-    10 models 190 pts
+    AdraxAgatone:{models:[['1 model',90]],unitLimit:3},
+    AggressorSquad:{models:[['3 models',100],['6 models',200]],unitLimit:3},
+    AncientInTerminatorArmour:{models:[['1 model', 90]],unitLimit:3},
+    ApothecaryBiologis:{models:[['1 model', 55]],unitLimit:3},
+    AssaultIntercessorSquad:{models:[['5 models', 80],['10 models', 160]],unitLimit:3},
+    AssaultSquad:{models:[['5 models', 95],['10 models', 190]],unitLimit:3},
     AssaultSquadWithJumpPacks:{models:[],unitLimit:3},
     5 models 115 pts
     10 models 230 pts
