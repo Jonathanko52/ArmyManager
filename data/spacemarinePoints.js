@@ -106,38 +106,19 @@ module.exports = {
     StormSpeederThunderstrike:{models:[['1 model', 170]],unitLimit:3},
     StormhawkInterceptor:{models:[['1 model', 165]],unitLimit:3},
     StormravenGunship:{models:[['1 model', 255]],unitLimit:3},
-    StormtalonGunship:{models:[['3 models', 150]],unitLimit:3},
-    1 model 175 pts
-    SuppressorSquad:{models:[['3 models', 150]],unitLimit:3},
-    3 models  85 pts
-    TacticalSquad:{models:[['3 models', 150]],unitLimit:3},
-    10 models 160 pts
-    Techmarine:{models:[['3 models', 150]],unitLimit:3},
-    1 model  70 pts
-    TerminatorAssaultSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
-    5 models 205 pts
-    10 models 410 pts
-    TerminatorSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
-    5 models 190 pts
-    10 models 380 pts
-    ThunderfireCannon:{models:[['3 models', 150]],unitLimit:3},
-    2 models  90 pts
-    TorGaradon:{models:[['3 models', 150]],unitLimit:3},
-    1 model  90 pts
-    TyrannicWarVeterans:{models:[['3 models', 150]],unitLimit:3},
-    5 models  85 pts
-    UrielVentris:{models:[['3 models', 150]],unitLimit:3},
-    1 model  75 pts
-    VanguardVeteranSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
-    5 models 120 pts
-    10 models 240 pts
-    VanguardVeteranSquadWithJumpPacks:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
-    5 models 105 pts
-    10 models 210 pts
-    Vindicator:{models:[['3 models', 150]],unitLimit:3},
-    1 model 190 pts
-    VulkanHe’stan:{models:[['3 models', 150]],unitLimit:3},
-    1 model  80 pts
-    Whirlwind:{models:[['3 models', 150]],unitLimit:3},
-    1 model 150 pts
+    StormtalonGunship:{models:[['1 model', 175]],unitLimit:3},
+    SuppressorSquad:{models:[['3 models', 85]],unitLimit:3},
+    TacticalSquad:{models:[['10 models', 160]],unitLimit:3},
+    Techmarine:{models:[['1 model', 70]],unitLimit:3},
+    TerminatorAssaultSquad:{models:[['5 models', 205],['10 models', 410]],unitLimit:3},
+    TerminatorSquad:{models:[['5 models', 190],['10 models', 380]],unitLimit:3},
+    ThunderfireCannon:{models:[['2 models', 90]],unitLimit:3},
+    TorGaradon:{models:[['1 model', 90]],unitLimit:3},
+    TyrannicWarVeterans:{models:[['5 models', 85]],unitLimit:3},
+    UrielVentris:{models:[['1 model', 75]],unitLimit:3},
+    VanguardVeteranSquad:{models:[['5 models', 120],['10 models', 240]],unitLimit:3},
+    VanguardVeteranSquadWithJumpPacks:{models:[['5 models', 105],['10 models', 210]],unitLimit:3},
+    Vindicator:{models:[['1 model', 190]],unitLimit:3},
+    VulkanHestan:{models:[['1 model', 80]],unitLimit:3},
+    Whirlwind:{models:[['1 model', 150]],unitLimit:3},
 };
