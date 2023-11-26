@@ -98,23 +98,14 @@ module.exports = {
     ScoutSniperSquad:{models:[['5 models', 75],['10 models', 150]],unitLimit:3},
     ScoutSquad:{models:[['5 models', 65],['10 models', 130]],unitLimit:3},
     SergeantChronus:{models:[['1 model', 75]],unitLimit:3},
-    SergeantTelion:{models:[['3 models', 150]],unitLimit:3},
-    1 model  70 pts
-    Stalker:{models:[['3 models', 150]],unitLimit:3},
-    1 model 140 pts
-    SternguardVeteranSquad:{models:[['3 models', 150],['3 models', 150]],unitLimit:3},
-    5 models 110 pts
-    10 models 220 pts
-    StormSpeederHailstrike:{models:[['3 models', 150]],unitLimit:3},
-    1 model 140 pts
-    StormSpeederHammerstrike:{models:[['3 models', 150]],unitLimit:3},
-    1 model 160 pts
-    StormSpeederThunderstrike:{models:[['3 models', 150]],unitLimit:3},
-    1 model 170 pts
-    StormhawkInterceptor:{models:[['3 models', 150]],unitLimit:3},
-    1 model 165 pts
-    StormravenGunship:{models:[['3 models', 150]],unitLimit:3},
-    1 model 255 pts
+    SergeantTelion:{models:[['1 models', 70]],unitLimit:3},
+    Stalker:{models:[['1 model', 140]],unitLimit:3},
+    SternguardVeteranSquad:{models:[['5 models', 110],['10 models', 220]],unitLimit:3},
+    StormSpeederHailstrike:{models:[['1 model', 140]],unitLimit:3},
+    StormSpeederHammerstrike:{models:[['1 model', 160]],unitLimit:3},
+    StormSpeederThunderstrike:{models:[['1 model', 170]],unitLimit:3},
+    StormhawkInterceptor:{models:[['1 model', 165]],unitLimit:3},
+    StormravenGunship:{models:[['1 model', 255]],unitLimit:3},
     StormtalonGunship:{models:[['3 models', 150]],unitLimit:3},
     1 model 175 pts
     SuppressorSquad:{models:[['3 models', 150]],unitLimit:3},

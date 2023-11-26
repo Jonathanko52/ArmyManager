@@ -13,6 +13,7 @@ function ArmyLeft({addUnitToArmy}){
     let unitsToPickFrom = []
 
     const handleUnitSelect = (event) =>{
+        setSelectedUnitName(event.target.value)
         setSelectedUnit(orkArmyPoints[event.target.value])
     }    
 
