@@ -1,5 +1,5 @@
 module.exports = {
-    AdraxAgatone:{models:[['1 model',90]],unitLimit:3},
+    AdraxAgatone:{models:[['1 model',90]],unitLimit:1},
     AggressorSquad:{models:[['3 models',100],['6 models',200]],unitLimit:3},
     AncientInTerminatorArmour:{models:[['1 model', 90]],unitLimit:3},
     ApothecaryBiologis:{models:[['1 model', 55]],unitLimit:3},
