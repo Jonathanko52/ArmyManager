@@ -47,7 +47,13 @@ function ArmyLeft({addUnitToArmy}){
           })
     }
 
+
+    // useEffect(()=>{
+        
+    // },[factionSelect])
+
     let keyId=0;
+
     for(let keys in orkArmyPoints){
         keyId++
         let splitKey = keys.replace(/([a-z])([A-Z])/g, '$1 $2');
@@ -55,6 +61,7 @@ function ArmyLeft({addUnitToArmy}){
             unitsToPickFrom.push(<option key={keyId} value={keys}>{splitKey}</option>)
         }
     }
+
 
     return (
         <div className="p-2 m-2 border-black col-span-2 row-span-5 border-1 ">
@@ -80,6 +87,7 @@ function ArmyLeft({addUnitToArmy}){
             }}>
                 <option key={1} value={'Ork'}>{'Ork'}</option>
                 <option key={2} value={'Black Templar'}>{'Black Templar'}</option>
+                <option key={3} value={'Space Marine'}>{'Space Marine'}</option>
 
             </select>
                {selectedUnit ? <UnitRow
