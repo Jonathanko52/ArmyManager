@@ -51,6 +51,16 @@ function ArmyLeft({addUnitToArmy}){
     // useEffect(()=>{
         // let keyId=0;
         // let factionChosen
+        // if(factionSelect === 'Ork'){
+
+        // } else if(factionSelect === 'Black Templar'){
+
+        // } else if(factionSelect === 'Space Marine'){
+
+        // }
+
+
+
         // for(let keys in orkArmyPoints){
         //     keyId++
         //     let splitKey = keys.replace(/([a-z])([A-Z])/g, '$1 $2');
