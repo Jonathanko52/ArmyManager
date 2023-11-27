@@ -49,7 +49,15 @@ function ArmyLeft({addUnitToArmy}){
 
 
     // useEffect(()=>{
-        
+        // let keyId=0;
+        // let factionChosen
+        // for(let keys in orkArmyPoints){
+        //     keyId++
+        //     let splitKey = keys.replace(/([a-z])([A-Z])/g, '$1 $2');
+        //     if(orkArmyPoints[keys][0][1] <= armyPointFilter){
+        //         unitsToPickFrom.push(<option key={keyId} value={keys}>{splitKey}</option>)
+        //     }
+        // }
     // },[factionSelect])
 
     let keyId=0;
