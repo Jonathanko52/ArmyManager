@@ -15,15 +15,11 @@ function ArmyLeft({addUnitToArmy}){
     let unitsToPickFrom = []
 
     const handleUnitSelect = (event) =>{
-        console.log(selectedUnitName)
-        console.log(selectedUnit)
         if(factionSelect === 'Ork'){
             factionChosen = orkArmyPoints
         } else if(factionSelect === 'Space Marine'){
             factionChosen = spacemarineArmyPoints 
         }
-        console.log("FIRST",selectedUnitName)
-        console.log("SECOND",factionChosen[event.target.value])
         setSelectedUnitName(event.target.value)
         setSelectedUnit(factionChosen[event.target.value])
     }    
@@ -60,7 +56,6 @@ function ArmyLeft({addUnitToArmy}){
 
 
     useEffect(()=>{
-        console.log("TRIGGER RERENDER")
     },[factionSelect])
 
     let keyId=0;
@@ -76,7 +71,6 @@ function ArmyLeft({addUnitToArmy}){
     for(let keys in factionChosen){
         keyId++
         let splitKey = keys.replace(/([a-z])([A-Z])/g, '$1 $2');
-        console.log("TEST",factionChosen[keys]['models'])
             if(factionChosen[keys]['models'][0][1] <= armyPointFilter){
                 unitsToPickFrom.push(<option key={keyId} value={keys}>{splitKey}</option>)
             }
