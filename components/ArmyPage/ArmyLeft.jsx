@@ -1,5 +1,7 @@
 import React, {useState,useEffect}from 'react';
 import orkArmyPoints from './../../data/orkArmyPoints'
+import spacemarineArmyPoints from './../../data/spacemarinePoints'
+import blacktemplarArmyPoints from './../../data/blackTemplayPoints'
 import UnitRow from './UnitRow'
 
 function ArmyLeft({addUnitToArmy}){
@@ -52,14 +54,12 @@ function ArmyLeft({addUnitToArmy}){
         // let keyId=0;
         // let factionChosen
         // if(factionSelect === 'Ork'){
-
+            // factionChosen = orkArmyPoints
         // } else if(factionSelect === 'Black Templar'){
-
+            // factionChosen = spacemarineArmyPoints 
         // } else if(factionSelect === 'Space Marine'){
-
+            // factionChosen = blacktemplarArmyPoints
         // }
-
-
 
         // for(let keys in orkArmyPoints){
         //     keyId++
