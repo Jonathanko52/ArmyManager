@@ -48,8 +48,8 @@ function ArmyLeft({addUnitToArmy}){
         let unitId = parseInt(Math.random() * 1000)
         addUnitToArmy({
             unitName: selectedUnitName,
-            modelCount: selectedUnit[unitSizeIndex][0], 
-            pointCost: selectedUnit[unitSizeIndex][1], 
+            modelCount: selectedUnit['models'][unitSizeIndex][0], 
+            pointCost: selectedUnit['models'][unitSizeIndex][1], 
             unitId:unitId
           })
     }

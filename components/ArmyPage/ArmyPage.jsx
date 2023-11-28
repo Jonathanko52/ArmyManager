@@ -39,7 +39,6 @@ function ArmyPage(){
   }, [isLoading]);
 
   const addUnitToArmy = (newUnit) =>{
-    console.log("NEW UNIT", newUnit)
     let id = duplicateIdCheck(newUnit.unitId)
     newUnit.unitId= id 
     setArmyReady({...armyReady, units:[newUnit,...armyReady.units]})
