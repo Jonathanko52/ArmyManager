@@ -1,7 +1,7 @@
 import React, {useState,useEffect}from 'react';
 import orkArmyPoints from './../../data/orkArmyPoints'
 import spacemarineArmyPoints from './../../data/spacemarinePoints'
-import blacktemplarArmyPoints from './../../data/blackTemplayPoints'
+// import blacktemplarArmyPoints from './../../data/blackTemplayPoints'
 import UnitRow from './UnitRow'
 
 function ArmyLeft({addUnitToArmy}){
@@ -10,7 +10,7 @@ function ArmyLeft({addUnitToArmy}){
     const [selectedUnitName, setSelectedUnitName] = useState('')
     const [unitSizeIndex, setUnitSizeIndex ] = useState(0)
     const [armyPointFilter, setArmyPointFilter] = useState(1000)
-    const [factionSelect, setFactionSelect] = useState('')
+    const [factionSelect, setFactionSelect] = useState('Ork')
 
     let unitsToPickFrom = []
 
@@ -50,36 +50,40 @@ function ArmyLeft({addUnitToArmy}){
     }
 
 
-    // useEffect(()=>{
-        // let keyId=0;
-        // let factionChosen
-        // if(factionSelect === 'Ork'){
-            // factionChosen = orkArmyPoints
+    useEffect(()=>{
+        let keyId=0;
+        let factionChosen
+        if(factionSelect === 'Ork'){
+            factionChosen = orkArmyPoints
+        } else if(factionSelect === 'Space Marine'){
+            factionChosen = spacemarineArmyPoints }
         // } else if(factionSelect === 'Black Templar'){
-            // factionChosen = spacemarineArmyPoints 
-        // } else if(factionSelect === 'Space Marine'){
-            // factionChosen = blacktemplarArmyPoints
+        //     factionChosen = blacktemplarArmyPoints
         // }
 
-        // for(let keys in orkArmyPoints){
-        //     keyId++
-        //     let splitKey = keys.replace(/([a-z])([A-Z])/g, '$1 $2');
-        //     if(orkArmyPoints[keys][0][1] <= armyPointFilter){
-        //         unitsToPickFrom.push(<option key={keyId} value={keys}>{splitKey}</option>)
-        //     }
-        // }
-    // },[factionSelect])
-
-    let keyId=0;
-
-    for(let keys in orkArmyPoints){
-        keyId++
-        let splitKey = keys.replace(/([a-z])([A-Z])/g, '$1 $2');
-        if(orkArmyPoints[keys][0][1] <= armyPointFilter){
-            unitsToPickFrom.push(<option key={keyId} value={keys}>{splitKey}</option>)
+        for(let keys in orkArmyPoints){
+            console.log(
+                "FOR"
+            )
+            keyId++
+            let splitKey = keys.replace(/([a-z])([A-Z])/g, '$1 $2');
+            if(orkArmyPoints[keys][0][1] <= armyPointFilter){
+                unitsToPickFrom.push(<option key={keyId} value={keys}>{splitKey}</option>)
+            }
         }
-    }
+        console.log("FACTION", factionChosen)
+    },[factionSelect])
 
+    // let keyId=0;
+
+    // for(let keys in orkArmyPoints){
+    //     keyId++
+    //     let splitKey = keys.replace(/([a-z])([A-Z])/g, '$1 $2');
+    //     if(orkArmyPoints[keys][0][1] <= armyPointFilter){
+    //         unitsToPickFrom.push(<option key={keyId} value={keys}>{splitKey}</option>)
+    //     }
+    // }
+    console.log(unitsToPickFrom)
 
     return (
         <div className="p-2 m-2 border-black col-span-2 row-span-5 border-1 ">
