@@ -10,13 +10,22 @@ function ArmyLeft({addUnitToArmy}){
     const [selectedUnitName, setSelectedUnitName] = useState('')
     const [unitSizeIndex, setUnitSizeIndex ] = useState(0)
     const [armyPointFilter, setArmyPointFilter] = useState(1000)
-    const [factionSelect, setFactionSelect] = useState('Ork')
+    const [factionSelect, setFactionSelect] = useState('Space Marine')
 
     let unitsToPickFrom = []
 
     const handleUnitSelect = (event) =>{
+        console.log(selectedUnitName)
+        console.log(selectedUnit)
+        if(factionSelect === 'Ork'){
+            factionChosen = orkArmyPoints
+        } else if(factionSelect === 'Space Marine'){
+            factionChosen = spacemarineArmyPoints 
+        }
+        console.log("FIRST",selectedUnitName)
+        console.log("SECOND",factionChosen[event.target.value])
         setSelectedUnitName(event.target.value)
-        setSelectedUnit(orkArmyPoints[event.target.value])
+        setSelectedUnit(factionChosen[event.target.value])
     }    
 
     const handlePointFilterSelect = (event) =>{
@@ -51,39 +60,27 @@ function ArmyLeft({addUnitToArmy}){
 
 
     useEffect(()=>{
-        let keyId=0;
-        let factionChosen
-        if(factionSelect === 'Ork'){
-            factionChosen = orkArmyPoints
-        } else if(factionSelect === 'Space Marine'){
-            factionChosen = spacemarineArmyPoints }
-        // } else if(factionSelect === 'Black Templar'){
-        //     factionChosen = blacktemplarArmyPoints
-        // }
-
-        for(let keys in orkArmyPoints){
-            console.log(
-                "FOR"
-            )
-            keyId++
-            let splitKey = keys.replace(/([a-z])([A-Z])/g, '$1 $2');
-            if(orkArmyPoints[keys][0][1] <= armyPointFilter){
-                unitsToPickFrom.push(<option key={keyId} value={keys}>{splitKey}</option>)
-            }
-        }
-        console.log("FACTION", factionChosen)
+        console.log("TRIGGER RERENDER")
     },[factionSelect])
 
-    // let keyId=0;
-
-    // for(let keys in orkArmyPoints){
-    //     keyId++
-    //     let splitKey = keys.replace(/([a-z])([A-Z])/g, '$1 $2');
-    //     if(orkArmyPoints[keys][0][1] <= armyPointFilter){
-    //         unitsToPickFrom.push(<option key={keyId} value={keys}>{splitKey}</option>)
-    //     }
+    let keyId=0;
+    let factionChosen
+    if(factionSelect === 'Ork'){
+        factionChosen = orkArmyPoints
+    } else if(factionSelect === 'Space Marine'){
+        factionChosen = spacemarineArmyPoints }
+    // } else if(factionSelect === 'Black Templar'){
+    //     factionChosen = blacktemplarArmyPoints
     // }
-    console.log(unitsToPickFrom)
+
+    for(let keys in factionChosen){
+        keyId++
+        let splitKey = keys.replace(/([a-z])([A-Z])/g, '$1 $2');
+        console.log("TEST",factionChosen[keys]['models'])
+            if(factionChosen[keys]['models'][0][1] <= armyPointFilter){
+                unitsToPickFrom.push(<option key={keyId} value={keys}>{splitKey}</option>)
+            }
+    }
 
     return (
         <div className="p-2 m-2 border-black col-span-2 row-span-5 border-1 ">
@@ -114,8 +111,8 @@ function ArmyLeft({addUnitToArmy}){
             </select>
                {selectedUnit ? <UnitRow
                     unitName={selectedUnitName}
-                    modelCount={selectedUnit[unitSizeIndex][0]}
-                    pointCost={selectedUnit[unitSizeIndex][1]}
+                    modelCount={selectedUnit['models'][unitSizeIndex][0]}
+                    pointCost={selectedUnit['models'][unitSizeIndex][1]}
                     buttonOne={increaseUnitSize}
                     buttonOneText={"Increase Size"}
                     buttonTwo={decreaseUnitSize}
