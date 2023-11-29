@@ -118,5 +118,4 @@ function ArmyLeft({addUnitToArmy}){
       )
 }
 
-
 export default ArmyLeft;

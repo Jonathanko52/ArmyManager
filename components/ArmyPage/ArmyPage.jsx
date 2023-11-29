@@ -17,7 +17,6 @@ function ArmyPage(){
   const [faction, setFaction] = useState('');
   const [armyId, setArmyId] = useState(0);
   const [unitBeingDragged, setUnitBeingDragged] = useState();
-  const [factionPoint, setFactionPoints] = useState(orkArmyPoints)
   const [overLimit, setOverlimit] = useState(false)
 
 
@@ -32,16 +31,13 @@ function ArmyPage(){
       window.addEventListener('beforeunload',saveOnClose);
 
     return ()=>{
-      // logState()
       window.removeEventListener('beforeunload', saveOnClose);
     }
   }, [isLoading]);
 
   useEffect(() => {
       checkUnitLimit()
-      console.log("FIRING")
     return ()=>{
-      // logState()
     }
   }, [armyReady]);
 
@@ -188,7 +184,6 @@ function ArmyPage(){
       setArmyUnpainted({...armyUnpainted, units:newArmyUnpainted})
     }
   }
-
 
   const removeUnitFromReady = (unitId)=>{
     let newUnits = armyReady.units.slice()
@@ -450,7 +445,6 @@ function ArmyPage(){
     }
     return acc
   },{})
-    console.log("ACC", limitObj)
     if(noOver){
       setOverlimit('')
     }

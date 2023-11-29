@@ -53,7 +53,8 @@ function ArmyRight({
 
     return ()=>{
       // saveArmyToLocal()
-      //as of right now, data isn't saved. deletes it, actually. theory is that army data is lost, then the save is run. whoops
+      //as of right now, data isn't saved. deletes it, actually. theory is that army data is 
+      // lost, then the save is run. whoops
     }
 
   },[unitsReady,unitsStandby,unitsUnpainted])
