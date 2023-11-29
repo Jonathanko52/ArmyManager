@@ -56,7 +56,6 @@ function ArmyPage(){
       }
     })
     setArmyReady({...armyReady, units:[...armyReady.units, duplicatedUnit]})
-    checkUnitLimit()
   }
 
   const duplicateUnitInStandby = (unitId) =>{
@@ -188,7 +187,6 @@ function ArmyPage(){
     let newUnits = armyReady.units.slice()
     newUnits = newUnits.filter(cur=>cur.unitId !== unitId)
     setArmyReady({...armyReady, units:newUnits})
-    checkUnitLimit()
   }
 
   const removeUnitFromStandby = (unitId)=>{
@@ -275,7 +273,6 @@ function ArmyPage(){
       setFaction('')
       setArmyId(0)
     }
-    checkUnitLimit()
   }
 
   const readyToStandby = (unitId) => {
@@ -289,8 +286,6 @@ function ArmyPage(){
     })
     setArmyReady({...armyReady, units:[...newReadyUnits]})
     setArmyStandby({...armyStandby, units:[...armyStandby.units, unitToBeMoved]})
-    checkUnitLimit()
-
   }
 
   const readyToUnpainted = (unitId) => {
@@ -304,8 +299,6 @@ function ArmyPage(){
     })
     setArmyReady({...armyReady, units:[...newReadyUnits]})
     setArmyUnpainted({...armyUnpainted, units:[...armyUnpainted.units, unitToBeMoved]})
-    checkUnitLimit()
-
   }
 
   const standbyToReady = (unitId) => {
@@ -319,10 +312,6 @@ function ArmyPage(){
     })
     setArmyStandby({...armyStandby, units:[...newStandbyUnits]})
     setArmyReady({...armyReady, units:[...armyReady.units, unitToBeMoved]})
-
-
-
-    checkUnitLimit()
   }
 
   const standbyToUnpainted = (unitId) => {
@@ -349,9 +338,6 @@ function ArmyPage(){
     })
     setArmyUnpainted({...armyUnpainted, units:[...newUnpaintedUnits]})
     setArmyReady({...armyReady, units:[...armyReady.units, unitToBeMoved]})
-
-
-    checkUnitLimit()
   }
 
   const unpaintedToStandy = (unitId) => {
@@ -425,8 +411,6 @@ function ArmyPage(){
         standbyToUnpainted(unitBeingDragged[0])
       }
     }
-    checkUnitLimit()
-
   }
 
   const saveOnClose = (event)=>{
@@ -445,13 +429,13 @@ function ArmyPage(){
 
   const checkUnitLimit = () =>{
     let noOver = true;
-    armyReady.units.reduce((acc,cur)=>{
+    let limitObj = armyReady.units.reduce((acc,cur)=>{
     if(acc[cur.unitName]){
       acc[cur.unitName]++
     } else {
       acc[cur.unitName]=1
     }
-    if(acc[cur.unitName] >= 3){
+    if(acc[cur.unitName] > 3){
       // let camelString = cur.unitName.replace(/(\w)(\w*)/g,
       // function(g0,g1,g2){return g1.toUpperCase() + g2.toLowerCase();}).replace(/\s+/g, '');
       noOver = false
@@ -459,6 +443,7 @@ function ArmyPage(){
     }
     return acc
   },{})
+    console.log("ACC", limitObj)
     if(noOver){
       setOverlimit('')
     }
