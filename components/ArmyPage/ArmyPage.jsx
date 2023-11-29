@@ -17,7 +17,6 @@ function ArmyPage(){
   const [faction, setFaction] = useState('');
   const [armyId, setArmyId] = useState(0);
   const [unitBeingDragged, setUnitBeingDragged] = useState();
-  const [overlimitObj, setOverlimitObj] = useState({})
   const [factionPoint, setFactionPoints] = useState(orkArmyPoints)
   const [overLimit, setOverlimit] = useState(false)
 
@@ -436,7 +435,7 @@ function ArmyPage(){
   }
 
   const checkUnitLimit = () =>{
-  let limitObj = armyReady.units.reduce((acc,cur)=>{
+    armyReady.units.reduce((acc,cur)=>{
     if(acc[cur.unitName]){
       acc[cur.unitName]++
     } else {

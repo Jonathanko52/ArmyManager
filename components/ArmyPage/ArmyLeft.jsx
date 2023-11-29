@@ -54,7 +54,6 @@ function ArmyLeft({addUnitToArmy}){
           })
     }
 
-
     useEffect(()=>{
     },[factionSelect])
 
