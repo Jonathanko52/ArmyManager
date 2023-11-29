@@ -37,11 +37,18 @@ function ArmyPage(){
     }
   }, [isLoading]);
 
+  useEffect(() => {
+      checkUnitLimit()
+      console.log("FIRING")
+    return ()=>{
+      // logState()
+    }
+  }, [armyReady]);
+
   const addUnitToArmy = (newUnit) =>{
     let id = duplicateIdCheck(newUnit.unitId)
     newUnit.unitId= id 
     setArmyReady({...armyReady, units:[newUnit,...armyReady.units]})
-    checkUnitLimit()
   }
 
   const duplicateUnitInReady = (unitId) =>{
