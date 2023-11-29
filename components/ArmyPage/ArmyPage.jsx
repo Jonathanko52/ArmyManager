@@ -435,6 +435,7 @@ function ArmyPage(){
   }
 
   const checkUnitLimit = () =>{
+    let noOver = true;
     armyReady.units.reduce((acc,cur)=>{
     if(acc[cur.unitName]){
       acc[cur.unitName]++
@@ -442,12 +443,16 @@ function ArmyPage(){
       acc[cur.unitName]=1
     }
     if(acc[cur.unitName] >= 3){
-      let camelString = cur.unitName.replace(/(\w)(\w*)/g,
-      function(g0,g1,g2){return g1.toUpperCase() + g2.toLowerCase();}).replace(/\s+/g, '');
+      // let camelString = cur.unitName.replace(/(\w)(\w*)/g,
+      // function(g0,g1,g2){return g1.toUpperCase() + g2.toLowerCase();}).replace(/\s+/g, '');
+      noOver = false
       setOverlimit(cur.unitName)
     }
     return acc
   },{})
+    if(noOver){
+      setOverlimit('')
+    }
 }
 
 
