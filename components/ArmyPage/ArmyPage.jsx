@@ -188,6 +188,7 @@ function ArmyPage(){
     let newUnits = armyReady.units.slice()
     newUnits = newUnits.filter(cur=>cur.unitId !== unitId)
     setArmyReady({...armyReady, units:newUnits})
+    checkUnitLimit()
   }
 
   const removeUnitFromStandby = (unitId)=>{
@@ -203,11 +204,12 @@ function ArmyPage(){
   }
 
   const changeArmyName = (armyName) => {
-    setArmyReady({...armyReady,armyName:armyName})
+    setArmyReady({...armyReady})
+
   }
 
   const changeArmyFaction = (armyFaction) =>{
-    setArmyReady({...armyReady,faction:armyFaction})
+    setArmyReady({...armyReady})
   }
 
   const saveArmyToLocal = () =>{
@@ -273,6 +275,7 @@ function ArmyPage(){
       setFaction('')
       setArmyId(0)
     }
+    checkUnitLimit()
   }
 
   const readyToStandby = (unitId) => {
@@ -286,6 +289,8 @@ function ArmyPage(){
     })
     setArmyReady({...armyReady, units:[...newReadyUnits]})
     setArmyStandby({...armyStandby, units:[...armyStandby.units, unitToBeMoved]})
+    checkUnitLimit()
+
   }
 
   const readyToUnpainted = (unitId) => {
@@ -299,6 +304,8 @@ function ArmyPage(){
     })
     setArmyReady({...armyReady, units:[...newReadyUnits]})
     setArmyUnpainted({...armyUnpainted, units:[...armyUnpainted.units, unitToBeMoved]})
+    checkUnitLimit()
+
   }
 
   const standbyToReady = (unitId) => {
@@ -418,6 +425,8 @@ function ArmyPage(){
         standbyToUnpainted(unitBeingDragged[0])
       }
     }
+    checkUnitLimit()
+
   }
 
   const saveOnClose = (event)=>{
