@@ -78,14 +78,14 @@ function ArmyLeft({addUnitToArmy}){
     return (
         <div className="p-2 m-2 border-black col-span-2 row-span-5 border-1 ">
             <label>Select Unit to Add to Army</label>
-            <select className='text-black w-full' onChange={(e)=>{
+            <select className='text-black w-3/4' onChange={(e)=>{
                 handleUnitSelect(e)
                 setUnitSizeIndex(0)
             }}>
                 {unitsToPickFrom}
-            </select>
+            </select><br></br>
             <label>Filters</label><br></br>
-            <select className='text-black' onChange={(e)=>{
+            <select className='text-black w-1/2' onChange={(e)=>{
                 handlePointFilterSelect(e)
             }}>
                 <option key={4} value={200}>{'< 200'}</option>
@@ -94,7 +94,7 @@ function ArmyLeft({addUnitToArmy}){
                 <option key={1} value={50}>{'< 50'}</option>
             </select><br></br>
             <label>Faction Select</label><br></br>
-            <select className='text-black  w-full' onChange={(e)=>{
+            <select className='text-black  w-1/2' onChange={(e)=>{
                 handleFactionSelect(e)
             }}>
                 <option key={1} value={'Ork'}>{'Ork'}</option>
