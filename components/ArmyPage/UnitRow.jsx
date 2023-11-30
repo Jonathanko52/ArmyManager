@@ -23,9 +23,9 @@ function UnitRow({
           onDrag={(e)=>{dragUnit(e, unitId, columnName)}}
         >
           <div className="col-span-3">
-          <label className="m-4 p-4 text-lg font-bold" >Unit Name: <label className="text-slate-50 font-normal">{unitName}</label></label><br></br>
-          <label className="m-4 p-4 text-lg font-bold" >Model Count: <label className="text-slate-50 font-normal">{modelCount}</label></label><br></br>
-          <label className="m-4 p-4 text-lg font-bold" >Point Cost: <label className="text-slate-50 font-normal">{pointCost}</label></label><br></br>
+          <label className="m-2 p-4 text-lg font-normal" >Unit Name: <label className="text-slate-50  font-bold">{unitName}</label></label><br></br>
+          <label className="m-2 p-4 text-lg font-normal" >Model Count: <label className="text-slate-50 font-bold">{modelCount}</label></label><br></br>
+          <label className="m-2 p-4 text-lg font-normal" >Point Cost: <label className="text-slate-50 font-bold">{pointCost}</label></label><br></br>
           </div>
           <div className="col-span-1">
               {buttonThree ? <button className="rounded-md p-2 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold  w-full" type="submit" value="Add Unit" 
