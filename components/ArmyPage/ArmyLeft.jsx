@@ -94,7 +94,7 @@ function ArmyLeft({addUnitToArmy}){
                 <option key={1} value={50}>{'< 50'}</option>
             </select><br></br>
             <label>Faction Select</label><br></br>
-            <select className='text-black' onChange={(e)=>{
+            <select className='text-black  w-full' onChange={(e)=>{
                 handleFactionSelect(e)
             }}>
                 <option key={1} value={'Ork'}>{'Ork'}</option>

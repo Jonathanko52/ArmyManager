@@ -2,7 +2,6 @@ import ArmyLeft from './ArmyLeft';
 import ArmyRight from './ArmyRight';
 import React, {useState, useContext, useEffect} from 'react';
 import ArmyContext from '../../context/ArmyContext'
-import orkArmyPoints from './../../data/orkArmyPoints'
 
 
 function ArmyPage(){
