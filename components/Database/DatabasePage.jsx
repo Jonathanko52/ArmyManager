@@ -17,8 +17,6 @@ function Database(){
   }, []);
 
   const fetchFromDatabase = () => {
-    // let confirmed = window.confirm("Are you sure you want to retrieve your data from the database?")
-    // if(confirmed){
       const postData = async () => {
         const response = await fetch("/api/retrieveArmy", {
           method: "GET",
@@ -29,7 +27,6 @@ function Database(){
         let newDatabaseArmies = data
         setDatabaseArmies(newDatabaseArmies)
       });
-    // }
   };
 
   const setDatabaseArmyToAppArmy = (ind) => {
@@ -59,7 +56,6 @@ function Database(){
   };
 
   const saveAppArmyToDatabase = () => {
-    //WORKING ON AWS DYNAMODB
     let confirmed = window.confirm("Are you sure you want to save your army to the database?")
       if(confirmed){
       const postData = async () => {
@@ -79,7 +75,6 @@ function Database(){
   };
 
   const updateAppArmyToDatabase = () => {
-    //WORKING ON AWS DYNAMODB
     let confirmed = window.confirm("Are you sure you want to save over your army in the database?")
       if(confirmed){
       const postData = async () => {
@@ -98,8 +93,6 @@ function Database(){
   };
 
   const deleteArmyFromDatabase = (armyName) => {
-    console.log("DELETE", armyName)
-    //WORKING ON AWS DYNAMODB
     let confirmed = window.confirm("Are you sure you want to delete this army?")
       if(confirmed){
       const postData = async () => {

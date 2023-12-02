@@ -4,7 +4,6 @@ import ArmyRow from './ArmyRow'
 function DatabaseRight({databaseArmies,deleteArmy,setDatabaseArmyToAppArmy}){
 
     useEffect(()=>{
-      console.log("DATA",databaseArmies)
     },[])
     let armies = []
     if(databaseArmies){
