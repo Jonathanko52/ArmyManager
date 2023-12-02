@@ -13,7 +13,7 @@ function Database(){
 
 
   useEffect(() => {
-    console.log("Database Mount. should only print once.", value)
+    fetchFromDatabase()
   }, []);
 
   const fetchFromDatabase = () => {
@@ -75,6 +75,7 @@ function Database(){
         console.log("ARMY SAVED TO DATABASE", data)
       });
     }
+    fetchFromDatabase()
   };
 
   const updateAppArmyToDatabase = () => {
@@ -93,6 +94,7 @@ function Database(){
         console.log("ARMY IN DATABASE UPDATED", data)
       });
     }
+    fetchFromDatabase()
   };
 
   const deleteArmyFromDatabase = (armyName) => {
@@ -112,6 +114,7 @@ function Database(){
         console.log("DELETING", data)
       });
     }
+    fetchFromDatabase()
   };
 
   const createTable = () => {
