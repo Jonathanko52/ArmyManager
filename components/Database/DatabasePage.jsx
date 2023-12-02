@@ -17,8 +17,8 @@ function Database(){
   }, []);
 
   const fetchFromDatabase = () => {
-    let confirmed = window.confirm("Are you sure you want to retrieve your data from the database?")
-    if(confirmed){
+    // let confirmed = window.confirm("Are you sure you want to retrieve your data from the database?")
+    // if(confirmed){
       const postData = async () => {
         const response = await fetch("/api/retrieveArmy", {
           method: "GET",
@@ -29,7 +29,7 @@ function Database(){
         let newDatabaseArmies = data
         setDatabaseArmies(newDatabaseArmies)
       });
-    }
+    // }
   };
 
   const setDatabaseArmyToAppArmy = (ind) => {
