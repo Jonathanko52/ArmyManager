@@ -1,22 +1,12 @@
 module.exports = {
-    Battlewagon:{models:[["1 model", 185]],unitLimit:3},
-
-    Black Templars Gladiator Lancer:{models:[["1 model", 185]],unitLimit:3},
-    1 model 165 pts
-    Black Templars Gladiator Reaper:{models:[["1 model", 185]],unitLimit:3},
-    1 model 155 pts
-    Black Templars Gladiator Valiant:{models:[["1 model", 185]],unitLimit:3},
-    1 model 155 pts
-    Black Templars Impulsor:{models:[["1 model", 185]],unitLimit:3},
-    1 model  85 pts
-    Black Templars Repulsor:{models:[["1 model", 185]],unitLimit:3},
-    1 model 200 pts
-    Black Templars Repulsor Executioner:{models:[["1 model", 185]],unitLimit:3},
-    1 model 235 pts
-    Castellan:{models:[["1 model", 185]],unitLimit:3},
-    1 model  65 pts
-    Chaplain Grimaldus:{models:[["1 model", 185]],unitLimit:3},
-    4 models  95 pts
+    Black Templars Gladiator Lancer:{models:[["1 model", 165]],unitLimit:3},
+    Black Templars Gladiator Reaper:{models:[["1 model", 155]],unitLimit:3},
+    Black Templars Gladiator Valiant:{models:[["1 model", 155]],unitLimit:3},
+    Black Templars Impulsor:{models:[["1 model", 85]],unitLimit:3},
+    Black Templars Repulsor:{models:[["1 model", 200]],unitLimit:3},
+    Black Templars Repulsor Executioner:{models:[["1 model", 235]],unitLimit:3},
+    Castellan:{models:[["1 model", 65]],unitLimit:3},
+    Chaplain Grimaldus:{models:[["4 model", 95]],unitLimit:1},
     Crusader Squad:{models:[["1 model", 185]],unitLimit:3},
     1 Sword Brother and 4 Initiates  65 pts
     1 Sword Brother and 9 Initiates 125 pts
