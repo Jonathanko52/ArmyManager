@@ -62,10 +62,10 @@ function ArmyLeft({addUnitToArmy}){
     if(factionSelect === 'Ork'){
         factionChosen = orkArmyPoints
     } else if(factionSelect === 'Space Marine'){
-        factionChosen = spacemarineArmyPoints }
-    // } else if(factionSelect === 'Black Templar'){
-    //     factionChosen = blacktemplarArmyPoints
-    // }
+        factionChosen = spacemarineArmyPoints 
+    } else if(factionSelect === 'Black Templar'){
+        factionChosen = blacktemplarArmyPoints
+    }
 
     for(let keys in factionChosen){
         keyId++
