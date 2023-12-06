@@ -18,9 +18,9 @@ export default function addArmy(req) {
     
       dynamodb.putItem(params, function(err) {
         if (err) {
-          console.error("Unable to add movie", err);
+          console.error("Unable to add army to database", err);
         } else {
-          console.log(`Added Army ${parsedArmy.armyName} to database`);
+          console.log(`Added Army ${parsedArmy.armyName} to database. Did this overwrite the old one?`);
         }
       });
   })

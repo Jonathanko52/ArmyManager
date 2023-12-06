@@ -11,7 +11,6 @@ export default function retrieveArmy(req, res) {
       if (err) {
         console.error("Unable to find army", err);
       } else {
-        console.log("Found armies");
         res.status(400).send(data.Items)
       }
     });

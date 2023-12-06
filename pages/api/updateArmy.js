@@ -21,7 +21,7 @@ export default function updateArmy(req) {
           if (err) {
             console.error("Unable to find movie", err);
           } else {
-            console.log(`UPDATED ${armyName}` )
+            console.log(`UPDATED ${armyName}'s information in the database` )
           }
         });
   })
