@@ -11,7 +11,4 @@ module.exports = {
       secretAccessKey: process.env.REACT_APP_SECRET_ACCESS_KEY,
     },
     region: 'us-west-1'
-    //should be US west to access table. 
-    //app seems to fail to read 'region' value on initial boot
-    //reads it after the initial boot if I change he value
 };

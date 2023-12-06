@@ -19,8 +19,13 @@ function ArmyLeft({addUnitToArmy}){
             factionChosen = orkArmyPoints
         } else if(factionSelect === 'Space Marine'){
             factionChosen = spacemarineArmyPoints 
+        } else if(factionSelect === 'Black Templar'){
+            factionChosen = blacktemplarArmyPoints
         }
-        setSelectedUnitName(event.target.value)
+
+        let newUnit =  event.target.value.replace(/([a-z])([A-Z])/g, '$1 $2');
+
+        setSelectedUnitName(newUnit)
         setSelectedUnit(factionChosen[event.target.value])
     }    
 
