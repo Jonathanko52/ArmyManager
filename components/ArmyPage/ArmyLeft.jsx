@@ -1,7 +1,7 @@
 import React, {useState,useEffect}from 'react';
 import orkArmyPoints from './../../data/orkArmyPoints'
 import spacemarineArmyPoints from './../../data/spacemarinePoints'
-// import blacktemplarArmyPoints from './../../data/blackTemplayPoints'
+import blacktemplarArmyPoints from './../../data/blackTemplarPoints'
 import UnitRow from './UnitRow'
 
 function ArmyLeft({addUnitToArmy}){
