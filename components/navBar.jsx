@@ -24,12 +24,6 @@ function NavBar(){
             console.log(value)
           }}>LOG STATE</button>
           <br></br>
-          <button onClick={(e)=>{
-          }}>DYNAMOTEST</button>
-          <br></br>
-          <button onClick={()=>{
-
-          }}>DYNAMOTEST2</button>
         </nav>        
       </div>
       )
