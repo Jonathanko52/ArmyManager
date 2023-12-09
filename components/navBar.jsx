@@ -10,15 +10,19 @@ function NavBar(){
       <div className="font-bold col-span-1 row-span-6 border-black border-2">
         <nav>
           <ul>
-          <li>
+            <br></br>
+            <li>
             <Link className="m-4" href="/">Index</Link><br></br>
             </li>
+            <br></br>
             <li>
             <Link className="m-4" href="/Army">Army</Link><br></br>
             </li>
+            <br></br>
             <li>
             <Link className="m-4" href="/Database">Database</Link>
             </li>
+            <br></br>
           </ul>
           <button onClick={()=>{
             console.log(value)
