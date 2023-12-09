@@ -437,8 +437,6 @@ function ArmyPage(){
       acc[cur.unitName]=1
     }
     if(acc[cur.unitName] > 3){
-      // let camelString = cur.unitName.replace(/(\w)(\w*)/g,
-      // function(g0,g1,g2){return g1.toUpperCase() + g2.toLowerCase();}).replace(/\s+/g, '');
       noOver = false
       setOverlimit(cur.unitName)
     }
