@@ -28,15 +28,15 @@ function UnitRow({
           <label className="m-2 p-4 text-lg font-normal" >Point Cost: <label className="text-slate-50 font-bold">{pointCost}</label></label><br></br>
           </div>
           <div className="col-span-1">
-              {buttonThree ? <button className="rounded-md p-2 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold  w-full" type="submit" value="Add Unit" 
+              {buttonThree ? <button className=" rounded-md p-2 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold  w-full" type="submit" value="Add Unit" 
               onClick={()=>{buttonThree(unitId)}}>{buttonThreeText}</button> : null}
-              {buttonFour ? <button className="rounded-md p-2 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold  w-full" type="submit" value="Add Unit" 
+              {buttonFour ? <button className=" rounded-md p-2 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold  w-full" type="submit" value="Add Unit" 
               onClick={()=>{buttonFour(unitId)}}>{buttonFourText}</button> : null}
           </div>
           <div className="col-span-4">
-              {buttonOne ? <button className="rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold  w-full" type="submit" value="Add Unit" 
+              {buttonOne ? <button className=" rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold  w-full" type="submit" value="Add Unit" 
               onClick={()=>{buttonOne(unitId)}}>{buttonOneText}</button> : null}
-              {buttonTwo ? <button className="rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold  w-full" type="submit" value="Add Unit" 
+              {buttonTwo ? <button className=" rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold  w-full" type="submit" value="Add Unit" 
               onClick={()=>{buttonTwo(unitId)}}>{buttonTwoText}</button> : null}
 
             </div>

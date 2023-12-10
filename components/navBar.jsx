@@ -12,15 +12,15 @@ function NavBar(){
           <ul>
             <br></br>
             <li>
-            <Link className="m-4" href="/">Index</Link><br></br>
+            <Link className="m-4 text-xl hover:text-2xl" href="/">Index</Link><br></br>
             </li>
             <br></br>
             <li>
-            <Link className="m-4" href="/Army">Army</Link><br></br>
+            <Link className="m-4 text-xl hover:text-2xl" href="/Army">Army</Link><br></br>
             </li>
             <br></br>
             <li>
-            <Link className="m-4" href="/Database">Database</Link>
+            <Link className="m-4 text-xl hover:text-2xl" href="/Database">Database</Link>
             </li>
             <br></br>
           </ul>
