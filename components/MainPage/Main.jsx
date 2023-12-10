@@ -4,7 +4,7 @@ import ArmyContext from '../../context/ArmyContext'
 
 
 
-function Database(){
+function MainPage(){
 
   const { value, setValue } = useContext(ArmyContext)
 
@@ -22,4 +22,4 @@ function Database(){
       )
 }
 
-export default Database;
+export default MainPage;
