@@ -4,7 +4,7 @@ import ArmyContext from '../../context/ArmyContext'
 
 
 
-function MainPage(){
+function MainLeft(){
 
   const { value, setValue } = useContext(ArmyContext)
 
@@ -22,4 +22,4 @@ function MainPage(){
       )
 }
 
-export default MainPage;
+export default MainLeft;
