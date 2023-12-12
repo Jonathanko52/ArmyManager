@@ -16,9 +16,8 @@ function MainRight(){
 
 
     return (
-        <div className="font-bold border-black col-span-10 grid grid-cols-12 border-2">
-
-        </div>
+      <div className="font-bold border-black border-l-2 col-span-8 row-span-5">
+      </div>
       )
 }
 

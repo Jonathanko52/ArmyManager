@@ -16,9 +16,9 @@ function MainLeft(){
 
 
     return (
-        <div className="font-bold border-black col-span-10 grid grid-cols-12 border-2">
+      <div className="p-2 m-2 border-black col-span-4 row-span-5 border-1">
 
-        </div>
+      </div>
       )
 }
 
