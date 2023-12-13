@@ -19,7 +19,8 @@ function MainPage(){
 
     return (
         <div className="font-bold border-black col-span-10 grid grid-cols-12 border-2">
-
+          <MainLeft/>
+          <MainRight/>
         </div>
       )
 }
