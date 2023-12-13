@@ -1,6 +1,8 @@
 
 import React, {useState, useContext, useEffect}from 'react';
-import ArmyContext from '../../context/ArmyContext'
+import ArmyContext from '../../context/ArmyContext';
+import MainLeft from '../../context/MainLeft';
+import MainRight from '../../context/MainRight';
 
 
 
