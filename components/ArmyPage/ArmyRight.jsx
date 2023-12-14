@@ -33,18 +33,11 @@ function ArmyRight({
   logState,
   armyPoints,
   overLimit,
-  readyPoints,
-  setReadyPoints,
-  standbyPoints,
-  setStandbyPoints,
-  unpaintedPoints,
-  setUnpaintedPoints,
+
 }){
 
   let totalArmyCost = 0;
-  let totalReadyCost = 0;
-  let totalUnpaintedCost = 0;
-  let totalStandbyCost = 0;
+
 
 
 
@@ -52,20 +45,15 @@ function ArmyRight({
 
     unitsReady.forEach((cur)=>{
       totalArmyCost += cur.pointCost
-      totalReadyCost += cur.pointCost
     })
     unitsStandby.forEach((cur)=>{
       totalArmyCost += cur.pointCost
-      totalUnpaintedCost += cur.pointCost
     })
     unitsUnpainted.forEach((cur)=>{
       totalArmyCost += cur.pointCost
-      totalStandbyCost += cur.pointCost
     })
     setArmyPoints(totalArmyCost)
-    setReadyPoints(totalReadyCost)
-    setStandbyPoints(totalUnpaintedCost)
-    setUnpaintedPoints(totalStandbyCost)
+
 
     return ()=>{
       // saveArmyToLocal()
@@ -96,15 +84,6 @@ function ArmyRight({
               </div>
               <div className="p-4">
                 <h1 className="text-xl font-bold p-2">Total cost in points:  <label className="text-slate-50 font-normal">{armyPoints}</label></h1>
-              </div>
-              <div className="p-4">
-                <h1 className="text-xl font-bold p-2">Total cost in Ready:  <label className="text-slate-50 font-normal">{readyPoints}</label></h1>
-              </div>
-              <div className="p-4">
-                <h1 className="text-xl font-bold p-2">Total cost in Standby:  <label className="text-slate-50 font-normal">{standbyPoints}</label></h1>
-              </div>
-              <div className="p-4">
-                <h1 className="text-xl font-bold p-2">Total cost in Unpainted:  <label className="text-slate-50 font-normal">{unpaintedPoints}</label></h1>
               </div>
               {/* <div className="p-4">
                 <h1 className="text-xl font-bold p-2">Army Id: <label className="text-slate-50 font-normal">{armyId}</label></h1>
