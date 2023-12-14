@@ -12,6 +12,9 @@ function ArmyPage(){
   const [armyStandby, setArmyStandby] = useState({units:[]});
   const [armyUnpainted, setArmyUnpainted] = useState({units:[]});
   const [armyPoints, setArmyPoints] = useState(0)
+  const [readyPoints, setReadyPoints] = useState(0)
+  const [standbyPoints, setStandbyPoints] = useState(0)
+  const [unpaintedPoints, setUnpaintedPoints] = useState(0)
   const [armyName, setArmyName] = useState('');
   const [faction, setFaction] = useState('');
   const [armyId, setArmyId] = useState(0);
@@ -488,6 +491,12 @@ function ArmyPage(){
             moveUnpaintedUnitUp={moveUnpaintedUnitUp}
             moveUnpaintedUnitDown={moveUnpaintedUnitDown}
             logState={logState}
+            readyPoints={readyPoints}
+            setReadyPoints={setReadyPoints}
+            standbyPoints={standbyPoints}
+            setStandbyPoints={setStandbyPoints}
+            unpaintedPoints={unpaintedPoints}
+            setUnpaintedPoints={setUnpaintedPoints}
           />
         </div>
       )
