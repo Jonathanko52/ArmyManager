@@ -53,7 +53,13 @@ function ArmyColumn({
   // },[army])
 
     return (
-        <div className="col-span-1 ARMYCOLUMN  h-screen overflow-y-scroll"
+      <div>
+            <div className="ARMYHEADER text-xl">
+              <div className="p-4 ">
+              <h1 className="text-xl font-bold">{columnName}</h1><label className="text-xl font-bold">Total cost in points: <label className="text-slate-50 font-normal">{totalArmyCost}</label></label>
+              </div>
+            </div>        
+          <div className="col-span-1 ARMYCOLUMN  h-screen overflow-y-scroll"
           onDrop={(e)=>{dropUnit(e,columnName)}}
           //Dragover itself doesn't do anything(well, I'm not making it do anything), but without it, onDrop does not work
           onDragOver={(e)=>{
@@ -61,16 +67,13 @@ function ArmyColumn({
           }}
         >
           <div onDrop={(e)=>{dropUnit(e,columnName)}}>
-            <div className="ARMYHEADER text-xl">
-              <div className="p-4 ">
-              <h1 className="text-xl font-bold">{columnName}</h1><label className="text-xl font-bold">Total cost in points: <label className="text-slate-50 font-normal">{totalArmyCost}</label></label>
-              </div>
-            </div>
+
             <div className="UNITS CONTAINER">
               {unitsComponents}
             </div>
           </div>
         </div>
+      </div>
       )
 }
 
