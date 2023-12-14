@@ -82,8 +82,17 @@ function ArmyRight({
                 <h1 className="text-xl font-bold p-2">Total cost in points:  <label className="text-slate-50 font-normal">{armyPoints}</label></h1>
               </div>
               <div className="p-4">
-                <h1 className="text-xl font-bold p-2">Army Id: <label className="text-slate-50 font-normal">{armyId}</label></h1>
+                <h1 className="text-xl font-bold p-2">Total cost in Ready:  <label className="text-slate-50 font-normal">{armyPoints}</label></h1>
               </div>
+              <div className="p-4">
+                <h1 className="text-xl font-bold p-2">Total cost in Standby:  <label className="text-slate-50 font-normal">{armyPoints}</label></h1>
+              </div>
+              <div className="p-4">
+                <h1 className="text-xl font-bold p-2">Total cost in Unpainted:  <label className="text-slate-50 font-normal">{armyPoints}</label></h1>
+              </div>
+              {/* <div className="p-4">
+                <h1 className="text-xl font-bold p-2">Army Id: <label className="text-slate-50 font-normal">{armyId}</label></h1>
+              </div> */}
               <div className="p-4">
                 <button className = "rounded-md p-2 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold" type="submit" value="Add Unit" onClick={logState}>Log State</button>        
               </div>
