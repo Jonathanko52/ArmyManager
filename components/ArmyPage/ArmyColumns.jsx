@@ -56,7 +56,10 @@ function ArmyColumn({
       <div>
           <div className="ARMYHEADER text-xl">
             <div className="p-4 ">
-              <h1 className="text-xl font-bold">{columnName}</h1><label className="text-xl font-bold">Total cost in points: <label className="text-slate-50 font-normal">{totalArmyCost}</label></label>
+              <h1 className="text-xl font-bold">{columnName}</h1>
+              <label className="text-xl font-bold">Total cost in points: 
+                <label className="text-slate-50 font-normal">{totalArmyCost}</label>
+              </label>
             </div>
           </div>        
         <div className="col-span-1 ARMYCOLUMN  h-screen overflow-y-scroll"
@@ -67,7 +70,6 @@ function ArmyColumn({
           }}
         >
           <div onDrop={(e)=>{dropUnit(e,columnName)}}>
-
             <div className="UNITS CONTAINER">
               {unitsComponents}
             </div>
