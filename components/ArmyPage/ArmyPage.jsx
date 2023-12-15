@@ -3,7 +3,6 @@ import ArmyRight from './ArmyRight';
 import React, {useState, useContext, useEffect} from 'react';
 import ArmyContext from '../../context/ArmyContext'
 
-
 function ArmyPage(){
     
   const { value, setValue, isLoading} = useContext(ArmyContext)
@@ -17,7 +16,6 @@ function ArmyPage(){
   const [armyId, setArmyId] = useState(0);
   const [unitBeingDragged, setUnitBeingDragged] = useState();
   const [overLimit, setOverlimit] = useState(false)
-
 
   useEffect(() => {
     let contextData = value
@@ -225,7 +223,6 @@ function ArmyPage(){
         }));
         saveToMainPage()
     }
-    console.log("SAVED")
   }
 
   const loadArmyFromLocal = () =>{
