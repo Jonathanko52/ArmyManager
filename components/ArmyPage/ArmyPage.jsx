@@ -1,5 +1,6 @@
 import ArmyLeft from './ArmyLeft';
 import ArmyRight from './ArmyRight';
+import ArmySummary from './ArmySummary'
 import React, {useState, useContext, useEffect} from 'react';
 import ArmyContext from '../../context/ArmyContext'
 
@@ -486,6 +487,7 @@ function ArmyPage(){
             moveUnpaintedUnitDown={moveUnpaintedUnitDown}
             logState={logState}
           />
+          <ArmySummary/>
         </div>
       )
 }
