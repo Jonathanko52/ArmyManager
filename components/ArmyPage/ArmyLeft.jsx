@@ -3,8 +3,9 @@ import orkArmyPoints from './../../data/orkArmyPoints'
 import spacemarineArmyPoints from './../../data/spacemarinePoints'
 import blacktemplarArmyPoints from './../../data/blackTemplarPoints'
 import UnitRow from './UnitRow'
+import ArmySummary from './ArmySummary'
 
-function ArmyLeft({addUnitToArmy}){
+function ArmyLeft({addUnitToArmy, armyReady}){
 
     const [selectedUnit, setSelectedUnit] = useState('');
     const [selectedUnitName, setSelectedUnitName] = useState('')
@@ -118,7 +119,9 @@ function ArmyLeft({addUnitToArmy}){
                     buttonThree={newArmyAddUnitToArmy}
                     buttonThreeText={"Add Unit To Army"}
             />: null }
-
+          <ArmySummary
+            armyReady={armyReady}
+          />
         </div>
       )
 }
