@@ -488,15 +488,8 @@ function ArmyPage(){
             logState={logState}
           />
           <ArmySummary
-            const [armyReady, setArmyReady] = useState({units:[]});
-            const [armyStandby, setArmyStandby] = useState({units:[]});
-            const [armyUnpainted, setArmyUnpainted] = useState({units:[]});
-            const [armyPoints, setArmyPoints] = useState(0)
-            const [armyName, setArmyName] = useState('');
-            const [faction, setFaction] = useState('');
-            const [armyId, setArmyId] = useState(0);
-            const [unitBeingDragged, setUnitBeingDragged] = useState();
-            const [overLimit, setOverlimit] = useState(false)
+            armyReady={armyReact}
+
           
           />
         </div>
