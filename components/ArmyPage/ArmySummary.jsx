@@ -1,14 +1,13 @@
 import React from 'react';
 
 function ArmySummary({armyReady}){
-    console.log(armyReady)
     let result = []
-    let convertedObj = armyReady.units.reduce()
+    let convertedObj = armyReady.units.reduce((acc,cur)=>{
+        
+    })
     armyReady.units.forEach((cur,ind)=>{
-        console.log(cur.unitName)
         result.push(<li>{cur.unitName}</li>)
     })
-
 
 
     return (
