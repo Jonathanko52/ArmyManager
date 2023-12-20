@@ -10,13 +10,11 @@ function ArmySummary({armyReady}){
         }
         return acc
     },{})
-    console.log(convertedObj)
 
     for(let keys in convertedObj){
         result.push(<li>{keys} : {convertedObj[keys]} </li>)
         result.push(<br></br>)
     }
-
 
     return (
         <div className="border-black col-span-8 row-span-2 border-2 p-2 m-2 rounded-md grid grid-cols-4">

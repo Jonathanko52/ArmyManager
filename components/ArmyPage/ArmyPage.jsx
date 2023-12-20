@@ -203,7 +203,6 @@ function ArmyPage(){
 
   const changeArmyName = (armyName) => {
     setArmyReady({...armyReady})
-
   }
 
   const changeArmyFaction = (armyFaction) =>{
