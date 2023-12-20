@@ -10,7 +10,6 @@ function MainRight(){
 
   const [] = useState('');
 
-
   useEffect(() => {
   }, []);
 
