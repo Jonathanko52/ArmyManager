@@ -27,7 +27,7 @@ function NavBar(){
           <button className = "rounded-md p-2 pl-4 pr-4 m-2 bg-slate-50 hover:bg-slate-200 text-black font-bold"
           onClick={()=>{
             console.log(value)
-          }}>LOG STATE</button>
+          }}>CONTEXT STATE</button>
           <br></br>
         </nav>        
       </div>
