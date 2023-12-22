@@ -12,12 +12,12 @@ function ArmySummary({armyReady}){
     },{})
 
     for(let keys in convertedObj){
-        result.push(<li>{keys} : {convertedObj[keys]} </li>)
+        result.push(<li className="p-4">{keys} : {convertedObj[keys]} </li>)
         result.push(<br></br>)
     }
 
     return (
-        <div className="border-black col-span-8 row-span-2 border-2 p-2 m-2 rounded-md grid grid-cols-4">
+        <div className="text-xl font-bold">
             <ul>
                 {result}
             </ul>
