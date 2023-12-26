@@ -18,7 +18,7 @@ function UnitRow({
 }){
     return (
         <div 
-          className="border-black col-span-8 row-span-2 border-2 p-4 m-4 rounded-md grid grid-cols-4" 
+          className="border-black border-2 col-span-8 row-span-2p-4 m-4 rounded-md grid grid-cols-4" 
           draggable="true"
           onDrag={(e)=>{dragUnit(e, unitId, columnName)}}
         >
