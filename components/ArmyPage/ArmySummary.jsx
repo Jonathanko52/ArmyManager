@@ -13,7 +13,7 @@ function ArmySummary({armyReady}){
 
     for(let keys in convertedObj){
         result.push(<li className="p-2">{keys} : {convertedObj[keys]} </li>)
-        result.push(<br></br>)
+        // result.push(<br></br>)
     }
 
     return (
