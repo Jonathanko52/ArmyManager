@@ -19,7 +19,6 @@ function ArmyColumn({
 }){
   let unitsComponents = [];
   let totalArmyCost = 0;
-  // useEffect(()=>{
     if(Array.isArray(units)){
 
     units.forEach((cur,ind)=>{
@@ -50,7 +49,6 @@ function ArmyColumn({
       totalArmyCost += cur.pointCost
     })
     }
-  // },[army])
 
     return (
       <div>
