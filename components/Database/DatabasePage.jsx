@@ -3,14 +3,11 @@ import DatabaseRight from './DatabaseRight.jsx';
 import React, {useState, useContext, useEffect}from 'react';
 import ArmyContext from '../../context/ArmyContext'
 
-
-
 function Database(){
 
   const { value, setValue } = useContext(ArmyContext)
 
   const [databaseArmies, setDatabaseArmies] = useState('');
-
 
   useEffect(() => {
     fetchFromDatabase()
@@ -34,7 +31,6 @@ function Database(){
     if(confirmed){
       let armyToBeSet
       let armyParsed = JSON.parse(databaseArmies[ind].armyString.S)
-
       let armyName = armyParsed.armyName
       let armyPoints = armyParsed.armyPoints
       let armyReady = armyParsed.armyReady
@@ -115,7 +111,6 @@ function Database(){
     let confirmed = window.confirm("Are you want to add a table to the database?")
       if(confirmed){
       const postData = async () => {
-
         const response = await fetch("/api/createTable", {
           method: "GET",
         });
