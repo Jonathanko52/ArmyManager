@@ -10,7 +10,7 @@ function DatabaseLeft({
   logCurrentState
 }){
 
-  const { value, setValue } = useContext(ArmyContext)
+  const { value } = useContext(ArmyContext)
 
   let armyName = value.armyName
   let armyFaction = value.faction
