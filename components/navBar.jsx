@@ -3,8 +3,7 @@ import React, { useContext } from 'react';
 import ArmyContext from './../context/ArmyContext'
 
 function NavBar(){
-
-
+  
     const { value, setValue } = useContext(ArmyContext)
     return (
       <div className="font-bold col-span-1 row-span-6 border-black border-2">
