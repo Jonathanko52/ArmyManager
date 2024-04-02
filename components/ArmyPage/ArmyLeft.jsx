@@ -39,13 +39,17 @@ function ArmyLeft({addUnitToArmy, armyReady}){
     }    
 
     const increaseUnitSize = () =>{
+        console.log("UNIT SIZE CHANGE UP")
         if(unitSizeIndex < selectedUnit.length-1){
+            console.log("SET FIRED")
             setUnitSizeIndex(unitSizeIndex+1)
         }
     }
 
     const decreaseUnitSize  = () =>{
+        console.log("UNIT SIZE CHANGE DOWN")
         if(unitSizeIndex > 0){
+            console.log("SET FIRED")
             setUnitSizeIndex(unitSizeIndex-1)
         }
     }
