@@ -48,7 +48,7 @@ module.exports = {
     Stompa:{models:[['1 model',800]],unitLimit:3},
     Stormboyz:{models:[['5 models',65],['10 models',130]],unitLimit:3},
     Tankbustas:{models:[['5 models',110]],unitLimit:3},
-    Trukk:{models:[['1 model',60]],unitLimit:3},
+    Trukk:{models:[['1 model',65]],unitLimit:3},
     Warbikers:{models:[['3 models',70],['6 models',140]],unitLimit:3},
     Warboss:{models:[['1 model',65]],unitLimit:3},
     WarbossInMegaArmour:{models:[['1 model',80]],unitLimit:3},

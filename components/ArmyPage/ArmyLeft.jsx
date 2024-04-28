@@ -39,8 +39,8 @@ function ArmyLeft({addUnitToArmy, armyReady}){
     }    
 
     const increaseUnitSize = () =>{
-        console.log("UNIT SIZE CHANGE UP")
-        if(unitSizeIndex < selectedUnit.length-1){
+        console.log("UNIT SIZE CHANGE UP", unitSizeIndex, selectedUnit, selectedUnit.length)
+        if(unitSizeIndex < selectedUnit.models.length-1){
             console.log("SET FIRED")
             setUnitSizeIndex(unitSizeIndex+1)
         }
